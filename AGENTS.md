@@ -19,7 +19,7 @@ Codex 與 Claude Code 都會讀這份。只寫讀程式看不出來的事。
 - 新文章上線前要經過獨立查證：規則對照 USA Pickleball 官方規則原文，球拍數字對照廠商規格。
 - 型號、店名、場館、組織名稱查不到就不寫。
 - 價格與精確數字行內標「（來源、YYYY-MM 查證）」。
-- 用字：正式稱「非截擊區」，第一次出現寫「非截擊區（廚房區）」。標題可兩者並列。
+- 用字照 `docs/TERMINOLOGY.md`：台灣球友怎麼說就怎麼寫，台灣習慣講英文的（dink、drop、reset、Erne）就寫英文。
 
 ## 知識卡
 - 資料在 `src/content/knowledge/cards.json`，來自站主本機的萃取端（沿用 badminton-knowledge-extractor）。
