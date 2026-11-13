@@ -1,0 +1,49 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { CATEGORIES, SITE_NAME, SITE_URL } from '../../consts';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('articles', ({ data }) => !data.draft);
+  return articles.map((a) => ({ params: { slug: a.id }, props: { article: a } }));
+}
+interface Props { article: CollectionEntry<'articles'> }
+const { article } = Astro.props;
+const { Content } = await render(article);
+const d = article.data;
+const category = CATEGORIES.find((c) => c.slug === d.category)!;
+const fmt = (date: Date) => date.toISOString().slice(0, 10);
+const ld = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: d.title,
+  description: d.description,
+  datePublished: fmt(d.pubDate),
+  dateModified: fmt(d.updatedDate ?? d.pubDate),
+  inLanguage: 'zh-Hant-TW',
+  mainEntityOfPage: new URL(`/articles/${article.id}/`, SITE_URL).href,
+  publisher: { '@type': 'Organization', name: SITE_NAME, url: SITE_URL },
+};
+---
+<Base title={d.title} description={d.description} jsonLd={[ld]}>
+  <article class="prose">
+    <p class="crumb"><a href={`/articles/#${category.slug}`}>{category.name}</a></p>
+    <h1>{d.title}</h1>
+    <p class="date">
+      {d.updatedDate ? <>更新於 <time datetime={fmt(d.updatedDate)}>{fmt(d.updatedDate)}</time></> : <time datetime={fmt(d.pubDate)}>{fmt(d.pubDate)}</time>}
+    </p>
+    {d.takeaways && (
+      <aside class="takeaways" aria-label="重點">
+        <ul>{d.takeaways.map((t) => <li>{t}</li>)}</ul>
+      </aside>
+    )}
+    <Content />
+  </article>
+</Base>
+
+<style>
+  .crumb, .date { font-size: .9rem; color: var(--muted); margin: 0; }
+  .prose h1 { font-size: clamp(1.8rem, 4.2vw, 2.6rem); line-height: 1.28; margin: .3em 0 .3em; }
+  .takeaways { margin: 24px 0 8px; padding: 16px 20px; border-left: 6px solid var(--ball); background: var(--card); border-radius: 0 12px 12px 0; }
+  .takeaways ul { margin: 0; padding-left: 1.2em; }
+</style>
