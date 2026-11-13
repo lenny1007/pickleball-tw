@@ -1,0 +1,2933 @@
+[
+  {
+    "id": "tss-jdl9qs-yvn4-0046",
+    "title": "發球後無意識走入底線內",
+    "zone": "serve",
+    "what": "發完球後順勢往前漫步，踏入底線內側等待對手接發球。",
+    "why": "站在底線內會讓對手容易把深球打在自己腳邊，逼迫自己從腳下撈球，導致打出薄弱且被動的第三拍。",
+    "how": [
+      "檢視自己發球後的習慣動作，避免發完球後無意識向前踏步。",
+      "若注意到自己發球後已走進底線內，應迅速向後移動退回底線後方。"
+    ],
+    "check": "發球後雙腳未踏進底線內；對手回擊深球時，球不會直接砸在自己腳邊。",
+    "source_channel": "Third Shot Sports",
+    "source_title": "Pickleball: DON'T make this common mistake",
+    "source_video_id": "JDl9QS-yVN4",
+    "timestamp": "00:46",
+    "index": false,
+    "type": "problem"
+  },
+  {
+    "id": "tss-jdl9qs-yvn4-0142",
+    "title": "發球後留守底線戰術",
+    "zone": "serve",
+    "what": "發完球後停留在底線後方或剛好在底線上等待對手回球，不主動往前壓。",
+    "why": "對手很少打出極短的接發球，即使有短球向前跑也相對容易；留在底線後可讓深回球落在身體前方，從容處理第三拍。",
+    "how": [
+      "站在底線後方完成發球動作。",
+      "擊球後維持在底線後方（或踩在底線上），不要往前移動。",
+      "觀察對手接發球的落點，若為短球再向前移動迎球擊打。"
+    ],
+    "check": "對手的接發球落在自己身體前方彈起，不需要在腳邊難受地挖球防守。",
+    "source_channel": "Third Shot Sports",
+    "source_title": "Pickleball: DON'T make this common mistake",
+    "source_video_id": "JDl9QS-yVN4",
+    "timestamp": "01:42",
+    "index": false,
+    "type": "tactic"
+  },
+  {
+    "id": "ptp-t5anzz4-iwo-0054",
+    "title": "第三拍抽球與 drop 的選擇策略",
+    "zone": "backcourt",
+    "what": "在第三拍除了打 drop 之外，也可以選擇抽球，甚至混合使用讓對手難以預測。",
+    "why": "當接發球偏軟、有機會以力量壓制對手時，或接發球太深導致自己擊球點不佳、受到壓迫容易失誤時，打低平抽球比勉強打精準度要求高的 drop 容錯率更高。若 drop 挑太高會被對手痛擊，而抽球挑稍高被攻擊的風險相對較小。混合抽球與 drop 也能保持不可預測性。",
+    "how": [
+      "評估對手的接發球深度與品質",
+      "若擊球點良好且對手回球偏弱，可選擇以低平抽球壓制",
+      "若擊球點被擠壓或處於重心不穩的防守狀態，打一記低平抽球過網，不勉強打高難度 drop",
+      "若自己在底線且有充裕時間調整身體結構，打第三拍 drop 前進非截擊區（廚房區）",
+      "第三拍若選擇抽球，可在第五拍、第七拍等對手回球較慢時再伺機補上 drop"
+    ],
+    "check": "在受到壓迫時不再頻繁因為強行打 drop 而掛網或送高球，能透過低平抽球過度爭取下一拍機會。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "How To Hit A 3rd Shot Drop In Pickleball (Technique Explained & More)",
+    "source_video_id": "T5anZZ4-Iwo",
+    "timestamp": "00:54",
+    "index": false,
+    "type": "tactic"
+  },
+  {
+    "id": "ptp-t5anzz4-iwo-0438",
+    "title": "Drop 落點目標瞄準非截擊區深處",
+    "zone": "backcourt",
+    "what": "打 drop 時，目標落點應設定在對手非截擊區（廚房區）的後半段，而非網帶前緣。",
+    "why": "瞄準非截擊區深處有較高的過網容錯空間，球不容易掛網。同時該落點貼近對手的腳邊，迫使已經站上非截擊線的對手必須在極低的擊球點擊球，降低對手攻擊的威脅性；若刻意打太淺，球弧度必須拉高，彈跳後往往浮得過高而容易被對手進攻。",
+    "how": [
+      "在底線或過渡區準備擊球時，視線與目標鎖定對手非截擊區（廚房區）靠非截擊線的後段區域",
+      "容許球帶有足夠的過網高度，不必極度貼網",
+      "讓球過網後下墜至對手腳前彈跳"
+    ],
+    "check": "球穩穩過網且不掛網，落點在對手非截擊線附近腳邊，迫使對手由下往上提球。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "How To Hit A 3rd Shot Drop In Pickleball (Technique Explained & More)",
+    "source_video_id": "T5anZZ4-Iwo",
+    "timestamp": "04:38",
+    "index": false,
+    "type": "tactic"
+  },
+  {
+    "id": "ptp-t5anzz4-iwo-0704",
+    "title": "優先選擇打斜線或中間的 drop",
+    "zone": "backcourt",
+    "what": "打 drop 時，絕大多數情況下應優先選擇打斜對角（crosscourt）或打向場地中央（down the middle）。",
+    "why": "斜角與中線的球場對角距離較長，讓球有更多空間與距離完成「爬升過網、及時下墜」的弧線，球的飛行軌跡可以相對平緩，彈跳後也較不易浮高被對手攻擊。直線（down the line）距離最短，難度最高。",
+    "how": [
+      "在底線擊球時，將拍面方向引導向斜對角非截擊區或對手兩人之間的中間區域",
+      "利用較長的飛行距離，打出容錯率更高的拋物線",
+      "平時仍需練直線 drop 以保持戰術多樣性，但比賽中以斜線與中路為主要選擇"
+    ],
+    "check": "球有充足的距離完成下墜並落在腳邊，大幅減少直接被對手在空中攔截或彈起過高被扣殺的機會。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "How To Hit A 3rd Shot Drop In Pickleball (Technique Explained & More)",
+    "source_video_id": "T5anZZ4-Iwo",
+    "timestamp": "07:04",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "ptp-t5anzz4-iwo-0802",
+    "title": "Drop 拋物線頂點保持在己方球場",
+    "zone": "backcourt",
+    "what": "擊出 drop 時，整段球路弧線的最高點（Apex）必須留在自己這一側的球場上。",
+    "why": "頂點在己方半場，代表球在飛越球網上方時已經處於下墜（descending）狀態，進入對手場地時能迅速下沈至低處，避免被對手在空中平抽或彈跳後形成攻勢。",
+    "how": [
+      "擊球時讓球在過網前就達到最高弧度",
+      "目視確認球在越過球網的瞬間是向下掉落的",
+      "寧可球過網偏高一點也不要掛網，若偏高還有防守機會，掛網則直接失分"
+    ],
+    "check": "球在越過球網上空時呈現下墜趨勢，抵達對手面前時高度已降至網帶以下。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "How To Hit A 3rd Shot Drop In Pickleball (Technique Explained & More)",
+    "source_video_id": "T5anZZ4-Iwo",
+    "timestamp": "08:02",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "ptp-t5anzz4-iwo-0853",
+    "title": "Drop 防掛網口訣：球拍向下並往上推",
+    "zone": "backcourt",
+    "what": "避免 drop 頻繁掛網的準備動作口訣：球拍向下、拍頭朝下、向上推（paddle down, tip down, push up）。",
+    "why": "掛網通常是因為準備引拍時球拍位置太高，導致擊球時拍面無法確實深入球的下方給予足夠的向上推力。",
+    "how": [
+      "步驟 1：擊球準備的第一步，確認球拍高度降到球的下方",
+      "步驟 2：拍頭微朝下指向地面",
+      "步驟 3：透過膝蓋微蹲配合球拍從下往上向前推動（push up）送球過網"
+    ],
+    "check": "引拍時拍面確實低於來球高度，球順暢升起並飄過球網，不再掛在網帶上。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "How To Hit A 3rd Shot Drop In Pickleball (Technique Explained & More)",
+    "source_video_id": "T5anZZ4-Iwo",
+    "timestamp": "08:53",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "ptp-t5anzz4-iwo-0936",
+    "title": "經典平擊 Drop 的擊球動作結構",
+    "zone": "backcourt",
+    "what": "經典平擊 drop（Classic Drop）是不帶旋轉或極少旋轉的平實推球動作，動作結構如同在底線打大號的 dink。",
+    "why": "平擊 drop 的控制力最直覺、容錯率高。動作不帶手腕甩動、拍面穩定，能確保球路路徑穩定受控。",
+    "how": [
+      "雙腳站位至少與肩同寬或略寬，雙膝彎曲建立穩固下盤，後腳確實踩穩",
+      "肩膀微轉，拍頭自然下沉，不向後大幅引拍拉拍（no backswing）",
+      "若空間允許，前腳向前跨入一步（step-in）增加推力與向非截擊線推進的動能",
+      "手腕鎖定不甩動，在身體前方以平整拍面推球，能量主要來自膝蓋升起與肩膀推動",
+      "順著球路做出延伸的隨揮（extended follow through）"
+    ],
+    "check": "擊球過程拍面始終保持穩定朝向目標，球平穩飛出不帶強烈旋轉，隨揮順暢延伸。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "How To Hit A 3rd Shot Drop In Pickleball (Technique Explained & More)",
+    "source_video_id": "T5anZZ4-Iwo",
+    "timestamp": "09:36",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "ptp-t5anzz4-iwo-1600",
+    "title": "各類 Drop 握拍法與握壓原則",
+    "zone": "backcourt",
+    "what": "不同旋轉的 drop 需搭配合適的握拍法，且握拍力道需保持放鬆。",
+    "why": "放鬆的握拍力道能讓拍面在觸球時產生吸震效果（absorb speed），把對方來球的速度減緩送回；握得太緊會將速度反彈回去導致 drop 出界或浮高。",
+    "how": [
+      "平擊（Classic）與下旋切球（Slice）：正反手皆採用大陸式握拍（Continental Grip）",
+      "正手上旋（Topspin）：採用東方式正手握拍（Eastern Forehand Grip）",
+      "雙手反手上旋：慣用手在下方、非慣用手在上方以雙手握持",
+      "握拍力道控制在放鬆程度，以 1 到 10 分計約在 3 到 4 分的鬆度"
+    ],
+    "check": "擊球瞬間手臂與手腕不僵硬，拍面能確實吸收來球衝力，球以柔和速度下墜至非截擊區。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "How To Hit A 3rd Shot Drop In Pickleball (Technique Explained & More)",
+    "source_video_id": "T5anZZ4-Iwo",
+    "timestamp": "16:00",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "ptp-t5anzz4-iwo-1339",
+    "title": "上旋、切球與平擊 Drop 的旋轉應用",
+    "zone": "backcourt",
+    "what": "依來球狀況選擇平擊（Classic）、切球（Slice）或上旋（Topspin）三種不同旋轉特性的 drop。",
+    "why": "平擊在球彈起上升期（on the rise）最容易執行；切球自高向低微切削能壓低彈跳高度；上旋 drop 在飛行時有俯衝效果可增加過網安全空間，彈跳後會往前衝咬住對手腳邊，是最具侵略性的 drop。",
+    "how": [
+      "平擊 drop：在球還在上升階段時，拍面垂直球心向前平推",
+      "切球（Slice）drop：引拍拍面不需壓得太低，由微高處向下刷撫球的下緣，提供下旋",
+      "上旋（Topspin）drop：拍頭壓低至近地面，由下往上大幅垂直刷球背，隨揮拍面較開且向高處帶",
+      "若具備雙手反手能力，強烈建議練雙手反手上旋 drop，比單手更具擊球點容錯空間"
+    ],
+    "check": "切球 drop 落地後彈跳貼地；上旋 drop 過網時有明顯下墜弧線且落地後向前彈壓迫對手。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "How To Hit A 3rd Shot Drop In Pickleball (Technique Explained & More)",
+    "source_video_id": "T5anZZ4-Iwo",
+    "timestamp": "13:39",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "ptp-ewrmnnhh7fw-0043",
+    "title": "全身投入參與擊球",
+    "zone": "backcourt",
+    "what": "在場上必須動腳、做墊步（split step），擊球前後都要保持良好的移位與回位腳步，並盡可能盯球。",
+    "why": "良好的腳步能幫助到位擊球與即時回位；在底線有較多時間看球進出拍，在網前快速截擊對峙時眼睛則要多看對手，而 dink 時則有充裕時間盯球。",
+    "how": [
+      "移動腳步並在對手擊球前做好墊步",
+      "完成擊球後立刻用回位腳步重新就位",
+      "底線回球與 dink 時盡量全程緊盯球的軌跡",
+      "網前快節奏抽擊對攻時，視線多鎖定對手"
+    ],
+    "check": "擊球前已站穩停妥，擊球後立刻回位且沒有站在原地看球。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "The Five Golden Rules of Pickleball",
+    "source_video_id": "ewRmnNHh7fw",
+    "timestamp": "00:43",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "ptp-ewrmnnhh7fw-0152",
+    "title": "擊球呼吸節奏配合",
+    "zone": "backcourt",
+    "what": "擊球引拍蓄力時吸氣，向前揮拍擊球時吐氣。",
+    "why": "保持特定呼吸節奏能讓身體在每顆球的擊球過程中充分投入並維持穩定節奏。",
+    "how": [
+      "準備擊球、引拍拉開時吸氣",
+      "向前揮拍擊中球並釋放球時順暢吐氣",
+      "球與球之間視需要自然呼吸調整"
+    ],
+    "check": "每次向前擊球時都有順暢吐氣，沒有憋氣僵硬的情況。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "The Five Golden Rules of Pickleball",
+    "source_video_id": "ewRmnNHh7fw",
+    "timestamp": "01:52",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "ptp-ewrmnnhh7fw-0229",
+    "title": "降低力量換取穩定度",
+    "zone": "backcourt",
+    "what": "減少 20% 到 30% 的擊球力量，以保證球能穩定落在界內為首要原則。",
+    "why": "匹克球想贏球必須把球打進，失誤的隊伍無法獲勝，把球留在場內的普通球遠勝於打十次失誤好幾次的華麗擊球。",
+    "how": [
+      "將出球力量降低 20% 至 30%",
+      "選擇自己能達到 10 次成功 9 次的把握球種",
+      "若某種球 10 次只能成功 3 次，比賽中堅決不打"
+    ],
+    "check": "非受迫性失誤明顯減少，回球能持續穩定落在場內。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "The Five Golden Rules of Pickleball",
+    "source_video_id": "ewRmnNHh7fw",
+    "timestamp": "02:29",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "ptp-ewrmnnhh7fw-0247",
+    "title": "回球預留邊界安全裕度",
+    "zone": "backcourt",
+    "what": "瞄準落點時不要直接對準邊線或球網，要給自己保留容錯緩衝空間（buffer）。",
+    "why": "直接壓線或貼網的失誤風險極高，預留裕度能大幅降低出界或掛網的機率；控球越精準者裕度可越小，但都不應直接瞄線。",
+    "how": [
+      "瞄準落點時將目標定在邊線內側一段距離",
+      "過網高度預留一定安全空間，不要每球都貼網刮過",
+      "依自身當日控球準度適度調整安全緩衝範圍"
+    ],
+    "check": "回球不會頻繁壓在線上或掛網，球都能安全過網落在界內。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "The Five Golden Rules of Pickleball",
+    "source_video_id": "ewRmnNHh7fw",
+    "timestamp": "02:47",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "ptp-ewrmnnhh7fw-0337",
+    "title": "三分之二弱點分配練習法",
+    "zone": "backcourt",
+    "what": "規劃練習時間時，將前三分之二的時間用來穩定弱項，後三分之一強化優勢武器。",
+    "why": "有策略地分配時間能有效補強容易失分的漏洞，同時將擅長的技術打磨成能壓制對手的致命武器。",
+    "how": [
+      "若練習時間為 1 小時，前約 40 分鐘（2/3）專注練習較弱、不穩定的球種",
+      "後約 20 分鐘（1/3）全力練習自己最喜歡、最具威力的武器球種"
+    ],
+    "check": "練習結束時，原本不穩定的技術失誤減少，優勢球種更具攻擊性。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "The Five Golden Rules of Pickleball",
+    "source_video_id": "ewRmnNHh7fw",
+    "timestamp": "03:37",
+    "index": false,
+    "type": "drill"
+  },
+  {
+    "id": "ptp-ewrmnnhh7fw-0455",
+    "title": "主動預判並擬定擊球計畫",
+    "zone": "backcourt",
+    "what": "帶著明確策略上場，主動計畫每一球的處理方式，而不是被動等球來才反應。",
+    "why": "被動反應會讓自己整場處於防守劣勢；主動把球打到對手不喜歡的位置，能逼對手回出自己喜歡打的球，掌握比賽主導權。",
+    "how": [
+      "上場前設定好遇到不同來球時的應對策略",
+      "觀察並找出對手不喜歡打的球路，持續將球送到該處",
+      "若策略奏效就堅持執行；若不奏效則重新閱讀比賽並調整計畫"
+    ],
+    "check": "在場上能主導擊球節奏，逼出對手失誤或打出高品質的進攻機會。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "The Five Golden Rules of Pickleball",
+    "source_video_id": "ewRmnNHh7fw",
+    "timestamp": "04:55",
+    "index": false,
+    "type": "tactic"
+  },
+  {
+    "id": "ptp-ewrmnnhh7fw-0601",
+    "title": "建立場上積極自我與搭檔對話",
+    "zone": "backcourt",
+    "what": "在個人或雙打比賽中，隨時對自己和搭檔保持積極鼓勵的態度與言語溝通。",
+    "why": "心態與情緒直接影響思考與擊球表現；在陷入低潮時積極鼓勵自己與搭檔，能有效幫助球隊擺脫連續失分並重拾專注。",
+    "how": [
+      "好球時主動稱讚搭檔並鼓勵自己維持表現",
+      "失誤時對自己說「沒關係，下一顆抓回來」，對搭檔說「想法很好、打得對，下一分加油」",
+      "連續失分低潮時，原地跳動提振精神，對自己喊話打氣"
+    ],
+    "check": "失誤後不沉溺自責，搭檔間保持溝通擊掌，球隊能快速止血回穩。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "The Five Golden Rules of Pickleball",
+    "source_video_id": "ewRmnNHh7fw",
+    "timestamp": "06:01",
+    "index": false,
+    "type": "tactic"
+  },
+  {
+    "id": "ptp-ewrmnnhh7fw-0849",
+    "title": "先預判防守抽球再應變軟球",
+    "zone": "kitchen",
+    "what": "面對對手擊球時，一律先做好防範重抽球的準備，若來球是軟球再向前處理。",
+    "why": "重抽球速度極快，若沒先準備會被頂到身體或穿透；軟球（dink/drop/reset）飛行時間較長，即使後反應也有充裕時間移位處理。",
+    "how": [
+      "對手擊球前先做墊步，預設對方會用力擊出重抽球",
+      "站位移至對手最可能打出的直線或穿越線路正中央",
+      "確認來球是軟球時，再順暢上前進行截擊或回放"
+    ],
+    "check": "面對對手突如其來的重抽球能穩穩架拍防守或反擊，不再被打得措手不及。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "The Five Golden Rules of Pickleball",
+    "source_video_id": "ewRmnNHh7fw",
+    "timestamp": "08:49",
+    "index": false,
+    "type": "tactic"
+  },
+  {
+    "id": "ptp-zns7wl76li8-0159",
+    "title": "窄單打雙打模擬練習",
+    "zone": "backcourt",
+    "what": "利用窄單打（Skinny Singles）模式，兩名球員僅使用奇數分側（odd side）進行對角線對打練習。",
+    "why": "模擬雙打情境，所有來球都由自己擊打，在相同時間內比一般四人雙打獲得更多觸球機會與重複練習次數，加速球技進步。",
+    "how": [
+      "兩名球員分別站於球場對角的發球區（如奇數側對奇數側）。",
+      "雙方僅能將球打向對角區域，若打向直線區域則判定為出界。",
+      "以此規則進行發球、接發球並展開分法對抗。"
+    ],
+    "check": "擊球落點均維持在對角半場內，且每球都能親自處理，觸球頻率明顯高於四人雙打。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "#1 Transformative Return of Serve Tip",
+    "source_video_id": "Zns7Wl76li8",
+    "timestamp": "01:59",
+    "index": false,
+    "type": "drill"
+  },
+  {
+    "id": "ptp-zns7wl76li8-0340",
+    "title": "接發球站位預留空間並向前迎擊",
+    "zone": "serve",
+    "what": "接發球準備時站位適度後退，擊球時保持身體向前動量（Forward Momentum）。",
+    "why": "後退站位能爭取時間等待來球彈起至高點；擊球時身體向前推進，能藉由前進慣性邊打邊往非截擊區（廚房區）移動，縮短後續上網所需時間，避免原地定點擊球導致回防不及。",
+    "how": [
+      "站位於底線後方適當距離，根據對手發球強弱或順逆風微調站位（順風或強發球退得更後）。",
+      "觀察來球彈起並上升至頂點。",
+      "擊球點保持在身體前方，擊球瞬間身體順勢向前跨步推進。",
+      "擊球完成後不停頓，直接朝非截擊區線順暢前進。"
+    ],
+    "check": "擊球瞬間身體動量是向前而非靜止，擊球結束時腳步已順勢越過底線往網前移動。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "#1 Transformative Return of Serve Tip",
+    "source_video_id": "Zns7Wl76li8",
+    "timestamp": "03:40",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "ptp-zns7wl76li8-0511",
+    "title": "接發球打深打慢爭取上網時間",
+    "zone": "serve",
+    "what": "將接發球瞄準對方底線深處，並以較慢的球速（如利用切球 slice 或增加弧度）回擊。",
+    "why": "球飛行距離越長、速度越慢，在空中停留的時間就越久，能給自己爭取更多跑向非截擊區線的時間；同時迫使對手在底線深處處理第三拍（例如增加第三拍 drop 的難度）。",
+    "how": [
+      "將回球目標設定在對手底線附近的深區。",
+      "可採用切球（slice）打法，使球速變慢、低彈跳並帶有旋轉干擾對手。",
+      "若尚未掌握切球，可打一般平擊球但稍微提高擊球弧度、放慢擊球節奏。",
+      "利用球在空中飛行的充裕時間，迅速且穩健地推進至非截擊區線。"
+    ],
+    "check": "回球落點靠近對方底線，且自己能在對手擊打第三拍之前順利就位在非截擊區線前。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "#1 Transformative Return of Serve Tip",
+    "source_video_id": "Zns7Wl76li8",
+    "timestamp": "05:11",
+    "index": false,
+    "type": "tactic"
+  },
+  {
+    "id": "ptp-zns7wl76li8-0650",
+    "title": "避免接發球過度側身繞打正手",
+    "zone": "serve",
+    "what": "接發球時過度向外側移動硬繞到球的另一側用正手擊球，導致身體嚴重失位。",
+    "why": "繞側打正手會讓自己遠離原本防守位置，增加移動至非截擊區線的距離與時間，容易使回球後的第四拍處於極度被動與落後狀態。",
+    "how": [
+      "來球在反手側時，直接以反手拍確實迎擊，不要大幅度繞步側身。",
+      "平時加強訓練較弱的一側（通常是反手拍），提升回深球的穩定度。",
+      "除非腳步非常快且移動範圍極小，否則盡量依來球方向直接用對應側擊球。"
+    ],
+    "check": "擊球位置維持在正常的接發球站位線上，擊球後能以最短直線距離向非截擊區線推進，未出現大範圍側向補位動作。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "#1 Transformative Return of Serve Tip",
+    "source_video_id": "Zns7Wl76li8",
+    "timestamp": "06:50",
+    "index": false,
+    "type": "problem"
+  },
+  {
+    "id": "ptp-97qrzj03g34-0114",
+    "title": "避免站姿過直打 dink",
+    "zone": "kitchen",
+    "what": "在非截擊區（廚房區）線前膝蓋打直、站得太高，只靠彎腰與伸手去撈球打 dink。",
+    "why": "雙膝鎖死會切斷下半身與擊球的連結，失去最大的穩定力量來源；一旦對手加速抽球，會立刻失去平衡向後倒，且單靠腰部與手臂擊球極不穩定。",
+    "how": [
+      "在非截擊區線前彎曲雙膝降低重心。",
+      "擊球時運用雙腿向地面推蹬的力量向上帶。",
+      "將腿部的推力傳遞至肩膀，帶動球拍向前上方將球送過網。"
+    ],
+    "check": "擊球力量來自腿部向上推蹬而非單靠腰部彎曲，面對對手加速球時能保持重心穩固不往後倒。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "Top 7 Things That Are Killing Your Dinking Game",
+    "source_video_id": "97QRZj03g34",
+    "timestamp": "01:14",
+    "index": false,
+    "type": "problem"
+  },
+  {
+    "id": "ptp-97qrzj03g34-0226",
+    "title": "打 dink 避免手腕甩動",
+    "zone": "kitchen",
+    "what": "擊球時過度使用手腕甩動（wrist flick）來把球打過去。",
+    "why": "手腕甩動會使拍面角度在觸球瞬間劇烈變化，一旦擊球點稍有誤差拍面就會過度打開導致球高高冒高（pop up）被對手扣殺；此外甩腕造成的加速度也會讓球飛得過高過長。",
+    "how": [
+      "固定手腕角度，避免在擊球時甩動拍頭。",
+      "以肩膀關節為主要轉軸進行平穩擺動。",
+      "維持拍面角度在觸球前後保持穩定一致。"
+    ],
+    "check": "擊球過程中拍面維持平穩不翻轉，回球能穩定貼網落在對方非截擊區內，不會意外冒高。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "Top 7 Things That Are Killing Your Dinking Game",
+    "source_video_id": "97QRZj03g34",
+    "timestamp": "02:26",
+    "index": false,
+    "type": "problem"
+  },
+  {
+    "id": "ptp-97qrzj03g34-0413",
+    "title": "避免過度用手肘砍球",
+    "zone": "kitchen",
+    "what": "打 dink 時過度彎曲並動作手肘，呈現由上往下的砍球動作（尤其常出現在反手拍）。",
+    "why": "由手肘發動的由上往下砍球動作，容易將球直接打入網帶，或是擊出過平過長的球而直接飛出對方的非截擊區。",
+    "how": [
+      "持拍手臂保持近乎伸直，手肘僅維持自然的微幅微彎。",
+      "以肩膀為主要槓桿轉軸，由下往上將球推起。",
+      "即使想帶微幅切球（slice），旋轉也是由肩膀帶動拍面滑過球底，而非靠手肘收折砍擊。"
+    ],
+    "check": "擊球動作由肩膀帶動整條手臂向上輕托，球呈現柔和的拋物線過網落地，手肘沒有劇烈收折動作。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "Top 7 Things That Are Killing Your Dinking Game",
+    "source_video_id": "97QRZj03g34",
+    "timestamp": "04:13",
+    "index": false,
+    "type": "problem"
+  },
+  {
+    "id": "ptp-97qrzj03g34-0508",
+    "title": "維持身前最佳擊球範圍",
+    "zone": "kitchen",
+    "what": "擊球點應保持在身體兩側最舒適可控的甜蜜區內，避免過度向前或向側邊伸手撈球。",
+    "why": "過度伸手撈球會破壞身體平衡與擊球穩定度，使拍面無法維持良好控制，容易打出失誤或冒高球。",
+    "how": [
+      "正手拍擊球範圍維持在右前方舒適的距離內（以右手持拍為例）。",
+      "朝向雙腳或身體而來的球，優先使用反手拍處理，其防守範圍較正手拍略大。",
+      "看到來球時迅速移動腳步調整位置，主動讓擊球點落在最佳控制範圍內。"
+    ],
+    "check": "擊球時手臂不必完全伸直勉強去夠球，身體核心維持平衡。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "Top 7 Things That Are Killing Your Dinking Game",
+    "source_video_id": "97QRZj03g34",
+    "timestamp": "05:08",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "ptp-97qrzj03g34-0617",
+    "title": "避免非截擊區過度踏步",
+    "zone": "kitchen",
+    "what": "在非截擊區線前過多跳躍、每球都大步跨進或頻繁使用交叉步，造成腳步動作過多。",
+    "why": "過多的腳步動作會讓身體在擊球瞬間處於不穩定或晃動狀態，不僅消耗額外體力，還會導致來不及為下一拍做好準備。",
+    "how": [
+      "在非截擊區線前保持輕盈準備站姿，但不要無謂跳躍。",
+      "非必要不要每拍都往前大跨步進非截擊區。",
+      "橫向小範圍移動時，優先使用小幅度滑步（shuffle）或腳尖朝前的開放式站姿（open stance）完成擊球。"
+    ],
+    "check": "完成 dink 擊球時雙腳重心穩固且能立刻恢復準備姿勢，沒有過多晃動或交叉步纏腳。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "Top 7 Things That Are Killing Your Dinking Game",
+    "source_video_id": "97QRZj03g34",
+    "timestamp": "06:17",
+    "index": false,
+    "type": "problem"
+  },
+  {
+    "id": "ptp-97qrzj03g34-0726",
+    "title": "堅守非截擊區線打截擊 dink",
+    "zone": "kitchen",
+    "what": "面對落在非截擊區附近的深球，不輕易後退等球落地，而是堅守在非截擊區線以截擊方式（dink volley）空中攔截。",
+    "why": "被對手來球逼退若選擇後退等落地，往往會一路退到更後方而失守網前優勢位置，給對手攻擊空檔。",
+    "how": [
+      "雙腳堅守在非截擊區線外，不主動後退。",
+      "身體壓低、手臂向前延伸進非截擊區上方。",
+      "在球落地前直接以截擊方式輕推成 dink 回擊。",
+      "若被迫後退一步，打完該拍後應立即上前重新奪回非截擊區線。"
+    ],
+    "check": "回擊過程中雙腳腳掌未踩進非截擊區內，且擊球後身體持續壓在非截擊區線上佔據網前位置。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "Top 7 Things That Are Killing Your Dinking Game",
+    "source_video_id": "97QRZj03g34",
+    "timestamp": "07:26",
+    "index": false,
+    "type": "tactic"
+  },
+  {
+    "id": "ptp-97qrzj03g34-0810",
+    "title": "消除正手 dink 大幅度拉拍",
+    "zone": "kitchen",
+    "what": "在正手打 dink 時過度轉動肩膀並將手臂向後大幅度拉拍（take back）。",
+    "why": "後擺幅度過大會讓球拍在迎球時產生不必要的過度加速，導致擊出的 dink 力量過大、飛得過長而直接越過對手的非截擊區成為攻擊目標。",
+    "how": [
+      "幾乎不向後拉拍，減少轉肩幅度。",
+      "提早將球拍微開、放低至預計擊球點下方。",
+      "動作以由下往上、由後向前的柔和推托為主，不進行大揮拍。"
+    ],
+    "check": "引拍時拍頭未超過身體軀幹後方，擊出的球速溫和、剛好越網並下墜在對方非截擊區內。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "Top 7 Things That Are Killing Your Dinking Game",
+    "source_video_id": "97QRZj03g34",
+    "timestamp": "08:10",
+    "index": false,
+    "type": "problem"
+  },
+  {
+    "id": "ptp-pd6jfaxv74i-0039",
+    "title": "職業水準核心：基礎擊球零失誤",
+    "zone": "backcourt",
+    "what": "職業球員最強大的優勢不是花俏的救球或華麗美技，而是能反覆穩定執行扎實的基本擊球。",
+    "why": "發球、接發球、第三拍 drop 與 dink 每一分都在打，極低的失誤率是贏球的基石，過度追求華麗球路反而容易產生壞習慣。",
+    "how": [
+      "以慢動作觀察職業球員的發球、接發球、第三拍 drop 與 dink",
+      "記錄自己常失誤的例行基本球",
+      "將大部分訓練時間集中在打磨基本動作的穩定度，而非追求高難度球路"
+    ],
+    "check": "在常規對打中，例行性發球、接發球與 dink 不會輕易送分或失誤。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "3 Common Mistakes Made by Recreational Pickleball Players (& most players 4.0 and below)",
+    "source_video_id": "PD6JfaXv74I",
+    "timestamp": "00:39",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "ptp-pd6jfaxv74i-0636",
+    "title": "網前截擊與 reset 應以推擋取代揮拍",
+    "zone": "kitchen",
+    "what": "在處理傳統截擊、drop、reset 與 block 時，不採用大動作甩拍，而是穩定拍面借力推擋或吸收來球能量。",
+    "why": "來球本身已帶有力量，過多甩拍動作會破壞擊球穩定度，極簡化動作才能精準借力與減力。",
+    "how": [
+      "維持身體重心穩定，手部保持適度堅定但不僵硬",
+      "減少拍面引拍與隨揮幅度，控制在微小位移",
+      "面對重球時用拍面與身體吸收力量，面對需要推深的球僅施加微幅推力（push）",
+      "動作盡可能簡化，秉持「少即是多（less is more）」原則"
+    ],
+    "check": "截擊或 reset 時球拍沒有大幅度甩動，球能平穩過網並落入目標區域。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "3 Common Mistakes Made by Recreational Pickleball Players (& most players 4.0 and below)",
+    "source_video_id": "PD6JfaXv74I",
+    "timestamp": "06:36",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "ptp-pd6jfaxv74i-0802",
+    "title": "鋪陳優勢前不輕易追求致勝分",
+    "zone": "kitchen",
+    "what": "不應每一拍都想一擊必殺，必須先靠落點將對手逼入劣勢，等到對手回出弱球才進攻。",
+    "why": "得一分需要多次鋪陳，但一次失誤就直接丟分；在缺乏足夠把握（成功率低於 8-9 成）時盲目追求死角，長期下來失分機率遠高於得分。",
+    "how": [
+      "將球打向能讓對手身體扭曲或移動受限的落點",
+      "預設每一球對手都會救回來，擊球後立刻做好下一拍準備",
+      "過網高度保留安全寬容度，瞄準落點退回邊線內側，避免貼網貼線",
+      "自我檢視：若該球路沒有 8 到 9 成的成功率，就不在比賽中冒險強攻"
+    ],
+    "check": "未出現明顯出界或掛網失誤，得分多來自對手在被動下的回球失誤或防守崩潰。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "3 Common Mistakes Made by Recreational Pickleball Players (& most players 4.0 and below)",
+    "source_video_id": "PD6JfaXv74I",
+    "timestamp": "08:02",
+    "index": false,
+    "type": "tactic"
+  },
+  {
+    "id": "ptp-pd6jfaxv74i-1102",
+    "title": "弱點球路降速拆解練習法",
+    "zone": "backcourt",
+    "what": "遇到無法應對的球路（如過深、過快、高旋轉），先降低難度建立打法，再逐步提升速度對抗。",
+    "why": "直接在高速和高壓下練習弱點，只會導致動作變形與失誤連連；從舒適區慢慢增加難度，才能讓身體建立正確的擊球手感。",
+    "how": [
+      "找出自己最常失誤的來球條件（例如深球、下旋、超快球）",
+      "請球伴降低球速、減少旋轉，餵到好打的好球帶建立核心動作",
+      "維持正確的轉肩、小幅引拍與身前擊球點",
+      "當擊球手感穩定後，循序漸進調高來球的速度與旋轉難度"
+    ],
+    "check": "在練習時能連續穩定回擊原本苦手的球路，動作不僵硬、擊球點維持在身體前方。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "3 Common Mistakes Made by Recreational Pickleball Players (& most players 4.0 and below)",
+    "source_video_id": "PD6JfaXv74I",
+    "timestamp": "11:02",
+    "index": false,
+    "type": "drill"
+  },
+  {
+    "id": "ptp-gzsbpweod4c-0046",
+    "title": "打完第三拍盲目衝網",
+    "zone": "backcourt",
+    "what": "打完第三拍 drop 或抽球後，為了趕快站上非截擊區（廚房區）線而全速往前衝，一邊跑一邊看球的落點品質。",
+    "why": "如果打出去的球不夠好，盲目往前衝會導致來不及做 split step 或 split step 慢半拍，被迫在跑動中倉促救球，直接陷入被動防守。",
+    "how": [
+      "擊出第三拍後不要全速衝刺",
+      "擊球後先用眼角餘光與直覺快速評估球的飛行與落點品質",
+      "對手準備擊球前必須停下腳步做好 split step 保持平衡"
+    ],
+    "check": "對手擊球瞬間，自己的雙腳已完成 split step 並穩定站定，而非身體仍在往前衝。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "#1 Most Common Net Rushing Mistake & How To Fix It",
+    "source_video_id": "gzsBpWEOD4c",
+    "timestamp": "00:46",
+    "index": false,
+    "type": "problem"
+  },
+  {
+    "id": "ptp-gzsbpweod4c-0147",
+    "title": "第三拍抽球的正確戰術意圖",
+    "zone": "backcourt",
+    "what": "第三拍選擇抽球時，不要抱著一拍直接得分的心態，而是為了創造下一拍更好的過渡機會。",
+    "why": "第三拍抽球的目的在於迫使對手回球失誤、回擊出高球讓搭檔截擊得分，或是逼出較軟、較短的回球，讓自己能從容跟進打第五拍 drop 進入非截擊區。",
+    "how": [
+      "面對較短的接發球，在底線前做好擊球準備擊出第三拍抽球",
+      "擊球後不急著衝網，留在原地或稍微前移觀察對手回球",
+      "等待對手回出較軟較弱的球，再向前移動並停下打出第五拍 drop 入非截擊區"
+    ],
+    "check": "第三拍抽球後有充裕時間做好準備，並能在平衡狀態下處理第五拍 drop。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "#1 Most Common Net Rushing Mistake & How To Fix It",
+    "source_video_id": "gzsBpWEOD4c",
+    "timestamp": "01:47",
+    "index": false,
+    "type": "tactic"
+  },
+  {
+    "id": "ptp-gzsbpweod4c-0434",
+    "title": "先評估球質再決定前進節奏",
+    "zone": "backcourt",
+    "what": "擊出第三拍（drop 或 抽球）後，必須先快速評估擊球品質，再開始向前推進，過渡區的推進不是賽跑。",
+    "why": "如果擊球品質普通或偏高，對手有攻擊機會，貿然前進會讓自己暴露在危險位置；多花一到兩拍平穩過渡，能確保全程都在受控狀態下抵達網前。",
+    "how": [
+      "第三拍擊球完成後，瞬間判斷球的高度與落點是否具有壓制力",
+      "若球質好、落入非截擊區低點，順勢向前推進幾步",
+      "若球質普通或較高，縮小推進幅度甚至停在原地，準備接對手的攻擊球"
+    ],
+    "check": "每一次擊球前身體都處於完全靜止且平衡的狀態，沒有在移動中被迫揮拍。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "#1 Most Common Net Rushing Mistake & How To Fix It",
+    "source_video_id": "gzsBpWEOD4c",
+    "timestamp": "04:34",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "ptp-gzsbpweod4c-0322",
+    "title": "過渡區兩階段檢查點練習",
+    "zone": "backcourt",
+    "what": "利用半場與兩組三角錐標記檢查點，練習從底線分段推進至非截擊區線的過渡步法與控球。",
+    "why": "透過設定固定的檢查點，強迫自己在每個點停下做 split step，戒除盲目衝網的壞習慣，並學習打出迫使對手在低於球網處擊球的中性球（neutral ball）。",
+    "how": [
+      "在過渡區前半段放置第一組三角錐（檢查點1），後半段接近非截擊區線放置第二組三角錐（檢查點2）",
+      "搭檔站在非截擊區線餵球，球員從底線打出第三拍 drop 或 抽球",
+      "前進至檢查點1停住、做 split step 保持平衡（重心在前腳掌），打出一記讓對手在低於網子處擊球的中性球",
+      "接著前進至檢查點2停住、再做一次 split step 並擊球",
+      "擊球完成後順勢移動至非截擊區線就位"
+    ],
+    "check": "在通過每個檢查點擊球時，身體完全靜止且雙腳重心平穩，打出的球迫使網前搭檔必須在低於球網高度擊球。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "#1 Most Common Net Rushing Mistake & How To Fix It",
+    "source_video_id": "gzsBpWEOD4c",
+    "timestamp": "03:22",
+    "index": false,
+    "type": "drill"
+  },
+  {
+    "id": "ptp-ax-7ies-0gg-0021",
+    "title": "隨處可練的截擊自主訓練",
+    "zone": "kitchen",
+    "what": "截擊球在空中擊出、完全不落地，因此不需依賴平整彈跳的球場地面，任何平坦安全的地方都能練習。",
+    "why": "截擊不接觸地面，不受場地彈跳品質限制，只要腳下踩穩不滑倒，在草地、磚地或等場地的空檔，對牆或與搭檔都能累積擊球手感。",
+    "how": [
+      "尋找草地、水泥地或平整磚地等平坦且站立穩固的場地",
+      "與搭檔相距約非截擊區線對線的距離，或面對牆壁",
+      "雙方直接在空中凌空互擊，維持球不落地的連續截擊"
+    ],
+    "check": "球在兩人之間或對牆連續來回，擊球點皆在空中且腳步站穩不打滑。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "5 KEY tips for amazing pickleball volleys",
+    "source_video_id": "aX-7iEs-0Gg",
+    "timestamp": "00:21",
+    "index": false,
+    "type": "drill"
+  },
+  {
+    "id": "ptp-ax-7ies-0gg-0144",
+    "title": "截擊預備站姿：微屈膝微前傾",
+    "zone": "kitchen",
+    "what": "在網前截擊時，雙膝微彎、上半身微向前傾，雙腳腳趾朝向前方。",
+    "why": "膝蓋打直鎖死或軀幹完全挺直會失去機動性；過度深蹲則浪費體力且難以回位。微屈膝與微前傾能在擊球時讓腿部發力參與，維持穩定且敏捷的運動站姿。",
+    "how": [
+      "雙腳腳趾朝前，膝蓋微彎，不要鎖死膝蓋",
+      "上半身稍微向前傾斜，維持彈性運動站姿",
+      "遇到低球時靠膝蓋下壓降低重心擊球，擊球後立刻回彈回微彎站姿",
+      "橫向移動使用滑步（shuffle step），不可向前踩進非截擊區（廚房區）以免截擊犯規"
+    ],
+    "check": "側面看脊椎與膝蓋呈自然微前傾角度，橫向移動能迅速以滑步到位且沒有直立挺胸鎖膝的現象。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "5 KEY tips for amazing pickleball volleys",
+    "source_video_id": "aX-7iEs-0Gg",
+    "timestamp": "01:44",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "ptp-ax-7ies-0gg-0246",
+    "title": "截擊手肘位置：剛剛好原則",
+    "zone": "kitchen",
+    "what": "手肘保持在身體前方適當距離，既不手臂打直鎖死，也不貼死身側（教練稱 Goldilocks Elbows）。",
+    "why": "手臂完全打直往前伸會使拍面過高，而網前大部分來球高度偏低；手肘完全縮在身側肋骨旁，擊球點容易落後。維持在身體前方適當位置才能在前方的最佳擊球點接球。",
+    "how": [
+      "持拍預備時，手肘自然置於軀幹前方，與身體保持一小段空隙",
+      "手腕微向後仰，讓球拍自然立起在胸腹前方",
+      "來球時手臂順勢向前迎球，不要讓手肘縮回身側"
+    ],
+    "check": "預備與擊球時手肘始終位於視線前方，沒有手肘夾緊肋骨擊球或手臂過度打直僵硬的狀況。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "5 KEY tips for amazing pickleball volleys",
+    "source_video_id": "aX-7iEs-0Gg",
+    "timestamp": "02:46",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "ptp-ax-7ies-0gg-0516",
+    "title": "截擊精簡轉身與微幅推送",
+    "zone": "kitchen",
+    "what": "截擊時肩膀僅做微幅轉動，不拉大拍也不做大隨揮，以向前推送借力為主。",
+    "why": "網前球速快且反應時間極短，做落地抽球般的大轉肩與大拉拍會來不及準備；且來球本身帶有動能，只需精準掌握觸球時間點向前借力推送即可。",
+    "how": [
+      "來球時肩膀僅做小幅度微轉，球拍不拉到身體後方",
+      "向前伸拍迎球，以短促穩定的推送動作將球借力送回",
+      "若需要增加球速，靠腿部力量向前蹬送，而不是加大手臂揮拍幅度",
+      "擊球後立即收拍回到預備姿勢，準備下一拍"
+    ],
+    "check": "球拍後擺不超過肩膀後方，擊球後拍面隨即回到胸前預備位置，能從容應對對手連續快球。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "5 KEY tips for amazing pickleball volleys",
+    "source_video_id": "aX-7iEs-0Gg",
+    "timestamp": "05:16",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "ptp-ax-7ies-0gg-0643",
+    "title": "截擊隨揮高度配合擊球高度",
+    "zone": "kitchen",
+    "what": "截擊的隨揮結束高度取決於擊球點高低：高球高收、中球中收、低球中收，嚴格避免由上往下切剁。",
+    "why": "截擊若從高處向下砍切（chop down），極易掛網或造成失控彈跳；順著球的高度往前推進才能確保過網高度與落點深度。",
+    "how": [
+      "高擊球點（平抽深球）：從高處擊球，隨揮順勢結束在偏高位置",
+      "高擊球點帶角度球：從高處擊球，隨揮可稍微由高到中高位置",
+      "中擊球點：擊球點在腰部高度，隨揮維持在中間高度向前送",
+      "低擊球點：擊球點偏低時，隨揮由低處向前延伸並結束在中間高度",
+      "任何情況下都不要出現從高處明顯由上往下切剁（chop down）的動作"
+    ],
+    "check": "擊球後的隨揮軌跡維持水平或微升向前，沒有球拍猛烈下砍向地面的動作。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "5 KEY tips for amazing pickleball volleys",
+    "source_video_id": "aX-7iEs-0Gg",
+    "timestamp": "06:43",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "ptp-ax-7ies-0gg-0819",
+    "title": "雙人截擊進階四步練習組",
+    "zone": "kitchen",
+    "what": "雙人站在網前不落地互截，依序進行同側互打、跨側對打與八字循環的漸進式練習。",
+    "why": "循序漸進強化正反手截擊切換的反應能力與控球準度，八字循環能模擬實戰中斜線與直線交替的網前截擊節奏。",
+    "how": [
+      "第 1 階段：雙方正手對正手互截連續擊球",
+      "第 2 階段：雙方反手對反手互截連續擊球",
+      "第 3 階段：一方打正手到對方反手，對方打反手回對方正手，一段時間後交換",
+      "第 4 階段（八字循環）：選手 A 一律打斜線、選手 B 一律打直線（例：A 正手斜線 -> B 正手直線 -> A 反手斜線 -> B 反手直線），形成八字循環",
+      "練完一輪後雙方交換打直線與斜線的角色"
+    ],
+    "check": "八字循環中四個擊球點節奏固定、球不落地，雙方能順暢完成數個完整循環不斷球。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "5 KEY tips for amazing pickleball volleys",
+    "source_video_id": "aX-7iEs-0Gg",
+    "timestamp": "08:19",
+    "index": false,
+    "type": "drill"
+  },
+  {
+    "id": "ptp-fbk4hgpewwi-0117",
+    "title": "雙打賽前確立中路球分工",
+    "zone": "backcourt",
+    "what": "在比賽或聯賽開始前，與搭檔明確約定好誰負責處理中路球。",
+    "why": "若沒有預先計畫，球來時容易落入被動反應，甚至造成兩人都搶球或都放球的失誤。",
+    "how": [
+      "賽前與搭檔討論發球後的中間來球由誰處理。",
+      "約定好由誰來執行中路球的第三拍 drop。",
+      "確認兩人在非截擊區（廚房區）線上時，中間的 dink 或中間浮球由誰截擊處理。"
+    ],
+    "check": "比賽中路球出現時，雙方沒有猶豫、搶拍或互看漏球的狀況。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "3 Golden Rules of Winning Pickleball Strategy",
+    "source_video_id": "fBK4HGPEWWI",
+    "timestamp": "01:17",
+    "index": false,
+    "type": "tactic"
+  },
+  {
+    "id": "ptp-fbk4hgpewwi-0143",
+    "title": "單一來球準備兩種應對方式",
+    "zone": "kitchen",
+    "what": "對每一種常見來球，至少掌握並具備兩種不同的回擊手段，避免模式固定。",
+    "why": "如果面對特定來球每次都回擊相同路徑，對手摸清規律後就能提前預判並壓制；保持不可預測性才能讓對手隨時處於警惕狀態。",
+    "how": [
+      "檢視自己面對特定來球（例如低彈跳攻擊球或特定角度 dink）時的回球慣性。",
+      "在同一情境下練習兩種回法（例如受攻擊時可選擇 reset 卸力或反擊推深）。",
+      "在實戰中交替運用不同回球，打亂對手節奏。"
+    ],
+    "check": "對手無法在擊球前提前移動到位抓你的回球路徑。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "3 Golden Rules of Winning Pickleball Strategy",
+    "source_video_id": "fBK4HGPEWWI",
+    "timestamp": "01:43",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "ptp-fbk4hgpewwi-0313",
+    "title": "帶弧度或切球的深長接發球",
+    "zone": "serve",
+    "what": "接發球時打出帶有弧度或切球的深球，而非過於平擊剛猛的抽球。",
+    "why": "平抽快球雖然速度快，但球過網時間極短，導致自己沒有足夠時間從底線推進至非截擊區（廚房區）線，容易在過渡區被迫打難處理的第四拍；較慢且深的球能為自己爭取推進上網的時間。",
+    "how": [
+      "接發球時採取切球或帶有適度弧度的推擊球。",
+      "目標將球落在對手底線附近深處。",
+      "擊球後立即順勢向前跟進移動至非截擊區線。"
+    ],
+    "check": "在對手擊出第三拍之前，自己已經平穩站上非截擊區線就位。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "3 Golden Rules of Winning Pickleball Strategy",
+    "source_video_id": "fBK4HGPEWWI",
+    "timestamp": "03:13",
+    "index": false,
+    "type": "tactic"
+  },
+  {
+    "id": "ptp-fbk4hgpewwi-0407",
+    "title": "利用慢速球爭取回防與站位時間",
+    "zone": "backcourt",
+    "what": "在第三拍 drop 或處於防守劣勢時，透過打出慢速、弧度適當的 reset 來重置節奏。",
+    "why": "慢速球滯空時間較長且不易被對手直接向下進攻，能為自己爭取寶貴的秒數，從底線或過渡區調整腳步移動到網前。",
+    "how": [
+      "發球方擊出第三拍 drop 時，保持球速和緩並落在非截擊區內。",
+      "當擊球點過低或受到對手壓迫反擊時，不勉強硬抽，以柔和手感擊出 reset。",
+      "利用球飛行的空檔，迅速向前補位至非截擊區線。"
+    ],
+    "check": "擊球後有充裕時間調整站位，且對手無法直接向下扣殺。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "3 Golden Rules of Winning Pickleball Strategy",
+    "source_video_id": "fBK4HGPEWWI",
+    "timestamp": "04:07",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "ptp-fbk4hgpewwi-0453",
+    "title": "壓迫性深 dink 奪走對手反應時間",
+    "zone": "kitchen",
+    "what": "在網前打出落點靠近對手腳邊或帶上旋的深 dink，壓迫對手空間。",
+    "why": "球直逼腳邊會迫使對手在空中截擊、半截擊或後退落地之間猶豫，壓縮其決策時間，容易引導出起球浮球（pop-up）或直接失誤。",
+    "how": [
+      "dink 時瞄準對手腳部前方或腳邊空檔，增加球的深度。",
+      "擊球時可適度加入上旋，使球落地後向前竄起加速。",
+      "隨時保持準備姿勢，鎖定對手被壓迫後冒出的高球進行攻擊。"
+    ],
+    "check": "對手擊球點受擠壓、腳步後退或回擊出高於球網的浮球。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "3 Golden Rules of Winning Pickleball Strategy",
+    "source_video_id": "fBK4HGPEWWI",
+    "timestamp": "04:53",
+    "index": false,
+    "type": "tactic"
+  },
+  {
+    "id": "ptp-fbk4hgpewwi-0625",
+    "title": "站位防守優先準備防範抽球",
+    "zone": "kitchen",
+    "what": "在非截擊區線防守時，站位與準備動作必須優先預設防範對手的抽球（抽球/speed up）。",
+    "why": "在對手的所有回球中，抽球威脅最大且球速最快，若未提前準備將完全來不及反應；若是軟球（dink/drop），通常有充裕時間跨步上前處理。",
+    "how": [
+      "觀察對手擊球點位置，評估其最可能發力抽球的角度範圍。",
+      "與搭檔移動卡住對手抽球的角度中線，縮小球場空檔。",
+      "球拍持於胸前維持防守準備姿態，優先防範快速球。",
+      "若對手回擊為軟球，再順勢向前移動處理。"
+    ],
+    "check": "面對對手突發的高速抽球或 speed up 時，球拍能及時攔截擋球，而不致手足無措。",
+    "source_channel": "PrimeTime Pickleball",
+    "source_title": "3 Golden Rules of Winning Pickleball Strategy",
+    "source_video_id": "fBK4HGPEWWI",
+    "timestamp": "06:25",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "bp-nbsuptoy3-c-0200",
+    "title": "發球站位與腳步限制",
+    "zone": "serve",
+    "what": "無論落地發球或截擊發球，擊球瞬間發球者的站位都受相同規則限制。",
+    "why": "規則要求擊球時必須保持至少一隻腳著地，且雙腳不得踩踏底線、中線延伸線或邊線延伸線之外的區域。",
+    "how": [
+      "站位保持在底線後方、中線延伸線與邊線延伸線之間的發球區內",
+      "擊球瞬間確認至少有一隻腳與發球區地面接觸（接地）",
+      "雙腳不可踩踏底線或跑進球場內，也不得踩越邊線與中線的虛擬延伸線",
+      "（教練建議）為避免爭議，發球時盡量遠離邊線與中線，站穩在區域正中央偏後處"
+    ],
+    "check": "球拍擊中球的瞬間，至少一隻腳在發球區地面上，且沒有任何一隻腳踩在底線或界外地面。",
+    "source_channel": "Better Pickleball",
+    "source_title": "Is That Serve Legal? 2026 Pickleball Serve Rules Update",
+    "source_video_id": "NbSUPToY3-c",
+    "timestamp": "02:00",
+    "index": false,
+    "type": "rule"
+  },
+  {
+    "id": "bp-nbsuptoy3-c-0315",
+    "title": "發球放球三大合規要件",
+    "zone": "serve",
+    "what": "發球放球時必須遵守釋放方式、不得施加旋轉、動作清晰可見三項規定。",
+    "why": "避免發球者利用手指搓球或球拍切球在放球階段製造額外旋轉，並確保對手能清楚看見放球動作。",
+    "how": [
+      "僅能使用單手或球拍來釋放球",
+      "放球時不得用手或球拍搓轉、操縱球體以產生旋轉",
+      "自然放手或讓球從拍面滾落，不可向下拋砸",
+      "確保對手與裁判能清楚看到放球動作"
+    ],
+    "check": "對手能清楚看到放手過程，球離開手或球拍時沒有人為強加的旋轉。",
+    "source_channel": "Better Pickleball",
+    "source_title": "Is That Serve Legal? 2026 Pickleball Serve Rules Update",
+    "source_video_id": "NbSUPToY3-c",
+    "timestamp": "03:15",
+    "index": false,
+    "type": "rule"
+  },
+  {
+    "id": "bp-nbsuptoy3-c-0500",
+    "title": "落地發球的放球與彈跳規範",
+    "zone": "serve",
+    "what": "落地發球（drop serve）是指球釋放後先自然落地彈跳，再以球拍擊打的發球方式。",
+    "why": "落地發球規則只約束「放球動作」，不限制球拍的揮拍路徑與擊球高度。",
+    "how": [
+      "可將手臂舉至自然伸展的任何高度放球（但不可站在椅子或隊友背上等外力輔助）",
+      "讓球在重力作用下自然下落，嚴禁朝任何方向用力推砸或拋球",
+      "球落地彈跳後再擊球，彈跳次數無限制（可彈跳一次以上）",
+      "球彈跳的地點沒有限制，彈在底線外或球場內皆合法"
+    ],
+    "check": "球是自然落體彈跳而非用力下砸，擊球發生在球彈跳之後。",
+    "source_channel": "Better Pickleball",
+    "source_title": "Is That Serve Legal? 2026 Pickleball Serve Rules Update",
+    "source_video_id": "NbSUPToY3-c",
+    "timestamp": "05:00",
+    "index": false,
+    "type": "rule"
+  },
+  {
+    "id": "bp-nbsuptoy3-c-0545",
+    "title": "落地發球高處放球的優勢",
+    "zone": "serve",
+    "what": "落地發球時將手舉高放球，彈跳頂點通常會更高，擊球點更理想。",
+    "why": "手臂高舉自然釋放時，球彈跳最高點約落在膝蓋至大腿高度，此高度揮拍發球最為順手且具攻擊空間。",
+    "how": [
+      "持球手完全向上伸直舉高",
+      "在最高點鬆手讓球自由垂直落下",
+      "等待球彈起達到最高點（大約在膝蓋到大腿高度）時揮拍擊球",
+      "避免放球位置過低導致彈跳過低、被迫在過低位置起拍"
+    ],
+    "check": "球彈起的最高頂點接近大腿高度，能以舒適自然的腰下擊球軌跡迎擊。",
+    "source_channel": "Better Pickleball",
+    "source_title": "Is That Serve Legal? 2026 Pickleball Serve Rules Update",
+    "source_video_id": "NbSUPToY3-c",
+    "timestamp": "05:45",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "bp-nbsuptoy3-c-0833",
+    "title": "截擊發球三大揮拍限制",
+    "zone": "serve",
+    "what": "截擊發球（volley serve，不落地直接發球）必須同時符合向上弧線、拍頭低於手腕、擊球點低於腰部三項限制。",
+    "why": "截擊發球規則約束的是揮拍動作與接觸點，防止發球演變成具壓迫性的由上往下扣殺。",
+    "how": [
+      "揮拍路徑：球拍擊球時必須沿著向上弧線（upward arc）由下往上移動",
+      "拍頭位置：擊球瞬間拍面的最高點，必須明顯低於持拍手手腕關節的最高處",
+      "擊球高度：球拍接觸球的瞬間，球的整體位置必須明確低於發球者的腰部（肚臍位置）"
+    ],
+    "check": "擊球瞬間揮拍呈明顯由下而上、拍頭朝下或斜下方、擊球點在肚臍以下。",
+    "source_channel": "Better Pickleball",
+    "source_title": "Is That Serve Legal? 2026 Pickleball Serve Rules Update",
+    "source_video_id": "NbSUPToY3-c",
+    "timestamp": "08:33",
+    "index": false,
+    "type": "rule"
+  },
+  {
+    "id": "bp-nbsuptoy3-c-1023",
+    "title": "截擊發球常見違規：挑高切發球",
+    "zone": "serve",
+    "what": "發挑高弧度較大或具切削的發球時，擊球點往往不慎高於腰部而形成違規發球。",
+    "why": "發球者為了做出推高或切削動作，常將球放得較高並在胸腰之間擊球，觸球點已超過肚臍水平面。",
+    "how": [
+      "自我檢查擊球高度是否在肚臍以下",
+      "啟動揮拍時手肘與手臂放鬆，保持由低到高的自然軌跡",
+      "讓接觸點保持在身體前方稍低位置，不要等球掉在過高位置去平推或由上往下切"
+    ],
+    "check": "拍面觸球時的位置確實低於腰際（肚臍高度），沒有在胸口或中腹部擊球。",
+    "source_channel": "Better Pickleball",
+    "source_title": "Is That Serve Legal? 2026 Pickleball Serve Rules Update",
+    "source_video_id": "NbSUPToY3-c",
+    "timestamp": "10:23",
+    "index": false,
+    "type": "problem"
+  },
+  {
+    "id": "bp-nbsuptoy3-c-1100",
+    "title": "友誼賽疑違規發球的處理原則",
+    "zone": "serve",
+    "what": "（教練觀點）在休閒友誼賽（rec play）中，除非發球極度誇張（如直接過頭扣殺），否則接發球方不應在比賽中直接喊違規。",
+    "why": "接發球員距離發球者約20呎，缺乏裁判在網前的視角與慢動作回放，很難百分之百確定違規；當場抓犯規極易引發雙方火氣與俱樂部人際衝突。",
+    "how": [
+      "比賽進行中不要直接中斷比賽喊對方發球違規",
+      "若確信對方發球違規（例如有錄影佐證），等該場比賽結束後私下找對方溝通",
+      "以客觀規則書文字或錄影畫面為依據，客觀告知所觀察到的情況",
+      "友善建議對方調整動作以符合正式規則，避免公開羞辱或當面指責"
+    ],
+    "check": "場上氣氛維持和諧，賽後私下溝通時對方能理解規則並願意調整動作。",
+    "source_channel": "Better Pickleball",
+    "source_title": "Is That Serve Legal? 2026 Pickleball Serve Rules Update",
+    "source_video_id": "NbSUPToY3-c",
+    "timestamp": "11:00",
+    "index": false,
+    "type": "tactic"
+  },
+  {
+    "id": "bp-be5bchvokxk-0106",
+    "title": "Drop-in 開放暢打參與方式",
+    "zone": "backcourt",
+    "what": "Drop-in play（又稱 open play 或 rec play），是不需事先預約場地、也不需自備搭檔的匹克球開放暢打機制。",
+    "why": "讓球友隨時能到球場與不同的人打球，降低打球門檻並迅速融入在地匹克球社群。",
+    "how": [
+      "查詢場地公告的開放暢打時段並準時到場",
+      "抵達後找到現場的球拍排隊區（paddle line up／paddle rack）",
+      "將球拍放入隊列中排隊",
+      "輪到自己的球拍時即可進入空出的場地開始比賽"
+    ],
+    "check": "球拍依序排入隊列，前一場結束後能順利接續上場進行下一場雙打。",
+    "source_channel": "Better Pickleball",
+    "source_title": "Pickleball Open Play - Everything Beginners Need to Know",
+    "source_video_id": "BE5bChvoKxk",
+    "timestamp": "01:06",
+    "index": false,
+    "type": "rule"
+  },
+  {
+    "id": "bp-be5bchvokxk-0139",
+    "title": "初次到場評估適合程度",
+    "zone": "backcourt",
+    "what": "開放暢打場地通常會按球友技術水平分場，新手需先確認該場地是否有新手友善區或符合自己實力的分區。",
+    "why": "避免誤入不合適的程度組別導致挫折感，或影響雙方比賽的流暢度。",
+    "how": [
+      "出發前或抵達時向球場櫃檯或球友詢問是否有新手友善的時段或場地",
+      "若清楚自己的評分（rating），直接對應現場分級標示尋找場地",
+      "若不清楚評分，先沿著球場走一圈觀察各場比賽的來回球節奏",
+      "評估場上節奏與自己實力相當、稍高或稍低後再決定加入哪一區"
+    ],
+    "check": "上場後能正常參與 rally 來回對打，沒有明顯跟不上球速或實力過度落差的情況。",
+    "source_channel": "Better Pickleball",
+    "source_title": "Pickleball Open Play - Everything Beginners Need to Know",
+    "source_video_id": "BE5bChvoKxk",
+    "timestamp": "01:39",
+    "index": false,
+    "type": "tactic"
+  },
+  {
+    "id": "bp-be5bchvokxk-0329",
+    "title": "球拍排隊架輪替規則",
+    "zone": "backcourt",
+    "what": "球場滿場時使用球拍架（paddle rack）排隊輪替上場的機制。",
+    "why": "建立客觀、公平的排隊順序，讓滿場時所有人都能依序享有打球權利。",
+    "how": [
+      "找到球拍架並確認該架標示的程度級別（例如 1.0-3.0）",
+      "將自己的球拍插入排隊架中後方的空槽內",
+      "向現場常客或管理人員詢問該場地的輪替方式（例如：2 on 2 off 兩上兩下、或 4 on 4 off 四上四下）",
+      "當隊列推進到自己的球拍時，與同組球友一同拿拍進場"
+    ],
+    "check": "球拍位置依打完場次向前推移，輪到自己時能清楚知道搭檔與對手並準時進場。",
+    "source_channel": "Better Pickleball",
+    "source_title": "Pickleball Open Play - Everything Beginners Need to Know",
+    "source_video_id": "BE5bChvoKxk",
+    "timestamp": "03:29",
+    "index": false,
+    "type": "rule"
+  },
+  {
+    "id": "bp-be5bchvokxk-0250",
+    "title": "球場球具借用與確認",
+    "zone": "gear",
+    "what": "前往不同球場參加開放暢打時，球與備用球拍的準備與確認方式。",
+    "why": "不同場地規範不同，有的提供公用球，有的需自備；多數球友裝備袋中會有備用球拍可供借用。",
+    "how": [
+      "出發前先查詢該場地是否免費提供匹克球或有租借球拍服務",
+      "若自己沒有球拍，可向現場櫃檯或球友禮貌詢問是否有備用球拍（extra paddle）可借用",
+      "確定現場用球類型後再進場熱身"
+    ],
+    "check": "進場前手中具備合乎規定的球拍，且場上有符合場地條件的球可供比賽。",
+    "source_channel": "Better Pickleball",
+    "source_title": "Pickleball Open Play - Everything Beginners Need to Know",
+    "source_video_id": "BE5bChvoKxk",
+    "timestamp": "02:50",
+    "index": false,
+    "type": "equipment"
+  },
+  {
+    "id": "bp-vbt6eoljes8-0053",
+    "title": "使用大陸式握拍提升控球力",
+    "zone": "kitchen",
+    "what": "避免用手掌死抓球拍，改用如同握手般的大陸式握拍（continental grip）。",
+    "why": "若將球拍握在掌心會喪失對球拍的控制力；大陸式握拍屬於中性握拍，能輕鬆左右變換拍面並帶來最大控制力。",
+    "how": [
+      "伸出手做出像要與人握手的姿勢",
+      "以手指自然包覆拍柄，避免將拍柄緊壓在掌心深處",
+      "維持中性拍面，方便正反手兩側隨時轉換"
+    ],
+    "check": "球拍能在正手與反手間輕鬆靈活切換，控球更為穩定。",
+    "source_channel": "Better Pickleball",
+    "source_title": "The 5 Mistakes That Sabotage Beginner Pickleball Players",
+    "source_video_id": "vbt6eOLJeS8",
+    "timestamp": "00:53",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "bp-vbt6eoljes8-0141",
+    "title": "擊球前務必做分腿墊步",
+    "zone": "backcourt",
+    "what": "在擊球前停下跑動步伐，以分腿墊步（split step）煞住前進的身體動量。",
+    "why": "若未停步就直接跑著擊球，身體累積的動量會帶進擊球中，導致球擊出界或挑出容易被殺的高球（pop-up）。",
+    "how": [
+      "向前跑動移位接近球時，觀察對手動作",
+      "當對手準備擊球時，立即做出分腿墊步停下身體動量",
+      "在身體完全平衡穩定的狀態下完成擊球"
+    ],
+    "check": "擊球瞬間身體不再向前衝，回球不會無故出界或向上冒高。",
+    "source_channel": "Better Pickleball",
+    "source_title": "The 5 Mistakes That Sabotage Beginner Pickleball Players",
+    "source_video_id": "vbt6eOLJeS8",
+    "timestamp": "01:41",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "bp-vbt6eoljes8-0250",
+    "title": "發球方與接發方上前戰術區分",
+    "zone": "backcourt",
+    "what": "不要在發球局盲目直衝非截擊區（廚房區），應根據發球方或接發球方採用不同上前策略。",
+    "why": "接發球方回球後可直接上網；但發球方若在第三拍 drop 冒高或過深時盲目衝向網前，很容易直接被對手扣殺。",
+    "how": [
+      "接發球方：擊出接發球後，順勢向前衝至非截擊區線站定",
+      "發球方：留在底線後方等待第三拍",
+      "發球方：觀察隊友或自己的第三拍品質，若球沒 drop 好或偏高，切勿盲目直衝非截擊區線"
+    ],
+    "check": "發球方上網時不會被對手迎頭扣殺，能依第三拍品質決定推進節奏。",
+    "source_channel": "Better Pickleball",
+    "source_title": "The 5 Mistakes That Sabotage Beginner Pickleball Players",
+    "source_video_id": "vbt6eOLJeS8",
+    "timestamp": "02:50",
+    "index": false,
+    "type": "tactic"
+  },
+  {
+    "id": "bp-vbt6eoljes8-0402",
+    "title": "接發球務必打深至底線",
+    "zone": "serve",
+    "what": "接發球時應將球擊向對手球場後段靠近底線的位置，避免回球過短。",
+    "why": "短的接發球讓發球方能走進場內輕鬆打第三拍並迅速壓迫；深回球則迫使發球方退至底線打高難度的遠距離第三拍。",
+    "how": [
+      "接發球時瞄準對手半場的後方綠色區域（底線附近）",
+      "確保球的落點靠近底線，把發球方壓制在球場深處",
+      "完成深回球後再順勢上前至非截擊區線"
+    ],
+    "check": "對手必須退到球場深處、在底線打難度極高的第三拍，而非進場輕鬆攻擊。",
+    "source_channel": "Better Pickleball",
+    "source_title": "The 5 Mistakes That Sabotage Beginner Pickleball Players",
+    "source_video_id": "vbt6eOLJeS8",
+    "timestamp": "04:02",
+    "index": false,
+    "type": "tactic"
+  },
+  {
+    "id": "bp-vbt6eoljes8-0507",
+    "title": "簡化擊球動作追求穩定性",
+    "zone": "kitchen",
+    "what": "摒棄大幅度旋球或花俏的複雜動作，奉行「少即是多（less is more）」的簡單擊球動作。",
+    "why": "動作越複雜越難以重複重現；簡化動作能顯著減少非受迫性失誤，提高擊球穩定性與連貫度。",
+    "how": [
+      "無論在網前 dink 或是後場擊球，拿掉過度的大拉拍與刻意刷旋",
+      "僅使用完成該擊球所需的最簡動作幅度",
+      "保持擊球動作純粹、穩定且易於重複"
+    ],
+    "check": "擊球動作乾淨簡短，連續來回中的失誤率明顯下降。",
+    "source_channel": "Better Pickleball",
+    "source_title": "The 5 Mistakes That Sabotage Beginner Pickleball Players",
+    "source_video_id": "vbt6eOLJeS8",
+    "timestamp": "05:07",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "bp-2kpmmi7-fnw-0202",
+    "title": "第三拍 drop 動作來自肩膀",
+    "zone": "backcourt",
+    "what": "第三拍 drop 的擺臂動作必須由肩膀帶動，手肘可自然微彎，但不可以用手肘或手腕作為發力來源。",
+    "why": "手肘與手腕屬於小肌群，用手肘彎曲或甩手腕發力會改變拍面角度，導致擊球過高或失誤，無法產生穩定且可重複的擊球動作。",
+    "how": [
+      "準備擊球時保持手肘可自然微彎，不需僵硬伸直。",
+      "揮拍時以肩膀為軸心帶動整條手臂與球拍一體擺動。",
+      "擊球過程中固定手腕，避免在觸球瞬間翻轉手腕或向上屈肘勾球。"
+    ],
+    "check": "擊球時拍面保持穩定朝向目標，球不會因手肘或手腕突然發力而噴飛過高或掛網。",
+    "source_channel": "Better Pickleball",
+    "source_title": "The 3rd Shot Drop Formula Every Player Needs to Know",
+    "source_video_id": "2KpmMI7-fnw",
+    "timestamp": "02:02",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "bp-2kpmmi7-fnw-0339",
+    "title": "將 drop 視為拋球而非打球",
+    "zone": "backcourt",
+    "what": "處理第三拍 drop 時，心理意象應想像成把球「拋」（toss）向目標，而不是用力去「打」（hit）球。",
+    "why": "將擊球感覺轉化為拋球，能自然引導身體使用肩膀進行平穩擺動，避免出現過度發力或用手臂硬推的衝動。",
+    "how": [
+      "站在擊球位置前，在腦中建立把球輕拋至對手非截擊區的意象。",
+      "揮拍軌跡比照下投手拋球的動作，由肩膀平順向前向上延伸。"
+    ],
+    "check": "揮拍動作平穩流暢，擊出的球帶有柔和的拋物線落在對方非截擊區內。",
+    "source_channel": "Better Pickleball",
+    "source_title": "The 3rd Shot Drop Formula Every Player Needs to Know",
+    "source_video_id": "2KpmMI7-fnw",
+    "timestamp": "03:39",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "bp-2kpmmi7-fnw-0351",
+    "title": "徒手拋球漸退練習",
+    "zone": "backcourt",
+    "what": "放下球拍，兩人隔網徒手接球並拋球，從非截擊區線開始逐漸後退至底線，體會 drop 的發力。",
+    "why": "透過徒手拋球能直接感受肩膀帶動的動作，隨著距離拉遠，也能自然學會藉由放大肩膀隨球動作來調節距離，建立身體記憶。",
+    "how": [
+      "雙方放下球拍，先站於非截擊區（廚房區）線兩側。",
+      "一方手拋球，另一方接住後，以肩膀帶動手臂將球平順拋回對方非截擊區。",
+      "熟悉後，練習者往後退 2 到 3 步，再次以肩膀發力拋球，並擴大隨球動作以增加飛行距離。",
+      "逐步退至底線，重複感受距離增加時肩膀動作與延伸隨球的配合。"
+    ],
+    "check": "拋球動力全程由肩膀產生，手臂與手腕不甩動，球能穩定拋入對面的非截擊區。",
+    "source_channel": "Better Pickleball",
+    "source_title": "The 3rd Shot Drop Formula Every Player Needs to Know",
+    "source_video_id": "2KpmMI7-fnw",
+    "timestamp": "03:51",
+    "index": false,
+    "type": "drill"
+  },
+  {
+    "id": "bp-2kpmmi7-fnw-0616",
+    "title": "持拍漸退 drop 練習",
+    "zone": "backcourt",
+    "what": "手持球拍，從非截擊區線開始以 dink 擊球，隨後逐步退入過渡區直到靠近底線，維持肩膀擺動的 drop 動作。",
+    "why": "將徒手拋球的肩膀感覺直接轉移到球拍上；在不同距離下練習，能同時訓練底線第三拍 drop 與過渡區 drop 的穩定度。",
+    "how": [
+      "兩人手持球拍站於非截擊區線，以肩膀擺動進行數球平穩的 dink。",
+      "練習者往後退步進入過渡區（transition zone），維持相同的肩膀擺動與拍面控制擊球。",
+      "退得越遠，隨球擺動的幅度要隨之拉長，將球柔和推向對方非截擊區。",
+      "持續退至靠近底線位置，模擬第三拍 drop 擊球，腳步保持以腳掌前段靈活移動不拖泥帶水。"
+    ],
+    "check": "不論站在過渡區或底線，擊球動作皆由肩膀帶動，球穩定落入對方非截擊區內。",
+    "source_channel": "Better Pickleball",
+    "source_title": "The 3rd Shot Drop Formula Every Player Needs to Know",
+    "source_video_id": "2KpmMI7-fnw",
+    "timestamp": "06:16",
+    "index": false,
+    "type": "drill"
+  },
+  {
+    "id": "bp-2kpmmi7-fnw-0817",
+    "title": "避免追求過低的貼網弧線",
+    "zone": "backcourt",
+    "what": "許多球友誤以為 drop 必須像半個拍面或一個拍面高度那樣貼網（skim the net），導致容錯率極低並頻繁掛網。",
+    "why": "過度害怕被對手攻擊，會促使球友刻意壓低球路；然而太低的弧線容錯率極差，容易直接掛網送分。建立穩定 drop 的第一步是先給予足夠弧度讓球過網，之後再微調能量使球不易被進攻。",
+    "how": [
+      "改變觀念，擊球時瞄準較高的飛行弧度（loft），給予球足夠高度跨越球網。",
+      "第一優先目標是「球一定要過網並落入非截擊區」，不要一開始就想壓到貼網高度。",
+      "能穩定過網後，再透過控制擺臂力量與手感，減少球上的衝力使其落地前不被攻擊。"
+    ],
+    "check": "擊球飛行軌跡呈現明顯的圓滑弧線，球能穩健越過球網並落在目標區域，大幅降低掛網率。",
+    "source_channel": "Better Pickleball",
+    "source_title": "The 3rd Shot Drop Formula Every Player Needs to Know",
+    "source_video_id": "2KpmMI7-fnw",
+    "timestamp": "08:17",
+    "index": false,
+    "type": "problem"
+  },
+  {
+    "id": "bp-2kpmmi7-fnw-1134",
+    "title": "一次專注練好一個技術要點",
+    "zone": "backcourt",
+    "what": "練球時遵循「一次一件事」（One Thing At A Time，簡稱 1TAT）原則，挑選一個最需要改進的環節單獨專注練習。",
+    "why": "如果同時把肩膀發力、拋球感、球的弧線等所有要點全部混在一次練習中執行，往往哪一個都做不好；單點突破能讓進步速度更快且更紮實。",
+    "how": [
+      "評估自己目前第三拍 drop 最嚴重的問題（例如：手腕亂晃、弧線太低）。",
+      "上場練習時只設定單一關注焦點（例如：今天只專心確認每一次擺臂都是肩膀帶動）。",
+      "當該要點形成穩定習慣後，再換下一個要點進行練習。"
+    ],
+    "check": "在練習過程中能清楚自評該單一要點是否執行到位，技術細節在實戰中逐漸變成本能反應。",
+    "source_channel": "Better Pickleball",
+    "source_title": "The 3rd Shot Drop Formula Every Player Needs to Know",
+    "source_video_id": "2KpmMI7-fnw",
+    "timestamp": "11:34",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "bp-a7rzzs-ya8-0033",
+    "title": "站姿過窄且從髖部彎腰",
+    "zone": "kitchen",
+    "what": "在非截擊區（廚房區）打 dink 時雙腳站太窄、膝蓋幾乎沒彎，只靠髖部向前彎腰打球。",
+    "why": "從髖部彎腰無法提供良好控制力，極度容易讓打出的 dink 冒高而被對手扣殺。",
+    "how": [
+      "將雙腳打開至略寬於肩寬的站姿開始準備",
+      "當輪到自己擊球時，彎曲膝蓋使身體重心降低以進入球的下方",
+      "避免單純從髖部往前彎腰，用屈膝搭配臀部下沉的方式將球向上托起過網"
+    ],
+    "check": "擊球時能輕鬆移動雙腳，身體維持穩定低重心，打出的球平穩過網不冒高。",
+    "source_channel": "Better Pickleball",
+    "source_title": "Stop Popping Up Your Dinks — Fix These Dink Mistakes FAST!",
+    "source_video_id": "-a7rZzS-yA8",
+    "timestamp": "00:33",
+    "index": false,
+    "type": "problem"
+  },
+  {
+    "id": "bp-a7rzzs-ya8-0144",
+    "title": "Dink握拍力量過大",
+    "zone": "kitchen",
+    "what": "握拍太緊（教練稱為死亡握法）會喪失對球弧線的控制力。",
+    "why": "太用力的握拍會讓球彈得過高；將握拍放鬆能獲得對擊球軌跡的最佳控制力。",
+    "how": [
+      "以 1 到 10 分設定握拍壓力表（1 為最輕、10 為緊握）",
+      "打 dink 時將握拍壓力維持在約 2 到 3 之間",
+      "在擊球前自我檢查握拍手感，確保手腕與手掌處於放鬆狀態"
+    ],
+    "check": "擊球感柔軟，球不會因球拍過度反彈而衝高出界或冒高。",
+    "source_channel": "Better Pickleball",
+    "source_title": "Stop Popping Up Your Dinks — Fix These Dink Mistakes FAST!",
+    "source_video_id": "-a7rZzS-yA8",
+    "timestamp": "01:44",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "bp-a7rzzs-ya8-0251",
+    "title": "Dink引拍過大造成冒高",
+    "zone": "kitchen",
+    "what": "在網前打 dink 時做出像底線抽球一樣的大引拍動作。",
+    "why": "過大的引拍會為球施加過多動能，在極短距離內必然導致球冒高被對手攻擊。",
+    "how": [
+      "盡可能縮小揮拍幅度，採用剛好足夠過網的極小揮拍",
+      "預先將球拍放至預期擊球點的位置前方",
+      "直接順勢將球輕輕托起推過球網，不要往後拉拍"
+    ],
+    "check": "球拍起拍位置在身體前方，揮拍路徑極短，球剛好貼網落下。",
+    "source_channel": "Better Pickleball",
+    "source_title": "Stop Popping Up Your Dinks — Fix These Dink Mistakes FAST!",
+    "source_video_id": "-a7rZzS-yA8",
+    "timestamp": "02:51",
+    "index": false,
+    "type": "problem"
+  },
+  {
+    "id": "bp-a7rzzs-ya8-0410",
+    "title": "Dink過度使用手腕",
+    "zone": "kitchen",
+    "what": "打 dink 時用手腕的甩動或翻轉來推球或帶球。",
+    "why": "手腕是小肌肉群，用手腕當作主導力量無法穩定控球，常常一球打好、下一球就嚴重冒高。",
+    "how": [
+      "保持手腕柔軟但不主動發力，手腕絕不是擊球的驅動力來源",
+      "改由肩膀帶動整個手臂動作",
+      "用肩膀作為主要驅動點，平穩地將球向上托起送過網"
+    ],
+    "check": "手腕在擊球過程中角度保持穩定不甩動，動作由肩關節平順擺動完成。",
+    "source_channel": "Better Pickleball",
+    "source_title": "Stop Popping Up Your Dinks — Fix These Dink Mistakes FAST!",
+    "source_video_id": "-a7rZzS-yA8",
+    "timestamp": "04:10",
+    "index": false,
+    "type": "problem"
+  },
+  {
+    "id": "bp-a7rzzs-ya8-0528",
+    "title": "傾斜身體取代腳步移動",
+    "zone": "kitchen",
+    "what": "面對兩側來球時腳步站死，只靠上半身向側邊傾斜伸手去夠球。",
+    "why": "身體側傾會破壞擊球姿勢與平衡，失去前置準備空間，極易打出冒高球。",
+    "how": [
+      "將重心保持在前腳掌（或稱腳底三角形區域）保持機動性",
+      "球往兩側跑時，第一時間移動腳步使身體就位",
+      "避免上半身歪斜伸手，用移動步伐讓球拍能自然擺在身體前方托球過網"
+    ],
+    "check": "擊球瞬間身體軀幹保持直立平衡，沒有向左右過度側倒。",
+    "source_channel": "Better Pickleball",
+    "source_title": "Stop Popping Up Your Dinks — Fix These Dink Mistakes FAST!",
+    "source_video_id": "-a7rZzS-yA8",
+    "timestamp": "05:28",
+    "index": false,
+    "type": "problem"
+  },
+  {
+    "id": "bp-a7rzzs-ya8-0628",
+    "title": "搶打初跳點未等反彈最高點",
+    "zone": "kitchen",
+    "what": "在球剛落地反彈的上升期（short hop）就急著出拍，而不是等球彈到最高點（apex）。",
+    "why": "球在反彈最高點時具備最低的能量，是最容易控制的時機；搶打上升期難度極高且極易冒高。",
+    "how": [
+      "移動腳步讓出擊球空間，耐心等待球落地反彈",
+      "讓球升至彈跳的最高點（apex）即能量最低時才出拍",
+      "聆聽擊球節奏，球落地一聲、球拍擊球一聲（碰-碰節奏），將球托送過網"
+    ],
+    "check": "擊球時間點在球彈跳的頂點，能清楚聽到落地與擊球有明顯節奏間隔，出球平穩貼網。",
+    "source_channel": "Better Pickleball",
+    "source_title": "Stop Popping Up Your Dinks — Fix These Dink Mistakes FAST!",
+    "source_video_id": "-a7rZzS-yA8",
+    "timestamp": "06:28",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "bp-k8enmxxr0wi-0015",
+    "title": "截擊 dink 的三大戰術優勢",
+    "zone": "kitchen",
+    "what": "在非截擊區（廚房區）線前不讓球落地，直接在空中以截擊（volley）方式回擊成 dink。",
+    "why": "直接在空中截擊能剝奪對手的反應時間、減少自身腳步移動量；移動越少擊球越穩定，同時也是未來發展手腕彈擊（flick）突擊技術的基礎。",
+    "how": [
+      "站穩在非截擊區線前，球拍保持在身前。",
+      "判斷球在舒適擊球範圍時，不退後等彈跳，直接在空中迎球回擊成軟球。",
+      "減少多餘的身體晃動與大動作移位。"
+    ],
+    "check": "擊球時身體不需要前後大幅跑動，對手準備下一拍的時間明顯被壓縮。",
+    "source_channel": "Better Pickleball",
+    "source_title": "Know When to Volley (And When to Let It Bounce)",
+    "source_video_id": "k8enMxXR0WI",
+    "timestamp": "00:15",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "bp-k8enmxxr0wi-0118",
+    "title": "漸進式軟手感截擊 dink 練習",
+    "zone": "kitchen",
+    "what": "先站在非截擊區內近距離練習極小揮拍的軟球手感，再逐步後退至非截擊區線前的訓練法。",
+    "why": "截擊 dink 時球拍往前延伸，球拍本身已有前進動能，若揮拍過大容易導致球冒高（pop up）或失誤，必須先建立極輕握拍與極小揮拍幅度的手感。",
+    "how": [
+      "練習時先站在非截擊區內大約中間位置（僅供手感訓練，非正式比賽站位）。",
+      "握拍極輕，保持幾乎沒有大動作揮拍（paddle motion），僅用球拍輕輕接球並送回對手非截擊區內。",
+      "感到熟練輕鬆後，往後退一步重複同樣動作。",
+      "最後退到非截擊區線後方正常站位，保持同樣的極小揮幅完成截擊 dink。"
+    ],
+    "check": "擊球聲音安靜柔和，球拍揮動幅度極小，球穩定落在對手非截擊區內且不冒高。",
+    "source_channel": "Better Pickleball",
+    "source_title": "Know When to Volley (And When to Let It Bounce)",
+    "source_video_id": "k8enMxXR0WI",
+    "timestamp": "01:18",
+    "index": false,
+    "type": "drill"
+  },
+  {
+    "id": "bp-k8enmxxr0wi-0405",
+    "title": "拍面角度控制截擊 dink 深度",
+    "zone": "kitchen",
+    "what": "利用球拍拍面的開闔角度，微調截擊 dink 落在對手非截擊區內的長度。",
+    "why": "微調拍面仰角能直接改變出球弧度，無需改變揮拍力道即可控制落點深淺。",
+    "how": [
+      "若想讓球落在對手非截擊區較淺（靠近球網）的位置，將拍面角度稍微向上打開（open）。",
+      "若想讓球落在對手非截擊區較深（靠近非截擊區線）的位置，將拍面角度稍微立起閉合（close）。",
+      "動作全程維持極小揮幅，單純依靠拍面傾斜度引導球的走向。"
+    ],
+    "check": "拍面向上開啟時球過網即墜落在近網處；拍面略為立起時球推深至對方非截擊區線附近。",
+    "source_channel": "Better Pickleball",
+    "source_title": "Know When to Volley (And When to Let It Bounce)",
+    "source_video_id": "k8enMxXR0WI",
+    "timestamp": "04:05",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "bp-k8enmxxr0wi-0441",
+    "title": "標記舒適空中截擊打擊區",
+    "zone": "kitchen",
+    "what": "在腳前地面放置彎曲條或繩子標出半圓弧線，具象化界定何時該空中截擊、何時該等球落地。",
+    "why": "過度往前伸手截擊會失去身體控制並破壞擊球穩定度；明確劃分打擊區能幫助大腦在瞬間做出正確決策。",
+    "how": [
+      "站在非截擊區線後，手肘置於身體前方，球拍自然平舉向前。",
+      "將球拍左右擺動，在球拍自然觸及的舒適範圍下方的地面擺放繩子或彎曲塑膠條形成弧線。",
+      "在弧線以內（偏向自己身體）的來球，一律不落地直接在空中截擊。",
+      "落在弧線以外、需要過度伸展手臂才能碰到的球，一律放它落地彈跳後再打。"
+    ],
+    "check": "所有在空中截擊的球手臂均保持自然舒適、無過度前撲或失去重心的現象。",
+    "source_channel": "Better Pickleball",
+    "source_title": "Know When to Volley (And When to Let It Bounce)",
+    "source_video_id": "k8enMxXR0WI",
+    "timestamp": "04:41",
+    "index": false,
+    "type": "drill"
+  },
+  {
+    "id": "bp-k8enmxxr0wi-0810",
+    "title": "火山錐目標防守截擊練習",
+    "zone": "kitchen",
+    "what": "在自身非截擊區線前放置擺了球的三角錐，逼迫自己積極空中截擊以保護三角錐不被擊中。",
+    "why": "利用保護目標物的競賽機制，強迫球員克服猶豫，勇敢在空中把球攔截下來，同時讓對手練習壓低球路。",
+    "how": [
+      "在非截擊區線內側自己的腳前放置 2 至 3 個頂部放著球的三角錐。",
+      "對手在對面練習打出攻擊三角錐的 dink；若對手擊落錐上的球則得 3 分。",
+      "防守方必須維持極小的球拍動作，主動在空中截擊來球，將球回軟至對手非截擊區內以保護目標。",
+      "即使身體需要左右移位，也要保持身前攔截的原則。"
+    ],
+    "check": "防守方能多數在球越過球網、接觸到三角錐之前就於空中完成截擊，且回球不冒高。",
+    "source_channel": "Better Pickleball",
+    "source_title": "Know When to Volley (And When to Let It Bounce)",
+    "source_video_id": "k8enMxXR0WI",
+    "timestamp": "08:10",
+    "index": false,
+    "type": "drill"
+  },
+  {
+    "id": "bp-clizpftqdve-0231",
+    "title": "Respect the X 核心原則",
+    "zone": "backcourt",
+    "what": "雙打中以球場對角線構成「X」字軸線，決定中路球與第三拍 drop 該由誰處理的原則。",
+    "why": "若球沿著 X 軸的某條對角線飛行，由位在該軸線另一端的球員擊球，球是迎面而來而非遠離身體，擊球機制更扎實，也能完全消除雙打中路誰打的混亂。",
+    "how": [
+      "想像球場上有兩條對角線交會成一個大「X」",
+      "觀察對手擊球後球的行進軸線",
+      "由站位落在該對角軸線上的球員負責處理該球（含第三拍 drop）",
+      "同隊搭檔清楚知道球的責任歸屬，不搶球也不猶豫"
+    ],
+    "check": "中路出現模糊球時，由順著對角飛行線的球員迎前擊球，兩位隊友沒有猶豫或互看的情況。",
+    "source_channel": "Better Pickleball",
+    "source_title": "Pickleball Doubles Strategy - Respect the X",
+    "source_video_id": "cLIzPfTqDVE",
+    "timestamp": "02:31",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "bp-clizpftqdve-0316",
+    "title": "正手佔中路迷思破解",
+    "zone": "backcourt",
+    "what": "「正手球拍在中間的人負責打中路」的傳統觀念，在實戰中並不可靠且常失效。",
+    "why": "（教練觀點）當隊伍組合是一左撇子一右撇子時，可能出現中間都是反手或中間都是正手的情況，此口訣便無法給出答案；而 Respect the X 則不受持拍手影響，永遠有明確指引。",
+    "how": [
+      "不要單純以「誰的正手在中間」當作雙打中路球的唯一分配規則",
+      "改用球的飛行軸線（Respect the X）來判斷誰擊球最順手",
+      "遇到一左一右搭檔時，更應依對角軸線原則分工"
+    ],
+    "check": "遇到中路球時不再因「誰正手在中間」起爭執或遲疑，而是依球的行進方向自然由順向者處理。",
+    "source_channel": "Better Pickleball",
+    "source_title": "Pickleball Doubles Strategy - Respect the X",
+    "source_video_id": "cLIzPfTqDVE",
+    "timestamp": "03:16",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "bp-clizpftqdve-0430",
+    "title": "破壞 X 軸導致擊球失誤與空檔",
+    "zone": "backcourt",
+    "what": "非對角軸線上的球員硬跨過中線去搶打對角接發球，造成第三拍失誤與走位混亂。",
+    "why": "跨過去搶打遠離自己身體的球，擊球者必須遠距離伸手撈球，容易失誤掛網或起高球；同時原本負責該球的搭檔會愣在原地，且自己原本的半場會完全空出。",
+    "how": [
+      "接發球若是打向搭檔的對角深處，發球者不要橫移跨過中線去搶打第三拍",
+      "讓身在該飛行軸線上的搭檔順向打第三拍 drop",
+      "避免伸手去夠「正遠離自己身體」的球"
+    ],
+    "check": "不會出現球員橫向大跨步伸手撈球掛網，也不會看到搭檔呆站在後方動彈不得、半邊球場全空。",
+    "source_channel": "Better Pickleball",
+    "source_title": "Pickleball Doubles Strategy - Respect the X",
+    "source_video_id": "cLIzPfTqDVE",
+    "timestamp": "04:30",
+    "index": false,
+    "type": "problem"
+  },
+  {
+    "id": "bp-clizpftqdve-0746",
+    "title": "順應 X 軸執行第三拍 drop 與前進",
+    "zone": "backcourt",
+    "what": "在第三拍 drop 時遵循 Respect the X，一位球員順向處理 drop，另一位球員順暢壓上網前。",
+    "why": "順向擊球者動作自然、容易打出優質第三拍 drop；未擊球的搭檔可以提早到位在非截擊區（廚房區）線上施壓，形成前壓後補的良好雙打隊形流動。",
+    "how": [
+      "接發球落在對角時，由該對角線上的球員負責打第三拍 drop",
+      "另一位球員（通常為發球或換位球員）順勢往非截擊區線前進就位",
+      "打 drop 的球員打完後跟進補位，兩人建立緊密防線"
+    ],
+    "check": "打第三拍的球員能在身體前方順暢擊球，搭檔已在非截擊區線就位準備攔截或下壓高球。",
+    "source_channel": "Better Pickleball",
+    "source_title": "Pickleball Doubles Strategy - Respect the X",
+    "source_video_id": "cLIzPfTqDVE",
+    "timestamp": "07:46",
+    "index": false,
+    "type": "tactic"
+  },
+  {
+    "id": "bp-clizpftqdve-0950",
+    "title": "主動「打破 X 軸」的進攻時機",
+    "zone": "backcourt",
+    "what": "在有明確優勢或戰術目的時，刻意打破 Respect the X 規則橫移搶攻。",
+    "why": "打破 X 軸只有在能為團隊帶來額外優勢時才該做；例如擁有強力正手抽球且對手回球落點允許直接攻擊對手弱點時，搶攻可直接得分或製造扣殺機會。",
+    "how": [
+      "先建立「除非有特定戰術優勢，否則遵守 X 軸」的默契",
+      "評估自身優勢技術（例如強力左手或右手正手抽球）",
+      "看到對手回球偏軟或能直接以抽球壓迫對手特定球員時，主動橫移搶打第三拍抽球",
+      "抽球壓迫後隨即跟進在非截擊區截擊得分"
+    ],
+    "check": "打破 X 軸搶打後能形成具威脅性的進攻（如直接得分或逼出對手失誤），而非被動救球或勉強回擊。",
+    "source_channel": "Better Pickleball",
+    "source_title": "Pickleball Doubles Strategy - Respect the X",
+    "source_video_id": "cLIzPfTqDVE",
+    "timestamp": "09:50",
+    "index": false,
+    "type": "tactic"
+  },
+  {
+    "id": "bp-hanioa7k8bw-0112",
+    "title": "接發球拉高過網高度",
+    "zone": "serve",
+    "what": "接發球時不要試圖貼網而過，應給予球約網上 3 呎的過網弧度。",
+    "why": "貼網擊球容易直接掛網奉送分數；提高過網點能徹底排除掛網失誤，並自然帶出深度，增加對手第三拍的難度。",
+    "how": [
+      "瞄準球網上方約 3 呎（約 90 公分）的空間作為過網瞄準點",
+      "由下往上擊球帶出弧線，確保球安全通過網帶"
+    ],
+    "check": "接發球不掛網，過網時明顯高於網帶，且球穩定落在對手場地深處",
+    "source_channel": "Better Pickleball",
+    "source_title": "3 Return of Serve Mistakes Costing You Points?",
+    "source_video_id": "HAnIoA7K8bw",
+    "timestamp": "01:12",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "bp-hanioa7k8bw-0207",
+    "title": "接發球落點瞄準底線前 4 呎",
+    "zone": "serve",
+    "what": "接發球應將落點控制在距離底線約 4 呎處，避免回球過淺落在中場前。",
+    "why": "接發球太淺會讓發球方立刻進場主動進攻；回球夠深能把對手壓制在後場，讓接發球方有充裕時間上網搶佔非截擊區掌控局面。",
+    "how": [
+      "接發球時以對手底線前約 4 呎為落點目標區域",
+      "保持足夠的過網安全高度與揮拍深度，確保球送到底線附近"
+    ],
+    "check": "球落在中場後方、距離底線約 4 呎的深區，接發球方能順利向前移動站上非截擊區（廚房區）線",
+    "source_channel": "Better Pickleball",
+    "source_title": "3 Return of Serve Mistakes Costing You Points?",
+    "source_video_id": "HAnIoA7K8bw",
+    "timestamp": "02:07",
+    "index": false,
+    "type": "tactic"
+  },
+  {
+    "id": "bp-hanioa7k8bw-0301",
+    "title": "接發預備站底線後 3 呎",
+    "zone": "serve",
+    "what": "接發球準備站位應退到離底線後方約 3 呎處，不可貼近底線站立。",
+    "why": "貼著底線站容易被對手深發球擠壓（jammed up），導致手臂無法伸展揮拍、球拍橫向滑過身體而失誤；後退 3 呎才有往前迎球的空間，讓手臂自由揮拍。",
+    "how": [
+      "接發球前，站在底線後方約 3 呎（約一步多）的位置準備",
+      "判斷來球後，身體向前移動迎球擊球",
+      "完成擊球後順勢向前邁進上網"
+    ],
+    "check": "接發擊球時手臂有足夠揮拍空間不被球擠壓，且擊球重心是往前迎擊而非後仰",
+    "source_channel": "Better Pickleball",
+    "source_title": "3 Return of Serve Mistakes Costing You Points?",
+    "source_video_id": "HAnIoA7K8bw",
+    "timestamp": "03:01",
+    "index": false,
+    "type": "problem"
+  },
+  {
+    "id": "pk-5skmsk2c-fy-0038",
+    "title": "非截擊區基本截擊限制",
+    "zone": "kitchen",
+    "what": "球員不能站在非截擊區（廚房區）內進行截擊（volley），包含雙腳踩在非截擊區線上均屬犯規。",
+    "why": "截擊是指球在落地彈跳前直接擊球；只要雙腳未接觸非截擊區或其標線，即使擊球點在非截擊區上方空中，擊球依然完全合法。",
+    "how": [
+      "站位保持在非截擊區線後方，雙腳完全不可踩到線。",
+      "對手來球未落地前，在空中直接進行截擊（無論扣殺或輕放）。",
+      "擊球時確保雙腳持續保持在非截擊區線外。"
+    ],
+    "check": "擊球瞬間雙腳均在非截擊區線後方地面，沒有踩到線上或踏入區內。",
+    "source_channel": "Pickleball Kitchen",
+    "source_title": "The pickleball kitchen rule (non-volley zone) COMPLETELY explained",
+    "source_video_id": "5sKMsK2C-fY",
+    "timestamp": "00:38",
+    "index": false,
+    "type": "rule"
+  },
+  {
+    "id": "pk-5skmsk2c-fy-0206",
+    "title": "截擊後衝力踩入非截擊區犯規",
+    "zone": "kitchen",
+    "what": "在線外截擊後，因身體衝力或失去平衡踩入非截擊區（廚房區），屬於非截擊區犯規。",
+    "why": "規則規定截擊動作所產生的動量（momentum）延續至踏入非截擊區即構成犯規，包含跌跌撞撞後踏入。",
+    "how": [
+      "向前迎擊截擊時，注意控制身體向前衝的動量。",
+      "擊球前後透過分腿墊步或煞車步在非截擊區線前完全停住。",
+      "確保身體達到完全靜止平衡狀態後，再決定後續移動。"
+    ],
+    "check": "截擊完成後，身體能穩固停在線外，沒有任何腳步或身體部位因前衝而碰觸非截擊區。",
+    "source_channel": "Pickleball Kitchen",
+    "source_title": "The pickleball kitchen rule (non-volley zone) COMPLETELY explained",
+    "source_video_id": "5sKMsK2C-fY",
+    "timestamp": "02:06",
+    "index": false,
+    "type": "problem"
+  },
+  {
+    "id": "pk-5skmsk2c-fy-0325",
+    "title": "出非截擊區後，雙腳都在區外才能截擊",
+    "zone": "kitchen",
+    "what": "腳踩過非截擊區後，要等雙腳都完全踩回區外的地面，才能截擊；跳出來還在空中就截擊算失誤。",
+    "why": "規則要求截擊前雙腳都已完全回到非截擊區外（USA Pickleball 規則 11.A.3）。教練也建議先站穩、恢復平衡再出手，比較不會失誤。",
+    "how": [
+      "雙腳踏出非截擊區，確保完全離開非截擊區線。",
+      "雙腳在線外著地，使身體完全重置為穩定平衡狀態。",
+      "確認平衡已重置後，再進行截擊擊球。"
+    ],
+    "check": "截擊前腳掌已完全在線外著地，且身體處於受控的平衡狀態而非仍在撤出過程中滯空擊球。",
+    "source_channel": "Pickleball Kitchen",
+    "source_title": "The pickleball kitchen rule (non-volley zone) COMPLETELY explained",
+    "source_video_id": "5sKMsK2C-fY",
+    "timestamp": "03:25",
+    "index": false,
+    "type": "rule"
+  },
+  {
+    "id": "pk-5skmsk2c-fy-0420",
+    "title": "球落地後進非截擊區擊球合法",
+    "zone": "kitchen",
+    "what": "只要球在非截擊區內或任何位置彈跳落地，球員可以隨時踩入非截擊區內擊球。",
+    "why": "非截擊區規則僅限制「未落地的截擊」；球只要彈跳過一次，球員在非截擊區內站多久、如何擊球（例如打 dink）完全合法。",
+    "how": [
+      "觀察對手來球彈跳點，確認球已在地面彈跳。",
+      "在球落地彈起後，跨步或踩入非截擊區內進行擊球（如 cross-court dink）。",
+      "擊球後可視情況退出非截擊區，以防對手下一拍直接回擊平飛截擊球。"
+    ],
+    "check": "球拍擊球前，球已在地面確實彈跳過一次。",
+    "source_channel": "Pickleball Kitchen",
+    "source_title": "The pickleball kitchen rule (non-volley zone) COMPLETELY explained",
+    "source_video_id": "5sKMsK2C-fY",
+    "timestamp": "04:20",
+    "index": false,
+    "type": "rule"
+  },
+  {
+    "id": "pk-b1b6m4bbrkg-0041",
+    "title": "回球先看對手來球意圖與旋轉",
+    "zone": "backcourt",
+    "what": "匹克球是雙向來回的運動，不能在真空狀態下單方面打球，必須先辨識對手送過來的球路與旋轉，才能做出正確的回球配置。",
+    "why": "（教練觀點）如果你不知道對手送過來的是什麼球、有什麼意圖，你就無法做出正確的回擊；只顧自己打自己的球，極容易在第三拍或對峙時失誤。",
+    "how": [
+      "觀察對手擊球時的動作與拍面角度",
+      "判斷來球是否帶有切球下旋、上旋或特定角度",
+      "依據來球特性調整自己的擊球角度與力道，而非每一拍都用同一種方式打"
+    ],
+    "check": "能清楚說出對手前一拍帶有什麼旋轉，且回球不再頻繁掛網或出界。",
+    "source_channel": "Pickleball Kitchen",
+    "source_title": "When pickleball beginners get this, EVERYTHING changes",
+    "source_video_id": "B1b6m4BBRkg",
+    "timestamp": "00:41",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "pk-b1b6m4bbrkg-0213",
+    "title": "第三拍應對下旋切球的回擊要領",
+    "zone": "backcourt",
+    "what": "對手接發球常打出側旋或下旋（backspin）切球，第三拍擊球時拍面接觸球後球會自然往下掉，必須主動向上推高擊球。",
+    "why": "下旋球落地後彈跳通常偏低、偏短甚至往側邊竄，而且接觸球拍時會產生向下的反作用力，如果用平常的平推或平抽方式回擊，極容易直接掛網。",
+    "how": [
+      "辨識對手切球產生的側跳或低彈跳特性，腳步提前到位",
+      "壓低重心，確保球拍位於球的下方",
+      "出拍時向上帶的幅度要比平時更高，補償下旋球觸拍後往下的掉落趨勢"
+    ],
+    "check": "第三拍 drop 或抽球能順利越過球網頂端，球不會直接栽入網中。",
+    "source_channel": "Pickleball Kitchen",
+    "source_title": "When pickleball beginners get this, EVERYTHING changes",
+    "source_video_id": "B1b6m4BBRkg",
+    "timestamp": "02:13",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "pk-b1b6m4bbrkg-0305",
+    "title": "小心應對網前直衝腳邊的急速彈跳",
+    "zone": "kitchen",
+    "what": "在非截擊區對攻時，對手擊向腳邊的攻擊球常帶有上旋，在剛彈起（short-hop）時若勉強出拍容易失控噴球。",
+    "why": "對手主動攻擊且直衝腳邊的球常帶有些微上旋，且球落地剛彈起時地心引力還來不及讓球減速，帶著極大衝力撞擊球拍，球彈離拍面的反應會非常快速。",
+    "how": [
+      "注意對手向腳邊施壓的球路，不要倉促在最低點急著推擊",
+      "遇到剛彈起的急速球，保持拍面穩定進行吸收或軟接（soft shot）",
+      "若對手回球落點稍高，則做好準備直接還擊"
+    ],
+    "check": "面對對手網前壓腳球時，能穩定以軟球回放，不會打出高彈跳或直接失誤。",
+    "source_channel": "Pickleball Kitchen",
+    "source_title": "When pickleball beginners get this, EVERYTHING changes",
+    "source_video_id": "B1b6m4BBRkg",
+    "timestamp": "03:05",
+    "index": false,
+    "type": "problem"
+  },
+  {
+    "id": "pk-b1b6m4bbrkg-0549",
+    "title": "觀察肢體語言預判低位 speed up",
+    "zone": "kitchen",
+    "what": "在網前對峙時，透過觀察對手低於網高的拉拍動作與後退步態，提前預判對手的 speed up 攻擊並架拍格擋。",
+    "why": "對手若習慣從低於網高處以由下往上的刷球（brush up）發動 speed up，攻擊前會有明顯的肢體語言（如後退微調、正手側引拍）；提早看懂就能先就定位格擋。",
+    "how": [
+      "在 dink 對峙過程中持續注意對手身體語言而非只盯著球",
+      "注意對手是否正在退後一步拉開空間並在正手側放低球拍",
+      "察覺攻擊前兆時立即停止移動並將球拍置於身前準備擋球（block）"
+    ],
+    "check": "在對手出手瞬間已架好球拍，能即時完成格擋甚至將球反壓回對方場內。",
+    "source_channel": "Pickleball Kitchen",
+    "source_title": "When pickleball beginners get this, EVERYTHING changes",
+    "source_video_id": "B1b6m4BBRkg",
+    "timestamp": "05:49",
+    "index": false,
+    "type": "tactic"
+  },
+  {
+    "id": "pk-udxkgdhkpfm-0048",
+    "title": "腳步先就位再揮拍",
+    "zone": "backcourt",
+    "what": "處理第三拍時，必須先讓雙腳移動到位並保持平衡，再進行揮拍動作。",
+    "why": "許多新手常邊揮拍邊試圖移動雙腳，身體傾斜導致重心不穩而極難跨步，先定位再揮拍能大幅提升擊球穩定度。",
+    "how": [
+      "觀察來球方向，先保持身體平衡不要傾斜借力伸拍",
+      "迅速移動腳步使雙腳先踏穩就位",
+      "就定位後再做出揮拍擊球動作"
+    ],
+    "check": "擊球前雙腳已完全踩定，身體沒有在失衡傾斜的狀態下勉強搆球。",
+    "source_channel": "Pickleball Kitchen",
+    "source_title": "Tired of being a beginner already? These 5 tips will help",
+    "source_video_id": "uDXKGDhkPfM",
+    "timestamp": "00:48",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "pk-udxkgdhkpfm-0218",
+    "title": "避免短促戳球改用肩膀平順揮拍",
+    "zone": "backcourt",
+    "what": "第三拍擊球時不要像刺拳般短促戳球（jabbing），而應由肩膀帶動完整、平順的揮拍。",
+    "why": "戳球會對球施加不穩定的多變力量導致失誤；以肩膀帶動緩慢而平滑的弧形揮拍，能帶來極高的擊球穩定性。",
+    "how": [
+      "不要只靠手腕或小手臂做急促推戳的短動作",
+      "以肩膀為軸心帶動球拍",
+      "做出大範圍且緩慢順暢的揮拍，並確實完成順勢動作（follow through）"
+    ],
+    "check": "揮拍軌跡流暢連續不卡頓，打出的第三拍弧度平穩且可控。",
+    "source_channel": "Pickleball Kitchen",
+    "source_title": "Tired of being a beginner already? These 5 tips will help",
+    "source_video_id": "uDXKGDhkPfM",
+    "timestamp": "02:18",
+    "index": false,
+    "type": "problem"
+  },
+  {
+    "id": "pk-udxkgdhkpfm-0350",
+    "title": "依第三拍落點判斷前進非截擊區",
+    "zone": "backcourt",
+    "what": "打出第三拍後，需根據球過網後的飛行高度與彈跳情況，決定是否前進非截擊區（廚房區）。",
+    "why": "如果第三拍過高或彈跳太高，對手能由上往下攻擊，此時貿然前衝會被打穿；只有當球夠低或落在對方腳邊時才適合壓上。",
+    "how": [
+      "打出第三拍後，眼睛緊盯球過網後的軌跡",
+      "若球過高或彈跳很高，先在後方或過渡區停住防守",
+      "若球低平越網並落於對手腳前，再趁機迅速壓至非截擊區線前"
+    ],
+    "check": "前進時不會被對手由上往下的重球直接打在腳邊失分，能從容在網前就位。",
+    "source_channel": "Pickleball Kitchen",
+    "source_title": "Tired of being a beginner already? These 5 tips will help",
+    "source_video_id": "uDXKGDhkPfM",
+    "timestamp": "03:50",
+    "index": false,
+    "type": "tactic"
+  },
+  {
+    "id": "pk-udxkgdhkpfm-0540",
+    "title": "過渡區借力防守應對來球球速",
+    "zone": "kitchen",
+    "what": "在過渡區面對對手強勁的來球時，利用對手來球的速度借力回擊，而非自己主動發力抽擊。",
+    "why": "對手擊球已有足夠球速，自己盲目用力揮打容易失控出界或冒高；放鬆以受力方式輕推，就能穩定將球送過網。",
+    "how": [
+      "辨識來球是否帶有強烈速度與向下角度",
+      "不要做出大幅度發力回擊",
+      "保持拍面穩定，僅輕輕推碰（nudge）借力將球擋回對方場內"
+    ],
+    "check": "接強球時拍面輕碰即將球緩速擋回對方非截擊區，未因過度發力而回擊出界或噴高。",
+    "source_channel": "Pickleball Kitchen",
+    "source_title": "Tired of being a beginner already? These 5 tips will help",
+    "source_video_id": "uDXKGDhkPfM",
+    "timestamp": "05:40",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "pk-udxkgdhkpfm-0920",
+    "title": "雙指握拍 dink 減壓練習",
+    "zone": "kitchen",
+    "what": "在非截擊區對練 dink 時，僅用大拇指與食指握住球拍進行對打，體會放鬆握拍的軟手（soft hands）感覺。",
+    "why": "握拍過緊（死亡握力）是造成回球容易冒高（pop-up）的主因；放鬆握力才能吸收球的衝力，提升控球精準度。",
+    "how": [
+      "僅用大拇指與食指扣住球拍握把，其餘三指完全放開不碰握把",
+      "在非截擊區線與夥伴進行放鬆的 dink 對練，體會球吸在拍上的感覺",
+      "熟悉減力觸感後，將其餘三指輕輕包覆握把，維持低握力繼續對打"
+    ],
+    "check": "dink 時球拍不再死硬震動，球過網後高度平貼球網且不易冒高。",
+    "source_channel": "Pickleball Kitchen",
+    "source_title": "Tired of being a beginner already? These 5 tips will help",
+    "source_video_id": "uDXKGDhkPfM",
+    "timestamp": "09:20",
+    "index": false,
+    "type": "drill"
+  },
+  {
+    "id": "pk-yb-awnq-qzw-0026",
+    "title": "接發球深度知覺誤差",
+    "zone": "serve",
+    "what": "站在底線後方觀察落點時，球看起來會比實際位置更深，視覺上看似快出界的球，實際上可能距離底線還有1.5英尺。",
+    "why": "若被視覺誤差誤導而保守減力，接發球容易偏淺，使對手的第三拍變得非常容易處理；把球打深能拉長對手第三拍距離並迫使其後退。",
+    "how": [
+      "理解站在底線遠處時視覺上會放大落點深度的現象",
+      "接發球時要有信心打得比平時習慣「稍微再用力一點」",
+      "把接發球落點目標設定在接近底線的深區"
+    ],
+    "check": "練習時透過側邊手機錄影回放，確認落點是否落在距離底線1到2英尺內而非場地中央偏淺處",
+    "source_channel": "Pickleball Kitchen",
+    "source_title": "Let's level up your pickleball return of serve!",
+    "source_video_id": "Yb_awnQ-qzw",
+    "timestamp": "00:26",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "pk-yb-awnq-qzw-0208",
+    "title": "接發球落點與對手角度管理",
+    "zone": "serve",
+    "what": "根據對手技術特性決定接發球的水平落點（中路或兩側）。",
+    "why": "如果把球打到擅長上旋抽球者的正手角落，會給對手極大的穿越角度拉出大斜線進入我方非截擊區，造成極難防守的第三拍；打向中線則可大幅縮小對手的進攻角度。",
+    "how": [
+      "觀察對手是否具備強烈上旋能力與正手優勢",
+      "若對手上旋極佳，避免將接發球送至其正手外角",
+      "將球推向中線附近，限制對手的回球角度選擇"
+    ],
+    "check": "對手第三拍是否無法拉出大角度對角球，且回球路徑相對集中好預測",
+    "source_channel": "Pickleball Kitchen",
+    "source_title": "Let's level up your pickleball return of serve!",
+    "source_video_id": "Yb_awnQ-qzw",
+    "timestamp": "02:08",
+    "index": false,
+    "type": "tactic"
+  },
+  {
+    "id": "pk-yb-awnq-qzw-0322",
+    "title": "避免推戳式接發球",
+    "zone": "serve",
+    "what": "新手接發球時常用平推或像打拳戳刺（punch/jab）的方式將球直直頂回對面。",
+    "why": "平推的球缺乏旋轉且容易浮高或偏淺，對手可以輕鬆在底線舒服迎擊並打出高品質的第三拍。",
+    "how": [
+      "停止用球拍直接朝前平推球",
+      "改為在接觸球時加入向下切削的動作以帶出旋轉"
+    ],
+    "check": "擊球時拍面是否有明顯的由上向下軌跡，而非單純往前頂",
+    "source_channel": "Pickleball Kitchen",
+    "source_title": "Let's level up your pickleball return of serve!",
+    "source_video_id": "Yb_awnQ-qzw",
+    "timestamp": "03:22",
+    "index": false,
+    "type": "problem"
+  },
+  {
+    "id": "pk-yb-awnq-qzw-0413",
+    "title": "非截擊區切球手感練習",
+    "zone": "kitchen",
+    "what": "站在非截擊區（廚房區）線上，練習由上往下的反手切球揮拍感覺。",
+    "why": "在較近距離且球速慢的情況下，更容易體會球拍由上向下移動、像接住球並給予下旋的手感，建立削球的基本軌跡。",
+    "how": [
+      "雙腳站在非截擊區線後方",
+      "請搭檔在對面輕輕送球過來",
+      "以反手持拍，拍面由高處往低處向下刷動觸球",
+      "體會球拍向下切削、球在拍面滾動的接觸感"
+    ],
+    "check": "球過網後帶有明顯下旋，落水後有向前停頓或回縮趨勢",
+    "source_channel": "Pickleball Kitchen",
+    "source_title": "Let's level up your pickleball return of serve!",
+    "source_video_id": "Yb_awnQ-qzw",
+    "timestamp": "04:13",
+    "index": false,
+    "type": "drill"
+  },
+  {
+    "id": "pk-yb-awnq-qzw-0520",
+    "title": "反手削球接發球技術動作",
+    "zone": "serve",
+    "what": "底線接發球時運用側身步法與由上往下的完整切削動作製造強烈下旋。",
+    "why": "帶下旋的球落地後彈跳低甚至往後頓，會讓對手很難向上提拉或發力，大幅增加其第三拍失誤或回出軟球的機率。",
+    "how": [
+      "向前跨步側身，雙腳腳尖朝向側邊線",
+      "轉動上半身，將持拍手的手肘指向對手方向蓄力",
+      "將球拍引至肩膀上方，手腕保持微彎鎖定（hinged）",
+      "球拍由上往下呈對角線斜切貫穿擊球點，順勢向前延伸揮拍，不要像橫向切水果般平切"
+    ],
+    "check": "回球軌跡低平且貼網，落地後彈跳偏低並帶有明顯下旋",
+    "source_channel": "Pickleball Kitchen",
+    "source_title": "Let's level up your pickleball return of serve!",
+    "source_video_id": "Yb_awnQ-qzw",
+    "timestamp": "05:20",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "pk-yb-awnq-qzw-0928",
+    "title": "正手削球接發球動作要點",
+    "zone": "serve",
+    "what": "運用正手拍面進行由上往下的切削接發球技術。",
+    "why": "提供正手側同樣的下旋壓迫效果，但因正手拍面彈力通常較反手更易噴球，需要更精確的控制。",
+    "how": [
+      "側身轉體準備迎球",
+      "拍面從高處引拍，由上往下精準切入球的底部",
+      "觸球後拍面順勢劃過身體前方完成隨球動作",
+      "注意接觸球瞬間的力量控制，避免球拍面擊打過猛導致出界"
+    ],
+    "check": "正手切出的球能壓低弧線落在對方底線深處，且無噴飛出界",
+    "source_channel": "Pickleball Kitchen",
+    "source_title": "Let's level up your pickleball return of serve!",
+    "source_video_id": "Yb_awnQ-qzw",
+    "timestamp": "09:28",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "pk-rktoxzdymyk-0012",
+    "title": "截擊發球與落地發球差異",
+    "zone": "serve",
+    "what": "匹克球發球分為兩種合法形式：截擊發球（volley serve）與落地發球（drop serve）。",
+    "why": "截擊發球是指球在落地前直接以球拍擊出；落地發球則是讓球自然落地彈起後再擊出。",
+    "how": [
+      "截擊發球：球由手中釋放後，在未接觸地面時直接擊球",
+      "落地發球：球從手中自然落下並於地面彈跳一次後再擊球"
+    ],
+    "check": "截擊發球時球未落地即擊出；落地發球時球確實先彈地一次再擊出。",
+    "source_channel": "Pickleball Kitchen",
+    "source_title": "Beginner to ADVANCED pickleball serve in 5 simple steps",
+    "source_video_id": "RKtoxzdyMyk",
+    "timestamp": "00:12",
+    "index": false,
+    "type": "rule"
+  },
+  {
+    "id": "pk-rktoxzdymyk-0031",
+    "title": "發球基本握拍設定",
+    "zone": "serve",
+    "what": "發球時採用握把虎口朝向自己的中性握拍，拇指與食指不可貼在拍面上。",
+    "why": "手指若貼在拍面上會限制揮拍動作，正確環繞握把才能提供乾淨穩定的揮拍路徑。",
+    "how": [
+      "手持球拍垂放於身側，放鬆手掌讓球拍自然向下滑動",
+      "將球拍提起，確認拇指與食指交會的 V 字朝向自己的下巴",
+      "拇指必須環繞在握把側面，嚴禁平貼在拍面正上方",
+      "食指同樣自然環繞握把，不可直立貼在拍面上"
+    ],
+    "check": "握拍拿起時，拇指和食指都在握把上，拍面上完全沒有手指接觸。",
+    "source_channel": "Pickleball Kitchen",
+    "source_title": "Beginner to ADVANCED pickleball serve in 5 simple steps",
+    "source_video_id": "RKtoxzdyMyk",
+    "timestamp": "00:31",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "pk-rktoxzdymyk-0113",
+    "title": "Level 1 基礎肩膀推球發球",
+    "zone": "serve",
+    "what": "Level 1 發球：身體完全正對對手，拍面朝上如平底鍋，單純利用肩膀關節前後擺動推球入界。",
+    "why": "動作極度簡單、變數最少，能確保新手穩定將球送入發球區。",
+    "how": [
+      "雙腳與胸口完全朝向球網與對手，身體不側身",
+      "將球與球拍置於身前，拍面朝上（如同端平底鍋）",
+      "固定手腕與手肘，單純以肩膀為軸心向後帶拍",
+      "肩膀向前推動球拍擊球，送拍結束時拍面朝向自己臉部前方"
+    ],
+    "check": "送拍結束時球拍停在正前方，球拍完全遮住自己的臉部視線。",
+    "source_channel": "Pickleball Kitchen",
+    "source_title": "Beginner to ADVANCED pickleball serve in 5 simple steps",
+    "source_video_id": "RKtoxzdyMyk",
+    "timestamp": "01:13",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "pk-rktoxzdymyk-0211",
+    "title": "基礎發球切忌側身站立",
+    "zone": "serve",
+    "what": "初學者發球時將身體完全側轉對著側邊球場是錯誤站位。",
+    "why": "側身容易導致揮拍軌跡違規（如擊球點過高），且會讓後續進階發球的銜接變得混亂。",
+    "how": [
+      "發球前檢查胸口與衣服標誌是否正對著對手球場",
+      "雙腳平行或微幅站立，保持軀幹朝前，不要轉成側身"
+    ],
+    "check": "發球準備與擊球瞬間，衣服正面的圖案始終正對前方的對手。",
+    "source_channel": "Pickleball Kitchen",
+    "source_title": "Beginner to ADVANCED pickleball serve in 5 simple steps",
+    "source_video_id": "RKtoxzdyMyk",
+    "timestamp": "02:11",
+    "index": false,
+    "type": "problem"
+  },
+  {
+    "id": "pk-rktoxzdymyk-0331",
+    "title": "Level 2 加大引拍與耳旁隨球",
+    "zone": "serve",
+    "what": "Level 2 發球：在維持胸口朝前的基礎下，大幅增加後引拍幅度，擊球後將球拍隨球延伸至非持拍耳側。",
+    "why": "拉長整個揮拍行程，藉由更長的前後揮動軌跡自然增加擊球深度與球速。",
+    "how": [
+      "站位依然保持正面朝對手",
+      "向後引拍時手臂盡可能向後延伸（想像用球拍輕觸身後的圍網）",
+      "肩膀向前帶動揮拍擊球",
+      "擊球後球拍順勢斜向穿越身體，手背最後輕靠在非持拍側的耳朵旁"
+    ],
+    "check": "揮拍完成時，持拍手的手背貼靠在對側耳朵旁，手肘順勢抬起。",
+    "source_channel": "Pickleball Kitchen",
+    "source_title": "Beginner to ADVANCED pickleball serve in 5 simple steps",
+    "source_video_id": "RKtoxzdyMyk",
+    "timestamp": "03:31",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "pk-rktoxzdymyk-0551",
+    "title": "Level 3 拍面微扣與斜向刷球",
+    "zone": "serve",
+    "what": "Level 3 發球：將初始朝上的拍面關閉約 45 度，以斜角向上路徑擊球產生上旋與球速。",
+    "why": "不再單純平推球體，藉由 45 度的揮拍斜線產生帶有旋轉與穿透力的球路。",
+    "how": [
+      "準備時手腕轉動約 90 度，將原本向上仰的拍面轉為微扣角度",
+      "後引拍時拍面像開門一樣順勢向後展開",
+      "擊球瞬間拍面呈現約 45 度角，沿著由下往上的斜線軌跡揮動",
+      "球拍順著對角線路徑穿越身體完成收拍"
+    ],
+    "check": "擊球接觸球瞬間，拍面與地面夾角約呈 45 度斜面，揮拍軌跡呈對角線延伸。",
+    "source_channel": "Pickleball Kitchen",
+    "source_title": "Beginner to ADVANCED pickleball serve in 5 simple steps",
+    "source_video_id": "RKtoxzdyMyk",
+    "timestamp": "05:51",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "pk-rktoxzdymyk-0853",
+    "title": "Level 4 跨步與髖關節動力鏈",
+    "zone": "serve",
+    "what": "Level 4 發球：加入非持拍腳向前跨步，結合肩膀與髖部的轉動釋放全身力量。",
+    "why": "將發球動作轉化為全身動力鏈，利用下盤前移與核心軀幹旋轉大幅提升球威。",
+    "how": [
+      "準備發球時，非持拍側腳向前邁出一大步",
+      "引拍時放球於身體前方較遠處，肩膀與髖部順勢向後旋轉蓄力",
+      "往前揮拍時，髖部與肩膀瞬間向前爆發旋轉，回正胸口",
+      "持拍側後腳順應慣性自然跟進上前"
+    ],
+    "check": "引拍時胸口標誌側轉避開前方視線，擊球瞬間胸口標誌瞬間爆發轉回正前方對手。",
+    "source_channel": "Pickleball Kitchen",
+    "source_title": "Beginner to ADVANCED pickleball serve in 5 simple steps",
+    "source_video_id": "RKtoxzdyMyk",
+    "timestamp": "08:53",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "pk-rktoxzdymyk-1123",
+    "title": "手腕完全放鬆甩拍練習",
+    "zone": "serve",
+    "what": "Level 5 的核心技巧：完全放鬆手腕與手指，讓球拍在揮動中產生拍頭滯後（Lag），並在擊球瞬間自然甩動（Snap）。",
+    "why": "（教練觀點）極度放鬆的手腕能創造最大的拍頭加速度，賦予發球強烈的球速與上旋，且甩動必須是放鬆下的被動產物而非刻意用手腕發力。",
+    "how": [
+      "單手握拍、另一手抓住持拍手的前臂，完全放掉手腕與手指的力量，感受手腕像麵條般完全垂軟",
+      "站在底線放鬆手腕，不刻意用力彎曲手腕，單純將球丟起並輕快往前揮",
+      "讓球拍在手臂前進時落後在後方（Lag），在撞擊球的最後瞬間自然甩出（Snap）",
+      "不需在意球的落點，專注體會手腕極度柔軟放鬆下的自然甩動感"
+    ],
+    "check": "手臂前移時拍頭明顯滯後在手腕之後，擊球瞬間拍頭自動超前手腕產生清脆甩動聲。",
+    "source_channel": "Pickleball Kitchen",
+    "source_title": "Beginner to ADVANCED pickleball serve in 5 simple steps",
+    "source_video_id": "RKtoxzdyMyk",
+    "timestamp": "11:23",
+    "index": false,
+    "type": "drill"
+  },
+  {
+    "id": "pk-6n7qvwnlkq-0054",
+    "title": "向上刷球製造上旋第三拍 drop",
+    "zone": "backcourt",
+    "what": "改變傳統高拋漂浮的第三拍，擊球時以向上刷球的方式製造強烈上旋，讓球過網後快速下墜。",
+    "why": "結合球速與上旋可使球貼網急速掉落在對手腳邊，給對手極大壓力並迫使對方回擊起高球，創造己方上網終結的機會。",
+    "how": [
+      "不再單純從球的下方將球死死推高或漂浮過網",
+      "持拍由球的後下方以刷球動作（brush up）向上摩擦擊球",
+      "完成擊球時帶有完整的向上收拍動作，賦予球向前的強烈旋轉"
+    ],
+    "check": "球剛好貼著網帶上方飛過，並在越過球網後明顯向下弧墜，落在對手腳邊。",
+    "source_channel": "Pickleball Kitchen",
+    "source_title": "3 HUGE tips for a better third shot drop",
+    "source_video_id": "_6N7qVwNLKQ",
+    "timestamp": "00:54",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "pk-6n7qvwnlkq-0213",
+    "title": "避免打完第三拍停留在原地",
+    "zone": "backcourt",
+    "what": "常見 3.0 到 3.5 球友在打出第三拍 drop 後停在底線看球，沒有完成跟進上網的轉換過程。",
+    "why": "若擊球後留在原地，對手第四拍只需輕易將球打回深處，己方就等於白白浪費第三拍並重回被動局面；向前推進能縮小空間、封鎖對手進攻角度，並為己方創造更好角度。",
+    "how": [
+      "擊出第三拍 drop 後，視線維持看球同時腳步立即啟動往前移動",
+      "只要第三拍品質良好，持續朝非截擊區（廚房區）邊線推進",
+      "藉由縮小與對手的距離來封死對方的回擊角度"
+    ],
+    "check": "第三拍出手後身體已穩定往網前推進或踩上非截擊區線，而非仍佇立在底線。",
+    "source_channel": "Pickleball Kitchen",
+    "source_title": "3 HUGE tips for a better third shot drop",
+    "source_video_id": "_6N7qVwNLKQ",
+    "timestamp": "02:13",
+    "index": false,
+    "type": "problem"
+  },
+  {
+    "id": "pk-6n7qvwnlkq-0354",
+    "title": "第三拍 drop 瞄準非截擊區角落",
+    "zone": "backcourt",
+    "what": "將第三拍 drop 鎖定對手的弱點側（通常是反手），或直接瞄準非截擊區（廚房區）的斜對角外側角落。",
+    "why": "球網兩側是全網最高的位置，當球落在非截擊區外角時，對手受限於高網難以直接打出直線穿越球，回擊往往必須往上拉高過網，進而送出高球給我方攻擊。",
+    "how": [
+      "準備打第三拍時，鎖定對手的弱勢反手或斜對角非截擊區的邊角位置",
+      "以適當弧線將 drop 送至對方非截擊區角落邊線附近",
+      "迫使對方在側邊極低處迎擊，並預備抓對方的起高球"
+    ],
+    "check": "對手被迫在非截擊區角落低位回擊，且無法發力直擊，只能回出較高的漂浮球。",
+    "source_channel": "Pickleball Kitchen",
+    "source_title": "3 HUGE tips for a better third shot drop",
+    "source_video_id": "_6N7qVwNLKQ",
+    "timestamp": "03:54",
+    "index": false,
+    "type": "tactic"
+  },
+  {
+    "id": "pk-gtbc4ud10aa-0030",
+    "title": "正手上旋dink起拍引導",
+    "zone": "kitchen",
+    "what": "正手上旋 dink 的起拍準備動作，確保球拍處於球的下方。",
+    "why": "讓球拍低於球才能在擊球時由下往上刷出上旋，手腕適度下垂能在前臂側邊產生緊繃感，幫助拍面順利鑽入球下方。",
+    "how": [
+      "像準備握手一樣將手往前伸直。",
+      "將手部與球拍朝下方垂下揮放。",
+      "感受前臂外側邊緣有一點緊繃感，並維持球拍低於球的位置。"
+    ],
+    "check": "引拍時前臂外側有微緊繃感，且拍面確實處於球的水平高度之下。",
+    "source_channel": "Pickleball Kitchen",
+    "source_title": "This simple dinking advice changed my game forever",
+    "source_video_id": "gTBc4ud10AA",
+    "timestamp": "00:30",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "pk-gtbc4ud10aa-0138",
+    "title": "看手錶翻轉刷出上旋",
+    "zone": "kitchen",
+    "what": "利用「前臂翻轉看手錶」的意象來刷出正手上旋 dink。",
+    "why": "藉由前臂的翻轉帶動拍面由下往上摩擦球的後側，產生前滾的上旋效果，不需依賴過度甩動手腕。",
+    "how": [
+      "想像手腕上方戴著手錶，前臂初始朝上。",
+      "在擊球接觸球瞬間，像看時間一樣將前臂向內上方翻轉過去。",
+      "在非截擊區（廚房區）只需極小幅度的動作即可完成上旋 dink。"
+    ],
+    "check": "擊球後前臂自然翻轉，球越過球網後呈現明顯往前旋轉滾動的軌跡。",
+    "source_channel": "Pickleball Kitchen",
+    "source_title": "This simple dinking advice changed my game forever",
+    "source_video_id": "gTBc4ud10AA",
+    "timestamp": "01:38",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "pk-gtbc4ud10aa-0218",
+    "title": "上旋dink的戰術壓迫",
+    "zone": "kitchen",
+    "what": "在網前對打時利用上旋 dink 迫使對手處於被動守勢。",
+    "why": "當帶有上旋的球飛過球網，對手如果發力打太用力，上旋會導致球接觸拍面後向上彈高（pop up），因此會迫使對手採取防守打法。",
+    "how": [
+      "在 dink 對峙中加入由下往上的小幅上旋刷球。",
+      "不需要發大力量打球，專注於由下向上的摩擦。",
+      "觀察對手若發力過猛，準備抓彈高球進攻。"
+    ],
+    "check": "對手擊球時不易發力壓低，甚至因上旋碰撞而回擊出過高的甜球。",
+    "source_channel": "Pickleball Kitchen",
+    "source_title": "This simple dinking advice changed my game forever",
+    "source_video_id": "gTBc4ud10AA",
+    "timestamp": "02:18",
+    "index": false,
+    "type": "tactic"
+  },
+  {
+    "id": "pk-gtbc4ud10aa-0240",
+    "title": "直線向上刷動的上旋截擊",
+    "zone": "kitchen",
+    "what": "正手上旋如果不橫越身體，改為直直向上刷拍的變化打法。",
+    "why": "橫越身體有時風險較大，直接單邊直直向上刷球更穩定，且特別適合運用在網前的截擊（volley）上旋球。",
+    "how": [
+      "引拍維持在身體單側下方。",
+      "擊球時球拍不跨越身體中線，直接直直向上刷起。",
+      "球拍始終維持在身體同一側完成收拍。"
+    ],
+    "check": "拍面在擊球過程中與身體同側，球帶有穩定上旋並平穩越網落地。",
+    "source_channel": "Pickleball Kitchen",
+    "source_title": "This simple dinking advice changed my game forever",
+    "source_video_id": "gTBc4ud10AA",
+    "timestamp": "02:40",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "pk-gtbc4ud10aa-0518",
+    "title": "反手下旋dink防守壓低",
+    "zone": "kitchen",
+    "what": "在非截擊區（廚房區）使用反手下旋（backspin/slice）進行 dink。",
+    "why": "下旋球朝自己方向旋轉，過網落地後球會稍微朝球網回彈且彈跳更低，能有效阻止對手在網前發動強烈進攻。",
+    "how": [
+      "以反手持拍，拍面由後上方往微前下方輕輕削切球的底部。",
+      "不需大幅度發力，以柔和手感推切。",
+      "將球送過網並落在對手非截擊區內。"
+    ],
+    "check": "球過網落地後向前衝的力道減緩、彈跳高度明顯偏低，甚至略微向網子方向微收。",
+    "source_channel": "Pickleball Kitchen",
+    "source_title": "This simple dinking advice changed my game forever",
+    "source_video_id": "gTBc4ud10AA",
+    "timestamp": "05:18",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "pk-gtbc4ud10aa-0610",
+    "title": "切球避免水果忍者式大揮拍",
+    "zone": "kitchen",
+    "what": "打下旋 dink 時過度用力、揮拍幅度過大的切球錯誤。",
+    "why": "過大的橫向橫切動作容易失誤且球路不穩定；事實上只要輕柔觸球與適度傾角，球就能產生非常充足的下旋。",
+    "how": [
+      "停止大幅度揮拍橫削的動作。",
+      "縮小揮拍軌跡，保持動作短小且可控。",
+      "僅用溫和且穩定的拍面去帶出旋轉即可。"
+    ],
+    "check": "揮拍動作緊湊流暢，沒有過度誇張的大砍動作，球依然帶有明顯下旋穩定過網。",
+    "source_channel": "Pickleball Kitchen",
+    "source_title": "This simple dinking advice changed my game forever",
+    "source_video_id": "gTBc4ud10AA",
+    "timestamp": "06:10",
+    "index": false,
+    "type": "problem"
+  },
+  {
+    "id": "pk-gtbc4ud10aa-0645",
+    "title": "旋轉判讀與正反手互練",
+    "zone": "kitchen",
+    "what": "雙方在非截擊區線上進行正手上旋與反手下旋的定點對打練習。",
+    "why": "透過實戰來回熟悉正手上旋與反手下旋的出手時機，同時訓練判讀來球旋轉與彈跳特性的能力。",
+    "how": [
+      "兩人站在球網兩側相距約 14 呎的非截擊區線上對打。",
+      "來球適合時使用正手上旋將球刷向邊線或對角。",
+      "面對較低或防守球時使用反手下旋穩定回放。",
+      "專注觀察每一拍球落地後的旋轉與彈跳變化，尋找進攻時機。"
+    ],
+    "check": "能連續多拍控制球的落點，且能依來球狀況切換上旋或下旋，保持 rally 不失誤。",
+    "source_channel": "Pickleball Kitchen",
+    "source_title": "This simple dinking advice changed my game forever",
+    "source_video_id": "gTBc4ud10AA",
+    "timestamp": "06:45",
+    "index": false,
+    "type": "drill"
+  },
+  {
+    "id": "tss-xiyjglzgxja-0117",
+    "title": "發球方得分制原則",
+    "zone": "serve",
+    "what": "在正規匹克球計分中，任何一隊都可以贏得來回對打（rally），但只有處於發球方的隊伍贏得 rally 才能得到分數。",
+    "why": "接發球方贏得 rally 時不能直接得分，其效果是阻止發球方繼續發球，並剝奪該發球員的發球權。",
+    "how": [
+      "發球方贏得 rally：發球方得 1 分，且同一個發球員繼續發球。",
+      "接發球方贏得 rally：接發球方不計分，發球方失去當前發球權。"
+    ],
+    "check": "接發球方贏得 rally 後，記分板上的分數維持不變，僅發球權轉移或換第二發球員。",
+    "source_channel": "Third Shot Sports",
+    "source_title": "Pickleball: How to Keep Score, Explained",
+    "source_video_id": "XIYjGLZgxjA",
+    "timestamp": "01:17",
+    "index": false,
+    "type": "rule"
+  },
+  {
+    "id": "tss-xiyjglzgxja-0150",
+    "title": "得分後的發球員換位",
+    "zone": "serve",
+    "what": "發球方贏得 rally 並得分後，該名發球員與同隊搭檔必須互換左右半場位置，由同一人到另一側繼續發球。",
+    "why": "規則規定發球員不得連續兩次在同一半場發球，得分後必須輪替到對側半場發球。",
+    "how": [
+      "發球方贏得 rally 得到 1 分。",
+      "發球員與搭檔互換左右半場站位。",
+      "由同一位發球員從新的半場斜對角發球給對方。"
+    ],
+    "check": "發球方每次得分後，發球員都移至另一側發球，且接發球方站位保持不變。",
+    "source_channel": "Third Shot Sports",
+    "source_title": "Pickleball: How to Keep Score, Explained",
+    "source_video_id": "XIYjGLZgxjA",
+    "timestamp": "01:50",
+    "index": false,
+    "type": "rule"
+  },
+  {
+    "id": "tss-xiyjglzgxja-0215",
+    "title": "二發交替與換發規則",
+    "zone": "serve",
+    "what": "雙打每回合中，每隊兩名球員都有發球機會。第一發球員失分後換第二發球員發球；第二發球員也失分時即形成換發（side out）。",
+    "why": "雙打機制確保每隊在失掉發球權之前，兩位隊員都有一次發球進攻的機會（除開局第一局外）。",
+    "how": [
+      "第一發球員失誤失分：失去發球權，改由搭檔（第二發球員）就地發球。",
+      "第二發球員失誤失分：發球權結束，形成換發（side out）。",
+      "換發後球交給對手，由對手的第一發球員開始發球。"
+    ],
+    "check": "一隊連續失去兩個發球員的發球權後，球權轉移給對方隊伍。",
+    "source_channel": "Third Shot Sports",
+    "source_title": "Pickleball: How to Keep Score, Explained",
+    "source_video_id": "XIYjGLZgxjA",
+    "timestamp": "02:15",
+    "index": false,
+    "type": "rule"
+  },
+  {
+    "id": "tss-xiyjglzgxja-0447",
+    "title": "雙打報分順序三字訣",
+    "zone": "serve",
+    "what": "雙打發球前必須按順序報出三個數字：發球方分數、接發方分數、第幾位發球員（1 或 2）。",
+    "why": "確保場上所有球員清楚當前比分，並確認目前是該隊的第一發球員或第二發球員在發球。",
+    "how": [
+      "報出第 1 個數字：自己隊伍（發球方）的分數。",
+      "報出第 2 個數字：對手隊伍（接發方）的分數。",
+      "報出第 3 個數字：當前發球員是第幾位（「1」代表第一發球員，「2」代表第二發球員）。",
+      "範例：己方 4 分、對方 3 分、第一發球員發球，口報「4-3-1」。"
+    ],
+    "check": "發球前大聲清晰報出三個數字，雙方球員對分數與發球序無異議後才擊球。",
+    "source_channel": "Third Shot Sports",
+    "source_title": "Pickleball: How to Keep Score, Explained",
+    "source_video_id": "XIYjGLZgxjA",
+    "timestamp": "04:47",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "tss-xiyjglzgxja-0800",
+    "title": "勝負條件：11分且領先2分",
+    "zone": "serve",
+    "what": "匹克球正規比賽打到 11 分獲勝，但獲勝方必須至少領先對手 2 分（win by 2）。",
+    "why": "若比分達到 10-10 或分差小於 2 分，比賽持續進行直到其中一隊拉開 2 分差距為止。",
+    "how": [
+      "持續比賽與計分，直到有隊伍達到 11 分。",
+      "檢查分差：若分差達 2 分以上（例如 11-9），比賽結束。",
+      "若分差僅 1 分（例如 11-10），比賽繼續進行，直到出現 2 分領先（例如 12-10、13-11）。"
+    ],
+    "check": "贏球隊伍的分數達到 11 分以上，且與對手分數相差至少 2 分。",
+    "source_channel": "Third Shot Sports",
+    "source_title": "Pickleball: How to Keep Score, Explained",
+    "source_video_id": "XIYjGLZgxjA",
+    "timestamp": "08:00",
+    "index": false,
+    "type": "rule"
+  },
+  {
+    "id": "tss-xiyjglzgxja-0847",
+    "title": "開局特殊比分 0-0-2",
+    "zone": "serve",
+    "what": "整場比賽剛開始的第一分，比分固定報「0-0-2（0-0 第二發球員）」，先發球方開局只有一次失誤機會。",
+    "why": "為了平衡先發球方的進攻優勢，開局第一局不給第一發球員權利，直接視為第二發球員。",
+    "how": [
+      "開賽第一球，發球員報分「0-0-2」。",
+      "先發球方若得分，該發球員換位繼續發球（報 1-0-2）。",
+      "先發球方一旦失分，直接判定換發（side out），球權立即交給對手。",
+      "換發後，對手隊伍恢復正常的兩次發球權，由對手的第一發球員開始發球。"
+    ],
+    "check": "比賽開局先發隊伍只要失分一次，球權立即轉移給對方，不換搭檔發球。",
+    "source_channel": "Third Shot Sports",
+    "source_title": "Pickleball: How to Keep Score, Explained",
+    "source_video_id": "XIYjGLZgxjA",
+    "timestamp": "08:47",
+    "index": false,
+    "type": "rule"
+  },
+  {
+    "id": "tss-fuvydhparzq-0010",
+    "title": "第三拍後的上網時機判斷",
+    "zone": "backcourt",
+    "what": "根據第三拍擊球的深淺與高度，決定留在底線防守還是向前推進至非截擊區（廚房區）。",
+    "why": "若把球打高，對手有機會強烈向下扣擊，冒然前進會被攻擊；若球迫使對手低位截擊或直接落入非截擊區，對手無法下壓，才能安全前進。",
+    "how": [
+      "擊出第三拍後，先觀察球的弧線與對手接球高度",
+      "若球過高或過深，留在底線後方做好防守準備",
+      "若球成功 drop 進非截擊區或迫使對手在低處截擊，與搭檔一同向前移動至非截擊區線"
+    ],
+    "check": "對手擊球時若是向下重扣，自己已在後場就位防守；對手擊球若是向上抬球，自己與搭檔已抵達網前非截擊區線。",
+    "source_channel": "Third Shot Sports",
+    "source_title": "Pickleball Strategies - When to Move Forward in Doubles and When to Stay Back",
+    "source_video_id": "fuvYdhpaRzQ",
+    "timestamp": "00:10",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "tss-fuvydhparzq-0134",
+    "title": "雙打推進保持平行站位",
+    "zone": "backcourt",
+    "what": "雙打搭檔在往前推進或留在後場時，兩人必須維持平行連線，避免單一人冒進造成脫節。",
+    "why": "一人過度樂觀往前衝而另一人留在後場，會導致兩人距離過大；落單上前的人會處於極差的擊球位置，送給對手直接得分的機會。",
+    "how": [
+      "隨時留意搭檔的站位深度，與搭檔保持在同一條水平線上",
+      "即便認為自己的球品質不錯，也要確認搭檔步調並觀察對手回擊姿態",
+      "若球質不夠好，不可單獨向前衝，留在後場一同防守"
+    ],
+    "check": "移動過程中與搭檔始終保持水平橫向連線，兩人之間沒有出現前後分離的大落差。",
+    "source_channel": "Third Shot Sports",
+    "source_title": "Pickleball Strategies - When to Move Forward in Doubles and When to Stay Back",
+    "source_video_id": "fuvYdhpaRzQ",
+    "timestamp": "01:34",
+    "index": false,
+    "type": "tactic"
+  },
+  {
+    "id": "tss-fuvydhparzq-0210",
+    "title": "口頭提醒球質避免冒進",
+    "zone": "backcourt",
+    "what": "擊出第三拍的球員透過喊聲（如「Heads up」），主動告知搭檔球擊得過高或過深。",
+    "why": "搭檔不一定能立刻準確評估球質，擊球者第一時間發聲示警，能讓兩人同時留在底線做好防禦重球的準備。",
+    "how": [
+      "擊球出拍後若發覺弧度過高或落點偏深，立刻大聲喊出警示詞",
+      "聽到警示的搭檔立刻停下向前腳步，留在後場降低重心防守",
+      "防守過渡後，等下一拍成功 drop 入非截擊區再組織上前"
+    ],
+    "check": "失誤打高時，搭檔沒有往前衝進過渡區被追打，而是留在底線穩固防守。",
+    "source_channel": "Third Shot Sports",
+    "source_title": "Pickleball Strategies - When to Move Forward in Doubles and When to Stay Back",
+    "source_video_id": "fuvYdhpaRzQ",
+    "timestamp": "02:10",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "tss-gyfcah5kl0g-0054",
+    "title": "接發球習慣打中路的盲點",
+    "zone": "serve",
+    "what": "許多球友認為接發球打中線能製造對手搶球或讓球的混亂，且球場寬 20 呎、打中路左右各有 10 呎容錯空間，因此習慣往中路送。",
+    "why": "（教練觀點）打中路製造困惑通常最多只奏效一次，對手溝通後就不會再犯，高水平隊伍更早已提前溝通好；更嚴重的缺點是，打中路等於把主控權交給對手，讓對手陣中較強的球員能隨意主動接管並處理球。",
+    "how": [
+      "檢視自己接發球是否無意識地每次都瞄準球場正中央",
+      "觀察對手較強的球員是否常移位到中路主動搶攻第三拍",
+      "如果對手強勢球員頻繁在中路發動攻擊，應立即停止盲目回中路"
+    ],
+    "check": "接發球後，對手實力較強的球員無法輕易移動到中線用優勢側掌控第三拍。",
+    "source_channel": "Third Shot Sports",
+    "source_title": "Pickleball Strategy: Avoid the Middle!",
+    "source_video_id": "GYfCah5kl0g",
+    "timestamp": "00:54",
+    "index": false,
+    "type": "problem"
+  },
+  {
+    "id": "tss-gyfcah5kl0g-0138",
+    "title": "接發球鎖定弱側打向邊線",
+    "zone": "serve",
+    "what": "接發球時不打中路，而是瞄準靠近某一側邊線的方向，刻意把球送給對手處理第三拍能力較弱的球員。",
+    "why": "雙打對手中通常有一方的第三拍能力較弱。將球送到靠近邊線的位置，對手較強的球員無法越界搶球，能百分之百迫使較弱的球員必須親自處理第三拍，進而增加對手失誤率、為己方創造得分機會。",
+    "how": [
+      "發球前先辨識出對手兩人中第三拍處理能力較弱的目標球員",
+      "接發球時將回球路徑瞄準該名球員側的邊線區域（如大角度斜線或直線近邊線）",
+      "即使失誤風險略高於打正中間，平時仍應多練習控制回球落點朝邊線走"
+    ],
+    "check": "接發球落點靠近邊線，對手較強的搭檔無法跨步搶球，必須由被鎖定的弱側球員擊打第三拍。",
+    "source_channel": "Third Shot Sports",
+    "source_title": "Pickleball Strategy: Avoid the Middle!",
+    "source_video_id": "GYfCah5kl0g",
+    "timestamp": "01:38",
+    "index": false,
+    "type": "tactic"
+  },
+  {
+    "id": "tss-sxw0pk8vgjg-0010",
+    "title": "Dink 的核心目的與功能",
+    "zone": "kitchen",
+    "what": "在靠近球網處接到低球時，回擊一記同樣柔軟且低平的球，稱為 dink。",
+    "why": "dink 是一種中和局勢的防守球，目的不是直接給對手製造麻煩，而是避免送出高球讓對手扣殺；透過迫使對手由下往上擊球，限制對方發力加速且同時保持球在界內。",
+    "how": [
+      "在網前非截擊區（廚房區）線附近就位",
+      "當對方回擊低球時，克制想要發力重擊的衝動",
+      "以柔和的力道將球送過網，讓球落在對方非截擊區內"
+    ],
+    "check": "對手接球時必須由低處向上擊球，無法直接發力下壓。",
+    "source_channel": "Third Shot Sports",
+    "source_title": "Best Pickleball Dink Technique",
+    "source_video_id": "SXW0PK8VgJg",
+    "timestamp": "00:10",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "tss-sxw0pk8vgjg-0053",
+    "title": "Dink 擊球點保持在身體前方",
+    "zone": "kitchen",
+    "what": "打 dink 時，擊球接觸點必須永遠維持在身體與球網之間的前方位置。",
+    "why": "身前的擊球位置最為穩固，能更容易且精準地控制球的方向與落點；若擊球點落到身側或身後，容易產生控球失誤。",
+    "how": [
+      "準備時將球拍維持在身體前方",
+      "預判球的彈跳，腳步到位，確保在身體前方迎球",
+      "嚴格禁止讓球穿透到身體側面或身後才觸球"
+    ],
+    "check": "擊球瞬間眼睛、球拍與球都在胸前視野範圍內，手肘未被擠壓在身側。",
+    "source_channel": "Third Shot Sports",
+    "source_title": "Best Pickleball Dink Technique",
+    "source_video_id": "SXW0PK8VgJg",
+    "timestamp": "00:53",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "tss-sxw0pk8vgjg-0113",
+    "title": "Dink 縮小或不做向後引拍",
+    "zone": "kitchen",
+    "what": "擊球前幾乎不做向後引拍（little to no backswing），拍面隨時保持在前。",
+    "why": "向前揮拍的距離越長，產生的球速就越快。dink 屬於慢速球，過大的向後引拍會產生過多速度而導致失控出界或冒高。",
+    "how": [
+      "在非截擊區前將球拍維持在前方準備位置",
+      "球來時不要向後拉拍，直接從身前位置向前推送擊球",
+      "全程將球拍維持在身體前方"
+    ],
+    "check": "引拍時拍面沒有越過身體軀幹側面中線。",
+    "source_channel": "Third Shot Sports",
+    "source_title": "Best Pickleball Dink Technique",
+    "source_video_id": "SXW0PK8VgJg",
+    "timestamp": "01:13",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "tss-sxw0pk8vgjg-0131",
+    "title": "固定手腕與拍面打 Dink",
+    "zone": "kitchen",
+    "what": "在擊球過程中維持手腕與球拍拍面的穩定，避免過度手腕動作。",
+    "why": "手腕與拍面穩定有助於每次都以球拍中心（甜區）紮實擊球，並精準控制球的去向；若手腕、前臂與手肘過度動作，容易導致控球失常。",
+    "how": [
+      "握拍時固定手腕角度，維持拍面方向",
+      "主要依靠肩膀帶動手臂做鐘擺式推送，而非轉動手腕",
+      "減少手肘的過度屈伸與前臂的翻轉"
+    ],
+    "check": "擊球時聲音紮實，球接觸在球拍正中心，且拍面在擊球前後角度維持一致。",
+    "source_channel": "Third Shot Sports",
+    "source_title": "Best Pickleball Dink Technique",
+    "source_video_id": "SXW0PK8VgJg",
+    "timestamp": "01:31",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "tss-sxw0pk8vgjg-0148",
+    "title": "擊球瞬間保持身體平衡與靜止",
+    "zone": "kitchen",
+    "what": "打 dink 時可採用開放式或中立式站姿，核心關鍵在於擊球瞬間身體維持穩定與平衡。",
+    "why": "良好的平衡與擊球當下的身體靜止，能提供穩定的擊球平台，大幅提升回球的穩定度。",
+    "how": [
+      "依球的來向選擇開放式站姿（雙腳面向球網）或中立式站姿（雙腳面向側邊）",
+      "移動到位後扎穩下盤，降低重心",
+      "在球拍觸球的瞬間，讓身體盡可能保持靜止、不隨意晃動或跑動"
+    ],
+    "check": "擊球完成後身體不會失去平衡倒向一側，視線維持水平穩定。",
+    "source_channel": "Third Shot Sports",
+    "source_title": "Best Pickleball Dink Technique",
+    "source_video_id": "SXW0PK8VgJg",
+    "timestamp": "01:48",
+    "index": false,
+    "type": "tactic"
+  },
+  {
+    "id": "tss-wowjlv0ie40-0059",
+    "title": "第三拍 drop 的戰術目的",
+    "zone": "backcourt",
+    "what": "第三拍 drop 是發球方在底線擊出的柔和高弧度球，目標是輕柔地落在對手的非截擊區（廚房區）。",
+    "why": "好的第三拍 drop 目的不是直接得分，而是迫使網前的對手必須在「低於球網的高度」擊球，限制對手發力進攻的能力，避免我方陷入被動並爭取上網機會。",
+    "how": [
+      "面對網前截擊或扣殺能力強的對手時，選擇打第三拍 drop 而非硬抽或挑高球",
+      "控制擊球力道與弧度，讓球過網後向下落入對手的非截擊區前三分之二區域",
+      "逼迫對手只能向上回擊柔和球，我方藉此往前移動至網前"
+    ],
+    "check": "對手擊球點低於球網高度，且無法直接強攻或下壓擊球。",
+    "source_channel": "Third Shot Sports",
+    "source_title": "Pickleball Strategy: Third Shot Drop",
+    "source_video_id": "WoWJLv0Ie40",
+    "timestamp": "00:59",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "tss-wowjlv0ie40-0154",
+    "title": "向上拋物線而非向前平擊",
+    "zone": "backcourt",
+    "what": "第三拍 drop 本質上是「向上」的擊球，而不是「向前」直直平擊的球。",
+    "why": "如果擊球軌跡太直或過度向前推，球要能過網往往需要較快的球速，而這股速度會導致球落地太深、飛出非截擊區，給對手攻擊機會；因此最好的 drop 會帶有明顯的弧線。",
+    "how": [
+      "揮拍路徑設定為由下往上（low to high）抬升，而非水平向前推擊",
+      "給予球適當的向上弧度，讓球在過網後自然下墜",
+      "落點設定在對手非截擊區（廚房區）內，特別是靠近球網的前三分之二區域"
+    ],
+    "check": "球在空中呈現明顯拋物線，過網後迅速下墜落在非截擊區內。",
+    "source_channel": "Third Shot Sports",
+    "source_title": "Pickleball Strategy: Third Shot Drop",
+    "source_video_id": "WoWJLv0Ie40",
+    "timestamp": "01:54",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "tss-wowjlv0ie40-0223",
+    "title": "保持開拍面向上托球",
+    "zone": "backcourt",
+    "what": "擊球時球拍拍面必須保持略微朝上的開拍面（open paddle face）。",
+    "why": "如果拍面垂直地面，擊球容易平平飛出去甚至掛網；拍面微開才能形成向上托球的動作，讓球順利升起過網。",
+    "how": [
+      "擊球準備時將球拍拍面略微朝上打開",
+      "揮拍接觸球時維持此開拍面角度，順著擊球路徑向上托起球",
+      "避免在擊球瞬間轉動手腕關閉拍面"
+    ],
+    "check": "觸球瞬間拍面朝上，球自然向上抬升而非平直前衝或掛網。",
+    "source_channel": "Third Shot Sports",
+    "source_title": "Pickleball Strategy: Third Shot Drop",
+    "source_video_id": "WoWJLv0Ie40",
+    "timestamp": "02:23",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "tss-wowjlv0ie40-0304",
+    "title": "運用雙腿蹲起帶動向上擊球",
+    "zone": "backcourt",
+    "what": "用「微蹲然後站起（sit and stand）」的腿部動作帶動由下往上的揮拍，而非依賴手腕和手臂甩動。",
+    "why": "單靠手腕與手臂做由下往上的動作時，手腕變異度過大、球拍穩定性差；利用雙腿的蹲起帶動，拍面能保持極高穩定度，擊球落點更一致。",
+    "how": [
+      "固定手腕，保持拍面穩定且微開",
+      "擊球前雙膝微彎呈現坐姿（sit）",
+      "擊球時藉由雙腿蹬起站立（stand）帶動手臂與球拍平穩向上推球"
+    ],
+    "check": "手腕與手臂沒有大幅度翻動，揮拍高度主要來自膝蓋微蹲後站起的垂直力量。",
+    "source_channel": "Third Shot Sports",
+    "source_title": "Pickleball Strategy: Third Shot Drop",
+    "source_video_id": "WoWJLv0Ie40",
+    "timestamp": "03:04",
+    "index": false,
+    "type": "principle"
+  },
+  {
+    "id": "tss-wowjlv0ie40-0328",
+    "title": "非截擊區目標 drop 練習",
+    "zone": "backcourt",
+    "what": "在球網另一側非截擊區內放置標記物作為目標，進行第三拍 drop 專項訓練。",
+    "why": "第三拍 drop 是非常依賴手感與力量微調的技術，透過具體目標物反覆實戰演練，能建立對球速與高度的精確控制感。",
+    "how": [
+      "在對手非截擊區內擺放兩個角錐或標記物作為目標",
+      "由搭檔接發球深球回擊至底線",
+      "擊球者在底線使用第三拍 drop，嘗試將球打入標記物附近的非截擊區",
+      "正手拍與反手拍交替練習"
+    ],
+    "check": "十顆球中能穩定將多數球送入非截擊區內，且球過網後不給對手高點下壓的機會。",
+    "source_channel": "Third Shot Sports",
+    "source_title": "Pickleball Strategy: Third Shot Drop",
+    "source_video_id": "WoWJLv0Ie40",
+    "timestamp": "03:28",
+    "index": false,
+    "type": "drill"
+  },
+  {
+    "id": "tss-wowjlv0ie40-0416",
+    "title": "優先選擇斜線第三拍 drop",
+    "zone": "backcourt",
+    "what": "在沒有特定戰術偏好的情況下，第三拍 drop 應優先打向斜線（crosscourt）而非直線（down the line）。",
+    "why": "球場的直線距離比斜線距離短。打向斜線擁有更長的地板距離與更大的目標空間，球成功落入非截擊區的容錯率更高。",
+    "how": [
+      "在底線接發後評估對手位置，若無特定目標，將球瞄準對角線對手的非截擊區",
+      "善用較長的球場對角距離，讓球有充分的飛行弧度與下墜空間",
+      "維持由下往上的拍面路徑，平穩將球推往斜對角"
+    ],
+    "check": "球飛向斜對角的非截擊區，即便落點稍長仍能留在非截擊區內不致出界或過深。",
+    "source_channel": "Third Shot Sports",
+    "source_title": "Pickleball Strategy: Third Shot Drop",
+    "source_video_id": "WoWJLv0Ie40",
+    "timestamp": "04:16",
+    "index": false,
+    "type": "tactic"
+  },
+  {
+    "id": "tss-qh-i9p24dco-0105",
+    "title": "發球方 stacking 站位",
+    "zone": "backcourt",
+    "what": "發球方兩位球員一開始站在球場的同一側，發球後再迅速移位至各自偏好的左右半場。",
+    "why": "若發球得分後輪轉到非偏好側，發球後兩人都從底線橫跨換位容易造成混亂；採用 stacking 讓非發球員先就位在網前同側，發球員擊球後只需一人橫移，可大幅減少雙方的移動量並降低混亂。",
+    "how": [
+      "發球員站在規則要求的發球區底線後準備發球",
+      "非發球搭檔站在同一側的非截擊區（廚房區）線旁",
+      "發球員完成發球後，順勢往另一側半場移動",
+      "兩人順利回到各自習慣的左右側防守"
+    ],
+    "check": "發球後發球員直接跑至空側，非發球員幾乎不用大範圍橫移，兩人迅速就定位在各自偏好的半場。",
+    "source_channel": "Third Shot Sports",
+    "source_title": "Pickleball Strategy: Stacking",
+    "source_video_id": "qH-I9P24Dco",
+    "timestamp": "01:05",
+    "index": false,
+    "type": "tactic"
+  },
+  {
+    "id": "tss-qh-i9p24dco-0226",
+    "title": "接發球方 stacking 站位",
+    "zone": "backcourt",
+    "what": "接發球時兩位球員先站在同一側（非接球搭檔站在邊線外），接發球完成後再順勢換位。",
+    "why": "若接球後兩人才同時大範圍橫移換位，雙方移動距離過長容易露空檔；非接球員先站在偏好側的邊線外，能減少換位時的移動距離與碰撞混亂。",
+    "how": [
+      "接發球員站在規則要求的接發球區底線後準備接球",
+      "非接球搭檔站在同一側的球場邊線外等待",
+      "接發球員擊出接發球後，直接往前跑向另一側（其偏好的半場）",
+      "在邊線外的搭檔順勢踏入球場，接管原側的非截擊區（廚房區）位置"
+    ],
+    "check": "接發球員擊球後斜向跑位就定位，邊線外的搭檔直接踏入眼前空出的半場，兩人順暢進入各自偏好的左右兩側。",
+    "source_channel": "Third Shot Sports",
+    "source_title": "Pickleball Strategy: Stacking",
+    "source_video_id": "qH-I9P24Dco",
+    "timestamp": "02:26",
+    "index": false,
+    "type": "tactic"
+  },
+  {
+    "id": "tss-qh-i9p24dco-0306",
+    "title": "發球與接球站位規則限制",
+    "zone": "serve",
+    "what": "匹克球規則中唯一有嚴格站位位置限制的只有發球員，其他球員不受特定區域限制。",
+    "why": "規則僅規定發球員必須在正確的分數對應發球區擊球；發球員的搭檔以及接發球方的搭檔均可自由站在場內或場外任何位置。",
+    "how": [
+      "確認發球員依照當前比分站於正確的右側或左側底線發球區內",
+      "發球員的同伴可依戰術需求站在場內或場外任何位置",
+      "接發球員站在對應接發球區，其同伴同樣可自由站於場內或場外任何位置（如邊線外）"
+    ],
+    "check": "只要發球員在正確發球區擊球且接發球員在對角接球，其餘兩人無論站在場內或場外皆屬合法。",
+    "source_channel": "Third Shot Sports",
+    "source_title": "Pickleball Strategy: Stacking",
+    "source_video_id": "qH-I9P24Dco",
+    "timestamp": "03:06",
+    "index": false,
+    "type": "rule"
+  }
+]

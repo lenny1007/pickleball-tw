@@ -1,0 +1,75 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import KnowledgeCard from '../../components/KnowledgeCard.astro';
+import { ZONES, type ZoneKey } from '../../consts';
+
+const cards = await getCollection('knowledge');
+const groups = (Object.keys(ZONES) as ZoneKey[]).map((z) => ({
+  key: z,
+  ...ZONES[z],
+  cards: cards.filter((c) => c.data.zone === z),
+}));
+---
+<Base title="技術卡" description="從匹克球教學影片整理的中文技術卡，依球場區域分類，每張附原片時間點。">
+  <header class="page-head">
+    <h1>技術卡</h1>
+    <p>依球場區域分類。每張卡附原片時間點，點來源直接看那一段。</p>
+  </header>
+
+  <form class="filter" role="search" onsubmit="return false">
+    <label for="kq" class="sr-only">搜尋技術卡</label>
+    <input id="kq" type="search" placeholder="輸入關鍵字，例如：第三拍" />
+  </form>
+  <p class="none" id="none" hidden>沒有找到符合的卡片。試試別的說法，例如「小球」或「dink」。</p>
+
+  {cards.length === 0 && <p class="none">第一批技術卡整理中。</p>}
+
+  {groups.filter((g) => g.cards.length).map((g) => (
+    <section class="zone-group" id={g.key}>
+      <h2>{g.name}</h2>
+      <div class="cards">
+        {g.cards.map((c) => (
+          <div class="item" data-text={[c.data.title, c.data.what, ...(c.data.how ?? [])].join(' ').toLowerCase()}>
+            <KnowledgeCard card={c.data} />
+          </div>
+        ))}
+      </div>
+    </section>
+  ))}
+</Base>
+
+<script>
+  const input = document.getElementById('kq') as HTMLInputElement;
+  const none = document.getElementById('none')!;
+  const items = [...document.querySelectorAll<HTMLElement>('.item')];
+  const apply = () => {
+    const q = input.value.trim().toLowerCase();
+    let shown = 0;
+    items.forEach((el) => {
+      const hit = !q || q.split(/\s+/).every((w) => el.dataset.text!.includes(w));
+      el.hidden = !hit;
+      if (hit) shown++;
+    });
+    document.querySelectorAll<HTMLElement>('.zone-group').forEach((g) => {
+      g.hidden = !g.querySelector('.item:not([hidden])');
+    });
+    none.hidden = !(q && items.length && shown === 0);
+  };
+  const q = new URLSearchParams(location.search).get('q');
+  if (q) input.value = q;
+  input.addEventListener('input', apply);
+  apply();
+</script>
+
+<style>
+  .filter { margin: 20px 0 8px; max-width: 520px; }
+  .filter input { width: 100%; font: inherit; padding: 12px 16px; border: 2px solid var(--ink); border-radius: 999px; background: var(--card); color: var(--ink); }
+  .none { color: var(--muted); }
+  .zone-group { padding-block: 32px; }
+  .zone-group h2 { font-size: 1.5rem; margin: 0 0 16px; }
+  .cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  .item { display: flex; min-width: 0; }
+  .item > :global(*) { flex: 1; }
+  @media (max-width: 860px) { .cards { grid-template-columns: minmax(0, 1fr); } }
+</style>

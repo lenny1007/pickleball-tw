@@ -1,0 +1,60 @@
+/* 設計方向：球場就是地圖。硬地球場藍、非截擊區淺藍、場外綠、黃綠球色點綴；冷灰底。
+   刻意與 badminton-tw（深綠＋羽球黃、Noto Sans／Space Grotesk）區隔。說明見 docs/DESIGN.md */
+:root {
+  --paper: #EDF2F3;
+  --ink: #14293A;
+  --muted: #4F6575;
+  --court: #2D6E8E;
+  --kitchen: #4F97B4;
+  --apron: #6E9A6A;
+  --line: #FFFFFF;
+  --ball: #D9E244;
+  --ball-ink: #2B3300;
+  --rule: #C9D6DB;
+  --card: #FFFFFF;
+  --on-court: #FFFFFF;
+  --display: "Huninn", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
+  --body: "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", system-ui, sans-serif;
+  --measure: 38em;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0E1C25; --ink: #E2ECEF; --muted: #9DB2BD; --court: #235A75; --kitchen: #357C99;
+    --apron: #3F6342; --line: #EAF3F6; --rule: #24394A; --card: #13252F;
+    color-scheme: dark;
+  }
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.75;
+}
+a { color: inherit; }
+img { max-width: 100%; height: auto; }
+:focus-visible { outline: 3px solid var(--ball); outline-offset: 3px; }
+.wrap {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+h1, h2 { font-family: var(--display); font-weight: 400; text-wrap: balance; }
+.page-head { padding-block: 32px 8px; }
+.page-head h1 { font-size: clamp(1.9rem, 4.4vw, 2.8rem); line-height: 1.25; margin: 0 0 8px; }
+.page-head p { color: var(--muted); margin: 0; max-width: var(--measure); }
+
+/* Prose for articles */
+.prose { max-width: var(--measure); padding-block: 24px 64px; }
+.prose h2 { font-size: 1.6rem; line-height: 1.35; margin: 2.2em 0 .5em; }
+.prose h3 { font-size: 1.15rem; margin: 1.8em 0 .4em; }
+.prose p, .prose li { color: var(--ink); }
+.prose table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; }
+.prose th, .prose td { border-bottom: 1px solid var(--rule); padding: 8px 10px; text-align: left; }
+.prose .table-wrap { overflow-x: auto; }

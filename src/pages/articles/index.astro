@@ -1,0 +1,36 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import { CATEGORIES } from '../../consts';
+
+const articles = (await getCollection('articles', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+const groups = CATEGORIES.map((c) => ({ ...c, items: articles.filter((a) => a.data.category === c.slug) }));
+---
+<Base title="文章" description="匹克球規則、球拍挑選、入門與場地的完整整理。">
+  <header class="page-head">
+    <h1>文章</h1>
+    <p>規則、球拍、入門與哪裡打。每篇上線前都對照過規則原文或廠商資料。</p>
+  </header>
+  {articles.length === 0 && <p class="none">第一批文章整理中。</p>}
+  {groups.filter((g) => g.items.length).map((g) => (
+    <section class="group" id={g.slug}>
+      <h2>{g.name}</h2>
+      <ul>
+        {g.items.map((a) => (
+          <li><a href={`/articles/${a.id}/`}>{a.data.title}</a><p>{a.data.description}</p></li>
+        ))}
+      </ul>
+    </section>
+  ))}
+</Base>
+
+<style>
+  .none { color: var(--muted); }
+  .group { padding-block: 28px; border-top: 1px solid var(--rule); margin-top: 24px; }
+  .group h2 { font-size: 1.5rem; margin: 0 0 12px; }
+  ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px; max-width: var(--measure); }
+  li a { font-weight: 600; font-size: 1.08rem; }
+  li p { margin: 2px 0 0; color: var(--muted); }
+</style>

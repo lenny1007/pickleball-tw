@@ -1,0 +1,60 @@
+---
+import { ZONES } from '../consts';
+// 首頁的球場俯視圖。球場 20×44 呎、非截擊區離網 7 呎；1 呎 = 8 單位，直式畫（跟手機同方向）。
+// 每個區塊是一個連結，點了到技術卡頁的對應分區。
+---
+<div class="court-wrap">
+  <svg class="court" viewBox="0 0 220 400" role="group" aria-labelledby="court-title">
+    <title id="court-title">匹克球場俯視圖，點區域看對應主題</title>
+    <rect x="0" y="0" width="220" height="400" rx="16" fill="var(--apron)" />
+    <g transform="translate(30,24)">
+      <a href="/knowledge/#backcourt" data-zone="backcourt" aria-label={`${ZONES.backcourt.name}：${ZONES.backcourt.note}`}>
+        <rect class="zone" x="0" y="0" width="160" height="120" fill="var(--court)" />
+      </a>
+      <a href="/knowledge/#kitchen" data-zone="kitchen" aria-label={`${ZONES.kitchen.name}：${ZONES.kitchen.note}`}>
+        <rect class="zone" x="0" y="120" width="160" height="112" fill="var(--kitchen)" />
+      </a>
+      <a href="/knowledge/#serve" data-zone="serve" aria-label={`${ZONES.serve.name}：${ZONES.serve.note}`}>
+        <rect class="zone" x="0" y="232" width="160" height="120" fill="var(--court)" />
+      </a>
+      <g stroke="var(--line)" stroke-width="2.5" fill="none" pointer-events="none">
+        <rect x="0" y="0" width="160" height="352" />
+        <line x1="0" y1="120" x2="160" y2="120" /><line x1="0" y1="232" x2="160" y2="232" />
+        <line x1="80" y1="0" x2="80" y2="120" /><line x1="80" y1="232" x2="80" y2="352" />
+      </g>
+      <line x1="-10" y1="176" x2="170" y2="176" stroke="var(--ink)" stroke-width="4" pointer-events="none" />
+      <g class="labels" pointer-events="none">
+        <text x="80" y="66" text-anchor="middle" font-size="15">打法與戰術</text>
+        <text x="80" y="153" text-anchor="middle" font-size="15">非截擊區・小球</text>
+        <text x="80" y="208" text-anchor="middle" font-size="13">網前不能截擊</text>
+        <text x="80" y="296" text-anchor="middle" font-size="15">發球與計分</text>
+      </g>
+      <circle class="ball" cx="120" cy="330" r="8" fill="var(--ball)" stroke="var(--ball-ink)" stroke-opacity=".3" pointer-events="none" />
+    </g>
+    <text class="dim" x="110" y="392" text-anchor="middle">6.1 × 13.41 公尺，單打雙打同一張場</text>
+  </svg>
+  <p class="zone-note" id="zone-note" aria-live="polite">點球場的區域，直接看那一區的技術卡。</p>
+</div>
+
+<script define:vars={{ notes: Object.fromEntries(Object.entries(ZONES).map(([k, v]) => [k, `${v.name}：${v.note}`])) }}>
+  const note = document.getElementById('zone-note');
+  document.querySelectorAll('.court a[data-zone]').forEach((a) => {
+    const show = () => { note.textContent = notes[a.dataset.zone]; };
+    a.addEventListener('mouseenter', show);
+    a.addEventListener('focus', show);
+  });
+</script>
+
+<style>
+  .court { display: block; width: 100%; max-width: 420px; height: auto; margin: 0 auto; }
+  .zone { transition: filter .15s; }
+  a:hover .zone, a:focus-visible .zone { filter: brightness(1.12); }
+  a:focus { outline: none; }
+  a:focus-visible .zone { stroke: var(--ball); stroke-width: 4; }
+  .labels text { font-family: var(--display); fill: var(--on-court); stroke: var(--court); stroke-width: 5px; stroke-linejoin: round; paint-order: stroke; }
+  .dim { font-family: var(--body); font-size: 11px; fill: var(--ink); opacity: .7; }
+  .ball { animation: drop .9s cubic-bezier(.3, 1.6, .5, 1) .2s both; }
+  @keyframes drop { from { transform: translateY(-40px); opacity: 0; } to { transform: none; opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) { .ball { animation: none; } }
+  .zone-note { min-height: 3.5em; margin: 14px auto 0; max-width: 420px; font-size: .95rem; color: var(--muted); }
+</style>
