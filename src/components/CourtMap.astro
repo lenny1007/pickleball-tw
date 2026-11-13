@@ -51,7 +51,7 @@ import { ZONES } from '../consts';
   a:hover .zone, a:focus-visible .zone { filter: brightness(1.12); }
   a:focus { outline: none; }
   a:focus-visible .zone { stroke: var(--ball); stroke-width: 4; }
-  .labels text { font-family: var(--display); fill: var(--on-court); }
+  .labels text { font-family: var(--display); fill: var(--on-court); stroke: var(--court); stroke-width: 5px; stroke-linejoin: round; paint-order: stroke; }
   .dim { font-family: var(--body); font-size: 11px; fill: var(--ink); opacity: .7; }
   .ball { animation: drop .9s cubic-bezier(.3, 1.6, .5, 1) .2s both; }
   @keyframes drop { from { transform: translateY(-40px); opacity: 0; } to { transform: none; opacity: 1; } }
