@@ -1,0 +1,82 @@
+---
+// 文章的步驟導覽：內文放一條三步驟帶，寬螢幕右側再放一條跟著捲動亮起的段落軌。
+// 數字只給真正有先後順序的步驟用；其他段落（出發點、開始練）在軌上不編號。
+interface Item { id: string; title: string; note?: string; step?: number }
+interface Props { items: Item[] }
+const { items } = Astro.props;
+const steps = items.filter((i) => i.step);
+---
+<ol class="steps">
+  {steps.map((s) => (
+    <li>
+      <a href={`#${s.id}`}>
+        <span class="num" aria-hidden="true">{s.step}</span>
+        <span class="txt"><span class="t">{s.title}</span>{s.note && <span class="n">{s.note}</span>}</span>
+      </a>
+    </li>
+  ))}
+</ol>
+
+<nav class="rail" aria-label="本文段落">
+  <ol>
+    {items.map((i) => (
+      <li class:list={{ stepped: i.step }}>
+        <a href={`#${i.id}`} data-target={i.id}>
+          <span class="dot" aria-hidden="true">{i.step ?? ''}</span>{i.title}
+        </a>
+      </li>
+    ))}
+  </ol>
+</nav>
+
+<script>
+  const links = [...document.querySelectorAll<HTMLAnchorElement>('.rail a[data-target]')];
+  const heads = links.map((a) => document.getElementById(a.dataset.target!)).filter(Boolean) as HTMLElement[];
+  const setCurrent = () => {
+    const y = window.scrollY + window.innerHeight * 0.3;
+    let cur = -1;
+    heads.forEach((h, i) => { if (h.offsetTop <= y) cur = i; });
+    links.forEach((a, i) => (i === cur ? a.setAttribute('aria-current', 'true') : a.removeAttribute('aria-current')));
+  };
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(() => { setCurrent(); ticking = false; });
+  }, { passive: true });
+  setCurrent();
+</script>
+
+<style>
+  .steps { list-style: none; margin: 1.8em 0 2.2em; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-radius: 14px; overflow: hidden; background: var(--court); }
+  .steps li { margin: 0; }
+  .steps li + li { border-left: 2px solid var(--line); }
+  .steps a { display: flex; gap: 12px; height: 100%; padding: 16px 16px 18px; text-decoration: none; color: var(--on-court); }
+  .steps a:hover .t { text-decoration: underline; }
+  .num { flex: none; width: 30px; height: 30px; border-radius: 50%; background: var(--ball); color: var(--ball-ink); font-family: var(--display); font-size: 1rem; display: grid; place-items: center; }
+  .txt { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+  .t { font-family: var(--display); font-size: 1.08rem; line-height: 1.4; }
+  .n { font-size: .85rem; line-height: 1.55; opacity: .85; }
+  .prose .steps li, .prose .steps .t, .prose .steps .n { color: var(--on-court); }
+  @media (max-width: 640px) {
+    .steps { grid-template-columns: 1fr; }
+    .steps li + li { border-left: 0; border-top: 2px solid var(--line); }
+  }
+
+  .rail { display: none; }
+  @media (min-width: 1200px) {
+    .rail {
+      display: block; position: fixed; top: 96px; width: 220px;
+      left: calc(50% - 540px + 16px + 608px + 56px);
+      font-size: .9rem;
+    }
+    .rail ol { list-style: none; margin: 0; padding: 0 0 0 14px; border-left: 2px solid var(--rule); }
+    .rail li { margin: 0; }
+    .rail a { display: flex; align-items: center; gap: 10px; padding: 7px 0; color: var(--muted); text-decoration: none; line-height: 1.45; }
+    .rail a:hover { color: var(--ink); }
+    .rail .dot { flex: none; width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; font-family: var(--display); font-size: .8rem; border: 2px solid var(--rule); color: var(--muted); }
+    .rail li:not(.stepped) .dot { width: 10px; height: 10px; margin: 0 6px; }
+    .rail a[aria-current] { color: var(--ink); }
+    .rail a[aria-current] .dot { background: var(--ball); border-color: var(--ball); color: var(--ball-ink); }
+  }
+</style>
