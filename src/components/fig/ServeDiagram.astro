@@ -1,0 +1,19 @@
+---
+import Court from './Court.astro';
+import Figure from './Figure.astro';
+import Player from './Player.astro';
+import Path from './Path.astro';
+import Bounce from './Bounce.astro';
+---
+<Figure caption="發球往對角發，要越過對方的非截擊區、落在黃色框起來的發球區。發到非截擊區的線上算失誤；落在中線、邊線、底線上算好球。">
+  <Court label="發球路線圖：從右發球區後方往對角發，球要越過對方的非截擊區" x0={-6} x1={50} y1={26}>
+    <rect x="292" y="2" width="146" height="96" class="target" />
+    <line x1="290" y1="0" x2="290" y2="100" class="fault-line" />
+    <Path x1={-14} y1={160} x2={372} y2={48} bend={-40} />
+    <Bounce x={372} y={48} />
+    <Player x={-26} y={160} label="發" />
+    <Player x={462} y={50} side="them" label="接" />
+    <text class="lab dark" x="290" y="232" text-anchor="middle">壓到這條線＝失誤</text>
+    <line x1="290" y1="216" x2="290" y2="104" class="leader" />
+  </Court>
+</Figure>

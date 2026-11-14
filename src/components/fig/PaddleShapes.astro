@@ -1,0 +1,27 @@
+---
+import Figure from './Figure.astro';
+// 示意圖：三種拍型的輪廓與甜區位置（黃綠色橢圓）。依廠商說法：寬拍甜區大、較靠近手；長拍甜區較小、較高。
+const shapes = [
+  { name: '寬拍', note: '甜區大、容錯高', w: 92, h: 116, sweet: { cy: 0.56, rx: 30, ry: 30 } },
+  { name: '標準', note: '介於兩者之間', w: 86, h: 124, sweet: { cy: 0.5, rx: 26, ry: 28 } },
+  { name: '長拍', note: '搆得遠、甜區較小', w: 76, h: 138, sweet: { cy: 0.42, rx: 20, ry: 24 } },
+];
+const handle = 56;
+---
+<Figure caption="三種拍型示意（非實際比例）。黃綠色是甜區的大概位置：寬拍甜區大、離手近；長拍甜區小、位置較高。">
+  <svg class="gear-fig" viewBox="0 0 480 300" role="img" aria-label="寬拍、標準拍、長拍的輪廓與甜區位置示意">
+    {shapes.map((s, i) => {
+      const cx = 80 + i * 160;
+      const top = 230 - handle - s.h;
+      return (
+        <g>
+          <rect x={cx - s.w / 2} y={top} width={s.w} height={s.h} rx="22" class="paddle-face" />
+          <ellipse cx={cx} cy={top + s.h * s.sweet.cy} rx={s.sweet.rx} ry={s.sweet.ry} class="sweet" />
+          <rect x={cx - 11} y={top + s.h - 4} width="22" height={handle + 4} rx="6" class="paddle-grip" />
+          <text x={cx} y="262" text-anchor="middle" class="lab dark big">{s.name}</text>
+          <text x={cx} y="286" text-anchor="middle" class="lab muted">{s.note}</text>
+        </g>
+      );
+    })}
+  </svg>
+</Figure>

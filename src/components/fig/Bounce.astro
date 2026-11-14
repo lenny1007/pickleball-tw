@@ -1,0 +1,6 @@
+---
+// 球落地點：一個小圓環，表示「這裡彈地」。
+interface Props { x: number; y: number }
+const { x, y } = Astro.props;
+---
+<g class="bounce"><circle cx={x} cy={y} r="7" /><circle cx={x} cy={y} r="2.5" class="core" /></g>

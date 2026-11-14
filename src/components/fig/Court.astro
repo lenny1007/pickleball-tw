@@ -1,0 +1,25 @@
+---
+// 圖解共用的球場底圖：橫式俯視，1 呎 = 10 單位。球場 44 × 20 呎，網在 x=220，
+// 非截擊區線在 x=150、290。子元素直接用這個座標系（slot 會畫在球場線上面）。
+interface Props {
+  x0?: number; x1?: number; y0?: number; y1?: number; // 顯示範圍（呎）
+  label: string;
+  kitchenFill?: boolean;
+  net?: boolean;
+}
+const { x0 = -3, x1 = 47, y0 = -3, y1 = 23, label, kitchenFill = true, net = true } = Astro.props;
+const vb = [x0 * 10, y0 * 10, (x1 - x0) * 10, (y1 - y0) * 10];
+---
+<svg class="court-fig" viewBox={vb.join(' ')} role="img" aria-label={label}>
+  <rect x={vb[0]} y={vb[1]} width={vb[2]} height={vb[3]} fill="var(--apron)" />
+  <rect x="0" y="0" width="440" height="200" fill="var(--court)" />
+  {kitchenFill && <rect x="150" y="0" width="140" height="200" fill="var(--kitchen)" />}
+  <slot name="under" />
+  <g stroke="var(--line)" stroke-width="2.5" fill="none">
+    <rect x="0" y="0" width="440" height="200" />
+    <line x1="150" y1="0" x2="150" y2="200" /><line x1="290" y1="0" x2="290" y2="200" />
+    <line x1="0" y1="100" x2="150" y2="100" /><line x1="290" y1="100" x2="440" y2="100" />
+  </g>
+  {net && <line x1="220" y1="-12" x2="220" y2="212" stroke="var(--ink)" stroke-width="5" stroke-linecap="round" />}
+  <slot />
+</svg>

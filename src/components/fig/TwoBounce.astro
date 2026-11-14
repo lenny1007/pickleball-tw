@@ -1,0 +1,43 @@
+---
+import Figure from './Figure.astro';
+// 雙彈跳規則分三格畫：每格一張小球場（1 呎 = 10 單位，橫式），一格只畫一拍。
+const panels = [
+  { title: '第 1 拍　發球：對方要等球落地彈起才能接', from: [-14, 160], to: [372, 50], bounce: true, bend: -36, hitter: 'us' },
+  { title: '第 2 拍　接發球：發球方也要等球落地彈起才能打', from: [452, 44], to: [80, 150], bounce: true, bend: -36, hitter: 'them' },
+  { title: '第 3 拍起　可以截擊，球不用先落地', from: [60, 150], to: [300, 70], bounce: false, bend: -28, hitter: 'us' },
+];
+const ph = 300; // 每格高度
+function arc(x1: number, y1: number, x2: number, y2: number, bend: number) {
+  const mx = (x1 + x2) / 2, my = (y1 + y2) / 2, dx = x2 - x1, dy = y2 - y1, l = Math.hypot(dx, dy);
+  const cx = mx - (dy / l) * bend, cy = my + (dx / l) * bend;
+  const tx = x2 - cx, ty = y2 - cy, tl = Math.hypot(tx, ty), ux = tx / tl, uy = ty / tl;
+  return {
+    d: `M${x1} ${y1} Q${cx} ${cy} ${x2} ${y2}`,
+    head: `M${x2 - ux * 13 - uy * 7} ${y2 - uy * 13 + ux * 7} L${x2} ${y2} L${x2 - ux * 13 + uy * 7} ${y2 - uy * 13 - ux * 7}`,
+  };
+}
+---
+<Figure caption="雙彈跳規則：發球、接發球這兩拍都要等球落地彈起一次（圓環是落地點）才能打。第 3 拍開始，雙方都可以截擊。">
+  <svg class="court-fig" viewBox={`-60 -50 560 ${ph * 3}`} role="img" aria-label="雙彈跳規則三步驟：發球要落地、接發球要落地、第三拍起可以截擊">
+    <rect x="-60" y="-50" width="560" height={ph * 3} fill="var(--apron)" />
+    {panels.map((p, i) => {
+      const a = arc(p.from[0], p.from[1], p.to[0], p.to[1], p.bend);
+      return (
+        <g transform={`translate(0,${i * ph})`}>
+          <text x="-40" y="-18" class="lab dark">{p.title}</text>
+          <rect width="440" height="200" fill="var(--court)" />
+          <rect x="150" width="140" height="200" fill="var(--kitchen)" />
+          <g stroke="var(--line)" stroke-width="2.5" fill="none">
+            <rect width="440" height="200" /><line x1="150" x2="150" y2="200" /><line x1="290" x2="290" y2="200" />
+            <line y1="100" x2="150" y2="100" /><line x1="290" y1="100" x2="440" y2="100" />
+          </g>
+          <line x1="220" y1="-10" x2="220" y2="210" stroke="var(--ink)" stroke-width="5" stroke-linecap="round" />
+          <g class="flight"><path d={a.d} class="trail" />{!p.bounce && <path d={a.head} class="head" />}</g>
+          {p.bounce && <g class="bounce"><circle cx={p.to[0]} cy={p.to[1]} r="8" /><circle cx={p.to[0]} cy={p.to[1]} r="3" class="core" /></g>}
+          <g class:list={['pl', p.hitter]}><circle cx={p.from[0] + (p.hitter === 'us' ? -12 : 10)} cy={p.from[1]} r="11" /></g>
+          {i === 2 && <g class="pl them"><circle cx="312" cy="62" r="11" /></g>}
+        </g>
+      );
+    })}
+  </svg>
+</Figure>

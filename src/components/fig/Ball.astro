@@ -1,0 +1,5 @@
+---
+interface Props { x: number; y: number; r?: number }
+const { x, y, r = 6 } = Astro.props;
+---
+<circle class="ball-dot" cx={x} cy={y} r={r} />

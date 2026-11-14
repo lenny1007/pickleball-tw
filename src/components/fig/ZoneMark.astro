@@ -1,0 +1,14 @@
+---
+// 知識卡用的小球場記號：直式半場，標出卡片所屬的區域。
+interface Props { zone: string }
+const { zone } = Astro.props;
+---
+<svg class="zone-mark" viewBox="0 0 22 40" aria-hidden="true" focusable="false">
+  <rect width="22" height="40" rx="3" fill="var(--rule)" />
+  {zone === 'backcourt' && <rect y="0" width="22" height="13" fill="var(--court)" />}
+  {zone === 'kitchen' && <rect y="13" width="22" height="14" fill="var(--kitchen)" />}
+  {zone === 'serve' && <rect y="27" width="22" height="13" fill="var(--court)" />}
+  {zone === 'gear' && <circle cx="11" cy="20" r="5" fill="var(--ball)" stroke="var(--ball-ink)" stroke-opacity=".4" />}
+  <g stroke="var(--paper)" stroke-width="1.2" fill="none"><line y1="13" x2="22" y2="13" /><line y1="27" x2="22" y2="27" /></g>
+  <line y1="20" x2="22" y2="20" stroke="var(--ink)" stroke-width="1.6" />
+</svg>

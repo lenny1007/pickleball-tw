@@ -1,0 +1,19 @@
+---
+import Court from './Court.astro';
+import Figure from './Figure.astro';
+import Player from './Player.astro';
+import Bounce from './Bounce.astro';
+---
+<Figure caption="A 站在線外截擊：合法。B 踩到非截擊區的線截擊：失誤。C 在區內打已經彈地的球：合法。D 截擊後收不住腳衝進區內：失誤，就算這一分已經結束也一樣。">
+  <Court label="非截擊區四種情況：線外截擊合法、踩線截擊失誤、區內打彈地球合法、截擊後衝進區內失誤" x0={3} x1={33} y0={-3} y1={22}>
+    <Player x={118} y={36} label="A" mark="ok" />
+    <Player x={150} y={92} label="B" mark="fault" />
+    <Bounce x={171} y={110} />
+    <Player x={196} y={112} label="C" mark="ok" />
+    <g opacity=".45"><Player x={104} y={178} label="D" /></g>
+    <path d="M118 178 h38" class="momentum" />
+    <path d="M150 172 l8 6 l-8 6" class="momentum-head" />
+    <Player x={174} y={178} label="D" mark="fault" />
+    <text class="lab dark" x="300" y="-10" text-anchor="middle">對方場地</text>
+  </Court>
+</Figure>

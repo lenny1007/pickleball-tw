@@ -1,0 +1,29 @@
+---
+import Figure from './Figure.astro';
+// 示意圖：球拍側面剖面，芯材厚度 13 mm 與 16 mm 的比較（比例放大）。
+const rows = [
+  { mm: 13, y: 40, note: '約 13 mm：出球快、偏力量' },
+  { mm: 16, y: 150, note: '約 16 mm：較穩、偏控制' },
+];
+---
+<Figure caption="球拍側面剖面示意（厚度放大）。中間蜂巢狀的是芯材，兩面是拍面材質。">
+  <svg class="gear-fig" viewBox="0 0 480 250" role="img" aria-label="球拍芯材厚度 13 毫米與 16 毫米的剖面比較示意">
+    <defs>
+      <pattern id="honey" width="14" height="12" patternUnits="userSpaceOnUse">
+        <path d="M0 6 l3.5 -6 h7 l3.5 6 l-3.5 6 h-7 z" class="honey" />
+      </pattern>
+    </defs>
+    {rows.map((r) => {
+      const t = r.mm * 3.6;
+      return (
+        <g>
+          <rect x="30" y={r.y} width="300" height="6" rx="3" class="skin" />
+          <rect x="30" y={r.y + 6} width="300" height={t} fill="url(#honey)" class="core" />
+          <rect x="30" y={r.y + 6 + t} width="300" height="6" rx="3" class="skin" />
+          <text x="346" y={r.y + 6 + t / 2 + 6} class="lab dark big">{r.mm} mm</text>
+          <text x="30" y={r.y + t + 34} class="lab muted">{r.note}</text>
+        </g>
+      );
+    })}
+  </svg>
+</Figure>
