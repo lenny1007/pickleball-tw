@@ -1,0 +1,21 @@
+---
+import Court from './Court.astro';
+import Figure from './Figure.astro';
+import Player from './Player.astro';
+import Path from './Path.astro';
+// 俯視：對手在左邊底線打第三拍，我方兩人在右邊非截擊區線。
+// 兩條虛線是 X 的兩條對角線；中間球由跟出手者同一條對角線另一端的人接。
+---
+<Figure caption="尊重 X：對手從左下打過來的中間球，沿著同一條對角線看過去，另一端是右上那位，所以由那位接。教練的分工建議，示意圖。">
+  <Court label="尊重 X 示意圖：對手在底線把球打向中間，由跟出手者在同一條對角線另一端的球員接球" x0={-6} x1={50} y1={26}>
+    <line x1="-15" y1="150" x2="305" y2="50" class="leader" />
+    <line x1="-15" y1="50" x2="305" y2="150" class="leader" />
+    <Path x1={-4} y1={146} x2={292} y2={102} bend={-26} />
+    <Player x={-15} y={50} side="them" />
+    <Player x={-15} y={150} side="them" label="打" />
+    <Player x={305} y={50} label="接" mark="ok" />
+    <Player x={305} y={150} />
+    <text class="lab dark" x="-40" y="240">對手在底線打中間球</text>
+    <text class="lab dark" x="250" y="240">我方在非截擊區線</text>
+  </Court>
+</Figure>

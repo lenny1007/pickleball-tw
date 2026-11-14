@@ -1,0 +1,38 @@
+---
+// 文章內的步驟帶：只放真正有先後順序的步驟（有 step 的項目），點了跳到該段。
+// 寬螢幕右側的段落軌由文章版型的 ArticleRail 負責。
+interface Item { id: string; title: string; note?: string; step?: number }
+interface Props { items: Item[] }
+const { items } = Astro.props;
+const steps = items.filter((i) => i.step);
+---
+<ol class="steps">
+  {steps.map((s) => (
+    <li>
+      <a href={`#${s.id}`}>
+        <span class="num" aria-hidden="true">{s.step}</span>
+        <span class="txt"><span class="t">{s.title}</span>{s.note && <span class="n">{s.note}</span>}</span>
+      </a>
+    </li>
+  ))}
+</ol>
+
+
+
+<style>
+  .steps { list-style: none; margin: 1.8em 0 2.2em; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-radius: 14px; overflow: hidden; background: var(--court); }
+  .steps li { margin: 0; }
+  .steps li + li { border-left: 2px solid var(--line); }
+  .steps a { display: flex; gap: 12px; height: 100%; padding: 16px 16px 18px; text-decoration: none; color: var(--on-court); }
+  .steps a:hover .t { text-decoration: underline; }
+  .num { flex: none; width: 30px; height: 30px; border-radius: 50%; background: var(--ball); color: var(--ball-ink); font-family: var(--display); font-size: 1rem; display: grid; place-items: center; }
+  .txt { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+  .t { font-family: var(--display); font-size: 1.08rem; line-height: 1.4; }
+  .n { font-size: .85rem; line-height: 1.55; opacity: .85; }
+  .prose .steps li, .prose .steps .t, .prose .steps .n { color: var(--on-court); }
+  @media (max-width: 640px) {
+    .steps { grid-template-columns: 1fr; }
+    .steps li + li { border-left: 0; border-top: 2px solid var(--line); }
+  }
+
+</style>

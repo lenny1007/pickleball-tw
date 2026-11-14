@@ -3,7 +3,8 @@
 interface Props { slug: string; small?: boolean }
 const { slug, small = false } = Astro.props;
 const kind =
-  slug.includes('non-volley') ? 'nvz'
+  slug.includes('mistakes') ? 'mistakes'
+  : slug.includes('non-volley') ? 'nvz'
   : slug.includes('paddle') ? 'paddle'
   : slug.includes('first-time') ? 'first'
   : slug.includes('where-to-play') ? 'venues'
@@ -83,6 +84,25 @@ const kind =
           </g>
         );
       }))}
+    </g>
+  )}
+  {kind === 'mistakes' && (
+    <g transform="translate(90,40)">
+      <rect width="440" height="200" fill="var(--court)" />
+      <rect x="150" width="140" height="200" fill="var(--kitchen)" />
+      <g stroke="var(--line)" stroke-width="3" fill="none">
+        <rect width="440" height="200" /><line x1="150" x2="150" y2="200" /><line x1="290" x2="290" y2="200" />
+        <line y1="100" x2="150" y2="100" /><line x1="290" y1="100" x2="440" y2="100" />
+      </g>
+      <line x1="220" y1="-14" x2="220" y2="214" stroke="var(--ink)" stroke-width="6" stroke-linecap="round" />
+      <path d="M10 150 Q110 120 212 126" class="cv-trail" />
+      <path d="M10 150 Q250 -60 486 22" class="cv-trail" />
+      <path d="M10 150 Q200 40 372 150" class="cv-trail" />
+      <g class="bounce"><circle cx="372" cy="150" r="9" /></g>
+      <circle cx="10" cy="150" r="9" class="ball-dot" />
+      <g transform="translate(220,126)" class="mk fault"><circle r="14" /><path d="M-6 -6 l12 12 M6 -6 l-12 12" fill="none" /></g>
+      <g transform="translate(500,22)" class="mk fault"><circle r="14" /><path d="M-6 -6 l12 12 M6 -6 l-12 12" fill="none" /></g>
+      <g transform="translate(372,122)" class="mk ok"><circle r="14" /><path d="M-7 0 l5 5 l9 -11" fill="none" /></g>
     </g>
   )}
   {kind === 'corner' && (
