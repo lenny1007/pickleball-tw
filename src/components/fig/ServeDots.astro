@@ -1,0 +1,32 @@
+---
+import Figure from './Figure.astro';
+// 側面示意：發球的「三個點」。水平 1 呎 = 10 單位；垂直放大兩倍（1 呎 = 20 單位）才看得出弧線。
+// 地面 y=200；發球方底線 x=0、網 x=220、對方底線 x=440。
+const P0 = [-15, 160], P2 = [220, 80], P3 = [400, 200];
+const C = [2 * P2[0] - (P0[0] + P3[0]) / 2, 2 * P2[1] - (P0[1] + P3[1]) / 2];
+const dots = [
+  { n: '1', p: P0, lab: '擊球點', dx: -6, dy: -22, anchor: 'middle' },
+  { n: '2', p: P2, lab: '網上方約 3 英尺', dx: 20, dy: -14, anchor: 'start' },
+  { n: '3', p: P3, lab: '離底線約 4 英尺', dx: 0, dy: 66, anchor: 'middle' },
+];
+---
+<Figure caption="教練的發球想像：先想好三個點，再沿著連起來的弧線推拍。側面示意圖，高度比例放大；網高只是示意。">
+  <svg class="gear-fig" viewBox="-70 -30 560 310" role="img" aria-label="發球三個點側面示意：擊球點、網上方約 3 英尺、離對方底線約 4 英尺的落點，三點連成一道弧線">
+    <line x1="-60" y1="200" x2="480" y2="200" stroke="var(--rule)" stroke-width="3" />
+    <line x1="0" y1="194" x2="0" y2="206" stroke="var(--muted)" stroke-width="3" />
+    <line x1="440" y1="194" x2="440" y2="206" stroke="var(--muted)" stroke-width="3" />
+    <text class="lab big" x="0" y="226" text-anchor="middle">底線</text>
+    <text class="lab big" x="440" y="226" text-anchor="middle">對方底線</text>
+    <line x1="220" y1="200" x2="220" y2="140" stroke="var(--ink)" stroke-width="5" stroke-linecap="round" />
+    <text class="lab big" x="232" y="190">網</text>
+    <g class="flight"><path d={`M${P0[0]} ${P0[1]} Q${C[0]} ${C[1]} ${P3[0]} ${P3[1]}`} class="trail" /></g>
+    <line x1="208" y1="140" x2="208" y2="84" class="leader" style="stroke: var(--muted)" />
+    <line x1="400" y1="238" x2="440" y2="238" class="leader" style="stroke: var(--muted)" />
+    {dots.map((d) => (
+      <g>
+        <g class="step" transform={`translate(${d.p[0]},${d.p[1]})`}><circle r="12" /><text y="4.5" text-anchor="middle" class="lab">{d.n}</text></g>
+        <text class="lab dark big" x={d.p[0] + d.dx} y={d.p[1] + d.dy} text-anchor={d.anchor}>{d.lab}</text>
+      </g>
+    ))}
+  </svg>
+</Figure>
