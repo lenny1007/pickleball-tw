@@ -1,0 +1,18 @@
+---
+// 球的飛行路線：從 (x1,y1) 到 (x2,y2)，以弧線畫，bend 控制彎曲方向與幅度。
+interface Props { x1: number; y1: number; x2: number; y2: number; bend?: number; num?: string }
+const { x1, y1, x2, y2, bend = 30, num } = Astro.props;
+const mx = (x1 + x2) / 2, my = (y1 + y2) / 2;
+const dx = x2 - x1, dy = y2 - y1, len = Math.hypot(dx, dy) || 1;
+const cx = mx - (dy / len) * bend, cy = my + (dx / len) * bend;
+// 箭頭方向：曲線終點切線
+const tx = x2 - cx, ty = y2 - cy, tl = Math.hypot(tx, ty) || 1;
+const ux = tx / tl, uy = ty / tl;
+const ah = `M${x2 - ux * 12 - uy * 6} ${y2 - uy * 12 + ux * 6} L${x2} ${y2} L${x2 - ux * 12 + uy * 6} ${y2 - uy * 12 - ux * 6}`;
+const nx = 0.25 * x1 + 0.5 * cx + 0.25 * x2, ny = 0.25 * y1 + 0.5 * cy + 0.25 * y2;
+---
+<g class="flight">
+  <path d={`M${x1} ${y1} Q${cx} ${cy} ${x2} ${y2}`} class="trail" />
+  <path d={ah} class="head" />
+  {num && <g class="step" transform={`translate(${nx},${ny})`}><circle r="11" /><text y="4.5" text-anchor="middle">{num}</text></g>}
+</g>

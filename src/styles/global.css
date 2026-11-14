@@ -13,6 +13,11 @@
   --rule: #C9D6DB;
   --card: #FFFFFF;
   --on-court: #FFFFFF;
+  /* 圖解裡的球員記號：深淺色模式都放在球場藍上，所以不跟著反轉 */
+  --marker-dark: #14293A;
+  --marker-light: #FFFFFF;
+  --ok: #2F8A4A;
+  --fault: #C2412D;
   --display: "Huninn", "PingFang TC", "Microsoft JhengHei", system-ui, sans-serif;
   --body: "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", system-ui, sans-serif;
   --measure: 38em;
@@ -58,3 +63,57 @@ h1, h2 { font-family: var(--display); font-weight: 400; text-wrap: balance; }
 .prose table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; }
 .prose th, .prose td { border-bottom: 1px solid var(--rule); padding: 8px 10px; text-align: left; }
 .prose .table-wrap { overflow-x: auto; }
+
+/* 圖解（src/components/fig）：同一套球場俯視語言。顏色全部用 token，深色模式自動跟著變。 */
+.fig { margin: 2em 0; }
+.fig svg { display: block; width: 100%; height: auto; border-radius: 12px; }
+.fig figcaption { margin-top: 10px; font-size: .9rem; color: var(--muted); line-height: 1.6; }
+.gear-fig { background: var(--card); border: 1px solid var(--rule); }
+.court-fig .lab, .gear-fig .lab, .court-fig .step text { font-family: var(--display); font-size: 14px; }
+.court-fig .lab { fill: var(--on-court); stroke: var(--court); stroke-width: 4px; stroke-linejoin: round; paint-order: stroke; }
+.court-fig .lab.dark { fill: var(--on-court); stroke: var(--apron); }
+.gear-fig .lab { fill: var(--muted); }
+.gear-fig .lab.dark { fill: var(--ink); }
+.gear-fig .lab.big { font-size: 18px; }
+.dim-line line, .leader { stroke: var(--on-court); stroke-width: 1.5; }
+.leader { stroke-dasharray: 3 3; }
+.pl circle { stroke-width: 3; }
+.pl.us circle { fill: var(--marker-dark); stroke: var(--marker-light); }
+.pl.them circle { fill: var(--marker-light); stroke: var(--marker-dark); }
+.pl-label { font-family: var(--display); font-size: 13px; }
+.pl.us .pl-label { fill: var(--marker-light); }
+.pl.them .pl-label { fill: var(--marker-dark); }
+.mk circle { stroke: none; }
+.mk path { stroke: var(--marker-light); stroke-width: 2.6; stroke-linecap: round; stroke-linejoin: round; }
+.mk.ok circle { fill: var(--ok); }
+.mk.fault circle { fill: var(--fault); }
+.ball-dot { fill: var(--ball); stroke: var(--ball-ink); stroke-opacity: .35; stroke-width: 1.5; }
+.bounce circle { fill: none; stroke: var(--ball); stroke-width: 2.5; }
+.bounce .core { fill: var(--ball); stroke: none; }
+.flight .trail { fill: none; stroke: var(--ball); stroke-width: 2.5; stroke-dasharray: 7 6; }
+.flight .head { fill: none; stroke: var(--ball); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.step circle { fill: var(--ball); }
+.step text { fill: var(--ball-ink); font-size: 13px; }
+.target { fill: var(--ball); fill-opacity: .22; stroke: var(--ball); stroke-width: 2; stroke-dasharray: 6 4; }
+.fault-line { stroke: var(--fault); stroke-width: 5; }
+.momentum, .momentum-head { fill: none; stroke: var(--on-court); stroke-width: 2.5; stroke-dasharray: 5 4; stroke-linecap: round; }
+.momentum-head { stroke-dasharray: none; }
+.paddle-face { fill: var(--ink); }
+.paddle-grip { fill: var(--muted); }
+.sweet { fill: var(--ball); fill-opacity: .85; }
+.skin { fill: var(--ink); }
+.honey { fill: none; stroke: var(--kitchen); stroke-width: 1.4; }
+.core { stroke: var(--rule); }
+.ball-body { fill: var(--ball); stroke: var(--ball-ink); stroke-opacity: .3; stroke-width: 2; }
+.ball-hole { fill: var(--ball-ink); fill-opacity: .55; }
+.rack { fill: var(--muted); }
+.rack-paddle { fill: var(--rule); }
+.rack-grip { fill: var(--rule); }
+.rack-paddle.next { fill: var(--ink); }
+.rack-grip.next { fill: var(--muted); }
+.bracket { fill: none; stroke: var(--ball-ink); stroke-width: 2; }
+.arrow-line { fill: none; stroke: var(--ink); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
+.cover { display: block; width: 100%; height: auto; border-radius: 14px; }
+.cv-trail { fill: none; stroke: var(--ball); stroke-width: 4; stroke-dasharray: 10 8; }
+.cv-paddle { fill: var(--ink); }
+.zone-mark { width: 14px; height: 26px; flex: none; }

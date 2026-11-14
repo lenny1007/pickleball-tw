@@ -1,0 +1,34 @@
+---
+import Figure from './Figure.astro';
+// 示意圖：室內球洞較少較大、戶外球洞較多較小。只畫看得到的半面，洞數不是實際數字。
+type Ring = { n: number; d: number; rot: number };
+// 看得到的半面：越靠邊緣的洞看起來越扁越小，這裡用縮小代替。
+function holes(rings: Ring[], size: number) {
+  const out = [{ x: 0, y: 0, s: size }];
+  for (const { n, d, rot } of rings) {
+    for (let i = 0; i < n; i++) {
+      const a = (i / n) * Math.PI * 2 + rot;
+      out.push({ x: Math.cos(a) * d, y: Math.sin(a) * d, s: size * (1 - (d / 82) ** 2 * 0.45) });
+    }
+  }
+  return out;
+}
+const indoor = holes([{ n: 6, d: 32, rot: 0 }, { n: 10, d: 60, rot: 0.3 }], 10);
+const outdoor = holes([{ n: 8, d: 24, rot: 0 }, { n: 14, d: 46, rot: 0.2 }, { n: 18, d: 66, rot: 0.1 }], 5.5);
+const balls = [
+  { x: 130, list: indoor, name: '室內球', note: '洞較少、較大，較軟較輕' },
+  { x: 350, list: outdoor, name: '戶外球', note: '洞較多、較小，較硬較重' },
+];
+---
+<Figure caption="室內球與戶外球示意（洞數不是實際數字）。規則上，核可的球室內戶外都能用。">
+  <svg class="gear-fig" viewBox="0 0 480 270" role="img" aria-label="室內球洞較少較大、戶外球洞較多較小的示意圖">
+    {balls.map((b) => (
+      <g>
+        <circle cx={b.x} cy="110" r="82" class="ball-body" />
+        {b.list.map((h) => <circle cx={b.x + h.x} cy={110 + h.y} r={h.s} class="ball-hole" />)}
+        <text x={b.x} y="226" text-anchor="middle" class="lab dark big">{b.name}</text>
+        <text x={b.x} y="252" text-anchor="middle" class="lab muted">{b.note}</text>
+      </g>
+    ))}
+  </svg>
+</Figure>
