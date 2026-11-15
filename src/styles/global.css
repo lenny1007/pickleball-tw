@@ -60,6 +60,13 @@ h1, h2 { font-family: var(--display); font-weight: 400; text-wrap: balance; }
 .prose h2 { font-size: 1.6rem; line-height: 1.35; margin: 2.2em 0 .5em; }
 .prose h3 { font-size: 1.15rem; margin: 1.8em 0 .4em; }
 .prose p, .prose li { color: var(--ink); }
+/* 閱讀舒適度（2026-11-15）：桌機字稍大、段落與清單多一點呼吸 */
+@media (min-width: 768px) { .prose { font-size: 17px; } }
+.prose p { margin: 0 0 1.15em; }
+.prose li + li { margin-top: .4em; }
+.prose h2 + p, .prose h3 + p { margin-top: 0; }
+.prose table { font-size: .94em; margin: 1.4em 0; }
+.prose th { font-family: var(--display); font-weight: 400; background: var(--card); }
 .prose table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; }
 .prose th, .prose td { border-bottom: 1px solid var(--rule); padding: 8px 10px; text-align: left; }
 .prose .table-wrap { overflow-x: auto; }
@@ -116,4 +123,5 @@ h1, h2 { font-family: var(--display); font-weight: 400; text-wrap: balance; }
 .cover { display: block; width: 100%; height: auto; border-radius: 14px; }
 .cv-trail { fill: none; stroke: var(--ball); stroke-width: 4; stroke-dasharray: 10 8; }
 .cv-paddle { fill: var(--ink); }
+.cv-num { font-family: var(--display); font-size: 84px; }
 .zone-mark { width: 14px; height: 26px; flex: none; }

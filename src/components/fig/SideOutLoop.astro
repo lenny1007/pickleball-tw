@@ -1,0 +1,37 @@
+---
+// 雙打發球權輪轉：每隊兩位都發過才換發；開局那一隊只有一位。
+import Figure from './Figure.astro';
+---
+<Figure caption="雙打發球權的輪轉。每次換到發球權，站右邊的人先發（第一位），輸一球交給隊友（第二位），隊友再輸一球才換對方發。每局開頭例外：先發的那一隊只有一個人發。">
+  <svg class="gear-fig" viewBox="0 0 480 258" role="img" aria-label="A 隊第一位、第二位發球員都輸球後換 B 隊，B 隊兩位都輸球後再換回 A 隊">
+    <defs>
+      <marker id="so-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0 0 L10 5 L0 10 z" class="so-head" />
+      </marker>
+    </defs>
+    <text x="120" y="30" text-anchor="middle" class="lab dark big">A 隊發球</text>
+    <text x="360" y="30" text-anchor="middle" class="lab dark big">B 隊發球</text>
+    {[0, 1].map((side) => (
+      <g transform={`translate(${side * 240},0)`}>
+        <rect x="30" y="50" width="180" height="50" rx="12" class="so-box" />
+        <text x="120" y="81" text-anchor="middle" class="so-txt">第一位（站右邊）</text>
+        <rect x="30" y="150" width="180" height="50" rx="12" class="so-box" />
+        <text x="120" y="181" text-anchor="middle" class="so-txt">第二位（隊友）</text>
+        <path d="M120 102 V146" class="so-line" marker-end="url(#so-arrow)" />
+        <text x="130" y="130" class="lab">輸一球</text>
+      </g>
+    ))}
+    <path d="M212 175 C 238 175, 242 75, 268 75" class="so-line so-out" marker-end="url(#so-arrow)" />
+    <path d="M212 175 L212 175 M452 175 Q474 175 474 197 L474 232 Q474 246 460 246 L24 246 Q12 246 12 232 L12 89 Q12 75 26 75" class="so-line so-out" marker-end="url(#so-arrow)" />
+    <text x="226" y="122" text-anchor="end" class="lab dark">換發</text>
+    <text x="240" y="238" text-anchor="middle" class="lab dark">換發</text>
+  </svg>
+</Figure>
+
+<style>
+  .so-box { fill: var(--court); }
+  .so-txt { font-family: var(--display); font-size: 16px; fill: var(--on-court); }
+  .so-line { fill: none; stroke: var(--muted); stroke-width: 2.5; }
+  .so-out { stroke: var(--ink); stroke-dasharray: 6 5; }
+  .so-head { fill: var(--muted); }
+</style>

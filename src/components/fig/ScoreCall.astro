@@ -1,0 +1,30 @@
+---
+// 雙打報分的三個數字：大字拆開，每個數字底下標它的意思。
+import Figure from './Figure.astro';
+const parts = [
+  { n: '4', t: '發球方分數' },
+  { n: '2', t: '接發方分數' },
+  { n: '1', t: '第一位發球員' },
+];
+---
+<Figure caption="雙打報「4－2－1」：發球方 4 分、接發方 2 分，由第一位發球員發。單打只報前兩個數字。">
+  <svg class="gear-fig score-call" viewBox="0 0 480 190" role="img" aria-label="報分 4－2－1，依序是發球方分數、接發方分數、第一位發球員">
+    {parts.map((p, i) => (
+      <g transform={`translate(${90 + i * 150},0)`}>
+        <rect x="-52" y="22" width="104" height="104" rx="18" class={i === 2 ? 'sc-tile sc-tile-hi' : 'sc-tile'} />
+        <text x="0" y="98" text-anchor="middle" class="sc-num">{p.n}</text>
+        <text x="0" y="160" text-anchor="middle" class="lab dark big">{p.t}</text>
+      </g>
+    ))}
+    <text x="165" y="86" text-anchor="middle" class="sc-dash">－</text>
+    <text x="315" y="86" text-anchor="middle" class="sc-dash">－</text>
+  </svg>
+</Figure>
+
+<style>
+  .sc-tile { fill: var(--court); }
+  .sc-tile-hi { fill: var(--ball); }
+  .sc-num { font-family: var(--display); font-size: 64px; fill: var(--on-court); }
+  .sc-tile-hi + .sc-num { fill: var(--ball-ink); }
+  .sc-dash { font-family: var(--display); font-size: 36px; fill: var(--muted); }
+</style>

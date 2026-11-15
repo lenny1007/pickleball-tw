@@ -43,10 +43,14 @@ for (const slug of slugs) {
   const paras = prose.split(/\n{2,}/).map((p) => p.trim())
     .filter((p) => p && !/^(#|-|\d+\.|<|import |\||>|\{)/.test(p));
   for (const p of paras) if (len(p) > 220) warn(`段落 ${len(p)} 字，建議拆開：「${p.slice(0, 24)}…」`);
-  const visuals = (prose.match(/<(VideoRef|StepGuide|Figure|[A-Z]\w+)\b/g) ?? []).length
-    + (prose.match(/^\|.+\|$/gm) ? 1 : 0);
   const chars = len(prose.replace(/\s/g, ''));
-  if (chars > 2500 && visuals < Math.floor(chars / 2500)) warn(`全文約 ${chars} 字只有 ${visuals} 個圖、表或影片卡，建議每 2,500 字至少一個`);
+  const tables = (prose.match(/^\|.*\|\s*\n\|[\s:|-]+\|/gm) ?? []).length;
+  const visualCount = (prose.match(/<(?!details|summary)[A-Z]\w+[\s/>]/g) ?? []).length + tables;
+  if (visualCount < Math.ceil(mainH2.length / 2)) warn(`正文 ${mainH2.length} 個 H2 只有 ${visualCount} 個圖、表或影片卡，建議每 2 個 H2 至少一個`);
+  // 封面：沒有專屬封面會用預設的球場一角
+  const cover = readFileSync('src/components/fig/ArticleCover.astro', 'utf8');
+  const keys = [...cover.matchAll(/slug\.includes\('([^']+)'\)/g)].map((m) => m[1]);
+  if (!keys.some((k) => slug.includes(k))) warn('沒有專屬封面，在 ArticleCover 加一種 kind');
 
   // 內部連結
   const internal = new Set([...prose.matchAll(/\]\((\/[^)\s#]*)/g)].map((m) => m[1]));

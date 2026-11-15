@@ -12,6 +12,9 @@ takeaways:
 ---
 
 import ScorePositions from '../../components/fig/ScorePositions.astro';
+import ScoreCall from '../../components/fig/ScoreCall.astro';
+import SingleServe from '../../components/fig/SingleServe.astro';
+import SideOutLoop from '../../components/fig/SideOutLoop.astro';
 
 匹克球的計分只要記住三件事：
 
@@ -26,8 +29,6 @@ import ScorePositions from '../../components/fig/ScorePositions.astro';
 一般一局打到 **11 分**，而且要**領先至少 2 分**才算贏。打到 10 比 10 時，要打到 12 比 10、13 比 11 這樣拉開 2 分才結束。
 
 比賽也可以打 15 分或 21 分一局，一樣要贏 2 分（團體賽允許只贏 1 分）。臨打幾乎都是 11 分一局。
-
-正式比賽中，只打一局的比賽或多局制的決勝局，打到一半要換場地：11 分局在任一方先到 6 分時換、15 分局先到 8 分、21 分局先到 11 分，換完由同一個人繼續發。
 
 ## 只有發球方能得分
 
@@ -46,6 +47,8 @@ import ScorePositions from '../../components/fig/ScorePositions.astro';
 
 **雙打**報三個數字：**發球方分數、接發方分數、發球員號碼**。例如「4－2－1」是發球方 4 分、接發方 2 分，現在由第一位發球員發。
 
+<ScoreCall />
+
 雙打每局開始要報「**0－0－2**」。原因是每局開頭只有一個人能發球，規則把這位起始發球員直接當成「第二位發球員」，他輸一球就換對方發。
 
 報錯分怎麼辦：
@@ -61,6 +64,8 @@ import ScorePositions from '../../components/fig/ScorePositions.astro';
 第一位發球員從右邊發起。每得 1 分，他就換到另一邊繼續發，直到他那一球輸掉，發球權交給隊友。隊友也一樣一直發到輸一球，然後換對方發。
 
 每局開頭是例外：先發球的那一隊只有起始發球員能發，他輸一球就直接換對方發。
+
+<SideOutLoop />
 
 一局開頭的雙打，逐球走一遍。A 隊是甲、乙，甲是這局的起始發球員；B 隊是丙、丁，開局時丙站右邊：
 
@@ -106,6 +111,8 @@ import ScorePositions from '../../components/fig/ScorePositions.astro';
 
 每得 1 分換一邊繼續發，直到輸掉一球，換對方發。
 
+<SingleServe />
+
 ## 每球得分制（暫行規則）
 
 USA Pickleball 另有每球得分制（rally scoring），在 2026 年版仍然是**暫行規則**，單打雙打都可以用。跟傳統計分的差別：
@@ -140,6 +147,12 @@ USA Pickleball 另有每球得分制（rally scoring），在 2026 年版仍然�
 <summary>雙打換發球時，一定是同一個人先發嗎？</summary>
 
 不一定。換到發球權時，由依隊伍分數站在右邊的人先發。分數是單數時，站右邊的是起始發球員的隊友，就由隊友先發。
+</details>
+
+<details>
+<summary>比賽打到一半要換場地嗎？</summary>
+
+只打一局的正式比賽，或多局制的決勝局，打到一半要換場地：11 分局在任一方先到 6 分時換、15 分局先到 8 分、21 分局先到 11 分，換完由同一個人繼續發。
 </details>
 
 ## 資料來源
