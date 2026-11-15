@@ -2,7 +2,7 @@
 
 - slug：pickleball-serve
 - 分類：rules（規則與技巧合寫，分類掛規則，因為規則搜尋比較多）
-- 狀態：選題中
+- 狀態：寫作中（claude/pb-pickleball-serve，2026-11-15）
 
 ## 讀者與需求
 
