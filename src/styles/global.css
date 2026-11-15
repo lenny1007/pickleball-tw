@@ -60,6 +60,13 @@ h1, h2 { font-family: var(--display); font-weight: 400; text-wrap: balance; }
 .prose h2 { font-size: 1.6rem; line-height: 1.35; margin: 2.2em 0 .5em; }
 .prose h3 { font-size: 1.15rem; margin: 1.8em 0 .4em; }
 .prose p, .prose li { color: var(--ink); }
+/* 閱讀舒適度（2026-11-15）：桌機字稍大、段落與清單多一點呼吸 */
+@media (min-width: 768px) { .prose { font-size: 17px; } }
+.prose p { margin: 0 0 1.15em; }
+.prose li + li { margin-top: .4em; }
+.prose h2 + p, .prose h3 + p { margin-top: 0; }
+.prose table { font-size: .94em; margin: 1.4em 0; }
+.prose th { font-family: var(--display); font-weight: 400; background: var(--card); }
 .prose table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; }
 .prose th, .prose td { border-bottom: 1px solid var(--rule); padding: 8px 10px; text-align: left; }
 .prose .table-wrap { overflow-x: auto; }
@@ -74,13 +81,13 @@ h1, h2 { font-family: var(--display); font-weight: 400; text-wrap: balance; }
 .court-fig .lab.dark { fill: var(--on-court); stroke: var(--apron); }
 .gear-fig .lab { fill: var(--muted); }
 .gear-fig .lab.dark { fill: var(--ink); }
-.gear-fig .lab.big { font-size: 18px; }
+.gear-fig .lab.big, .court-fig .lab.big { font-size: 18px; }
 .dim-line line, .leader { stroke: var(--on-court); stroke-width: 1.5; }
 .leader { stroke-dasharray: 3 3; }
 .pl circle { stroke-width: 3; }
 .pl.us circle { fill: var(--marker-dark); stroke: var(--marker-light); }
 .pl.them circle { fill: var(--marker-light); stroke: var(--marker-dark); }
-.pl-label { font-family: var(--display); font-size: 13px; }
+.pl-label { font-family: var(--display); font-size: 16px; }
 .pl.us .pl-label { fill: var(--marker-light); }
 .pl.them .pl-label { fill: var(--marker-dark); }
 .mk circle { stroke: none; }
@@ -116,4 +123,12 @@ h1, h2 { font-family: var(--display); font-weight: 400; text-wrap: balance; }
 .cover { display: block; width: 100%; height: auto; border-radius: 14px; }
 .cv-trail { fill: none; stroke: var(--ball); stroke-width: 4; stroke-dasharray: 10 8; }
 .cv-paddle { fill: var(--ink); }
+.cv-num { font-family: var(--display); font-size: 84px; }
 .zone-mark { width: 14px; height: 26px; flex: none; }
+
+/* 手機上圖解會整張縮小，圖上的字跟著變小；這裡把 SVG 字級放大，讓實際顯示至少約 11px（npm run shoot 會檢查）。 */
+@media (max-width: 560px) {
+  .court-fig .lab, .gear-fig .lab, .court-fig .step text { font-size: 18px; }
+  .gear-fig .lab.big, .court-fig .lab.big { font-size: 21px; }
+  .pl-label { font-size: 18px; }
+}

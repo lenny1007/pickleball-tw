@@ -1,0 +1,41 @@
+---
+// 俯視腳印示意圖：要截擊前，兩隻腳都要回到非截擊區外。非截擊區在每格右邊。
+import Figure from './Figure.astro';
+const rows = [
+  { feet: [[86, 50], [150, 96]], ok: false, t: '一腳還踩在線上', s: '這時截擊：失誤' },
+  { feet: [[70, 50], [104, 96]], ok: true, t: '兩腳都退到線外', s: '這時截擊：可以' },
+];
+const rh = 150;
+---
+<Figure caption="俯視示意圖。腳印是球員的兩隻腳，右邊是非截擊區，黃綠色是非截擊區的線（屬於非截擊區）。剛踩進去救球後，要兩隻腳都退到線外，才可以截擊。">
+  <svg class="gear-fig nvz-feet" viewBox={`0 0 480 ${rh * rows.length}`} role="img" aria-label="一腳還踩在非截擊區線上就截擊是失誤；兩腳都退到線外才可以截擊">
+    {rows.map((r, i) => (
+      <g transform={`translate(0,${i * rh})`}>
+        <rect x="16" y="14" width="124" height="122" rx="0" class="nf-court" />
+        <rect x="140" y="14" width="80" height="122" class="nf-kitchen" />
+        <rect x="134" y="14" width="10" height="122" class="nf-line" />
+        <text x="180" y="34" text-anchor="middle" class="lab nf-on">區內</text>
+        {r.feet.map(([x, y]) => (
+          <ellipse cx={x} cy={y} rx="25" ry="12" class="nf-foot" />
+        ))}
+        <g transform={`translate(262,${58})`} class:list={['mk', r.ok ? 'ok' : 'fault']}>
+          <circle r="12" />
+          {r.ok
+            ? <path d="M-6 0 l4.5 5 l8 -10" fill="none" />
+            : <path d="M-5 -5 l10 10 M5 -5 l-10 10" fill="none" />}
+        </g>
+        <text x="284" y="64" class="lab dark big">{r.t}</text>
+        <text x="262" y="100" class="lab big">{r.s}</text>
+      </g>
+    ))}
+  </svg>
+</Figure>
+
+<style>
+  .nvz-feet .lab.big { font-size: 20px; }
+  .nf-court { fill: var(--court); }
+  .nf-kitchen { fill: var(--kitchen); }
+  .nf-line { fill: var(--ball); }
+  .nf-foot { fill: var(--marker-light); stroke: var(--marker-dark); stroke-width: 2.5; }
+  .nf-on { fill: var(--on-court) !important; font-size: 17px !important; }
+</style>

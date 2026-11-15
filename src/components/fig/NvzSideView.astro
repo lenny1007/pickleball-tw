@@ -1,0 +1,54 @@
+---
+// 側面示意圖：非截擊區只算地面。1 呎 = 20 單位，網在 x=330，非截擊區線在 x=190。
+// 人站在線外、拍子伸到非截擊區上空截擊，是合法的。
+import Figure from './Figure.astro';
+const g = 214; // 地面高度
+---
+<Figure caption="側面示意圖。非截擊區只算地面上那一塊，黃綠色的線也算在裡面，但不往上延伸。人站在線外、拍子伸到它的上空截擊，只要腳沒踩進去、收拍後也沒衝進去，就是合法的。">
+  <svg class="gear-fig nvz-side" viewBox="0 0 560 280" role="img" aria-label="側面圖：球員站在非截擊區線外，把拍子伸到非截擊區上空截擊，合法">
+    <!-- 上空的虛線框：不算非截擊區 -->
+    <rect x="194" y="58" width="136" height={g - 62} class="ns-air" />
+    <text x="262" y="84" text-anchor="middle" class="lab big">上空不算</text>
+    <!-- 地面 -->
+    <rect x="20" y={g} width="520" height="14" class="ns-court" />
+    <rect x="190" y={g} width="140" height="14" class="ns-kitchen" />
+    <rect x="330" y={g} width="140" height="14" class="ns-kitchen" />
+    <rect x="187" y={g} width="7" height="14" class="ns-line" />
+    <rect x="466" y={g} width="7" height="14" class="ns-line" />
+    <!-- 球網 -->
+    <rect x="327" y={g - 57} width="6" height="57" class="ns-net" />
+    <text x="342" y={g - 46} class="lab big">球網</text>
+    <!-- 球員：站在線外 -->
+    <g class="ns-body">
+      <line x1="136" y1="148" x2="122" y2={g - 2} />
+      <line x1="136" y1="148" x2="160" y2={g - 2} />
+      <line x1="134" y1="104" x2="136" y2="150" />
+      <line x1="136" y1="114" x2="196" y2="122" />
+    </g>
+    <circle cx="132" cy="88" r="13" class="ns-head" />
+    <rect x="196" y="106" width="36" height="28" rx="12" class="ns-paddle" transform="rotate(-8 214 120)" />
+    <circle cx="250" cy="116" r="8" class="ball-dot" />
+    <g transform="translate(284,112)" class="mk ok">
+      <circle r="11" /><path d="M-5.5 0 l4 4.5 l7 -9" fill="none" />
+    </g>
+    <!-- 標示 -->
+    <line x1="190" y1={g + 26} x2="330" y2={g + 26} class="ns-dim" />
+    <line x1="190" y1={g + 19} x2="190" y2={g + 33} class="ns-dim" />
+    <line x1="330" y1={g + 19} x2="330" y2={g + 33} class="ns-dim" />
+    <text x="262" y={g + 54} text-anchor="middle" class="lab dark big">非截擊區 2.13 公尺</text>
+    <text x="100" y={g + 54} text-anchor="middle" class="lab dark big">腳在線外</text>
+  </svg>
+</Figure>
+
+<style>
+  .nvz-side .lab.big { font-size: 22px; }
+  .ns-court { fill: var(--court); }
+  .ns-kitchen { fill: var(--kitchen); }
+  .ns-line { fill: var(--ball); }
+  .ns-net { fill: var(--ink); }
+  .ns-air { fill: none; stroke: var(--muted); stroke-width: 1.5; stroke-dasharray: 6 5; }
+  .ns-body line { stroke: var(--ink); stroke-width: 9; stroke-linecap: round; }
+  .ns-head { fill: var(--ink); }
+  .ns-paddle { fill: var(--muted); }
+  .ns-dim { stroke: var(--muted); stroke-width: 1.5; }
+</style>

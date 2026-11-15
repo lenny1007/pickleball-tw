@@ -1,9 +1,9 @@
 ---
 // 文章段落軌：寬螢幕（≥1200px）時固定在內文右側，列出 H2，捲到哪段就亮哪段。
-// H2 以「第一步／第二步…」開頭的會顯示步驟數字；延伸閱讀、參考影片這類附錄不列。
+// H2 以「第一步／第二步…」開頭的會顯示步驟數字；延伸閱讀、參考影片、資料來源這類附錄不列。
 import type { MarkdownHeading } from 'astro';
 interface Props { headings: MarkdownHeading[] }
-const SKIP = new Set(['延伸閱讀', '參考影片']);
+const SKIP = new Set(['延伸閱讀', '參考影片', '資料來源', '這篇怎麼整理的']);
 const NUM: Record<string, number> = { 一: 1, 二: 2, 三: 3, 四: 4, 五: 5, 六: 6, 七: 7, 八: 8, 九: 9 };
 const items = Astro.props.headings
   .filter((h) => h.depth === 2 && !SKIP.has(h.text))

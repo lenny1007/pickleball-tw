@@ -1,0 +1,29 @@
+---
+// 單打發球位置：發球方分數雙數從右邊發、單數從左邊發，都往對角發。
+import Court from './Court.astro';
+import Figure from './Figure.astro';
+import Player from './Player.astro';
+import Path from './Path.astro';
+import Bounce from './Bounce.astro';
+const panels = [
+  { title: '自己分數 0、2、4…：從右邊發', y: 150, ty: 50 },
+  { title: '自己分數 1、3、5…：從左邊發', y: 50, ty: 150 },
+];
+---
+<Figure caption="示意圖。單打看發球方自己的分數：雙數從右邊發、單數從左邊發，都發到對角的發球區。發球方面向圖的右邊。">
+  <div class="ss-pair">
+    {panels.map((p) => (
+      <Court label={p.title} x0={-6} x1={47} y0={-6} y1={23}>
+        <text class="lab dark big" x="205" y="-26" text-anchor="middle">{p.title}</text>
+        <Path x1={-14} y1={p.y} x2={370} y2={p.ty} bend={p.y > 100 ? -40 : 40} />
+        <Bounce x={370} y={p.ty} />
+        <Player x={-26} y={p.y} label="發" />
+        <Player x={462} y={p.ty} side="them" label="接" />
+      </Court>
+    ))}
+  </div>
+</Figure>
+
+<style>
+  .ss-pair { display: grid; gap: 12px; }
+</style>
