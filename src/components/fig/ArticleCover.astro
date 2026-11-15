@@ -9,11 +9,31 @@ const kind =
   : slug.includes('paddle') ? 'paddle'
   : slug.includes('first-time') ? 'first'
   : slug.includes('where-to-play') ? 'venues'
+  : slug.includes('how-to-play') ? 'play'
   : slug.includes('rules') ? 'rules'
   : 'corner';
 ---
 <svg class:list={['cover', { small }]} viewBox="0 0 640 280" aria-hidden="true" focusable="false">
   <rect width="640" height="280" fill="var(--apron)" />
+  {kind === 'play' && (
+    <g transform="translate(100,40)">
+      <rect width="440" height="200" fill="var(--court)" />
+      <rect x="150" width="140" height="200" fill="var(--kitchen)" />
+      <g stroke="var(--line)" stroke-width="3" fill="none">
+        <rect width="440" height="200" /><line x1="150" x2="150" y2="200" /><line x1="290" x2="290" y2="200" />
+        <line y1="100" x2="150" y2="100" /><line x1="290" y1="100" x2="440" y2="100" />
+      </g>
+      <line x1="220" y1="-14" x2="220" y2="214" stroke="var(--ink)" stroke-width="6" stroke-linecap="round" />
+      <path d="M-10 160 Q170 -10 370 50" class="cv-trail" />
+      <path d="M440 50 Q260 -20 60 150" class="cv-trail" />
+      <path d="M60 150 Q160 60 262 76" class="cv-trail" />
+      <g class="bounce"><circle cx="370" cy="50" r="9" /><circle cx="60" cy="150" r="9" /></g>
+      <circle cx="262" cy="76" r="10" class="ball-dot" />
+      {[['1', 300, 20], ['2', 150, 30], ['3', 170, 104]].map(([n, x, y]) => (
+        <g transform={`translate(${x},${y})`}><circle r="16" fill="var(--ball)" /><text y="7" text-anchor="middle" class="cv-step" fill="var(--ball-ink)">{n}</text></g>
+      ))}
+    </g>
+  )}
   {kind === 'rules' && (
     <g transform="translate(100,40)">
       <rect width="440" height="200" fill="var(--court)" />
@@ -128,3 +148,7 @@ const kind =
     </g>
   )}
 </svg>
+
+<style>
+  .cv-step { font: 700 20px var(--display); }
+</style>

@@ -23,6 +23,7 @@
 | `PaddleRack` | 臨打排球拍 | first-time-pickleball |
 | `PaddleShapes` | 三種拍型與甜區 | how-to-choose-paddle |
 | `CoreThickness` | 芯材厚度剖面 | how-to-choose-paddle |
+| `PointFlow` | 一分球前三拍與站位：接發方上網、發球方留底線 | how-to-play-pickleball |
 | `ArticleCover` | 每篇的封面，依 slug 關鍵字選畫面 | 全部 |
 
 畫新圖用的零件：
