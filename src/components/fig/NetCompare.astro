@@ -1,0 +1,30 @@
+---
+// 三種運動的網子中央高度（側面，1 公尺 = 160 單位，地面 y=300）。
+import Figure from './Figure.astro';
+const g = 300, k = 160;
+const nets = [
+  { name: '匹克球', h: 0.864, lab: '86.4 cm', pb: true },
+  { name: '網球', h: 0.914, lab: '91.4 cm', pb: false },
+  { name: '羽球', h: 1.524, lab: '1.524 m', pb: false },
+];
+---
+<Figure caption="側面示意圖，依比例畫，都是網子中央的高度。匹克球網比網球網低約 5 公分，羽球網高得多。網球網兩端 1.07 公尺、羽球網兩端 1.55 公尺、匹克球網兩端 91.4 公分。">
+  <svg class="gear-fig" viewBox="0 0 540 360" role="img" aria-label="網子中央高度：匹克球 86.4 公分、網球 91.4 公分、羽球 1.524 公尺">
+    <line x1="20" y1={g} x2="520" y2={g} stroke="var(--rule)" stroke-width="3" />
+    {nets.map((n, i) => {
+      const x = 70 + i * 160, top = g - n.h * k;
+      return (
+        <g>
+          <rect x={x} y={top} width="90" height={n.h * k} class:list={['nc-net', { pb: n.pb }]} />
+          <text class="lab dark big" x={x + 45} y={top - 12} text-anchor="middle">{n.lab}</text>
+          <text class="lab big" x={x + 45} y={g + 34} text-anchor="middle">{n.name}</text>
+        </g>
+      );
+    })}
+  </svg>
+</Figure>
+
+<style>
+  .nc-net { fill: var(--muted); opacity: .35; }
+  .nc-net.pb { fill: var(--court); opacity: 1; }
+</style>

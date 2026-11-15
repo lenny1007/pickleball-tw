@@ -23,6 +23,8 @@
 | `PaddleRack` | 臨打排球拍 | first-time-pickleball |
 | `PaddleShapes` | 三種拍型與甜區 | how-to-choose-paddle |
 | `CoreThickness` | 芯材厚度剖面 | how-to-choose-paddle |
+| `CourtCompare` | 網球場、羽球場、匹克球場大小疊圖（依比例） | pickleball-vs-tennis-badminton |
+| `NetCompare` | 三種運動網子中央高度（依比例） | pickleball-vs-tennis-badminton |
 | `ArticleCover` | 每篇的封面，依 slug 關鍵字選畫面 | 全部 |
 
 畫新圖用的零件：
