@@ -34,7 +34,7 @@ for (const slug of slugs) {
   // 結構：H2 數量與長度
   const prose = body.replace(/```[\s\S]*?```/g, '');
   const h2 = [...prose.matchAll(/^## (.+)$/gm)].map((m) => m[1]);
-  const mainH2 = h2.filter((h) => !['延伸閱讀', '參考影片', '參考資料'].includes(h));
+  const mainH2 = h2.filter((h) => !['延伸閱讀', '參考影片', '參考資料', '資料來源', '這篇怎麼整理的'].includes(h));
   if (mainH2.length < 3) warn(`正文 H2 只有 ${mainH2.length} 個，右側段落軌不會出現`);
   if (mainH2.length > 9) warn(`正文 H2 有 ${mainH2.length} 個，考慮合併或拆成兩篇`);
   for (const h of mainH2) if (len(h.split('：')[0]) > 16) warn(`H2 冒號前超過 16 字，段落軌會很擠：「${h}」`);
@@ -58,6 +58,15 @@ for (const slug of slugs) {
   const inbound = readdirSync(DIR).filter((f) => !f.startsWith(slug + '.'))
     .filter((f) => readFileSync(join(DIR, f), 'utf8').includes(`/articles/${slug}/`));
   if (!inbound.length) warn('沒有其他文章連到這篇，記得從相關舊文加一個連結進來');
+
+  // 開頭（第一個 H2 之前）不放資料來源、查證、條號說明這類文字，放到文末「資料來源」（站主 2026-11-15 定）
+  const intro = prose.split(/^## /m)[0].replace(/^import .*$/gm, '');
+  const meta = intro.match(/[^\n。]*(查證）|條號|規則書|依 .{0,40}整理|整理自|下文統稱)[^\n。]*/);
+  if (meta) err(`開頭有資料來源或查證說明，移到文末「資料來源」：「${meta[0].trim().slice(0, 40)}」`);
+
+  // 內文不放規則條號、查證日期、來源括號（站主 2026-11-15）。文末「資料來源」「這篇怎麼整理的」段除外。
+  const bodyOnly = prose.split(/^## (?:資料來源|這篇怎麼整理的)\s*$/m)[0];
+  for (const m of bodyOnly.matchAll(/（[^（）]*(?:\d+\.[A-Z]|規則第\s*\d+\s*節|查證|官方部落格)[^（）]*）/g)) err(`內文有條號或查證括號，移到文末「資料來源」：「${m[0].slice(0, 30)}」`);
 
   // 已知的坑
   for (const m of prose.matchAll(/^.*[）」』】。，、：；！？]\*\*(?=[^\s*\p{P}]).*$/gmu)) {
