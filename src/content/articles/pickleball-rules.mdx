@@ -13,6 +13,9 @@ takeaways:
 import CourtDimensions from '../../components/fig/CourtDimensions.astro';
 import ServeDiagram from '../../components/fig/ServeDiagram.astro';
 import TwoBounce from '../../components/fig/TwoBounce.astro';
+import NvzCases from '../../components/fig/NvzCases.astro';
+import LineCall from '../../components/fig/LineCall.astro';
+import ScoreCall from '../../components/fig/ScoreCall.astro';
 
 匹克球的規則不多，但有三條是其他球類沒有的：**雙彈跳規則**、**非截擊區**，以及**只有發球方能得分**。第一次跟陌生球友打臨打，被糾正的幾乎都是這三條。
 
@@ -83,11 +86,15 @@ import TwoBounce from '../../components/fig/TwoBounce.astro';
 - 截擊時，你身上的東西（包括球拍）或你的隊友碰到非截擊區。
 - 剛才踩進非截擊區，還沒兩腳都退出來就截擊。
 
+<NvzCases />
+
 反過來說，**非截擊區隨時都可以走進去**，例如進去打已經彈地的球；只是要截擊之前，兩腳都得先退出來。網前互推的 dink 小球，就是在這條線附近來回。
 
 ## 界內界外
 
 球落在線上算界內，因為線屬於它圍起來的區域（發球落在非截擊區線上除外）。看不清楚的球一律算界內，要清楚看到球和線之間有空隙才能喊出界。
+
+<LineCall />
 
 ## 計分
 
@@ -104,6 +111,8 @@ USA Pickleball 也有「每球得分制」（rally scoring），但到 2026 年�
 ### 雙打報分報三個數字
 
 雙打發球前要報三個數字：**發球方分數、接發方分數、這是第幾位發球員**。例如「4－2－1」代表發球方 4 分、接發方 2 分、由第一位發球員發。
+
+<ScoreCall />
 
 每局開始報「**0－0－2**」。因為規定每局第一輪只有一個人發球，輸一球就直接換發，所以第一位發球的人被當成「第二位」來報。
 

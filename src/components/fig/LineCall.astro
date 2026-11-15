@@ -1,0 +1,41 @@
+---
+// 俯視示意圖：壓線算不算。每列左邊是一小段地面，中間白線，球的大小和線寬比例接近實際（球約 7.4 公分、線約 5 公分）。
+import Figure from './Figure.astro';
+const rows = [
+  { left: '場內', right: '場外', lc: 'lc-court', rc: 'lc-apron', ball: 140, ok: true, t: '球碰到線', s: '界內' },
+  { left: '場內', right: '場外', lc: 'lc-court', rc: 'lc-apron', ball: 176, ok: false, t: '球和線之間看得到空隙', s: '出界' },
+  { left: '非截擊區', right: '發球區', lc: 'lc-kitchen', rc: 'lc-court', ball: 132, ok: false, t: '發球碰到非截擊區的線', s: '發球失誤' },
+];
+const rh = 100;
+---
+<Figure caption="俯視示意圖。一般來球，球碰到線就算界內；看不清楚時也算界內，要清楚看到空隙才能喊出界。唯一的例外是發球：碰到非截擊區的線算失誤。">
+  <svg class="gear-fig line-call" viewBox={`0 0 480 ${rh * rows.length + 8}`} role="img" aria-label="球碰到線算界內；球和線之間有空隙算出界；發球碰到非截擊區的線算發球失誤">
+    {rows.map((r, i) => (
+      <g transform={`translate(0,${i * rh + 8})`}>
+        <rect x="16" y="8" width="118" height="80" class={r.lc} />
+        <rect x="134" y="8" width="90" height="80" class={r.rc} />
+        <rect x="126" y="8" width="10" height="80" class="lc-line" />
+        <text x="24" y="28" class="lab lc-tag">{r.left}</text>
+        <text x="216" y="28" text-anchor="end" class="lab lc-tag">{r.right}</text>
+        <circle cx={r.ball} cy="58" r="14" class="ball-dot" />
+        <g transform="translate(258,36)" class:list={['mk', r.ok ? 'ok' : 'fault']}>
+          <circle r="12" />
+          {r.ok
+            ? <path d="M-6 0 l4.5 5 l8 -10" fill="none" />
+            : <path d="M-5 -5 l10 10 M5 -5 l-10 10" fill="none" />}
+        </g>
+        <text x="280" y="42" class="lab dark big">{r.s}</text>
+        <text x="246" y="76" class="lab big">{r.t}</text>
+      </g>
+    ))}
+  </svg>
+</Figure>
+
+<style>
+  .line-call .lab.big { font-size: 20px; }
+  .lc-court { fill: var(--court); }
+  .lc-apron { fill: var(--apron); }
+  .lc-kitchen { fill: var(--kitchen); }
+  .lc-line { fill: var(--line); }
+  .lc-tag { fill: var(--on-court) !important; font-size: 13px !important; }
+</style>
