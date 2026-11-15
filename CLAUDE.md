@@ -5,7 +5,7 @@ Codex 與 Claude Code 都會讀這份。只寫讀程式看不出來的事。
 ## 基本
 - 回覆、PR 說明、commit 訊息一律繁體中文。
 - 正式站 https://pickleball-tw.com 。推到 `main` = Vercel 自動部署上線。
-- Astro 5 靜態站，沒有後端。驗收順序：`npm run check`（0 errors）→ `npm run build`。CI 跑同樣兩步。
+- Astro 5 靜態站，沒有後端。驗收順序：`npm run check`（0 errors）→ `npm run build`。動到文章時先跑 `npm run check:articles`。CI 跑同樣兩步。
 
 ## 定位
 - 把國內外匹克球教學影片整理成繁中知識卡與文章；變現走 AdSense，低人力。
@@ -20,7 +20,7 @@ Codex 與 Claude Code 都會讀這份。只寫讀程式看不出來的事。
 - 型號、店名、場館、組織名稱查不到就不寫。
 - 價格與精確數字行內標「（來源、YYYY-MM 查證）」。
 - 粗體 `**…**` 的結尾 `**` 前面不能是全形標點（例如「（低手發球）**要」），否則整段會變成字面星號。標點移到粗體外。build 後 `grep -rlF "**" dist --include=index.html` 應該沒有結果。
-- 從單一頻道影片整理「教練系統」再寫文章的流程見 `docs/COACH_ARTICLE_WORKFLOW.md`（引文機檢：`scripts/coach-system/check_quotes.py`）。
+- 寫新文章照 `docs/ARTICLE_WORKFLOW.md`：選題卡（`docs/briefs/`）→ 素材 → 大綱 → 寫作 → 獨立查證 → `npm run check:articles` → 上線後第 4、8 週追蹤。用教練影片當素材時另看 `docs/COACH_ARTICLE_WORKFLOW.md`。
 - 用字照 `docs/TERMINOLOGY.md`：台灣球友怎麼說就怎麼寫，台灣習慣講英文的（dink、drop、reset、Erne）就寫英文。
 
 ## 知識卡
