@@ -6,7 +6,7 @@ const net = 500, g1 = 120;
 const bad = net - 1.98 * 200, pb = net - 2.13 * 200;
 const g2 = 430;
 ---
-<Figure caption="示意圖，上下兩排比例不同。上排：羽球的前發球線離網 1.98 公尺，匹克球的非截擊區線離網 2.13 公尺，要往後多畫 15 公分。下排：羽球網中間高 1.524 公尺，匹克球網中間只有 86.4 公分。">
+<Figure caption="示意圖，上下兩排比例不同。上排：羽球的前發球線離網 1.98 公尺，匹克球的非截擊區線離網 2.13 公尺，大約在羽球線後面 15 公分。下排：羽球網中間高 1.524 公尺，匹克球網中間只有 86.4 公分。">
   <svg class="gear-fig bc" viewBox="0 0 540 470" role="img" aria-label="羽球場與匹克球場比較：非截擊區線比羽球前發球線離網遠 15 公分；羽球網高 1.524 公尺，匹克球網高 86.4 公分">
     <text class="lab dark big" x="20" y="34">離網距離</text>
     <rect x="20" y={g1} width={net - 20} height="12" fill="var(--court)" />
@@ -16,7 +16,7 @@ const g2 = 430;
     <text class="lab big" x={bad + 8} y={g1 - 30}>羽球前發球線 1.98 m</text>
     <rect x={pb - 3} y={g1} width="6" height="34" fill="var(--ball)" stroke="var(--ink)" stroke-width="1" />
     <text class="lab dark big" x={pb - 2} y={g1 + 62}>非截擊區線 2.13 m</text>
-    <text class="lab dark big" x={pb - 2} y={g1 + 90}>多 15 公分</text>
+    <text class="lab dark big" x={pb - 2} y={g1 + 90}>約多 15 公分</text>
 
     <line x1="20" y1="236" x2="520" y2="236" stroke="var(--rule)" stroke-width="1.5" />
     <text class="lab dark big" x="20" y="270">網子中間多高</text>
