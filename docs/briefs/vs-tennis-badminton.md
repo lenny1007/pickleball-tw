@@ -2,7 +2,7 @@
 
 - slug：pickleball-vs-tennis-badminton
 - 分類：beginner
-- 狀態：選題中
+- 狀態：寫作中（claude/pb-vs-tennis-badminton，2026-11-15）
 
 ## 讀者與需求
 
