@@ -8,7 +8,9 @@
     "build": "astro build",
     "preview": "astro preview",
     "check": "astro check",
-    "check:articles": "node scripts/check-articles.mjs"
+    "check:articles": "node scripts/check-articles.mjs",
+    "topics:status": "node scripts/topics/status.mjs",
+    "shoot": "node scripts/shoot-figures.mjs"
   },
   "dependencies": {
     "@astrojs/mdx": "4.3.14",
@@ -19,5 +21,7 @@
     "@astrojs/check": "^0.9.6",
     "typescript": "^5.9.3"
   },
-  "engines": { "node": ">=20.12" }
+  "engines": {
+    "node": ">=20.12"
+  }
 }

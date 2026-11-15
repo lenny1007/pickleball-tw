@@ -1,6 +1,8 @@
 # 選題清單
 
-流程見 [`../ARTICLE_WORKFLOW.md`](../ARTICLE_WORKFLOW.md)。每個題目一張選題卡，範本是 `_TEMPLATE.md`。
+流程見 [`../ARTICLE_WORKFLOW.md`](../ARTICLE_WORKFLOW.md)（最前面有開工清單）。每個題目一張選題卡，範本是 `_TEMPLATE.md`。
+
+**每個題目現在的狀態不看這份**，跑 `npm run topics:status`：它會讀 main 和每個 `claude/*` 分支上的選題卡「狀態」欄，列出誰在寫什麼。認領題目就是改自己那張卡的狀態再 push。這份 README 只記每一輪選題的資料和排序，各討論串不要改它，免得分支互相衝突。
 
 ## 2026-11-15 第一輪
 

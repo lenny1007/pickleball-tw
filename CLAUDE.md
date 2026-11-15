@@ -20,7 +20,8 @@ Codex 與 Claude Code 都會讀這份。只寫讀程式看不出來的事。
 - 型號、店名、場館、組織名稱查不到就不寫。
 - 精確數字與價格要有來源，但**內文不放規則條號、查證日期、來源括號**，開頭也不放資料說明；全部集中在文末「資料來源」段（站主 2026-11-15：影響閱讀的都拿掉）。條號與日期記在 `docs/briefs/` 的選題卡和查證紀錄。
 - 粗體 `**…**` 的結尾 `**` 前面不能是全形標點（例如「（低手發球）**要」），否則整段會變成字面星號。標點移到粗體外。build 後 `grep -rlF "**" dist --include=index.html` 應該沒有結果。
-- 寫新文章照 `docs/ARTICLE_WORKFLOW.md`：選題卡（`docs/briefs/`）→ 素材 → 大綱 → 寫作 → 獨立查證 → `npm run check:articles` → 上線後第 4、8 週追蹤。用教練影片當素材時另看 `docs/COACH_ARTICLE_WORKFLOW.md`。
+- 寫新文章照 `docs/ARTICLE_WORKFLOW.md`：選題卡（`docs/briefs/`）→ 素材 → 大綱 → 寫作 → 獨立查證 → `npm run check:articles` → 上線後第 4、8 週追蹤。用教練影片當素材時另看 `docs/COACH_ARTICLE_WORKFLOW.md`。新討論串先照 ARTICLE_WORKFLOW 最前面的「開工清單」：`npm run topics:status` 看誰在寫什麼、改選題卡狀態認領、一篇一個 PR。
+- 圖解先看 `docs/FIGURES.md` 有沒有現成的；畫完跑 `npm run shoot -- <slug>` 截圖並抓手機上太小的字。
 - 用字照 `docs/TERMINOLOGY.md`：台灣球友怎麼說就怎麼寫，台灣習慣講英文的（dink、drop、reset、Erne）就寫英文。
 
 ## 知識卡

@@ -14,6 +14,23 @@
 | 6. 上線 | draft PR，站主看預覽後合併 | 雲端 |
 | 7. 追蹤 | 選題卡裡的追蹤段 | 上線後第 4 週、第 8 週 |
 
+
+## 新討論串開工清單
+
+接到「寫一篇文章」或「挑下一個題目」時，照這個順序做。每一步的細節在下面對應的段落。
+
+1. **看誰在寫什麼**：`npm run topics:status`。列出 main 上已上線的文章，和每個 `claude/*` 分支正在寫的選題卡、文章。別的分支已經在寫的題目就不要碰。
+2. **挑題**：從 `docs/briefs/README.md` 的排序挑「選題中」的題目；要開新題目就照第 1 步過三關。
+3. **認領**：把選題卡的「狀態」改成「寫作中」，**先 commit、push**，別的討論串跑 `topics:status` 才看得到。只改自己那張卡，不要改 `README.md` 的排序表（多個分支一起改會衝突）。
+4. **素材與大綱**：第 2、3 步，寫進選題卡。
+5. **寫作與畫圖**：第 4 步。圖先看 [`FIGURES.md`](FIGURES.md) 有沒有現成的。
+6. **自己檢查**：`npm run check:articles -- <slug>` → `npm run build` → `npm run shoot -- <slug>`，並打開截圖看。
+7. **查證**：第 5 步，用下面的交辦範本派 subagent。error 全部修完，主控要自己對過一手來源才改。
+8. **上線**：第 6 步。**一篇文章一個 PR**，才能各自合併。PR 說明附預覽連結、查證結果數字。
+9. **收尾**：站主合併後，選題卡狀態改「已上線（日期）」，填追蹤段的第 4、8 週日期。
+
+需要站主電腦的步驟（Google 搜尋建議、YouTube 字幕、教練影片萃取）要開 Remote Control，其他都在雲端做完。
+
 ## 1. 選題
 
 一個題目要同時過三關才寫：
@@ -94,7 +111,7 @@
    - 單打發球位置（`SingleServe`）。
 2. **每篇有自己的封面**：新題目在 `ArticleCover` 加一種 kind，不要用預設的球場一角。
 3. **只有少數人需要的細節放到常見問題**：例如正式比賽才有的規定，讓正文只留大多數讀者要的東西。
-4. **截圖檢查**：用 frontend-design skill 的角度，截桌機、手機、深色模式各一輪，確認：
+4. **截圖檢查**：`npm run build && npm run shoot -- <slug>` 截桌機、手機、深色模式各一輪（規則見 [`FIGURES.md`](FIGURES.md)），用 frontend-design skill 的角度確認：
    - 圖上的字看得清楚；
    - 手機沒有橫向捲動；
    - 表格不擠；
@@ -133,6 +150,23 @@
 
 description、takeaways 也要查。error 全部修完才上線；minor 逐條判斷。
 
+主控收到結果後，**判成 error 的每一條都要自己回一手來源再看一次**才改（試做時查證員把正確的發球規則判錯過）。查證紀錄寫進選題卡的「查證」段：日期、檢查幾條、error／minor 各幾條、改了什麼。
+
+**規則文章的交辦範本**（貼給 Agent，換掉 slug）：
+
+> 你是查證員，目標是找出 `src/content/articles/<slug>.mdx` 的錯，不是幫它背書。一手來源是 USA Pickleball 2026 規則書 PDF：https://pickleballcanada.org/wp-content/uploads/2026/03/2026-Official-Rulebook-EN.pdf （用 WebFetch 讀，usapickleball.org 連不到）。
+> 逐句檢查正文、description、takeaways、常見問題、圖說（圖說在 `src/components/fig/` 的 `caption`）：
+> 1. 每一句規則說法找出對應條文，引用條號和原文一句。
+> 2. 抓這幾種錯：條文沒有的說法、漏掉例外或條件、把「通常」寫成「一定」、把暫行規則寫成正式規則、單位換算錯、把慣例或禮儀寫成規則。
+> 3. 每個問題標 error（讀者照做會錯）或 minor（不精確但不會害人），附建議改法。
+> 回報：檢查幾句、通過幾句、問題清單（位置、原句、條文原文、嚴重度、建議改法）。不要改檔案。
+
+**球拍文章的交辦範本**：
+
+> 你是查證員，目標是找出 `src/content/articles/<slug>.mdx` 的錯。每個型號、重量、厚度、尺寸、價格、材質，都到廠商官網的規格頁核對（用 WebFetch／WebSearch），查不到官方來源的標「查無來源」。也檢查 USA Pickleball 核可清單的說法、單位換算（1 oz ≈ 28.35 g、1 in = 2.54 cm）。每個問題標 error／minor，附來源網址與建議改法。回報檢查幾項、通過幾項。不要改檔案。
+
+教練影片類用 `COACH_ARTICLE_WORKFLOW.md` 第 10 步的範本，要在站主電腦跑。
+
 ## 6. 上線
 
 ```
@@ -140,6 +174,7 @@ npm run check:articles -- <slug>   # ✗ 一定要修，△ 自己判斷
 npm run check                      # 0 errors
 npm run build
 grep -rlF "**" dist --include=index.html   # 應該沒有結果
+npm run shoot -- <slug>                    # 截圖、手機橫向捲動、圖上字太小
 ```
 
 `check:articles` 會檢查這些：
@@ -149,7 +184,7 @@ grep -rlF "**" dist --include=index.html   # 應該沒有結果
 - 站內連結：往外連幾篇、有沒有連到不存在的文章、有沒有舊文連進來。
 - 粗體有沒有失效、內文有沒有殘留時間點、英制單位有沒有換算。
 
-最後照選題卡在舊文加上連進來的連結，開 draft PR，站主看過預覽說可以才合併。
+最後照選題卡在舊文加上連進來的連結，開 draft PR（一篇一個），站主看過預覽說可以才合併。合併後把選題卡狀態改成「已上線（日期）」。
 
 ## 7. 追蹤
 

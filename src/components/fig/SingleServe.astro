@@ -14,7 +14,7 @@ const panels = [
   <div class="ss-pair">
     {panels.map((p) => (
       <Court label={p.title} x0={-6} x1={47} y0={-6} y1={23}>
-        <text class="lab dark" x="205" y="-26" text-anchor="middle">{p.title}</text>
+        <text class="lab dark big" x="205" y="-26" text-anchor="middle">{p.title}</text>
         <Path x1={-14} y1={p.y} x2={370} y2={p.ty} bend={p.y > 100 ? -40 : 40} />
         <Bounce x={370} y={p.ty} />
         <Player x={-26} y={p.y} label="發" />

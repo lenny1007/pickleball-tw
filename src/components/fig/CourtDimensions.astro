@@ -2,7 +2,7 @@
 import Court from './Court.astro';
 import Figure from './Figure.astro';
 ---
-<Figure caption="球場俯視圖。單打、雙打用同一張場；網子兩側淺藍色的區域是非截擊區，線也算在裡面。">
+<Figure caption="球場俯視圖。單打、雙打用同一張場；網子兩側淺藍色的區域是非截擊區，線也算在裡面。球網兩端高 91.4 公分、中間 86.4 公分。">
   <Court label="匹克球場尺寸圖：長 13.41 公尺、寬 6.10 公尺，網子兩側各有 2.13 公尺深的非截擊區" y0={-7} y1={29} x0={-7}>
     <g class="dim-line">
       <line x1="0" y1="-30" x2="440" y2="-30" /><line x1="0" y1="-38" x2="0" y2="-22" /><line x1="440" y1="-38" x2="440" y2="-22" />
@@ -12,13 +12,15 @@ import Figure from './Figure.astro';
     <text class="lab dark" x="220" y="-40" text-anchor="middle">13.41 公尺（44 呎）</text>
     <text class="lab dark" x="-42" y="100" text-anchor="middle" transform="rotate(-90 -42 100)">6.10 公尺（20 呎）</text>
     <text class="lab dark" x="185" y="256" text-anchor="middle">2.13 公尺（7 呎）</text>
-    <text class="lab" x="185" y="104" text-anchor="middle">非截擊區</text>
-    <text class="lab" x="255" y="104" text-anchor="middle">非截擊區</text>
+    <text class="lab vert" x="185" y="100" text-anchor="middle">非截擊區</text>
+    <text class="lab vert" x="255" y="100" text-anchor="middle">非截擊區</text>
     <text class="lab" x="75" y="55" text-anchor="middle">左發球區</text>
     <text class="lab" x="75" y="155" text-anchor="middle">右發球區</text>
     <text class="lab" x="365" y="55" text-anchor="middle">右發球區</text>
     <text class="lab" x="365" y="155" text-anchor="middle">左發球區</text>
-    <text class="lab dark" x="228" y="276" text-anchor="start">球網：兩端 91.4、中間 86.4 公分</text>
-    <line x1="224" y1="266" x2="222" y2="214" class="leader" />
   </Court>
 </Figure>
+
+<style>
+  .vert { writing-mode: vertical-rl; }
+</style>
