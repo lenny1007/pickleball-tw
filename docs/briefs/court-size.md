@@ -2,7 +2,7 @@
 
 - slug：pickleball-court-size
 - 分類：rules
-- 狀態：選題中
+- 狀態：寫作中（claude/project-thread-0ajncf，2026-11-15）
 
 ## 讀者與需求
 
