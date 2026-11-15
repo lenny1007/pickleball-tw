@@ -23,6 +23,9 @@
 | `PaddleRack` | 臨打排球拍 | first-time-pickleball |
 | `PaddleShapes` | 三種拍型與甜區 | how-to-choose-paddle |
 | `CoreThickness` | 芯材厚度剖面 | how-to-choose-paddle |
+| `ServeTypes` | 截擊式發球與落地發球的側面對照 | pickleball-serve |
+| `ServeLandings` | 發球落點：擦網落進、中線、底線算好球，非截擊區線失誤 | pickleball-serve |
+| `ReturnDepth` | 接發球：站底線後、過網高度、落點深度（側面） | pickleball-serve |
 | `ArticleCover` | 每篇的封面，依 slug 關鍵字選畫面 | 全部 |
 
 畫新圖用的零件：
