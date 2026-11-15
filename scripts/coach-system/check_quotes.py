@@ -13,8 +13,9 @@
 
 知識卡模式（萃取端 2026-11 起每張卡帶 source_quote 與 claim_basis）：
   python -X utf8 check_quotes.py <transcripts 資料夾> --cards <cards.json 或萃取輸出 .json> [...]
-    每張有 source_quote 的卡都對字幕比一次，時間點對卡的 timestamp（預設容許 30 秒，
-    因為卡的時間是這一點開始講的地方，原話可能在後面）。
+    每張有 source_quote 的卡都對字幕比一次。卡的時間是這一點開始講的地方，原話常在後面，
+    所以允許原話比 timestamp 早 15 秒到晚 120 秒（--tolerance、--after 可調）。
+    原話必須是一段連續的字幕，用 ... 拼接兩段會被判找不到。
     另外檢查 claim_basis 只能是 physics／coach_method／screen_data／coach_example，
     golf 的萃取曾自創第五種值，流進站上會讓 build 失敗。
     沒有 source_quote 的卡只計數、不算失敗（舊卡都沒有）；加 --require-quote 則算失敗。
@@ -33,7 +34,11 @@ import sys
 def norm(s: str) -> str:
     s = s.lower().replace("’", "'").replace("‘", "'")
     s = re.sub(r"[^a-z0-9' ]+", " ", s)
-    return re.sub(r"\s+", " ", s).strip()
+    s = re.sub(r"\s+", " ", s).strip()
+    # 字幕和 Gemini 對口語縮寫的寫法常不同（going to／gonna），兩邊都展開再比
+    for short, full in (("gonna", "going to"), ("wanna", "want to"), ("gotta", "got to")):
+        s = re.sub(rf"\b{short}\b", full, s)
+    return s
 
 
 def secs(t: str) -> int:
@@ -136,7 +141,8 @@ def items(md: pathlib.Path):
         yield m.group("id"), m.group("t"), m.group("q"), ""
 
 
-def check_quote(cache, tdir, vid, t, q, tolerance, max_words):
+def check_quote(cache, tdir, vid, t, q, tolerance, max_words, after=None):
+    """after：原話允許比 t 晚多少秒（知識卡的時間是這一點開始講的地方，原話常在後面）。"""
     problems = []
     if vid not in cache:
         cache[vid] = find_transcript(tdir, vid)
@@ -150,12 +156,15 @@ def check_quote(cache, tdir, vid, t, q, tolerance, max_words):
         text, marks = tr
         hits = [m.start() for m in re.finditer(re.escape(nq), text)] if nq else []
         if not hits:
-            problems.append("字幕裡找不到這句")
+            problems.append("字幕裡找不到這句" + ("（不要用 ... 拼接兩段）" if "..." in q or "…" in q else ""))
         elif t:
             want = secs(t)
-            diff = min(abs(time_at(marks, h) - want) for h in hits)
+            def off(h):
+                d = time_at(marks, h) - want
+                return max(0, d - after) if after is not None and d > 0 else abs(d)
+            diff = min(off(h) for h in hits)
             if diff > tolerance:
-                problems.append(f"時間差 {diff} 秒")
+                problems.append(f"時間差超出 {diff} 秒")
     return problems
 
 
@@ -165,7 +174,8 @@ def main():
     ap.add_argument("files", nargs="*")
     ap.add_argument("--cards", nargs="+", default=[], help="知識卡 JSON（站上的 cards.json 或萃取輸出）")
     ap.add_argument("--require-quote", action="store_true", help="沒有 source_quote 的卡也算不通過")
-    ap.add_argument("--tolerance", type=int, default=None, help="時間誤差上限（秒），預設引文 15、知識卡 30")
+    ap.add_argument("--tolerance", type=int, default=None, help="時間誤差上限（秒），預設 15；知識卡另外允許原話比卡片時間晚 --after 秒")
+    ap.add_argument("--after", type=int, default=120, help="知識卡原話可比 timestamp 晚多少秒（預設 120）")
     ap.add_argument("--max-words", type=int, default=25)
     a = ap.parse_args()
     if not a.files and not a.cards:
@@ -193,7 +203,7 @@ def main():
             if basis is not None and basis not in CLAIM_BASIS:
                 problems.append(f"claim_basis 不在四個值內：{basis}")
             if q:
-                problems += check_quote(cache, tdir, vid, t, q, a.tolerance or 30, a.max_words)
+                problems += check_quote(cache, tdir, vid, t, q, a.tolerance or 15, a.max_words, after=a.after)
             else:
                 no_quote += 1
                 if a.require_quote:
