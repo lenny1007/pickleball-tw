@@ -1,0 +1,28 @@
+---
+// 雙打站位檢查：發球方分數雙數時，起始發球員站右邊；單數時站左邊（規則 5.B.3）。
+// 兩張半場並排，只畫發球方那一半。
+import Court from './Court.astro';
+import Figure from './Figure.astro';
+import Player from './Player.astro';
+const panels = [
+  { title: '分數 0、2、4…（雙數）', startY: 150, partnerY: 50 },
+  { title: '分數 1、3、5…（單數）', startY: 50, partnerY: 150 },
+];
+---
+<Figure caption="示意圖。發球方面向球網（圖的右邊），「隊」是隊友，「起」是這局一開始發球的人。隊伍分數是雙數時他站右邊，單數時站左邊，隊友站另一邊；接發方也用自己的分數這樣檢查。誰站右邊，換到發球權時就是第一位發球員。">
+  <div class="pos-pair">
+    {panels.map((p) => (
+      <Court label={`${p.title}：起始發球員站${p.startY > 100 ? '右' : '左'}邊`} x0={-6} x1={23} y0={-5} y1={23} >
+        <text class="lab dark" x="85" y="-22" text-anchor="middle">{p.title}</text>
+        <Player x={-28} y={p.startY} label="起" />
+        <Player x={-28} y={p.partnerY} label="隊" />
+        <text class="lab" x="75" y={p.startY + 5} text-anchor="middle">{p.startY > 100 ? '右邊' : '左邊'}</text>
+      </Court>
+    ))}
+  </div>
+</Figure>
+
+<style>
+  .pos-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 480px) { .pos-pair { grid-template-columns: 1fr; } }
+</style>
