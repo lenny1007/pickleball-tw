@@ -20,6 +20,7 @@ Codex 與 Claude Code 都會讀這份。只寫讀程式看不出來的事。
 - 型號、店名、場館、組織名稱查不到就不寫。
 - 價格與精確數字行內標「（來源、YYYY-MM 查證）」。
 - 粗體 `**…**` 的結尾 `**` 前面不能是全形標點（例如「（低手發球）**要」），否則整段會變成字面星號。標點移到粗體外。build 後 `grep -rlF "**" dist --include=index.html` 應該沒有結果。
+- 從單一頻道影片整理「教練系統」再寫文章的流程見 `docs/COACH_ARTICLE_WORKFLOW.md`（引文機檢：`scripts/coach-system/check_quotes.py`）。
 - 用字照 `docs/TERMINOLOGY.md`：台灣球友怎麼說就怎麼寫，台灣習慣講英文的（dink、drop、reset、Erne）就寫英文。
 
 ## 知識卡
