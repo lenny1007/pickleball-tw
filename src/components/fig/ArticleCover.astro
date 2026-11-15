@@ -9,11 +9,28 @@ const kind =
   : slug.includes('paddle') ? 'paddle'
   : slug.includes('first-time') ? 'first'
   : slug.includes('where-to-play') ? 'venues'
+  : slug.includes('serve') ? 'serve'
   : slug.includes('rules') ? 'rules'
   : 'corner';
 ---
 <svg class:list={['cover', { small }]} viewBox="0 0 640 280" aria-hidden="true" focusable="false">
   <rect width="640" height="280" fill="var(--apron)" />
+  {kind === 'serve' && (
+    <g>
+      <rect x="0" y="40" width="640" height="200" fill="var(--court)" />
+      <rect x="250" y="40" width="140" height="200" fill="var(--kitchen)" />
+      <g stroke="var(--line)" stroke-width="3" fill="none">
+        <line x1="0" y1="40" x2="640" y2="40" /><line x1="0" y1="240" x2="640" y2="240" />
+        <line x1="250" y1="40" x2="250" y2="240" /><line x1="390" y1="40" x2="390" y2="240" />
+        <line x1="0" y1="140" x2="250" y2="140" /><line x1="390" y1="140" x2="640" y2="140" />
+      </g>
+      <line x1="320" y1="26" x2="320" y2="254" stroke="var(--ink)" stroke-width="6" stroke-linecap="round" />
+      <rect x="392" y="42" width="246" height="96" fill="var(--ball)" opacity=".25" />
+      <path d="M40 200 Q300 0 520 90" class="cv-trail" />
+      <g class="bounce"><circle cx="520" cy="90" r="9" /></g>
+      <circle cx="40" cy="200" r="12" class="ball-dot" />
+    </g>
+  )}
   {kind === 'rules' && (
     <g transform="translate(100,40)">
       <rect width="440" height="200" fill="var(--court)" />

@@ -1,0 +1,34 @@
+---
+// 發球落點：只畫接發方半場，1 呎 = 10 單位（見 Court.astro）。目標是右上那個發球區。
+import Court from './Court.astro';
+import Figure from './Figure.astro';
+const balls = [
+  { n: '1', x: 340, y: 30, ok: true, sx: -26, sy: 6 },
+  { n: '2', x: 380, y: 100, ok: true, sx: -2, sy: 28 },
+  { n: '3', x: 440, y: 60, ok: true, sx: -26, sy: 12 },
+  { n: '4', x: 290, y: 80, ok: false, sx: -28, sy: 4 },
+];
+---
+<Figure caption="俯視示意圖，只畫接發球的半場，虛線框是這一球要發進的發球區。① 擦網後落進發球區：好球，繼續打。② 落在中線、③ 落在底線：線算發球區的，好球。④ 落在非截擊區線上：失誤。">
+  <Court label="發球落點：擦網後落進發球區、落在中線、落在底線都是好球；落在非截擊區線上是失誤" x0={17} x1={50} y0={-4} y1={25}>
+    <rect x="292" y="2" width="146" height="96" class="target" />
+    <line x1="290" y1="0" x2="290" y2="100" class="fault-line" />
+    <path d="M222 30 Q272 6 340 30" class="sl-trail" />
+    {balls.map((b) => (
+      <g>
+        <circle cx={b.x} cy={b.y} r="7" class="ball-dot" />
+        <g class="step" transform={`translate(${b.x + b.sx},${b.y + b.sy})`}><circle r="12" /><text y="5" text-anchor="middle" class="lab">{b.n}</text></g>
+        <g transform={`translate(${b.x + 14},${b.y - 16})`} class:list={['mk', b.ok ? 'ok' : 'fault']}>
+          <circle r="10" />
+          {b.ok ? <path d="M-5 0 l3.5 4 l6.5 -8" fill="none" /> : <path d="M-4.5 -4.5 l9 9 M4.5 -4.5 l-9 9" fill="none" />}
+        </g>
+      </g>
+    ))}
+    <text class="lab dark big" x="290" y="228" text-anchor="middle">非截擊區線</text>
+    <text class="lab dark big" x="220" y="-16" text-anchor="middle">網</text>
+  </Court>
+</Figure>
+
+<style>
+  .sl-trail { fill: none; stroke: var(--ball); stroke-width: 2.5; stroke-dasharray: 7 6; }
+</style>
