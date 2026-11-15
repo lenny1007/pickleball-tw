@@ -26,6 +26,7 @@ Codex 與 Claude Code 都會讀這份。只寫讀程式看不出來的事。
 
 ## 知識卡
 - 資料在 `src/content/knowledge/cards.json`，來自站主本機的萃取端（沿用 badminton-knowledge-extractor）。
+- 2026-11-15 起新卡帶 `claim_basis`（`coach_method` 站上標「一種教法」）與 `source_quote`（教練英文原話）。新卡進站前用 `scripts/coach-system/check_quotes.py --cards` 對字幕機檢，見 `docs/EXTRACTION-FIDELITY.md`。
 - 卡片預設 `index: false`：不進 sitemap、頁面 noindex。有搜尋需求的卡才開。理由：badminton-tw 卡片全開時 sitemap 88% 是卡、77% 零曝光。
 
 ## 分支

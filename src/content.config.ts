@@ -36,6 +36,14 @@ const knowledge = defineCollection({
     source_title: z.string(),
     source_video_id: z.string(),
     timestamp: z.string(), // "mm:ss"
+    /**
+     * 這張卡的說法是什麼性質（沿用 golfer-tw 的萃取欄位，舊卡沒有）：
+     * physics 規則或物理共識，可當事實寫；coach_method 這位教練的做法，站上標「一種教法」；
+     * screen_data 影片畫面上的數據；coach_example 教練的假設舉例，站上標「示範舉例」。
+     */
+    claim_basis: z.enum(['physics', 'coach_method', 'screen_data', 'coach_example']).nullable().optional(),
+    /** 教練講這一點的英文原話，用來對字幕機檢（scripts/coach-system/check_quotes.py --cards）。 */
+    source_quote: z.string().nullable().optional(),
     /** 進 sitemap 與否。預設不進，有搜尋需求再開。 */
     index: z.boolean().default(false),
   }),

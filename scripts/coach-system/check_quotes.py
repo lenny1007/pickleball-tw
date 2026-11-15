@@ -11,10 +11,19 @@
        - quote: "..."
   2. COACH-SYSTEM.md 行尾的 (<id> mm:ss, "...")
 
-字幕檔格式：transcripts/<id>.txt，每行開頭 [mm:ss]。
+知識卡模式（萃取端 2026-11 起每張卡帶 source_quote 與 claim_basis）：
+  python -X utf8 check_quotes.py <transcripts 資料夾> --cards <cards.json 或萃取輸出 .json> [...]
+    每張有 source_quote 的卡都對字幕比一次，時間點對卡的 timestamp（預設容許 30 秒，
+    因為卡的時間是這一點開始講的地方，原話可能在後面）。
+    另外檢查 claim_basis 只能是 physics／coach_method／screen_data／coach_example，
+    golf 的萃取曾自創第五種值，流進站上會讓 build 失敗。
+    沒有 source_quote 的卡只計數、不算失敗（舊卡都沒有）；加 --require-quote 則算失敗。
+
+字幕檔格式：transcripts/<id>.txt，每行開頭 [mm:ss]；找不到時改讀 <id>*.vtt。
 比對前會把大小寫、標點、多餘空白拿掉；引文可以跨好幾行字幕。
 有任何一條不通過時結束碼為 1。
 """
+import json
 import argparse
 import pathlib
 import re
@@ -52,6 +61,54 @@ def load_transcript(path: pathlib.Path):
     return text, marks
 
 
+VTT_TIME = re.compile(r"(\d+:)?(\d{2}):(\d{2})\.\d{3}\s+-->")
+
+
+def load_vtt(path: pathlib.Path):
+    """YouTube 自動字幕是滾動式，同一行會在下一個 cue 重複出現；連續重複的行只留一次。"""
+    text, marks, last, t = "", [], None, 0
+    for line in path.read_text(encoding="utf-8").splitlines():
+        m = VTT_TIME.match(line)
+        if m:
+            t = int((m.group(1) or "0:")[:-1]) * 3600 + int(m.group(2)) * 60 + int(m.group(3))
+            continue
+        if not line.strip() or line.startswith(("WEBVTT", "Kind:", "Language:", "NOTE")):
+            continue
+        piece = norm(re.sub(r"<[^>]+>", "", line))
+        if not piece or piece == last:
+            continue
+        last = piece
+        if text:
+            text += " "
+        marks.append((len(text), t))
+        text += piece
+    return text, marks
+
+
+def find_transcript(tdir: pathlib.Path, vid: str):
+    p = tdir / f"{vid}.txt"
+    if p.exists():
+        return load_transcript(p)
+    vtts = sorted(tdir.glob(f"{vid}*.vtt"))
+    return load_vtt(vtts[0]) if vtts else None
+
+
+CLAIM_BASIS = {"physics", "coach_method", "screen_data", "coach_example"}
+
+
+def walk_cards(node):
+    """萃取輸出的外層格式不一定（list、{"cards": [...]}、{"knowledge": [...]}…），有 source_video_id 的 dict 都當卡。"""
+    if isinstance(node, dict):
+        if "source_video_id" in node:
+            yield node
+            return
+        for v in node.values():
+            yield from walk_cards(v)
+    elif isinstance(node, list):
+        for v in node:
+            yield from walk_cards(v)
+
+
 def time_at(marks, pos):
     t = marks[0][1] if marks else 0
     for start, s in marks:
@@ -79,13 +136,40 @@ def items(md: pathlib.Path):
         yield m.group("id"), m.group("t"), m.group("q"), ""
 
 
+def check_quote(cache, tdir, vid, t, q, tolerance, max_words):
+    problems = []
+    if vid not in cache:
+        cache[vid] = find_transcript(tdir, vid)
+    tr = cache[vid]
+    nq = norm(q)
+    if len(nq.split()) > max_words:
+        problems.append(f"超過 {max_words} 字（{len(nq.split())}）")
+    if tr is None:
+        problems.append("找不到字幕檔")
+    else:
+        text, marks = tr
+        hits = [m.start() for m in re.finditer(re.escape(nq), text)] if nq else []
+        if not hits:
+            problems.append("字幕裡找不到這句")
+        elif t:
+            want = secs(t)
+            diff = min(abs(time_at(marks, h) - want) for h in hits)
+            if diff > tolerance:
+                problems.append(f"時間差 {diff} 秒")
+    return problems
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("transcripts")
-    ap.add_argument("files", nargs="+")
-    ap.add_argument("--tolerance", type=int, default=15, help="時間誤差上限（秒）")
+    ap.add_argument("files", nargs="*")
+    ap.add_argument("--cards", nargs="+", default=[], help="知識卡 JSON（站上的 cards.json 或萃取輸出）")
+    ap.add_argument("--require-quote", action="store_true", help="沒有 source_quote 的卡也算不通過")
+    ap.add_argument("--tolerance", type=int, default=None, help="時間誤差上限（秒），預設引文 15、知識卡 30")
     ap.add_argument("--max-words", type=int, default=25)
     a = ap.parse_args()
+    if not a.files and not a.cards:
+        ap.error("至少要給一個 .md 或 --cards")
 
     tdir = pathlib.Path(a.transcripts)
     cache = {}
@@ -93,29 +177,32 @@ def main():
     for f in a.files:
         for vid, t, q, label in items(pathlib.Path(f)):
             total += 1
-            problems = []
-            if vid not in cache:
-                p = tdir / f"{vid}.txt"
-                cache[vid] = load_transcript(p) if p.exists() else None
-            tr = cache[vid]
-            nq = norm(q)
-            if len(nq.split()) > a.max_words:
-                problems.append(f"超過 {a.max_words} 字（{len(nq.split())}）")
-            if tr is None:
-                problems.append("找不到字幕檔")
-            else:
-                text, marks = tr
-                hits = [m.start() for m in re.finditer(re.escape(nq), text)] if nq else []
-                if not hits:
-                    problems.append("字幕裡找不到這句")
-                else:
-                    want = secs(t)
-                    diff = min(abs(time_at(marks, h) - want) for h in hits)
-                    if diff > a.tolerance:
-                        problems.append(f"時間差 {diff} 秒")
+            problems = check_quote(cache, tdir, vid, t, q, a.tolerance or 15, a.max_words)
             if problems:
                 bad += 1
                 print(f"✗ {pathlib.Path(f).name} {label} {vid} {t}：{'；'.join(problems)}\n    \"{q[:120]}\"")
+
+    no_quote = 0
+    for f in a.cards:
+        for card in walk_cards(json.loads(pathlib.Path(f).read_text(encoding="utf-8"))):
+            total += 1
+            problems = []
+            cid = card.get("id") or card.get("title") or "?"
+            vid, t = card.get("source_video_id", ""), card.get("timestamp") or ""
+            basis, q = card.get("claim_basis"), (card.get("source_quote") or "").strip()
+            if basis is not None and basis not in CLAIM_BASIS:
+                problems.append(f"claim_basis 不在四個值內：{basis}")
+            if q:
+                problems += check_quote(cache, tdir, vid, t, q, a.tolerance or 30, a.max_words)
+            else:
+                no_quote += 1
+                if a.require_quote:
+                    problems.append("沒有 source_quote")
+            if problems:
+                bad += 1
+                print(f"✗ {pathlib.Path(f).name} {cid} {vid} {t}：{'；'.join(problems)}\n    \"{q[:120]}\"")
+    if a.cards:
+        print(f"（知識卡中沒有 source_quote 的：{no_quote} 張）")
     print(f"共檢查 {total} 條，{total - bad} 條通過，{bad} 條不通過")
     sys.exit(1 if bad else 0)
 

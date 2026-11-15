@@ -20,3 +20,9 @@ export const ZONES = {
   gear: { name: '裝備', note: '球拍、球、鞋。' },
 } as const;
 export type ZoneKey = keyof typeof ZONES;
+
+/** 知識卡 claim_basis 要在站上標出來的兩種；physics、screen_data 不標。 */
+export const CLAIM_LABELS: Record<string, { text: string; hint: string }> = {
+  coach_method: { text: '一種教法', hint: '這是這位教練的做法或偏好，不是唯一標準' },
+  coach_example: { text: '示範舉例', hint: '教練舉的假設例子，不是實測數據' },
+};
