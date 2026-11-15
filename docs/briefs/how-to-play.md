@@ -2,7 +2,7 @@
 
 - slug：how-to-play-pickleball
 - 分類：beginner
-- 狀態：選題中
+- 狀態：寫作中（claude/pb-how-to-play，2026-11-15）
 
 ## 讀者與需求
 
