@@ -33,6 +33,7 @@
 | `NetHeight` | 球網正面：邊線處 91.4、中間 86.4 公分，網柱間距 | pickleball-court-size |
 | `CourtClearance` | 球場一角：最小與建議的場外空間 | pickleball-court-size |
 | `BadmintonCompare` | 羽球前發球線 vs 非截擊區線、兩種網高 | pickleball-court-size |
+| `HistoryTimeline` | 匹克球發展時間軸：1965 發明到 2025 美國人數 | what-is-pickleball |
 | `ArticleCover` | 每篇的封面，依 slug 關鍵字選畫面 | 全部 |
 
 畫新圖用的零件：
