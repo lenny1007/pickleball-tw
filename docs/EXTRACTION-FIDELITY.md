@@ -46,7 +46,15 @@ golfer-tw 在 2026-07 發現，Gemini 萃取影片時最常出的錯有兩種：
 
    字幕可以是 `<影片 id>.txt`（每行 `[mm:ss]` 開頭）或 yt-dlp 抓的 `<影片 id>*.vtt`。會檢查原話是否逐字出現（gonna／going to 這類口語縮寫視為相同）、時間點落在卡片 `timestamp` 前 15 秒到後 120 秒之間（卡片時間是這一點開始講的地方，原話常在後面）、25 字以內、`claim_basis` 值域，以及原話含 I／we／my 卻標 physics 的卡。
 
-之後每一批新卡進站前都跑第 3 步，不通過的卡修掉或刪掉再合併進 `cards.json`。
+4. 用 Claude 逐句驗證內容有沒有字幕根據（自動修正）：
+
+   ```
+   python -X utf8 scripts/coach-system/verify_cards.py <字幕資料夾> <萃取輸出 .json> --out <報告 .json> --apply <修正後 .json>
+   ```
+
+   每張卡配上 timestamp 前 20 秒到後 180 秒的字幕，交給全新的 `claude -p`（Claude Code 訂閱額度，不呼叫付費 API）以推翻為目標判定：教練沒講的原因、數字、術語、加重的語氣都刪掉，`why` 整段沒根據就改成「教練未展開」，`claim_basis` 分錯就改，`what` 本身沒根據的卡整張剔除。修正寫到新檔，原檔不動，每張卡加 `fidelity_status`（verified／fixed／unverified）。羽球卡要多驗的欄位用 `--fields what,why,how,check,description_pro,common_failure` 加上。
+
+之後每一批新卡進站前都跑第 3、4 步，用第 4 步的修正檔進站；`unverified` 的卡（沒字幕或驗證失敗）不進站。
 
 ## 第一次實跑（2026-11-15）
 
@@ -61,3 +69,7 @@ prompt 加上「原話只抄一段連續的話」「教練用 I／we 講的做�
 - 原話機檢：匹克球 4/4、羽球 3/4（一句 31 字超長）。羽球練習頻率 4 張全部留空，上次 5 張全是編的。
 - 仍壓不下去的：8 張裡 4 張的 `why` 或 `check` 補了教練沒講的原因或數字（例如教練沒解釋為什麼用七成力，卡片卻寫了理由）；1 張教練第一人稱講的做法被標成 physics。
 - 結論：規則型指示 Gemini 大多照做，判斷型指示不穩，繼續加字效果有限。第一人稱標 physics 已改由機檢抓；`why` 有沒有補料仍要新卡進站前抽看。
+
+## 第三道：Claude 逐句驗證（2026-11-16）
+
+第二輪後 `why`／`check` 仍會補料，站主決定改成自動處理，不靠人工抽看。新增 `verify_cards.py`（見上方驗收第 4 步）。雲端用模擬卡實測：教練只說「我切球用七成力」，Gemini 卡片的 why「七成力能精確控制切削角度」與 check「連續 10 次落在前發球線」都被刪掉，why 改成「教練未展開」，claim_basis 由 physics 改成 coach_method。
