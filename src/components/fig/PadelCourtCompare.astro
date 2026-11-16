@@ -1,0 +1,35 @@
+---
+// 板式網球場與匹克球場俯視疊圖（1 公尺 = 20 單位）。padel 20 × 10 m，四周有牆／圍網；
+// 匹克球 13.41 × 6.10 m。網都在 x=0。padel 發球線距網 6.95 m；匹克球非截擊區 2.13 m。
+import Figure from './Figure.astro';
+const D = { w: 20 * 20, h: 10 * 20, sv: 6.95 * 20 };
+const P = { w: 13.41 * 20, h: 6.10 * 20, k: 2.13 * 20 };
+---
+<Figure caption="俯視示意圖，依比例畫。外面是板式網球場（20 × 10 公尺），粗框是四周的牆和圍網；裡面藍色的是匹克球場（13.41 × 6.10 公尺），淺藍是非截擊區。匹克球場的面積大約是板式網球場的四成。">
+  <svg class="gear-fig pcc" viewBox={`${-D.w / 2 - 24} ${-D.h / 2 - 54} ${D.w + 48} ${D.h + 118}`} role="img" aria-label="板式網球場和匹克球場大小比較：板式網球場 20 乘 10 公尺、四周有牆，匹克球場 13.41 乘 6.10 公尺、約是它的四成">
+    <rect x={-D.w / 2} y={-D.h / 2} width={D.w} height={D.h} class="pcc-padel" />
+    <g class="pcc-pl">
+      <line x1={-D.sv} y1={-D.h / 2} x2={-D.sv} y2={D.h / 2} />
+      <line x1={D.sv} y1={-D.h / 2} x2={D.sv} y2={D.h / 2} />
+      <line x1={-D.sv} y1="0" x2={D.sv} y2="0" />
+    </g>
+    <rect x={-P.w / 2} y={-P.h / 2} width={P.w} height={P.h} class="pcc-pb" />
+    <rect x={-P.k} y={-P.h / 2} width={P.k * 2} height={P.h} class="pcc-k" />
+    <rect x={-P.w / 2} y={-P.h / 2} width={P.w} height={P.h} class="pcc-line" />
+    <rect x={-D.w / 2} y={-D.h / 2} width={D.w} height={D.h} class="pcc-wall" />
+    <line x1="0" y1={-D.h / 2 - 10} x2="0" y2={D.h / 2 + 10} stroke="var(--ink)" stroke-width="4" stroke-linecap="round" />
+    <text class="lab dark big" x={-D.w / 2} y={-D.h / 2 - 20}>板式網球場 20 × 10 m，四周有牆</text>
+    <text class="lab big pcc-in" x="0" y="7" text-anchor="middle">匹克球場</text>
+    <text class="lab dark big" x="0" y={D.h / 2 + 42} text-anchor="middle">匹克球場 13.41 × 6.10 m</text>
+  </svg>
+</Figure>
+
+<style>
+  .pcc-padel { fill: var(--apron); }
+  .pcc-pl line { stroke: var(--line); stroke-width: 2; opacity: .7; }
+  .pcc-pb { fill: var(--court); }
+  .pcc-k { fill: var(--kitchen); }
+  .pcc-line { fill: none; stroke: var(--line); stroke-width: 2.5; }
+  .pcc-wall { fill: none; stroke: var(--ink); stroke-width: 8; }
+  .pcc .pcc-in { fill: var(--on-court); }
+</style>
