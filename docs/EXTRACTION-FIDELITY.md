@@ -44,7 +44,7 @@ golfer-tw 在 2026-07 發現，Gemini 萃取影片時最常出的錯有兩種：
    python -X utf8 scripts/coach-system/check_quotes.py <字幕資料夾> --cards <萃取輸出 .json> --require-quote
    ```
 
-   字幕可以是 `<影片 id>.txt`（每行 `[mm:ss]` 開頭）或 yt-dlp 抓的 `<影片 id>*.vtt`。會檢查原話是否逐字出現（gonna／going to 這類口語縮寫視為相同）、時間點落在卡片 `timestamp` 前 15 秒到後 120 秒之間（卡片時間是這一點開始講的地方，原話常在後面）、25 字以內、`claim_basis` 值域，以及原話含 I／we／my 卻標 physics 的卡。
+   字幕可以是 `<影片 id>.txt`（每行 `[mm:ss]` 開頭）或 yt-dlp 抓的 `<影片 id>*.vtt`。會檢查原話是否逐字出現（gonna／going to 這類口語縮寫視為相同）、時間點落在卡片 `timestamp` 前 15 秒到後 120 秒之間（卡片時間是這一點開始講的地方，原話常在後面）、25 字以內、`claim_basis` 值域，以及原話含 I／my 卻標 physics 的卡（we 常是泛指，不算）。口頭禪 um、uh、you know 比對時忽略。
 
 4. 用 Claude 逐句驗證內容有沒有字幕根據（自動修正）：
 
@@ -73,3 +73,7 @@ prompt 加上「原話只抄一段連續的話」「教練用 I／we 講的做�
 ## 第三道：Claude 逐句驗證（2026-11-16）
 
 第二輪後 `why`／`check` 仍會補料，站主決定改成自動處理，不靠人工抽看。新增 `verify_cards.py`（見上方驗收第 4 步）。雲端用模擬卡實測：教練只說「我切球用七成力」，Gemini 卡片的 why「七成力能精確控制切削角度」與 check「連續 10 次落在前發球線」都被刪掉，why 改成「教練未展開」，claim_basis 由 physics 改成 coach_method。
+
+### 實跑（2026-11-16，站主電腦、訂閱額度）
+
+匹克球 4 張、羽球 5 張全部判 fix、0 drop；一批約 20–80 秒，100 張卡約 15–20 分鐘。上一輪列的補料（七成力的理由、10 次落點、速度、語氣加重）全部被刪，另外抓到兩處 Gemini 把教練的意思講反或講錯並改正。偏嚴：3 張的 check 被整欄清空、1 張教練有講的原因被改成「教練未展開」。已在 prompt 補上「check 能從教練講的直接推出就保留」「教練用 because／so 說明的算有講原因」，並在套用時重排 how 的步驟編號、禁止改 `timestamp`／`source_video_id`。

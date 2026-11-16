@@ -18,7 +18,7 @@
     原話必須是一段連續的字幕，用 ... 拼接兩段會被判找不到。
     另外檢查 claim_basis 只能是 physics／coach_method／screen_data／coach_example，
     golf 的萃取曾自創第五種值，流進站上會讓 build 失敗。
-    原話含 I／we／my 卻標 physics 的卡也會被抓出來（教練講自己的做法應歸 coach_method）。
+    原話含 I／my 卻標 physics（we 常是泛指，不算） 的卡也會被抓出來（教練講自己的做法應歸 coach_method）。
     沒有 source_quote 的卡只計數、不算失敗（舊卡都沒有）；加 --require-quote 則算失敗。
 
 字幕檔格式：transcripts/<id>.txt，每行開頭 [mm:ss]；找不到時改讀 <id>*.vtt。
@@ -39,7 +39,9 @@ def norm(s: str) -> str:
     # 字幕和 Gemini 對口語縮寫的寫法常不同（going to／gonna），兩邊都展開再比
     for short, full in (("gonna", "going to"), ("wanna", "want to"), ("gotta", "got to")):
         s = re.sub(rf"\b{short}\b", full, s)
-    return s
+    # 口頭禪：Gemini 抄原話時常省略，兩邊都拿掉
+    s = re.sub(r"\b(um|uh|you know)\b", " ", s)
+    return re.sub(r"\s+", " ", s).strip()
 
 
 def secs(t: str) -> int:
@@ -203,8 +205,8 @@ def main():
             basis, q = card.get("claim_basis"), (card.get("source_quote") or "").strip()
             if basis is not None and basis not in CLAIM_BASIS:
                 problems.append(f"claim_basis 不在四個值內：{basis}")
-            if basis == "physics" and q and re.search(r"\b(i|i'm|i'll|we|we're|my|our)\b", norm(q)):
-                problems.append("原話是教練用 I／we 講自己的做法，卻標 physics，應該是 coach_method")
+            if basis == "physics" and q and re.search(r"\b(i|i'm|i'll|i've|my|me)\b", norm(q)):
+                problems.append("原話是教練用 I／my 講自己的做法，卻標 physics，應該是 coach_method")
             if q:
                 problems += check_quote(cache, tdir, vid, t, q, a.tolerance or 15, a.max_words, after=a.after)
             else:

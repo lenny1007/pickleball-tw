@@ -101,8 +101,9 @@ PROMPT = """你是知識卡的忠實性審查員。下面每張卡是 Gemini 從
 1. 翻譯、改寫、濃縮、合併教練說過的話都算有根據。
 2. 教練沒說出口的原因、機制、術語、數字、次數、距離、成功率、語氣加重（例如教練說「如果」卻寫成「最容易」）都算沒根據。
 3. 只能從畫面得知的內容（示範動作的姿勢、畫面上的數據）你無法確認：不要刪，列在 visual_only。
-4. why 欄：只要原因是教練沒講的就刪掉那部分；整段都沒根據時改成「教練未展開」。
+4. why 欄：只要原因是教練沒講的就刪掉那部分；整段都沒根據時改成「教練未展開」。教練用 because、so、that's why、the reason 等說明的，就算有講原因，要保留。
 5. how／check 等其他欄位：刪掉沒根據的句子或片段，保留有根據的。不要新增任何內容，不要潤飾。
+   check 是「怎麼確認做對了」的可觀察結果：能從教練講的內容直接推出的要保留，只刪掉數字和教練沒講的具體後果；除非整欄都跟字幕無關，不要清空。
 6. what 本身在字幕裡找不到根據時，整張卡 verdict 為 drop。
 7. claim_basis 只能是 physics（規則、物理、公認基本功）、coach_method（這位教練的做法或偏好，含教練用 I／we／my 講自己的做法）、screen_data（畫面數據）、coach_example（假設舉例）。分類錯了就在 claim_basis 填正確值。
 8. source_quote 若不是字幕裡的原話或與卡片內容無關，在 notes 註明。
@@ -138,6 +139,23 @@ def build_packets(cards, tdir, fields):
             "transcript": window,
         })
     return packets
+
+
+# 卡片 id 由這兩欄算出，驗證絕不能改
+PROTECTED = {"source_video_id", "timestamp", "id"}
+
+
+def renumber(val):
+    """how 刪掉某一步後，「Step 2:」「2.」這類編號重排，避免從第 2 步開始。"""
+    if not isinstance(val, list):
+        return val
+    out = []
+    for i, item in enumerate(val, 1):
+        if isinstance(item, str):
+            item = re.sub(r"^(\s*[Ss]tep\s*)\d+", lambda m: f"{m.group(1)}{i}", item)
+            item = re.sub(r"^(\s*)\d+([.、)）])", lambda m: f"{m.group(1)}{i}{m.group(2)}", item)
+        out.append(item)
+    return out
 
 
 def parse_json_array(text: str):
@@ -178,7 +196,7 @@ def main():
     ap.add_argument("--keep-api-env", action="store_true", help="保留 ANTHROPIC_API_KEY 等變數（會改用 API 計費）")
     a = ap.parse_args()
 
-    fields = [f.strip() for f in a.fields.split(",") if f.strip()]
+    fields = [f.strip() for f in a.fields.split(",") if f.strip() and f.strip() not in PROTECTED]
     root = json.loads(pathlib.Path(a.cards).read_text(encoding="utf-8"))
     cards = list(walk(root))
     packets = build_packets(cards, pathlib.Path(a.transcripts), fields)
@@ -244,8 +262,8 @@ def main():
                 drops.append((card, parent))
                 continue
             for f, val in (v.get("fixes") or {}).items():
-                if f in fields and f in card:
-                    card[f] = None if val == "" else val
+                if f in fields and f in card and f not in PROTECTED:
+                    card[f] = renumber(None if val == "" else val)
             if v.get("claim_basis") and v["claim_basis"] != card.get("claim_basis"):
                 card["claim_basis"] = v["claim_basis"]
             changed = bool(v.get("fixes")) or v["verdict"] == "fix"
