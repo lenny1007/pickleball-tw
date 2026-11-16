@@ -1,0 +1,26 @@
+---
+// 接發球側面示意：水平 1 呎 = 10 單位、垂直放大兩倍（1 呎 = 20 單位），地面 y=200。
+// 接發方底線 x=0、網 x=220、發球方底線 x=440。
+import Figure from './Figure.astro';
+const P0 = [-30, 150], P2 = [220, 80], P3 = [400, 200];
+const C = [2 * P2[0] - (P0[0] + P3[0]) / 2, 2 * P2[1] - (P0[1] + P3[1]) / 2];
+---
+<Figure caption="側面示意圖，高度比例放大，網高只是示意。教練對接發球的三個建議：站在底線後約 3 英尺（約 90 公分）、過網留約 3 英尺高、打到離對方底線約 4 英尺（約 1.2 公尺）的深處。">
+  <svg class="gear-fig" viewBox="-80 -30 580 310" role="img" aria-label="接發球側面示意：站底線後約 3 英尺，過網約 3 英尺高，落點離對方底線約 4 英尺">
+    <line x1="-70" y1="200" x2="480" y2="200" stroke="var(--rule)" stroke-width="3" />
+    <line x1="0" y1="194" x2="0" y2="206" stroke="var(--muted)" stroke-width="3" />
+    <line x1="440" y1="194" x2="440" y2="206" stroke="var(--muted)" stroke-width="3" />
+    <text class="lab big" x="0" y="230" text-anchor="middle">底線</text>
+    <text class="lab big" x="440" y="230" text-anchor="middle">對方底線</text>
+    <line x1="220" y1="200" x2="220" y2="140" stroke="var(--ink)" stroke-width="5" stroke-linecap="round" />
+    <text class="lab big" x="232" y="190">網</text>
+    <g class="flight"><path d={`M${P0[0]} ${P0[1]} Q${C[0]} ${C[1]} ${P3[0]} ${P3[1]}`} class="trail" /></g>
+    <circle cx={P0[0]} cy="178" r="13" fill="var(--ink)" />
+    <line x1="208" y1="140" x2="208" y2="84" class="leader" style="stroke: var(--muted)" />
+    <line x1="400" y1="246" x2="440" y2="246" class="leader" style="stroke: var(--muted)" />
+    <line x1="-30" y1="246" x2="0" y2="246" class="leader" style="stroke: var(--muted)" />
+    <text class="lab dark big" x="232" y="70">過網約 3 英尺</text>
+    <text class="lab dark big" x="490" y="272" text-anchor="end">離底線約 4 英尺</text>
+    <text class="lab dark big" x="-74" y="272" text-anchor="start">站後約 3 英尺</text>
+  </svg>
+</Figure>
