@@ -1,0 +1,29 @@
+---
+// 場外要留的空間：俯視球場左上角，1 呎 = 10 單位（見 Court.astro）。
+// 最小場地 30 × 60 呎（兩側各 5 呎、兩端各 8 呎）；建議 34 × 64 呎（兩側各 7 呎、兩端各 10 呎）。
+import Court from './Court.astro';
+import Figure from './Figure.astro';
+---
+<Figure caption="俯視示意圖，只畫球場一角。白色虛線是規則書的最小場地：底線後面留 2.44 公尺、邊線外留 1.52 公尺。黃綠色虛線是新建球場和比賽建議的大小：底線後 3.05 公尺、邊線外 2.13 公尺。">
+  <Court label="球場一角的場外空間：最小是底線後 2.44 公尺、邊線外 1.52 公尺；建議是底線後 3.05 公尺、邊線外 2.13 公尺" x0={-16} x1={19} y0={-10} y1={11}>
+    <rect x="-80" y="-50" width="600" height="300" class="cc-min" />
+    <rect x="-100" y="-70" width="640" height="340" class="cc-rec" />
+    <line x1="-80" y1="40" x2="0" y2="40" class="cc-dim" />
+    <text class="lab dark" x="-6" y="30" text-anchor="end">2.44 m</text>
+    <line x1="-100" y1="85" x2="0" y2="85" class="cc-dim rec" />
+    <text class="lab dark" x="-6" y="75" text-anchor="end">3.05 m</text>
+    <line x1="30" y1="-50" x2="30" y2="0" class="cc-dim" />
+    <text class="lab dark" x="38" y="-18">1.52 m</text>
+    <line x1="110" y1="-70" x2="110" y2="0" class="cc-dim rec" />
+    <text class="lab dark" x="118" y="-18">2.13 m</text>
+    <text class="lab" x="75" y="60" text-anchor="middle">球場</text>
+  </Court>
+</Figure>
+
+<style>
+  .cc-min, .cc-rec { fill: none; stroke-width: 3; stroke-dasharray: 9 6; }
+  .cc-min { stroke: var(--line); }
+  .cc-rec { stroke: var(--ball); }
+  .cc-dim { stroke: var(--line); stroke-width: 2; }
+  .cc-dim.rec { stroke: var(--ball); }
+</style>
