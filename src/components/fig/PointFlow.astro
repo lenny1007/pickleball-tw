@@ -1,0 +1,32 @@
+---
+// 一分球的前三拍與站位（俯視，1 呎 = 10 單位，見 Court.astro）。
+// 左邊是發球方，右邊是接發球方。接發球員回球後往前跑到非截擊區線；發球方先留在底線。
+import Court from './Court.astro';
+import Figure from './Figure.astro';
+import Player from './Player.astro';
+import Path from './Path.astro';
+import Bounce from './Bounce.astro';
+---
+<Figure caption="俯視示意圖：一分球的前三拍。① 發球，要落地彈起才能接。② 接發球打深，也要落地彈起才能打；接發球員打完往前跑到非截擊區線，跟隊友站齊。③ 發球方在底線打第三拍，常見的打法是用軟球落進對方的非截擊區，看清楚這一拍的結果再往前。">
+  <Court label="一分球的前三拍：發球、接發球打深後接發球方上網、發球方在底線打第三拍落進對方非截擊區" x0={-7} x1={51} y0={-4} y1={27}>
+    <Path x1={-14} y1={156} x2={372} y2={52} bend={-40} num="1" />
+    <Bounce x={372} y={52} />
+    <Path x1={454} y1={46} x2={58} y2={150} bend={-40} num="2" />
+    <Bounce x={58} y={150} />
+    <Path x1={-12} y1={156} x2={262} y2={70} bend={-22} num="3" />
+    <Bounce x={262} y={70} />
+    <line x1="440" y1="40" x2="318" y2="40" class="pf-move" />
+    <path d="M330 34 L318 40 L330 46" class="pf-move" />
+    <Player x={-24} y={156} label="發" />
+    <Player x={-24} y={50} />
+    <g opacity=".45"><Player x={460} y={40} side="them" label="接" /></g>
+    <Player x={304} y={40} side="them" />
+    <Player x={304} y={156} side="them" />
+    <text class="lab dark" x="-50" y="236">發球方：先留在底線</text>
+    <text class="lab dark" x="268" y="236">接發球方：上到網前</text>
+  </Court>
+</Figure>
+
+<style>
+  .pf-move { fill: none; stroke: var(--line); stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 2 6; }
+</style>
