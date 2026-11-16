@@ -1,0 +1,32 @@
+---
+// 正面示意：球網高度。水平 1 呎 = 20 單位（網柱間 22 呎 = 440）；垂直 1 吋 = 4 單位，
+// 兩端與中間的高低差另外放大，才看得出網子中間比較低。地面 y=250。
+import Figure from './Figure.astro';
+const g = 250;
+const side = g - 144;   // 兩端 36 吋
+const mid = g - 120;    // 中間：示意放大高低差
+---
+<Figure caption="正面示意圖，高低差有放大。球網在邊線外緣的位置高 91.4 公分，正中央高 86.4 公分，中間比兩端低約 5 公分。兩根網柱內側相距 6.71 公尺，網子要比場地寬一點。">
+  <svg class="gear-fig net-h" viewBox="0 0 540 330" role="img" aria-label="球網正面示意圖：兩端高 91.4 公分，中間高 86.4 公分，網柱內側相距 6.71 公尺">
+    <line x1="10" y1={g} x2="530" y2={g} stroke="var(--rule)" stroke-width="3" />
+    <rect x="70" y={g} width="400" height="8" fill="var(--court)" />
+    <rect x="44" y={side - 10} width="10" height={g - side + 10} fill="var(--ink)" rx="3" />
+    <rect x="486" y={side - 10} width="10" height={g - side + 10} fill="var(--ink)" rx="3" />
+    <path d={`M54 ${side} L70 ${side} Q270 ${2 * mid - side} 470 ${side} L486 ${side} L486 ${g - 40} L54 ${g - 40} Z`} class="nh-mesh" />
+    <path d={`M54 ${side} L70 ${side} Q270 ${2 * mid - side} 470 ${side} L486 ${side}`} class="nh-tape" />
+    <line x1="70" y1={side} x2="70" y2={g} class="nh-dim" />
+    <line x1="270" y1={mid} x2="270" y2={g} class="nh-dim" />
+    <text class="lab dark big" x="78" y={side - 22}>91.4 公分</text>
+    <text class="lab dark big" x="270" y={mid - 22} text-anchor="middle">86.4 公分</text>
+    <text class="lab big" x="70" y={g + 30} text-anchor="middle">邊線</text>
+    <text class="lab big" x="470" y={g + 30} text-anchor="middle">邊線</text>
+    <line x1="54" y1={g + 50} x2="486" y2={g + 50} class="nh-dim" />
+    <text class="lab dark big" x="270" y={g + 74} text-anchor="middle">網柱內側相距 6.71 公尺</text>
+  </svg>
+</Figure>
+
+<style>
+  .nh-mesh { fill: var(--muted); opacity: .18; }
+  .nh-tape { fill: none; stroke: var(--ink); stroke-width: 6; stroke-linejoin: round; }
+  .nh-dim { stroke: var(--muted); stroke-width: 1.5; stroke-dasharray: 5 4; }
+</style>

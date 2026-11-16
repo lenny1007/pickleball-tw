@@ -2,7 +2,7 @@
 
 - slug：pickleball-vs-tennis-badminton
 - 分類：beginner
-- 狀態：查證完成（claude/pb-vs-tennis-badminton，2026-11-15）
+- 狀態：已上線（2026-11-16）
 
 ## 讀者與需求
 
@@ -55,5 +55,5 @@
 
 ## 追蹤
 
-- 第 4 週：
-- 第 8 週：
+- 第 4 週（2026-12-14）：
+- 第 8 週（2027-01-11）：

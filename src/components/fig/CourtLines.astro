@@ -1,0 +1,23 @@
+---
+// 各條線叫什麼：俯視全場，1 呎 = 10 單位（見 Court.astro）。
+import Court from './Court.astro';
+import Figure from './Figure.astro';
+---
+<Figure caption="俯視示意圖。底線、邊線圍出整張場；中線只畫在非截擊區線到底線之間，把每一邊分成左右兩個發球區。每個發球區約 4.57 × 3.05 公尺。">
+  <Court label="匹克球場的線：兩端是底線，兩側是邊線，網子兩側各一條非截擊區線，中線從非截擊區線畫到底線" y0={-7} y1={29} x0={-8}>
+    <text class="lab dark big vert" x="-40" y="100" text-anchor="middle">底線</text>
+    <text class="lab dark big" x="75" y="-18" text-anchor="middle">邊線</text>
+    <text class="lab big" x="75" y="92" text-anchor="middle">中線</text>
+    <text class="lab dark big" x="150" y="236" text-anchor="middle">非截擊區線</text>
+    <text class="lab dark big" x="290" y="236" text-anchor="middle">非截擊區線</text>
+    <text class="lab dark big" x="220" y="-18" text-anchor="middle">球網</text>
+    <text class="lab" x="365" y="50" text-anchor="middle">發球區</text>
+    <text class="lab" x="365" y="150" text-anchor="middle">發球區</text>
+    <text class="lab vert" x="185" y="100" text-anchor="middle">非截擊區</text>
+    <text class="lab vert" x="255" y="100" text-anchor="middle">非截擊區</text>
+  </Court>
+</Figure>
+
+<style>
+  .vert { writing-mode: vertical-rl; }
+</style>
