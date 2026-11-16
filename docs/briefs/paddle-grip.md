@@ -2,7 +2,7 @@
 
 - slug：paddle-grip
 - 分類：paddles
-- 狀態：寫作中（claude/pb-paddle-grip，2026-11-16）
+- 狀態：查證完成（claude/pb-paddle-grip，2026-11-16）
 
 ## 讀者與需求
 
@@ -37,6 +37,13 @@
 - 往內連：how-to-choose-paddle、beginner-mistakes、pickleball-rules
 
 ## 查證
+
+- 2026-11-16 獨立查證（fresh-context agent）：無硬錯誤，7 處小修。
+  - 「介於兩個尺寸選細的」是我們的推論（Selkirk 只說可以加握把布加粗），改成明說是本站建議。
+  - 長度範圍改 4 到 6 吋（Selkirk：長柄 5.5 吋以上、雙手最長 6 吋）；周長改 4 到 5 吋、多數 4 到 4.75（兩篇 Selkirk 說法不同、JustPaddles 4 到 4.5）。
+  - 標準長度改標 JustPaddles 的 5 到 5¼ 吋；「適合單手」改標 JustPaddles。
+  - 規則改成「沒有另外限制握把長度」（3.D.6 有握把更換、加粗相關條文）。
+  - FAQ 握把太粗：可以換薄的替換握把；刪掉沒來源的「好纏」。
 
 ## 追蹤
 
