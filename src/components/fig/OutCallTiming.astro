@@ -1,0 +1,39 @@
+---
+// 2026 年規則：什麼時候喊出界才算數。兩條時間線，上面是沒回球、下面是回了球。
+import Figure from './Figure.astro';
+const x0 = 40, x1 = 500;
+---
+<Figure caption="示意圖。上：球落在你這邊、你沒回球，要在球落地後馬上喊出界，拖到下一次發球前才喊，2026 年起不再算數。下：你已經把球打回去了，出界要在對方擊球之前喊，對方打了才喊就繼續打。">
+  <svg class="gear-fig oct" viewBox="0 0 540 400" role="img" aria-label="喊出界的時機：沒回球時落地後馬上喊；回了球時要在對方擊球前喊">
+    <text class="lab dark big" x={x0 - 20} y="34">你沒回球</text>
+    <rect x="70" y="62" width="150" height="28" rx="6" class="oct-ok" />
+    <line x1={x0} y1="76" x2={x1} y2="76" class="oct-line" />
+    <circle cx="70" cy="76" r="9" class="ball-dot" />
+    <circle cx="460" cy="76" r="8" class="oct-dot" />
+    <text class="lab big" x="70" y="124" text-anchor="middle">球落地</text>
+    <text class="lab big" x="460" y="124" text-anchor="middle">下一發</text>
+    <g class="mk ok" transform="translate(145,150)"><circle r="12" /><path d="M-6 0 l4.5 5 l8 -10" fill="none" /></g>
+    <text class="lab dark big" x="165" y="157">馬上喊</text>
+    <g class="mk fault" transform="translate(330,150)"><circle r="12" /><path d="M-5 -5 l10 10 M5 -5 l-10 10" fill="none" /></g>
+    <text class="lab dark big" x="350" y="157">拖到後來</text>
+
+    <text class="lab dark big" x={x0 - 20} y="234">你回球了</text>
+    <rect x="200" y="262" width="180" height="28" rx="6" class="oct-ok" />
+    <line x1={x0} y1="276" x2={x1} y2="276" class="oct-line" />
+    <circle cx="70" cy="276" r="9" class="ball-dot" />
+    <circle cx="200" cy="276" r="8" class="oct-dot" />
+    <circle cx="380" cy="276" r="8" class="oct-dot" />
+    <text class="lab big" x="70" y="324" text-anchor="middle">球落地</text>
+    <text class="lab big" x="200" y="324" text-anchor="middle">你回球</text>
+    <text class="lab big" x="380" y="324" text-anchor="middle">對方擊球</text>
+    <g class="mk ok" transform="translate(220,356)"><circle r="12" /><path d="M-6 0 l4.5 5 l8 -10" fill="none" /></g>
+    <text class="lab dark big" x="240" y="363">對方打之前喊</text>
+    <text class="lab big" x="400" y="252">之後就繼續打</text>
+  </svg>
+</Figure>
+
+<style>
+  .oct-line { stroke: var(--rule); stroke-width: 4; }
+  .oct-ok { fill: var(--ball); opacity: .35; }
+  .oct-dot { fill: var(--muted); }
+</style>
