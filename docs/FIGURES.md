@@ -36,6 +36,8 @@
 | `OutCallTiming` | 2026 喊出界的時機：沒回球要馬上喊、回了球要在對方擊球前喊 | pickleball-rules-2026 |
 | `RallyVsSideOut` | 接發球方贏球：傳統計分只換發、每球得分制直接得分 | pickleball-rules-2026 |
 | `HistoryTimeline` | 匹克球發展時間軸：1965 發明到 2025 美國人數 | what-is-pickleball |
+| `HandleLength` | 短柄與長柄：總長相同，握把越長拍面越短（依比例） | paddle-grip |
+| `GripShapes` | 握把橫切面：圓形、方形、八角形 | paddle-grip |
 | `ArticleCover` | 每篇的封面，依 slug 關鍵字選畫面 | 全部 |
 
 畫新圖用的零件：

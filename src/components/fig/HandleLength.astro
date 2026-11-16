@@ -1,0 +1,35 @@
+---
+import Figure from './Figure.astro';
+// 示意圖：總長相同時，握把越長、拍面越短（1 吋 = 13 單位）。
+const k = 13, total = 16.5, base = 270;
+const paddles = [
+  { name: '短柄', len: 4.5, note1: '拍面較長', note2: '甜區較大、較集中' },
+  { name: '長柄', len: 5.5, note1: '可以雙手握', note2: '搆得遠、甜區較高' },
+];
+---
+<Figure caption="示意圖，依比例畫。兩支球拍總長一樣，握把長 1 吋，拍面就短 1 吋。握把長度依 Selkirk 的分法：短柄約 4 到 4.75 吋，長柄 5.5 吋以上。">
+  <svg class="gear-fig" viewBox="0 0 540 370" role="img" aria-label="短柄與長柄球拍比較：總長相同，長柄的拍面比較短">
+    {paddles.map((p, i) => {
+      const cx = 140 + i * 210;
+      const hg = p.len * k, face = (total - p.len) * k;
+      const top = base - hg - face;
+      return (
+        <g>
+          <rect x={cx - 46} y={top} width="92" height={face + 6} rx="22" class="paddle-face" />
+          <rect x={cx - 11} y={base - hg} width="22" height={hg} rx="6" class="paddle-grip" />
+          <line x1={cx + 26} y1={base - hg} x2={cx + 26} y2={base} class="hl-dim" />
+          <line x1={cx + 20} y1={base - hg} x2={cx + 32} y2={base - hg} class="hl-dim" />
+          <line x1={cx + 20} y1={base} x2={cx + 32} y2={base} class="hl-dim" />
+          <text x={cx + 40} y={base - hg / 2 + 6} class="lab dark">{p.len} 吋</text>
+          <text x={cx} y={base + 34} text-anchor="middle" class="lab dark big">{p.name}</text>
+          <text x={cx} y={base + 58} text-anchor="middle" class="lab">{p.note1}</text>
+          <text x={cx} y={base + 80} text-anchor="middle" class="lab">{p.note2}</text>
+        </g>
+      );
+    })}
+  </svg>
+</Figure>
+
+<style>
+  .hl-dim { stroke: var(--ball); stroke-width: 3; }
+</style>

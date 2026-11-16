@@ -1,0 +1,34 @@
+---
+import Figure from './Figure.astro';
+// 示意圖：握把橫切面三種形狀（依 Selkirk 的說法）。
+const r = 46;
+const oct = Array.from({ length: 8 }, (_, i) => {
+  const a = Math.PI / 8 + (i * Math.PI) / 4;
+  return `${(r * Math.cos(a)).toFixed(1)},${(r * Math.sin(a)).toFixed(1)}`;
+}).join(' ');
+const shapes = [
+  { name: '圓形', note: '多數人都順手' },
+  { name: '方形', note: '桌球轉來常偏好' },
+  { name: '八角形', note: '網球轉來常偏好' },
+];
+---
+<Figure caption="握把橫切面示意圖。Selkirk 的說法：圓形大多數人都好握；方形的手感接近桌球拍；八角形的稜角讓人換正反手時容易找到握法。周長多在 4 到 4.75 吋（約 10 到 12 公分）。">
+  <svg class="gear-fig" viewBox="0 0 540 220" role="img" aria-label="握把橫切面：圓形、方形、八角形">
+    {shapes.map((s, i) => {
+      const cx = 90 + i * 180;
+      return (
+        <g transform={`translate(${cx},80)`}>
+          {i === 0 && <circle r={r} class="gs-shape" />}
+          {i === 1 && <rect x={-r * 0.86} y={-r * 0.86} width={r * 1.72} height={r * 1.72} rx="12" class="gs-shape" />}
+          {i === 2 && <polygon points={oct} class="gs-shape" />}
+          <text y={r + 40} text-anchor="middle" class="lab dark big">{s.name}</text>
+          <text y={r + 66} text-anchor="middle" class="lab">{s.note}</text>
+        </g>
+      );
+    })}
+  </svg>
+</Figure>
+
+<style>
+  .gs-shape { fill: var(--muted); stroke: var(--ink); stroke-width: 4; }
+</style>
