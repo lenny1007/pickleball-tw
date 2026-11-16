@@ -35,6 +35,7 @@
 | `BadmintonCompare` | 羽球前發球線 vs 非截擊區線、兩種網高 | pickleball-court-size |
 | `OutCallTiming` | 2026 喊出界的時機：沒回球要馬上喊、回了球要在對方擊球前喊 | pickleball-rules-2026 |
 | `RallyVsSideOut` | 接發球方贏球：傳統計分只換發、每球得分制直接得分 | pickleball-rules-2026 |
+| `HistoryTimeline` | 匹克球發展時間軸：1965 發明到 2025 美國人數 | what-is-pickleball |
 | `ArticleCover` | 每篇的封面，依 slug 關鍵字選畫面 | 全部 |
 
 畫新圖用的零件：

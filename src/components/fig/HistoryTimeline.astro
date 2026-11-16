@@ -1,0 +1,36 @@
+---
+// 匹克球發展時間軸（直式，手機也好讀）。
+import Figure from './Figure.astro';
+const events = [
+  ['1965', '美國華盛頓州班布里奇島發明'],
+  ['1967', '第一座永久球場蓋好'],
+  ['1972', '成立公司保護這項運動'],
+  ['1976', '第一場已知的比賽'],
+  ['1984', '第一本規則書出版'],
+  ['1990', '美國 50 州都有人打'],
+  ['2005', 'USA Pickleball 成立'],
+  ['2025', '美國約 2,430 萬人打過'],
+];
+const row = 58, top = 40;
+---
+<Figure caption="示意圖：匹克球從 1965 年的後院遊戲，到美國連續五年成長最快的運動。">
+  <svg class="gear-fig" viewBox={`0 0 540 ${top * 2 + row * (events.length - 1)}`} role="img" aria-label={events.map(([y, t]) => `${y} 年${t}`).join('；')}>
+    <line x1="120" y1={top} x2="120" y2={top + row * (events.length - 1)} stroke="var(--rule)" stroke-width="4" />
+    {events.map(([y, t], i) => {
+      const cy = top + i * row;
+      const hl = i === 0 || i === events.length - 1;
+      return (
+        <g>
+          <text class="lab dark big" x="96" y={cy + 7} text-anchor="end">{y}</text>
+          <circle cx="120" cy={cy} r={hl ? 11 : 8} class:list={['ht-dot', { hl }]} />
+          <text class="lab big" x="146" y={cy + 7}>{t}</text>
+        </g>
+      );
+    })}
+  </svg>
+</Figure>
+
+<style>
+  .ht-dot { fill: var(--court); stroke: var(--apron); stroke-width: 3; }
+  .ht-dot.hl { fill: var(--ball); }
+</style>
