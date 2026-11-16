@@ -33,6 +33,8 @@
 | `NetHeight` | 球網正面：邊線處 91.4、中間 86.4 公分，網柱間距 | pickleball-court-size |
 | `CourtClearance` | 球場一角：最小與建議的場外空間 | pickleball-court-size |
 | `BadmintonCompare` | 羽球前發球線 vs 非截擊區線、兩種網高 | pickleball-court-size |
+| `OutCallTiming` | 2026 喊出界的時機：沒回球要馬上喊、回了球要在對方擊球前喊 | pickleball-rules-2026 |
+| `RallyVsSideOut` | 接發球方贏球：傳統計分只換發、每球得分制直接得分 | pickleball-rules-2026 |
 | `HistoryTimeline` | 匹克球發展時間軸：1965 發明到 2025 美國人數 | what-is-pickleball |
 | `ArticleCover` | 每篇的封面，依 slug 關鍵字選畫面 | 全部 |
 

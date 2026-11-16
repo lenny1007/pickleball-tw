@@ -14,11 +14,24 @@ const kind =
   : slug.includes('how-to-play') ? 'play'
   : slug.includes('serve') ? 'serve'
   : slug.includes('court-size') ? 'size'
+  : slug.includes('rules-2026') ? 'r2026'
   : slug.includes('rules') ? 'rules'
   : 'corner';
 ---
 <svg class:list={['cover', { small }]} viewBox="0 0 640 280" aria-hidden="true" focusable="false">
   <rect width="640" height="280" fill="var(--apron)" />
+  {kind === 'r2026' && (
+    <g>
+      <rect x="150" y="34" width="340" height="230" rx="10" fill="var(--court)" />
+      <g stroke="var(--line)" stroke-width="5" stroke-linecap="round">
+        <line x1="196" y1="88" x2="400" y2="88" /><line x1="196" y1="140" x2="440" y2="140" /><line x1="196" y1="192" x2="360" y2="192" />
+      </g>
+      <g stroke="var(--ball)" stroke-width="8" stroke-linecap="round" fill="none">
+        <path d="M420 182 l14 14 l28 -34" />
+      </g>
+      <circle cx="500" cy="60" r="26" class="ball-dot" />
+    </g>
+  )}
   {kind === 'whatis' && (
     <g>
       <rect x="0" y="150" width="640" height="130" fill="var(--court)" />

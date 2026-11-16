@@ -1,0 +1,32 @@
+---
+// 接發球方贏了一球：傳統計分只換發，每球得分制直接得分。
+import Figure from './Figure.astro';
+const rows = [
+  { name: '傳統計分', res: '只換發球，不得分', ok: false },
+  { name: '每球得分制', res: '直接得 1 分', ok: true },
+];
+---
+<Figure caption="示意圖：同樣是接發球方贏了這一球。傳統計分只有發球方能得分，接發球方贏球只換成自己發；每球得分制誰贏誰得分，2026 年起接發球方在賽末點贏球也直接拿下這局。">
+  <svg class="gear-fig" viewBox="0 0 540 250" role="img" aria-label="接發球方贏球：傳統計分只換發不得分；每球得分制直接得一分">
+    <text class="lab dark big" x="20" y="30">接發球方贏了這一球</text>
+    {rows.map((r, i) => {
+      const y = 70 + i * 90;
+      return (
+        <g>
+          <rect x="20" y={y} width="500" height="70" rx="10" class:list={['rv-card', { on: r.ok }]} />
+          <text class="lab dark big" x="40" y={y + 43}>{r.name}</text>
+          <g class:list={['mk', r.ok ? 'ok' : 'fault']} transform={`translate(250,${y + 36})`}>
+            <circle r="12" />
+            {r.ok ? <path d="M-6 0 l4.5 5 l8 -10" fill="none" /> : <path d="M-5 -5 l10 10 M5 -5 l-10 10" fill="none" />}
+          </g>
+          <text class="lab dark big" x="274" y={y + 43}>{r.res}</text>
+        </g>
+      );
+    })}
+  </svg>
+</Figure>
+
+<style>
+  .rv-card { fill: var(--apron); stroke: var(--rule); stroke-width: 2; }
+  .rv-card.on { fill: var(--ball); fill-opacity: .25; }
+</style>
