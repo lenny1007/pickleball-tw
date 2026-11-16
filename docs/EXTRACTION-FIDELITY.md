@@ -77,3 +77,14 @@ prompt 加上「原話只抄一段連續的話」「教練用 I／we 講的做�
 ### 實跑（2026-11-16，站主電腦、訂閱額度）
 
 匹克球 4 張、羽球 5 張全部判 fix、0 drop；一批約 20–80 秒，100 張卡約 15–20 分鐘。上一輪列的補料（七成力的理由、10 次落點、速度、語氣加重）全部被刪，另外抓到兩處 Gemini 把教練的意思講反或講錯並改正。偏嚴：3 張的 check 被整欄清空、1 張教練有講的原因被改成「教練未展開」。已在 prompt 補上「check 能從教練講的直接推出就保留」「教練用 because／so 說明的算有講原因」，並在套用時重排 how 的步驟編號、禁止改 `timestamp`／`source_video_id`。
+
+### 接進萃取流程（2026-11-16）
+
+兩邊萃取端各加了 `scripts/verify_new_videos.py`（一鍵：匯出新卡 → 找字幕 → check_quotes → verify_cards → 寫回萃取資料庫）與 `apply_verified.py`（寫回；有卡沒驗完、`timestamp`／`source_video_id`／`title` 被改、資料庫在送驗後變動的影片整支不寫回）。匹克球 `to_site_cards.py` 跳過 `fidelity_status` 為 unverified／rejected 的卡。羽球腳本在呼叫 Claude 前擋掉已上站的影片，且必須在該批新卡第一次 `reconcile:apply` 之前跑。
+
+```
+cd C:\Users\USER\Desktop\pickleball-knowledge-extractor; python -X utf8 scripts/verify_new_videos.py --target <target> --video-id <id> [<id> ...]
+cd C:\Users\USER\Desktop\badminton-knowledge-extractor; python -X utf8 scripts/verify_new_videos.py --target <target> --video-id <id> [<id> ...]
+```
+
+腳本預設從 `C:\Users\USER\Desktop\pickleball-tw-extract\scripts\coach-system` 讀 check_quotes.py 與 verify_cards.py，那個 clone 要更新到含這兩支檔的 main。第二次實跑後再補兩點：驗證者可把拼接或超長的 `source_quote` 換成字幕裡一段連續原話，刪減後的殘句改寫成通順短句（不新增內容）。

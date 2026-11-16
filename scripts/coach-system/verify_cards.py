@@ -106,7 +106,9 @@ PROMPT = """你是知識卡的忠實性審查員。下面每張卡是 Gemini 從
    check 是「怎麼確認做對了」的可觀察結果：能從教練講的內容直接推出的要保留，只刪掉數字和教練沒講的具體後果；除非整欄都跟字幕無關，不要清空。
 6. what 本身在字幕裡找不到根據時，整張卡 verdict 為 drop。
 7. claim_basis 只能是 physics（規則、物理、公認基本功）、coach_method（這位教練的做法或偏好，含教練用 I／we／my 講自己的做法）、screen_data（畫面數據）、coach_example（假設舉例）。分類錯了就在 claim_basis 填正確值。
-8. source_quote 若不是字幕裡的原話或與卡片內容無關，在 notes 註明。
+8. source_quote 必須是字幕裡一段連續的原話（25 個英文字或 40 個中文字以內）。若用「...」拼接、超長、或不在字幕裡，
+   在 fixes.source_quote 換成字幕中最能支持這張卡的一段連續原話（逐字照抄字幕，不改字）；找不到就在 notes 註明。
+9. 刪掉片段後句子若不通順或成了殘句，改寫成通順的短句，但只能用剩下有根據的內容，不能新增。
 
 只輸出一個 JSON 陣列，不要任何其他文字，每張卡一個物件：
 {{"key": "<卡片 key>", "verdict": "pass" | "fix" | "drop",
@@ -262,7 +264,7 @@ def main():
                 drops.append((card, parent))
                 continue
             for f, val in (v.get("fixes") or {}).items():
-                if f in fields and f in card and f not in PROTECTED:
+                if (f in fields or f == "source_quote") and f in card and f not in PROTECTED:
                     card[f] = renumber(None if val == "" else val)
             if v.get("claim_basis") and v["claim_basis"] != card.get("claim_basis"):
                 card["claim_basis"] = v["claim_basis"]
