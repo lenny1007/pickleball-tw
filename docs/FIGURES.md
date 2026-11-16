@@ -23,6 +23,8 @@
 | `PaddleRack` | 臨打排球拍 | first-time-pickleball |
 | `PaddleShapes` | 三種拍型與甜區 | how-to-choose-paddle |
 | `CoreThickness` | 芯材厚度剖面 | how-to-choose-paddle |
+| `CourtCompare` | 網球場、羽球場、匹克球場大小疊圖（依比例） | pickleball-vs-tennis-badminton |
+| `NetCompare` | 三種運動網子中央高度（依比例） | pickleball-vs-tennis-badminton |
 | `PointFlow` | 一分球前三拍與站位：接發方上網、發球方留底線 | how-to-play-pickleball |
 | `ServeTypes` | 截擊式發球與落地發球的側面對照 | pickleball-serve |
 | `ServeLandings` | 發球落點：擦網落進、中線、底線算好球，非截擊區線失誤 | pickleball-serve |

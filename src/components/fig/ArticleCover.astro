@@ -9,6 +9,7 @@ const kind =
   : slug.includes('paddle') ? 'paddle'
   : slug.includes('first-time') ? 'first'
   : slug.includes('where-to-play') ? 'venues'
+  : slug.includes('vs-tennis') ? 'vs'
   : slug.includes('how-to-play') ? 'play'
   : slug.includes('serve') ? 'serve'
   : slug.includes('court-size') ? 'size'
@@ -17,6 +18,16 @@ const kind =
 ---
 <svg class:list={['cover', { small }]} viewBox="0 0 640 280" aria-hidden="true" focusable="false">
   <rect width="640" height="280" fill="var(--apron)" />
+  {kind === 'vs' && (
+    <g>
+      <rect x="40" y="20" width="560" height="240" fill="var(--apron)" stroke="var(--line)" stroke-width="3" />
+      <rect x="160" y="78" width="320" height="124" fill="var(--court)" />
+      <rect x="250" y="78" width="140" height="124" fill="var(--kitchen)" />
+      <rect x="160" y="78" width="320" height="124" fill="none" stroke="var(--line)" stroke-width="3" />
+      <line x1="320" y1="8" x2="320" y2="272" stroke="var(--ink)" stroke-width="6" stroke-linecap="round" />
+      <circle cx="420" cy="140" r="14" class="ball-dot" />
+    </g>
+  )}
   {kind === 'play' && (
     <g transform="translate(100,40)">
       <rect width="440" height="200" fill="var(--court)" />

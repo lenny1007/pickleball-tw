@@ -1,0 +1,25 @@
+---
+// 三種球場外框疊圖（俯視，1 公尺 = 20 單位）。網球雙打場 23.77 × 10.97 m；
+// 匹克球場 13.41 × 6.10 m 與羽球雙打場 13.40 × 6.10 m 幾乎重疊，畫成同一框。網都在 x=0。
+import Figure from './Figure.astro';
+const T = { w: 23.77 * 20, h: 10.97 * 20 };
+const P = { w: 13.41 * 20, h: 6.10 * 20 };
+---
+<Figure caption="俯視示意圖，依比例畫。外框是網球雙打場（23.77 × 10.97 公尺），裡面藍色的是匹克球場（13.41 × 6.10 公尺）。羽球雙打場是 13.40 × 6.10 公尺，跟匹克球場幾乎完全重疊。">
+  <svg class="gear-fig cc3" viewBox={`${-T.w / 2 - 20} ${-T.h / 2 - 50} ${T.w + 40} ${T.h + 110}`} role="img" aria-label="網球場、羽球場、匹克球場大小比較：匹克球場和羽球雙打場幾乎一樣大，約是網球雙打場面積的三分之一">
+    <rect x={-T.w / 2} y={-T.h / 2} width={T.w} height={T.h} class="cc3-tennis" />
+    <rect x={-P.w / 2} y={-P.h / 2} width={P.w} height={P.h} class="cc3-pb" />
+    <rect x={-P.w / 2} y={-P.h / 2} width={P.w} height={P.h} class="cc3-line" />
+    <line x1="0" y1={-T.h / 2 - 10} x2="0" y2={T.h / 2 + 10} stroke="var(--ink)" stroke-width="4" stroke-linecap="round" />
+    <text class="lab dark big" x={-T.w / 2} y={-T.h / 2 - 16}>網球雙打場 23.77 × 10.97 m</text>
+    <text class="lab big cc3-in" x="0" y="8" text-anchor="middle">匹克球、羽球</text>
+    <text class="lab dark big" x="0" y={T.h / 2 + 40} text-anchor="middle">13.41 × 6.10 m（羽球 13.40 × 6.10 m）</text>
+  </svg>
+</Figure>
+
+<style>
+  .cc3-tennis { fill: var(--apron); stroke: var(--ink); stroke-width: 2; }
+  .cc3-pb { fill: var(--court); }
+  .cc3-line { fill: none; stroke: var(--line); stroke-width: 2.5; }
+  .cc3 .cc3-in { fill: var(--on-court); }
+</style>
