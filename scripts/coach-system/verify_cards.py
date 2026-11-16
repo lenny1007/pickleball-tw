@@ -13,6 +13,7 @@ Gemini 萃取時常在 why／check 補教練沒講的原因或數字（2026-11-1
             沒字幕或驗證失敗的標 unverified，不要讓它進站）。
   --fields  要驗的欄位。羽球卡另有 description_pro、common_failure 等，用逗號加上。
   --dry-run 只把每批的 prompt 寫到報告旁邊，不呼叫 Claude。
+  呼叫 claude 前會拿掉 ANTHROPIC_API_KEY／AUTH_TOKEN／BASE_URL，確保用訂閱額度而不是 API 計費。
 
 字幕：<影片 id>.txt（每行 [mm:ss] 開頭）或 <影片 id>*.vtt，與 check_quotes.py 相同。
 每張卡取 timestamp 前 20 秒到後 180 秒的字幕給驗證者。
@@ -21,6 +22,7 @@ Gemini 萃取時常在 why／check 補教練沒講的原因或數字（2026-11-1
 import argparse
 import copy
 import json
+import os
 import pathlib
 import re
 import shlex
@@ -145,10 +147,19 @@ def parse_json_array(text: str):
     return json.loads(text[start:end + 1])
 
 
-def run_claude(runner, prompt):
+# 站主電腦同時有 ANTHROPIC_API_KEY 與 claude.ai 登入時，claude 會優先用 API 金鑰計費；
+# 從 Claude 桌面版裡叫 claude -p 還會繼承它的連線設定而 401。拿掉這些變數，一律走訂閱登入。
+STRIP_ENV = ("ANTHROPIC_API_KEY", "ANTHROPIC_AUTH_TOKEN", "ANTHROPIC_BASE_URL")
+
+
+def run_claude(runner, prompt, keep_api_env=False):
     args = shlex.split(runner, posix=(sys.platform != "win32"))
     exe = shutil.which(args[0]) or args[0]
-    r = subprocess.run([exe] + args[1:], input=prompt, capture_output=True, text=True, encoding="utf-8")
+    env = dict(os.environ)
+    if not keep_api_env:
+        for k in STRIP_ENV:
+            env.pop(k, None)
+    r = subprocess.run([exe] + args[1:], input=prompt, capture_output=True, text=True, encoding="utf-8", env=env)
     if r.returncode != 0:
         raise RuntimeError(f"runner 結束碼 {r.returncode}：{r.stderr[:300]}")
     return r.stdout
@@ -164,6 +175,7 @@ def main():
     ap.add_argument("--batch", type=int, default=6)
     ap.add_argument("--runner", default="claude -p")
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--keep-api-env", action="store_true", help="保留 ANTHROPIC_API_KEY 等變數（會改用 API 計費）")
     a = ap.parse_args()
 
     fields = [f.strip() for f in a.fields.split(",") if f.strip()]
@@ -191,7 +203,7 @@ def main():
         verdicts = None
         for attempt in range(2):
             try:
-                verdicts = parse_json_array(run_claude(a.runner, prompt))
+                verdicts = parse_json_array(run_claude(a.runner, prompt, a.keep_api_env))
                 break
             except (ValueError, RuntimeError, json.JSONDecodeError) as e:
                 err = str(e)
