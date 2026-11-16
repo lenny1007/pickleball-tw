@@ -1,7 +1,7 @@
 # 選題卡：匹克球拍握把怎麼選
 
 - slug：paddle-grip
-- 分類：paddle
+- 分類：paddles
 - 狀態：寫作中（claude/pb-paddle-grip，2026-11-16）
 
 ## 讀者與需求

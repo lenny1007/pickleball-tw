@@ -6,6 +6,7 @@ const kind =
   slug.includes('mistakes') ? 'mistakes'
   : slug.includes('scoring') ? 'scoring'
   : slug.includes('non-volley') ? 'nvz'
+  : slug.includes('paddle-grip') ? 'grip'
   : slug.includes('paddle') ? 'paddle'
   : slug.includes('what-is') ? 'whatis'
   : slug.includes('first-time') ? 'first'
@@ -20,6 +21,20 @@ const kind =
 ---
 <svg class:list={['cover', { small }]} viewBox="0 0 640 280" aria-hidden="true" focusable="false">
   <rect width="640" height="280" fill="var(--apron)" />
+  {kind === 'grip' && (
+    <g>
+      <rect x="0" y="0" width="640" height="280" fill="var(--court)" />
+      <g transform="rotate(-20 320 140)">
+        <rect x="230" y="-40" width="180" height="200" rx="44" class="paddle-face" />
+        <rect x="290" y="150" width="60" height="150" rx="14" class="paddle-grip" />
+        <g stroke="var(--ball)" stroke-width="6" stroke-linecap="round">
+          <line x1="290" y1="182" x2="350" y2="170" /><line x1="290" y1="212" x2="350" y2="200" />
+          <line x1="290" y1="242" x2="350" y2="230" /><line x1="290" y1="272" x2="350" y2="260" />
+        </g>
+      </g>
+      <circle cx="540" cy="70" r="24" class="ball-dot" />
+    </g>
+  )}
   {kind === 'r2026' && (
     <g>
       <rect x="150" y="34" width="340" height="230" rx="10" fill="var(--court)" />
