@@ -18,7 +18,7 @@
 | `SideOutLoop` | 雙打發球權輪轉 | pickleball-scoring |
 | `SingleServe` | 單打發球位置 | pickleball-scoring |
 | `RespectX` | 中間球誰接（教練的分工建議） | beginner-mistakes |
-| `ServeDots` | 發球的三個點（側面） | beginner-mistakes |
+| `ServeDots` | 發球的三個點（側面） | beginner-mistakes、pickleball-practice-drills |
 | `BallTypes` | 室內球與戶外球 | first-time-pickleball |
 | `PaddleRack` | 臨打排球拍 | first-time-pickleball |
 | `PaddleShapes` | 三種拍型與甜區 | how-to-choose-paddle |
@@ -40,6 +40,7 @@
 | `GripShapes` | 握把橫切面：圓形、方形、八角形 | paddle-grip |
 | `PadelCourtCompare` | 板式網球場與匹克球場大小疊圖（依比例，含牆） | pickleball-vs-padel |
 | `PadelWall` | 側視：板式網球球先落地可彈牆、匹克球碰圍網算失誤 | pickleball-vs-padel |
+| `StepBackDrill` | 側視：從非截擊區一步步退到底線的練習，越往後弧度越高 | pickleball-practice-drills |
 | `ArticleCover` | 每篇的封面，依 slug 關鍵字選畫面 | 全部 |
 
 畫新圖用的零件：

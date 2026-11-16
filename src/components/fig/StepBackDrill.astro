@@ -1,0 +1,46 @@
+---
+// 側視：教練的「從網前往後退」練習。水平 1 呎 = 12 單位。網 x=80，非截擊區線 x=164（7 呎），
+// 底線 x=344（網後 22 呎）。三個站位各打一道弧線落進對方非截擊區，越往後弧度越高。
+import Figure from './Figure.astro';
+const ground = 230, net = 80, nvz = 164, base = 344;
+const spots = [
+  { x: 150, h: 40, n: '1', lab: '非截擊區' },
+  { x: 250, h: 70, n: '2', lab: '過渡區' },
+  { x: 336, h: 100, n: '3', lab: '底線' },
+];
+const land = 40;
+---
+<Figure caption="側面示意圖，弧線高度只是示意。教練的練法：先站在非截擊區，把球輕輕送進對方的非截擊區；習慣了再一步步往後退，經過過渡區退到底線。動作都一樣，只有隨揮變大，弧度也要跟著拉高。">
+  <svg class="gear-fig sbd" viewBox="-36 0 436 310" role="img" aria-label="從非截擊區一步步退到底線練習：三個站位都把球送進對方非截擊區，越往後弧度越高">
+    <rect x={net - 84} y={ground - 6} width="84" height="6" class="sbd-k" />
+    <rect x={net} y={ground - 6} width={nvz - net} height="6" class="sbd-k" />
+    <line x1="0" y1={ground} x2={base + 20} y2={ground} class="sbd-floor" />
+    <line x1={net} y1={ground} x2={net} y2={ground - 36} class="sbd-net" />
+    {spots.map((s) => (
+      <path d={`M${s.x} ${ground - 40} Q${(s.x + land) / 2} ${ground - 40 - s.h * 1.6} ${land} ${ground}`} class="sbd-arc" />
+    ))}
+    {spots.map((s) => (
+      <g>
+        <circle cx={s.x} cy={ground - 40} r="13" class="sbd-dot" />
+        <text x={s.x} y={ground - 35} text-anchor="middle" class="sbd-n">{s.n}</text>
+        <text class="lab dark" x={s.x} y={ground + 26} text-anchor="middle">{s.lab}</text>
+      </g>
+    ))}
+    <circle cx={land} cy={ground - 8} r="7" class="ball-dot" />
+    <text class="lab" x={land} y={ground + 26} text-anchor="middle">對方非截擊區</text>
+    <path d={`M${spots[0].x + 18} ${ground + 64} L${spots[2].x} ${ground + 64}`} class="sbd-move" />
+    <path d={`M${spots[2].x - 8} ${ground + 58} L${spots[2].x} ${ground + 64} L${spots[2].x - 8} ${ground + 70}`} class="sbd-move" />
+    <text class="lab dark big" x={(spots[0].x + spots[2].x) / 2} y={ground + 46} text-anchor="middle">一步步往後退</text>
+    <text class="lab dark big" x="20" y="28">動作一樣，隨揮變大</text>
+  </svg>
+</Figure>
+
+<style>
+  .sbd-floor { stroke: var(--court); stroke-width: 6; }
+  .sbd-k { fill: var(--kitchen); }
+  .sbd-net { stroke: var(--ink); stroke-width: 4; }
+  .sbd-arc { fill: none; stroke: var(--ball); stroke-width: 3; stroke-dasharray: 6 5; }
+  .sbd-dot { fill: var(--court); }
+  .sbd-n { fill: var(--on-court); font: 16px var(--display); }
+  .sbd-move { fill: none; stroke: var(--muted); stroke-width: 2.5; stroke-linecap: round; }
+</style>
