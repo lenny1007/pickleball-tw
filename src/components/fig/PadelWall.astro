@@ -3,8 +3,8 @@
 // 沒落地直接打到對方的牆是失誤。下：匹克球，球碰到圍網或牆就算失誤。
 import Figure from './Figure.astro';
 ---
-<Figure caption="側視示意圖。上：板式網球，球在你這邊先落地、再彈到牆上，只要在第二次落地前打回去就算數；打過去的球沒落地就直接碰到對方的牆，算你失分。下：匹克球，牆和圍網不是場地的一部分，球碰到就算失誤。">
-  <svg class="gear-fig pw" viewBox="0 0 560 440" role="img" aria-label="板式網球的球可以先落地再碰牆；匹克球的球碰到圍網就算失誤">
+<Figure caption="側視示意圖。上：板式網球，球在你這邊先落地、再彈到牆上，只要在第二次落地前打回去就算數；打過去的球沒落地就直接碰到對方的牆，算你失分。下：匹克球，球落在你這邊、你沒接到就碰到圍網，算你失誤；打出去的球沒落地就碰到圍網，算擊球的人失誤。">
+  <svg class="gear-fig pw" viewBox="0 0 560 440" role="img" aria-label="板式網球的球可以先落地再碰牆；匹克球的球落地後沒接到、碰到圍網，算接球方失誤">
     <text class="lab dark big" x="20" y="30">板式網球</text>
     <line x1="20" y1="170" x2="470" y2="170" class="pw-floor" />
     <line x1="150" y1="170" x2="150" y2="134" class="pw-net" />
@@ -29,7 +29,7 @@ import Figure from './Figure.astro';
     <g class="mk ok" transform="translate(360,424)"><circle r="10" /><path d="M-5 0 l4 4 l7 -9" fill="none" /></g>
     <text class="lab dark" x="378" y="430">落地</text>
     <g class="mk fault" transform="translate(452,330)"><circle r="12" /><path d="M-5 -5 l10 10 M5 -5 l-10 10" fill="none" /></g>
-    <text class="lab dark" x="436" y="306" text-anchor="end">碰到圍網就算失誤</text>
+    <text class="lab dark" x="436" y="306" text-anchor="end">沒接到、碰到圍網：接球方失誤</text>
   </svg>
 </Figure>
 
