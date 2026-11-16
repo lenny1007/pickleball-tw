@@ -23,6 +23,9 @@
 | `PaddleRack` | 臨打排球拍 | first-time-pickleball |
 | `PaddleShapes` | 三種拍型與甜區 | how-to-choose-paddle |
 | `CoreThickness` | 芯材厚度剖面 | how-to-choose-paddle |
+| `ServeTypes` | 截擊式發球與落地發球的側面對照 | pickleball-serve |
+| `ServeLandings` | 發球落點：擦網落進、中線、底線算好球，非截擊區線失誤 | pickleball-serve |
+| `ReturnDepth` | 接發球：站底線後、過網高度、落點深度（側面） | pickleball-serve |
 | `CourtLines` | 各條線的名稱（底線、邊線、中線、非截擊區線）與發球區 | pickleball-court-size |
 | `NetHeight` | 球網正面：邊線處 91.4、中間 86.4 公分，網柱間距 | pickleball-court-size |
 | `CourtClearance` | 球場一角：最小與建議的場外空間 | pickleball-court-size |
