@@ -2,7 +2,7 @@
 
 - slug：what-is-pickleball
 - 分類：beginner
-- 狀態：寫作中（claude/pb-what-is-pickleball，2026-11-16）
+- 狀態：查證完成（claude/pb-what-is-pickleball，2026-11-16）
 
 ## 讀者與需求
 
@@ -42,6 +42,10 @@
 - 舊文加連結：first-time-pickleball 開頭或 how-to-play 開頭
 
 ## 查證
+
+- 2026-11-16 獨立查證（fresh-context agent）：無硬錯誤，3 處小修。
+  - 對照：USA Pickleball〈History of the Game〉、2026 規則書（3.A.1、3.B.6–7、3.D.2–5、4.A、7.D、10.A）、官網 Rules Summary（「Only one serve attempt is allowed per server」）、GCN 轉述 SFIA 2026 Topline（24.3M、+22.8%、2020 年 4.2M、連續五年成長最快）、Merriam-Webster、d3WTNjz9W2g 00:26–00:50、02:05–02:46。
+  - 小修：發球不全是「低手」，改寫成由下往上揮拍或落地發球；球拍改「硬質、不能壓縮」（規則書沒提到線）；2005 年改成「以新組織重新成立」（1984 年規則書是更早的 U.S.A.P.A. 出的）。
 
 ## 追蹤
 
