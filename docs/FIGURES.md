@@ -38,6 +38,8 @@
 | `HistoryTimeline` | 匹克球發展時間軸：1965 發明到 2025 美國人數 | what-is-pickleball |
 | `HandleLength` | 短柄與長柄：總長相同，握把越長拍面越短（依比例） | paddle-grip |
 | `GripShapes` | 握把橫切面：圓形、方形、八角形 | paddle-grip |
+| `PadelCourtCompare` | 板式網球場與匹克球場大小疊圖（依比例，含牆） | pickleball-vs-padel |
+| `PadelWall` | 側視：板式網球球先落地可彈牆、匹克球碰圍網算失誤 | pickleball-vs-padel |
 | `ArticleCover` | 每篇的封面，依 slug 關鍵字選畫面 | 全部 |
 
 畫新圖用的零件：
