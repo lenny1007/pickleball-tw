@@ -1,0 +1,48 @@
+---
+// 側視：發球方從底線往前推進時，準備姿勢跟著位置變。水平 1 呎 = 12 單位。
+// 網 x=40，非截擊區線 x=124（7 呎），底線 x=304（網後 22 呎）。
+import Figure from './Figure.astro';
+const ground = 214, net = 40, nvz = 124, base = 304;
+const spots = [
+  { x: 272, p: 22, lab: '過渡區', sub: '球拍放低' },
+  { x: 204, p: 52, lab: '往前推進', sub: '慢慢抬高' },
+  { x: 140, p: 78, lab: '非截擊區線', sub: '一般準備姿勢' },
+];
+---
+<Figure caption="側面示意圖。發球方看清楚隊友第三拍的結果，再一段一段往前。教練說準備姿勢要跟著位置變：在過渡區，對手的球常打到腳邊，球拍放低；往前推進時慢慢抬高；到了非截擊區線，再用球拍在身體前方的一般準備姿勢。">
+  <svg class="gear-fig trd" viewBox="-10 0 360 386" role="img" aria-label="發球方往前推進時的準備姿勢：過渡區球拍放低，往前推進慢慢抬高，到非截擊區線用一般準備姿勢">
+    <rect x={net} y={ground - 6} width={nvz - net} height="6" class="trd-k" />
+    <line x1="0" y1={ground} x2={base + 30} y2={ground} class="trd-floor" />
+    <line x1={net} y1={ground} x2={net} y2={ground - 36} class="trd-net" />
+    <line x1={base} y1={ground - 8} x2={base} y2={ground + 8} class="trd-tick" />
+    <text class="lab" x={net} y={ground + 24} text-anchor="middle">網</text>
+    <text class="lab" x={base} y={ground + 24} text-anchor="middle">底線</text>
+    {spots.map((s, i) => (
+      <g>
+        <circle cx={s.x} cy={ground - 112} r="11" class="trd-body" />
+        <path d={`M${s.x} ${ground - 100} L${s.x + 4} ${ground - 50} M${s.x + 4} ${ground - 50} L${s.x - 8} ${ground - 24} L${s.x - 4} ${ground} M${s.x + 4} ${ground - 50} L${s.x + 16} ${ground - 24} L${s.x + 14} ${ground}`} class="trd-limb" />
+        <path d={`M${s.x} ${ground - 88} L${s.x - 18} ${ground - s.p}`} class="trd-limb" />
+        <rect x={s.x - 34} y={ground - s.p - 14} width="14" height="28" rx="6" class="trd-paddle" />
+        <circle cx={s.x + 4} cy={ground + 46} r="13" class="trd-num" />
+        <text class="trd-n" x={s.x + 4} y={ground + 52} text-anchor="middle">{i + 1}</text>
+        <text class="lab dark big" x="0" y={ground + 100 + i * 30}>{`${i + 1}　${s.lab}：${s.sub}`}</text>
+      </g>
+    ))}
+    <path d={`M${spots[0].x + 10} 34 L${spots[2].x - 10} 34`} class="trd-move" />
+    <path d={`M${spots[2].x - 2} 28 L${spots[2].x - 10} 34 L${spots[2].x - 2} 40`} class="trd-move" />
+    <text class="lab dark big" x={(spots[0].x + spots[2].x) / 2} y="24" text-anchor="middle">看完第三拍，慢慢往前</text>
+  </svg>
+</Figure>
+
+<style>
+  .trd-floor { stroke: var(--court); stroke-width: 6; }
+  .trd-k { fill: var(--kitchen); }
+  .trd-net { stroke: var(--ink); stroke-width: 4; }
+  .trd-tick { stroke: var(--line); stroke-width: 3; }
+  .trd-body { fill: var(--ink); }
+  .trd-limb { fill: none; stroke: var(--ink); stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; }
+  .trd-paddle { fill: var(--ball); stroke: var(--ink); stroke-width: 2; }
+  .trd-num { fill: var(--court); }
+  .trd-n { fill: var(--on-court); font: 16px var(--display); }
+  .trd-move { fill: none; stroke: var(--muted); stroke-width: 2.5; stroke-linecap: round; }
+</style>
