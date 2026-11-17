@@ -1,0 +1,29 @@
+---
+// 鞋子正面剖面示意：慢跑鞋為往前跑設計，鞋底外擴、側向支撐少；球場鞋鞋面與側牆加強，適合左右移動。
+import Figure from './Figure.astro';
+---
+<Figure caption="示意圖，從鞋子正面看剖面。左：慢跑鞋為往前跑設計，鞋底外擴、側向支撐少，急停或往旁邊跨步時容易扭到腳踝。右：球場鞋的鞋面和側邊加強，往旁邊移動時比較穩。">
+  <svg class="gear-fig shc" viewBox="0 0 560 300" role="img" aria-label="慢跑鞋與球場鞋正面剖面比較：慢跑鞋鞋底外擴、側向支撐少；球場鞋鞋面與側邊加強">
+    <text class="lab dark big" x="140" y="32" text-anchor="middle">慢跑鞋</text>
+    <path d="M95 80 Q140 60 185 80 L195 190 L85 190 Z" class="shc-upper" />
+    <path d="M70 190 L210 190 L222 238 L58 238 Z" class="shc-mid" />
+    <path d="M58 238 L222 238 L222 248 L58 248 Z" class="shc-out" />
+    <path d="M240 150 l40 0 M270 140 l10 10 l-10 10" class="shc-arrow" />
+    <text class="lab" x="140" y="278" text-anchor="middle">鞋底外擴、側向支撐少</text>
+
+    <text class="lab dark big" x="420" y="32" text-anchor="middle">球場鞋</text>
+    <path d="M375 90 Q420 70 465 90 L470 200 L370 200 Z" class="shc-upper" />
+    <path d="M370 130 L378 200 L362 200 Z M470 130 L462 200 L478 200 Z" class="shc-wall" />
+    <rect x="356" y="200" width="128" height="30" rx="4" class="shc-mid" />
+    <rect x="356" y="230" width="128" height="14" rx="3" class="shc-out" />
+    <text class="lab" x="420" y="278" text-anchor="middle">鞋面、側邊加強</text>
+  </svg>
+</Figure>
+
+<style>
+  .shc-upper { fill: var(--card); stroke: var(--ink); stroke-width: 3; }
+  .shc-mid { fill: var(--rule); stroke: var(--ink); stroke-width: 2; }
+  .shc-out { fill: var(--ink); }
+  .shc-wall { fill: var(--court); }
+  .shc-arrow { fill: none; stroke: var(--muted); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+</style>
