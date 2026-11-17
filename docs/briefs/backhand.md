@@ -2,7 +2,7 @@
 
 - slug：pickleball-backhand
 - 分類：technique
-- 狀態：寫作中
+- 狀態：查證完成
 
 ## 讀者與需求
 
@@ -25,7 +25,7 @@
 
 ## 查證
 
-- 
+- 2026-11-18 獨立 fresh-context agent 對 Jess COACH-SYSTEM 條目與字幕、BP 條目逐句反查：error 0、minor 5，全部照改（單雙手分法改成依球的位置、握拍 FAQ 刪掉編者加的對比、roll 刷子補「來球較低、不退開」、description「最常見」改「常見」、5lkgmO1EW8E 刪握拍頸細節並註明講者不確定）。
 
 ## 追蹤
 
