@@ -1,0 +1,34 @@
+---
+// 側視：在過渡區處理空中球。擊球點高於網、能由上往下打 → 可以攻；必須由下往上打 → 穩住打 reset。
+import Figure from './Figure.astro';
+const g = 220, net = 200;
+---
+<Figure caption="側面示意圖，弧線只是示意。Coach Jess 的判斷：能由上往下打的球，很可能可以攻；必須由下往上打的球（例如在膝蓋高度），先穩住、擺好球拍，打 reset 把球放軟，不要從低處硬攻。">
+  <svg class="gear-fig hld" viewBox="0 0 400 300" role="img" aria-label="擊球點高、能往下打就攻；擊球點低、只能往上打就打 reset">
+    <line x1="0" y1={g} x2="400" y2={g} class="hld-floor" />
+    <rect x="0" y={g - 6} width="120" height="6" class="hld-k" />
+    <line x1="0" y1={g} x2="0" y2={g - 60} class="hld-net" />
+    <text class="lab" x="8" y={g - 66}>網</text>
+    <line x1="0" y1={g - 60} x2="400" y2={g - 60} class="hld-ref" />
+    <circle cx="300" cy="70" r="10" class="ball-dot" />
+    <path d={`M290 74 L40 ${g - 20}`} class="hld-attack" />
+    <path d={`M48 ${g - 30} L40 ${g - 20} L52 ${g - 22}`} class="hld-attack" />
+    <text class="lab dark big" x="310" y="50">高：往下打</text>
+    <text class="lab dark" x="210" y="112">可以攻</text>
+    <circle cx="300" cy={g - 26} r="10" class="ball-dot" />
+    <path d={`M290 ${g - 30} Q170 ${g - 140} 60 ${g - 8}`} class="hld-reset" />
+    <text class="lab dark big" x="310" y={g - 40}>低：只能往上</text>
+    <text class="lab dark" x="140" y={g - 100}>reset 放軟</text>
+    <text class="lab" x="200" y={g + 34} text-anchor="middle">虛線：網的高度</text>
+    <text class="lab" x="60" y={g + 60} text-anchor="middle">對方非截擊區</text>
+  </svg>
+</Figure>
+
+<style>
+  .hld-floor { stroke: var(--court); stroke-width: 6; }
+  .hld-k { fill: var(--kitchen); }
+  .hld-net { stroke: var(--ink); stroke-width: 4; }
+  .hld-ref { stroke: var(--muted); stroke-width: 1.5; stroke-dasharray: 4 4; }
+  .hld-attack { fill: none; stroke: var(--fault); stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round; }
+  .hld-reset { fill: none; stroke: var(--ball); stroke-width: 3.5; stroke-dasharray: 7 5; }
+</style>
