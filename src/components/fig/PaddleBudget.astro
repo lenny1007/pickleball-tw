@@ -1,0 +1,27 @@
+---
+import Figure from './Figure.astro';
+// 示意圖：三支入門拍的價格（長條依比例，NT$1 = 0.12 單位）與芯材厚度剖面（依比例，1 mm = 3 單位）。
+const k = 0.12;
+const rows = [
+  { name: 'Kuikma Open', price: 799, mm: 16, face: '玻纖', g: '225 g' },
+  { name: 'Kuikma React', price: 1249, mm: 16, face: '碳纖', g: '235 g' },
+  { name: 'JOOLA Journey', price: 2199, mm: 10, face: '玻纖', g: '約 221 g' },
+];
+---
+<Figure caption="示意圖，價格長條和芯材厚度都依比例畫。兩支 Kuikma 都是 16 mm 厚芯；JOOLA Journey 是 10 mm 薄芯，出球比較有力、比較不好控制。">
+  <svg class="gear-fig" viewBox="0 0 540 360" role="img" aria-label="三支入門球拍的價格與芯材厚度比較">
+    {rows.map((r, i) => {
+      const y = 30 + i * 112;
+      return (
+        <g>
+          <text x="24" y={y + 18} class="lab dark big">{r.name}</text>
+          <rect x="24" y={y + 34} width={r.price * k} height="26" rx="6" fill="var(--ball)" />
+          <text x={32 + r.price * k} y={y + 54} class="lab dark">NT${r.price.toLocaleString('en-US')}</text>
+          <rect x="404" y={y + 47 - r.mm * 1.5} width="100" height={r.mm * 3} rx="3" class="paddle-face" />
+          <text x="454" y={y + 18} text-anchor="middle" class="lab dark">芯 {r.mm} mm</text>
+          <text x="24" y={y + 88} class="lab">{r.face}　{r.g}</text>
+        </g>
+      );
+    })}
+  </svg>
+</Figure>

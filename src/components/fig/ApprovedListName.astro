@@ -1,0 +1,23 @@
+---
+import Figure from './Figure.astro';
+// 示意圖：賣場上的名字和 USA Pickleball 核可清單上的名字不一定一樣。
+const boxes = [
+  { y: 24, head: '迪卡儂賣場上寫', l1: '品牌　KUIKMA', l2: '品名　Open' },
+  { y: 196, head: '核可清單上寫', l1: '品牌　DECATHLON', l2: '型號　OPEN' },
+];
+---
+<Figure caption="示意圖。同一支迪卡儂 Kuikma Open，在 USA Pickleball 核可清單上登記的品牌是 DECATHLON，用 Kuikma 搜不到。查不到時，換成母公司或型號再搜一次。">
+  <svg class="gear-fig" viewBox="0 0 540 340" role="img" aria-label="迪卡儂賣場寫 Kuikma Open，核可清單上登記為 DECATHLON OPEN">
+    {boxes.map((b) => (
+      <g>
+        <rect x="70" y={b.y} width="400" height="120" rx="12" fill="var(--paper)" stroke="var(--rule)" stroke-width="2" />
+        <text x="96" y={b.y + 34} class="lab">{b.head}</text>
+        <text x="96" y={b.y + 70} class="lab dark big">{b.l1}</text>
+        <text x="96" y={b.y + 102} class="lab dark big">{b.l2}</text>
+      </g>
+    ))}
+    <line x1="270" y1="150" x2="270" y2="184" stroke="var(--ink)" stroke-width="4" stroke-linecap="round" />
+    <path d="M258 174 L270 190 L282 174" fill="none" stroke="var(--ink)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+    <g transform="translate(436,256)" class="mk ok"><circle r="16" /><path d="M-8 0 l5.6 6.4 l10.4 -12.8" fill="none" /></g>
+  </svg>
+</Figure>

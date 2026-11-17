@@ -9,6 +9,7 @@ const kind =
   : slug.includes('mistakes') ? 'mistakes'
   : slug.includes('scoring') ? 'scoring'
   : slug.includes('non-volley') ? 'nvz'
+  : slug.includes('paddle-recommendations') ? 'picks'
   : slug.includes('paddle-grip') ? 'grip'
   : slug.includes('paddle') ? 'paddle'
   : slug.includes('what-is') ? 'whatis'
@@ -55,6 +56,19 @@ const kind =
       <line x1="320" y1="18" x2="320" y2="262" stroke="var(--line)" stroke-width="5" stroke-linecap="round" />
       <path d="M220 200 L520 120 L430 70" fill="none" stroke="var(--ball)" stroke-width="5" stroke-dasharray="10 8" stroke-linecap="round" />
       <circle cx="430" cy="70" r="16" class="ball-dot" />
+    </g>
+  )}
+  {kind === 'picks' && (
+    <g>
+      <rect x="0" y="200" width="640" height="80" fill="var(--court)" />
+      <line x1="0" y1="200" x2="640" y2="200" stroke="var(--line)" stroke-width="5" />
+      {[{ x: 180, h: 40 }, { x: 320, h: 70 }, { x: 460, h: 100 }].map((p) => (
+        <g>
+          <rect x={p.x - 42} y={200 - p.h - 88} width="84" height="96" rx="24" class="paddle-face" />
+          <rect x={p.x - 11} y={200 - p.h} width="22" height={p.h} rx="6" class="paddle-grip" />
+        </g>
+      ))}
+      <circle cx="560" cy="176" r="18" class="ball-dot" />
     </g>
   )}
   {kind === 'grip' && (
