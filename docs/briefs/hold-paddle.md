@@ -2,7 +2,7 @@
 
 - slug：how-to-hold-paddle
 - 分類：technique
-- 狀態：寫作中
+- 狀態：查證完成
 
 ## 讀者與需求
 
@@ -25,7 +25,17 @@
 
 ## 查證
 
-- 
+- 2026-11-17，獨立 subagent 逐條對 Jess 與 Better Pickleball 字幕反查，約 46 條：OK 36、minor 8、error 2。
+- error（主控回字幕確認後修）：
+  - 參考影片少列 PYj2l4UHGa0（擋網截擊握力 3／10）。已補。
+  - 「雙手反手左手握較緊」出自 5lkgmO1EW8E（字幕差、本站不用），「roll volley 不要太緊」出自 3cBNtEU5-vk 05:05，是正手課、說話者不確定。兩列都刪掉。
+- minor 已修：
+  - 掌心握法和「正反手」不再串成因果，H2 標明是 Better Pickleball 的建議。
+  - 1 到 10 的兩端改標為 Better Pickleball 的說法。
+  - takeaway 改成「反手 roll volley」。
+  - flick 句照原話改寫，改成 99%。
+  - 刪掉「指節在握把上方」。
+  - GripClock 圖說標明視角是本站畫的。
 
 ## 追蹤
 
