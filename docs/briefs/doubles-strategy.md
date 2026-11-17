@@ -2,7 +2,7 @@
 
 - slug：pickleball-doubles-strategy
 - 分類：technique
-- 狀態：寫作中
+- 狀態：查證完成
 
 ## 讀者與需求
 
@@ -35,7 +35,7 @@
 
 ## 查證
 
-- 
+- 2026-11-18 獨立 fresh-context agent 對 COACH-SYSTEM.md 條目與字幕（cLIzPfTqDVE、IWVu09HFGvY 等）逐句反查：error 0、minor 6，全部照改（補「通常」、正手在中間三處統一成「不一定給得出答案」、非截擊區線改「傳統準備姿勢」、圖說改條件句、「常常」改「容易」、RespectX 前註明是網前例子）。n1waFhWp-Lo 沒有字幕檔，只對 COACH-SYSTEM 條目；嵌入影片的說明只留 01:04 的「改打直線」。
 
 ## 追蹤
 
