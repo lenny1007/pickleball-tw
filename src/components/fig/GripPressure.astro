@@ -1,0 +1,37 @@
+---
+// 握力量尺 1–10：兩位教練給的 dink 與擋球參考值。
+import Figure from './Figure.astro';
+const x0 = 40, x1 = 360;
+const xs = (n: number) => x0 + ((n - 1) / 9) * (x1 - x0);
+const marks = [
+  { a: 2, b: 3, y: 120, t: 'dink（Better Pickleball）', dark: true },
+  { a: 3, b: 4, y: 166, t: 'dink（Coach Jess）', dark: true },
+  { a: 3, b: 3, y: 212, t: '擋網截擊練習', dark: false },
+];
+---
+<Figure caption="示意圖。兩位教練都用 1（最輕）到 10（死命握緊）形容握力：Better Pickleball 的教練說 dink 大約 2，頂多 3；Coach Jess 說大約 3 到 4，緊到球拍不會掉、鬆到手腕還能後仰。Better Pickleball 的擋網截擊練習裡，握約 3 的球落在對方非截擊區附近，握到約 10 會飛到後場。">
+  <svg class="gear-fig gpr" viewBox="0 0 400 250" role="img" aria-label="握力量尺 1 到 10：dink 約 2 到 4，擋網截擊約 3">
+    <rect x={x0} y="54" width={x1 - x0} height="18" rx="9" class="gpr-bar" />
+    {Array.from({ length: 10 }, (_, i) => (
+      <g>
+        <line x1={xs(i + 1)} y1="50" x2={xs(i + 1)} y2="76" class="gpr-tick" />
+        <text x={xs(i + 1)} y="98" text-anchor="middle" class="gpr-n">{i + 1}</text>
+      </g>
+    ))}
+    <text class="lab" x={x0} y="36">最輕</text>
+    <text class="lab" x={x1} y="36" text-anchor="end">死命握緊</text>
+    {marks.map((m) => (
+      <g>
+        <rect x={xs(m.a) - 8} y={m.y - 14} width={xs(m.b) - xs(m.a) + 16} height="16" rx="8" class="gpr-mark" />
+        <text class:list={['lab', { dark: m.dark }]} x={xs(m.b) + 18} y={m.y}>{m.t}</text>
+      </g>
+    ))}
+  </svg>
+</Figure>
+
+<style>
+  .gpr-bar { fill: var(--rule); }
+  .gpr-tick { stroke: var(--muted); stroke-width: 1.5; }
+  .gpr-n { fill: var(--ink); font: 14px var(--display); }
+  .gpr-mark { fill: var(--ball); stroke: var(--ink); stroke-width: 1.5; }
+</style>

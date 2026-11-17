@@ -45,6 +45,8 @@
 | `SoleCompare` | 戶外鞋底硬耐磨 vs 室內鞋底軟、不留痕 | pickleball-shoes |
 | `PaddleBudget` | 三支入門拍的價格長條與芯材厚度剖面（依比例） | paddle-recommendations |
 | `ApprovedListName` | 賣場上的品牌名 vs 核可清單上登記的名字（Kuikma → DECATHLON） | paddle-recommendations |
+| `GripClock` | 握把底端時鐘：大陸式 V 靠上偏左、東方式 V 約 1 點、指節約 3 點 | how-to-hold-paddle |
+| `GripPressure` | 握力量尺 1–10：兩位教練的 dink 與擋網截擊參考值 | how-to-hold-paddle |
 | `ArticleCover` | 每篇的封面，依 slug 關鍵字選畫面 | 全部 |
 
 畫新圖用的零件：
