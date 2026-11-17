@@ -1,0 +1,29 @@
+---
+// 室內鞋與戶外鞋的鞋底：戶外鞋底硬、耐磨；室內鞋底軟、抓地、不容易在木地板留痕。
+import Figure from './Figure.astro';
+const rows = [
+  { y: 70, title: '戶外鞋', sub: '硬橡膠，耐磨', floor: '柏油', cls: 'sc-hard' },
+  { y: 190, title: '室內鞋', sub: '軟橡膠，抓地、不留痕', floor: '木地板', cls: 'sc-soft' },
+];
+---
+<Figure caption="示意圖。戶外場多半是柏油，鞋底要用比較硬的橡膠才耐磨；室內木地板用比較軟的鞋底，抓地好、比較不會留下痕跡。室內鞋拿去戶外穿會磨得比較快，戶外鞋穿在木地板上抓地力比較差。多數匹克球鞋其實室內外都能穿，買之前看商品說明。">
+  <svg class="gear-fig sc" viewBox="0 0 560 290" role="img" aria-label="戶外鞋底硬、耐磨，適合柏油；室內鞋底軟、抓地、不留痕，適合木地板">
+    {rows.map((r) => (
+      <g>
+        <text class="lab dark big" x="24" y={r.y}>{r.title}</text>
+        <text class="lab" x="24" y={r.y + 24}>{r.sub}</text>
+        <rect x="230" y={r.y - 36} width="200" height="28" rx="14" class="sc-upper" />
+        <rect x="222" y={r.y - 8} width="216" height="22" rx="8" class={r.cls} />
+        <rect x="200" y={r.y + 18} width="260" height="14" class="sc-floor" />
+        <text class="lab" x="470" y={r.y + 30}>{r.floor}</text>
+      </g>
+    ))}
+  </svg>
+</Figure>
+
+<style>
+  .sc-upper { fill: var(--card); stroke: var(--ink); stroke-width: 2.5; }
+  .sc-hard { fill: var(--ink); }
+  .sc-soft { fill: var(--kitchen); }
+  .sc-floor { fill: var(--apron); }
+</style>
