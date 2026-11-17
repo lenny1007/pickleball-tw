@@ -1,0 +1,41 @@
+---
+// 嵌入官方示範影片：先只顯示 YouTube 縮圖，點了才載入 youtube-nocookie 播放器，從指定秒數開始播。
+// 只嵌入原頻道允許嵌入的影片；不下載、不截圖（站主 2026-11-17：跟家電站同做法）。
+interface Props { id: string; t?: string; title: string; channel?: string; note: string }
+const { id, t = '0:00', title, channel = 'Better Pickleball', note } = Astro.props;
+const sec = t.split(':').reduce((acc, n) => acc * 60 + Number(n), 0);
+const src = `https://www.youtube-nocookie.com/embed/${id}?start=${sec}&autoplay=1&rel=0`;
+---
+<figure class="vembed">
+  <button type="button" class="vembed-play" data-src={src} aria-label={`播放：${title}（從 ${t} 開始）`}>
+    <img src={`https://i.ytimg.com/vi/${id}/hqdefault.jpg`} alt="" width="480" height="360" loading="lazy" decoding="async" />
+    <span class="vembed-btn" aria-hidden="true">▶</span>
+    <span class="vembed-ts">從 {t} 開始</span>
+  </button>
+  <figcaption><strong>{note}</strong><span>{channel} 的 YouTube 影片：{title}</span></figcaption>
+</figure>
+
+<script>
+  document.querySelectorAll<HTMLButtonElement>('.vembed-play').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const f = document.createElement('iframe');
+      f.src = btn.dataset.src!;
+      f.title = btn.getAttribute('aria-label') ?? '影片';
+      f.allow = 'accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture';
+      f.allowFullscreen = true;
+      f.className = 'vembed-frame';
+      btn.replaceWith(f);
+    }, { once: true });
+  });
+</script>
+
+<style>
+  .vembed { margin: 1.8em 0; }
+  .vembed-play, :global(.vembed-frame) { display: block; position: relative; width: 100%; aspect-ratio: 16 / 9; border: 0; padding: 0; border-radius: 6px; overflow: hidden; background: var(--rule); cursor: pointer; }
+  .vembed-play img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .vembed-btn { position: absolute; left: 50%; top: 50%; translate: -50% -50%; width: 64px; height: 64px; border-radius: 50%; background: var(--ball); color: var(--ball-ink); font-size: 26px; line-height: 64px; text-align: center; padding-left: 4px; }
+  .vembed-ts { position: absolute; right: 8px; bottom: 8px; padding: 2px 8px; border-radius: 4px; background: rgba(0, 0, 0, .75); color: #fff; font-size: .8rem; }
+  .vembed-play:focus-visible { outline: 3px solid var(--ball); outline-offset: 3px; }
+  figcaption { margin-top: 8px; font-size: .9rem; color: var(--muted); line-height: 1.6; }
+  figcaption strong { display: block; color: var(--ink); }
+</style>

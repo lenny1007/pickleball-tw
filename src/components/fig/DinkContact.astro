@@ -1,0 +1,45 @@
+---
+// push dink 的擊球點：上半是俯視（兩腳之間的半圓），下半是側面（身體前方、地面到桌面）。
+import Figure from './Figure.astro';
+---
+<Figure caption="示意圖，以右手持拍為準。Coach Jess 說 push dink 的擊球點有兩個方向要顧：左右是在兩腳之間像半圓的範圍裡，前後是舒服地在身體前方，她說至少 12 到 18 吋（大約 30 到 45 公分）。揮拍只要從地面到桌面那麼短。">
+  <svg class="gear-fig dkc" viewBox="0 0 400 476" role="img" aria-label="push dink 擊球點：俯視在兩腳之間的半圓，側面在身體前方約 30 到 45 公分，揮拍從地面到桌面高度">
+    <text class="lab dark big" x="20" y="30">從上面看</text>
+    <line x1="40" y1="56" x2="360" y2="56" class="dkc-line" />
+    <text class="lab" x="360" y="48" text-anchor="end">非截擊區線（網在上方）</text>
+    <path d="M140 170 A60 60 0 0 1 260 170 Z" class="dkc-zone" />
+    <ellipse cx="140" cy="186" rx="14" ry="26" class="dkc-foot" />
+    <ellipse cx="260" cy="186" rx="14" ry="26" class="dkc-foot" />
+    <circle cx="200" cy="138" r="9" class="dkc-ball" />
+    <text class="lab dark" x="200" y="236" text-anchor="middle">兩腳之間的半圓</text>
+
+    <line x1="20" y1="262" x2="380" y2="262" class="dkc-sep" />
+
+    <text class="lab dark big" x="20" y="296">從側面看</text>
+    <line x1="30" y1="420" x2="370" y2="420" class="dkc-ground" />
+    <line x1="150" y1="352" x2="370" y2="352" class="dkc-table" />
+    <text class="lab" x="370" y="344" text-anchor="end">桌面高度</text>
+    <rect x="64" y="300" width="36" height="120" rx="18" class="dkc-body" />
+    <path d="M160 412 Q 200 400 236 360" class="dkc-swing" />
+    <path d="M236 360 l-14 3 M236 360 l-2 14" class="dkc-swing" />
+    <circle cx="240" cy="372" r="9" class="dkc-ball" />
+    <line x1="100" y1="436" x2="240" y2="436" class="dkc-dim" />
+    <line x1="100" y1="428" x2="100" y2="444" class="dkc-dim" />
+    <line x1="240" y1="428" x2="240" y2="444" class="dkc-dim" />
+    <text class="lab dark" x="262" y="400">地面到桌面</text>
+    <text class="lab dark" x="170" y="466" text-anchor="middle">身體前方約 30 到 45 公分</text>
+  </svg>
+</Figure>
+
+<style>
+  .dkc-line { stroke: var(--ink); stroke-width: 4; }
+  .dkc-zone { fill: var(--kitchen); stroke: var(--ink); stroke-width: 1.5; stroke-dasharray: 5 4; }
+  .dkc-foot { fill: var(--ink); }
+  .dkc-ball { fill: var(--ball); stroke: var(--ink); stroke-width: 2; }
+  .dkc-sep { stroke: var(--rule); stroke-width: 1.5; }
+  .dkc-ground { stroke: var(--ink); stroke-width: 3; }
+  .dkc-table { stroke: var(--muted); stroke-width: 1.5; stroke-dasharray: 6 5; }
+  .dkc-body { fill: var(--court); }
+  .dkc-swing { fill: none; stroke: var(--ink); stroke-width: 3; stroke-linecap: round; }
+  .dkc-dim { stroke: var(--ink); stroke-width: 1.5; }
+</style>

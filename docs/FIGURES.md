@@ -45,6 +45,9 @@
 | `SoleCompare` | 戶外鞋底硬耐磨 vs 室內鞋底軟、不留痕 | pickleball-shoes |
 | `PaddleBudget` | 三支入門拍的價格長條與芯材厚度剖面（依比例） | paddle-recommendations |
 | `ApprovedListName` | 賣場上的品牌名 vs 核可清單上登記的名字（Kuikma → DECATHLON） | paddle-recommendations |
+| `DinkContact` | push dink 擊球點：俯視兩腳之間的半圓、側面身體前方 30–45 公分與地面到桌面 | pickleball-dink |
+| `DinkTargets` | 網前俯視：對手外側腳、內側腳、中間，1·2 外側 → 3 內側 | pickleball-dink |
+| `AttackCheck` | speed up 前三個檢查（離網距離、穩不穩、球的高度）與兩種結果 | pickleball-dink |
 | `ArticleCover` | 每篇的封面，依 slug 關鍵字選畫面 | 全部 |
 
 畫新圖用的零件：
