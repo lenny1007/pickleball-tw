@@ -8,9 +8,12 @@ const zoneKeys = Object.keys(ZONES) as [string, ...string[]];
 // 長文：規則、球拍、入門、哪裡打。上線前要通過查證（見 AGENTS.md）。
 const articles = defineCollection({
   loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/articles' }),
-  schema: z.object({
+  schema: ({ image }) => z.object({
     title: z.string(),
     description: z.string(),
+    /** 開頭情境圖（AI 生成，只當情境、不示範動作）：src/assets/covers/<slug>.webp。沒有就用 ArticleCover 的 SVG。 */
+    cover: image().optional(),
+    cover_alt: z.string().optional(),
     pubDate: z.coerce.date(),
     updatedDate: z.coerce.date().optional(),
     category: z.enum(categorySlugs),
