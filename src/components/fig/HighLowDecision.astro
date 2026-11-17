@@ -10,17 +10,17 @@ const g = 220, net = 200;
     <line x1="0" y1={g} x2="0" y2={g - 60} class="hld-net" />
     <text class="lab" x="8" y={g - 66}>網</text>
     <line x1="0" y1={g - 60} x2="400" y2={g - 60} class="hld-ref" />
-    <circle cx="300" cy="70" r="10" class="ball-dot" />
-    <path d={`M290 74 L40 ${g - 20}`} class="hld-attack" />
+    <circle cx="280" cy="80" r="10" class="ball-dot" />
+    <path d={`M270 84 L40 ${g - 20}`} class="hld-attack" />
     <path d={`M48 ${g - 30} L40 ${g - 20} L52 ${g - 22}`} class="hld-attack" />
-    <text class="lab dark big" x="310" y="50">高：往下打</text>
-    <text class="lab dark" x="210" y="112">可以攻</text>
+    <text class="lab dark big" x="392" y="40" text-anchor="end">高：往下打</text>
+    <text class="lab dark" x="392" y="64" text-anchor="end">可以攻</text>
     <circle cx="300" cy={g - 26} r="10" class="ball-dot" />
     <path d={`M290 ${g - 30} Q170 ${g - 140} 60 ${g - 8}`} class="hld-reset" />
-    <text class="lab dark big" x="310" y={g - 40}>低：只能往上</text>
-    <text class="lab dark" x="140" y={g - 100}>reset 放軟</text>
-    <text class="lab" x="200" y={g + 34} text-anchor="middle">虛線：網的高度</text>
-    <text class="lab" x="60" y={g + 60} text-anchor="middle">對方非截擊區</text>
+    <text class="lab dark big" x="392" y={g + 34} text-anchor="end">低：只能往上</text>
+    <text class="lab dark" x="392" y={g + 58} text-anchor="end">reset 放軟</text>
+    <text class="lab" x="8" y={g + 34}>虛線：網的高度</text>
+    <text class="lab" x="8" y={g + 58}>左邊是對方非截擊區</text>
   </svg>
 </Figure>
 

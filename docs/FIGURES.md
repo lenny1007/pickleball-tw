@@ -45,6 +45,8 @@
 | `SoleCompare` | 戶外鞋底硬耐磨 vs 室內鞋底軟、不留痕 | pickleball-shoes |
 | `PaddleBudget` | 三支入門拍的價格長條與芯材厚度剖面（依比例） | paddle-recommendations |
 | `ApprovedListName` | 賣場上的品牌名 vs 核可清單上登記的名字（Kuikma → DECATHLON） | paddle-recommendations |
+| `VolleyElbow` | 側視兩格：截擊手肘在前有力 ✓ vs 手腕拱成山 ✗ | pickleball-volley |
+| `HighLowDecision` | 側視：擊球點高能往下打就攻，低只能往上就 reset | pickleball-volley |
 | `ArticleCover` | 每篇的封面，依 slug 關鍵字選畫面 | 全部 |
 
 畫新圖用的零件：
