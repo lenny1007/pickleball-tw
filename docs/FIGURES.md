@@ -45,6 +45,9 @@
 | `SoleCompare` | 戶外鞋底硬耐磨 vs 室內鞋底軟、不留痕 | pickleball-shoes |
 | `PaddleBudget` | 三支入門拍的價格長條與芯材厚度剖面（依比例） | paddle-recommendations |
 | `ApprovedListName` | 賣場上的品牌名 vs 核可清單上登記的名字（Kuikma → DECATHLON） | paddle-recommendations |
+| `BackhandZone` | 俯視：球拍舉在 11 點時，左側到右髖用反手、右髖外側用正手 | pickleball-backhand |
+| `DriveRhythm` | 雙手反手抽球節奏：轉身、停、踏步揮拍；力量後腳→轉體→左手 | pickleball-backhand |
+| `RollSpectrum` | 反手 roll volley 光譜：純 roll（肩膀）到純 flick（手腕），球低靠肩膀 | pickleball-backhand |
 | `ArticleCover` | 每篇的封面，依 slug 關鍵字選畫面 | 全部 |
 
 畫新圖用的零件：
