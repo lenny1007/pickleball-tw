@@ -2,7 +2,7 @@
 
 - slug：pickleball-volley
 - 分類：technique
-- 狀態：寫作中
+- 狀態：查證完成
 
 ## 讀者與需求
 
@@ -25,7 +25,7 @@
 
 ## 查證
 
-- 
+- 2026-11-18 獨立 fresh-context agent 對 Jess COACH-SYSTEM 條目與字幕逐句反查：error 2、minor 6。主控回字幕確認兩個 error（Cp0abkVKkTg 16:48–17:08 手腕拱成山的後果是軟弱無力，不是 pop-up；FAQ reset vs dink 是編者定義）後全部照改，另補「很可能」保留語氣、「網下」刪「很低」、三種回法改標為編者並列、參考影片補兩支。
 
 ## 追蹤
 

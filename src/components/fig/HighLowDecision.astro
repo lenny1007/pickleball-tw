@@ -4,7 +4,7 @@ import Figure from './Figure.astro';
 const g = 220, net = 200;
 ---
 <Figure caption="側面示意圖，弧線只是示意。Coach Jess 的判斷：能由上往下打的球，很可能可以攻；必須由下往上打的球（例如在膝蓋高度），先穩住、擺好球拍，打 reset 把球放軟，不要從低處硬攻。">
-  <svg class="gear-fig hld" viewBox="0 0 400 300" role="img" aria-label="擊球點高、能往下打就攻；擊球點低、只能往上打就打 reset">
+  <svg class="gear-fig hld" viewBox="0 0 400 300" role="img" aria-label="擊球點高、能往下打多半可以攻；擊球點低、只能往上打就打 reset">
     <line x1="0" y1={g} x2="400" y2={g} class="hld-floor" />
     <rect x="0" y={g - 6} width="120" height="6" class="hld-k" />
     <line x1="0" y1={g} x2="0" y2={g - 60} class="hld-net" />
@@ -14,7 +14,7 @@ const g = 220, net = 200;
     <path d={`M270 84 L40 ${g - 20}`} class="hld-attack" />
     <path d={`M48 ${g - 30} L40 ${g - 20} L52 ${g - 22}`} class="hld-attack" />
     <text class="lab dark big" x="392" y="40" text-anchor="end">高：往下打</text>
-    <text class="lab dark" x="392" y="64" text-anchor="end">可以攻</text>
+    <text class="lab dark" x="392" y="64" text-anchor="end">多半可以攻</text>
     <circle cx="300" cy={g - 26} r="10" class="ball-dot" />
     <path d={`M290 ${g - 30} Q170 ${g - 140} 60 ${g - 8}`} class="hld-reset" />
     <text class="lab dark big" x="392" y={g + 34} text-anchor="end">低：只能往上</text>
