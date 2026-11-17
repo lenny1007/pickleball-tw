@@ -2,7 +2,7 @@
 
 - slug：paddle-recommendations
 - 分類：paddle
-- 狀態：寫作中
+- 狀態：已上線（2026-11-18）
 
 ## 讀者與需求
 
@@ -37,3 +37,6 @@
   - 雲端讀不到的迪卡儂台灣價格、顏色、自營與否，以站主電腦讀到的頁面內嵌資料為準；JOOLA 高價款（Hyperion CFS 16 NT$6,699、Anna Bright Scorpeus CFS 14 NT$7,675）主控在 joola.tw 讀到。
 
 ## 追蹤
+
+- 第 4 週（2026-12-16）：
+- 第 8 週（2027-01-13）：
