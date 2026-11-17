@@ -3,11 +3,11 @@
 import Figure from './Figure.astro';
 const rows = [
   { y: 70, title: '戶外鞋', sub: '硬橡膠，耐磨', floor: '柏油', cls: 'sc-hard' },
-  { y: 190, title: '室內鞋', sub: '軟橡膠，抓地、不留痕', floor: '木地板', cls: 'sc-soft' },
+  { y: 190, title: '室內鞋', sub: '軟橡膠，抓地、較不留痕', floor: '木地板', cls: 'sc-soft' },
 ];
 ---
 <Figure caption="示意圖。戶外場多半是柏油，鞋底要用比較硬的橡膠才耐磨；室內木地板用比較軟的鞋底，抓地好、比較不會留下痕跡。室內鞋拿去戶外穿會磨得比較快，戶外鞋穿在木地板上抓地力比較差。多數匹克球鞋其實室內外都能穿，買之前看商品說明。">
-  <svg class="gear-fig sc" viewBox="0 0 560 290" role="img" aria-label="戶外鞋底硬、耐磨，適合柏油；室內鞋底軟、抓地、不留痕，適合木地板">
+  <svg class="gear-fig sc" viewBox="0 0 560 290" role="img" aria-label="戶外鞋底硬、耐磨，適合柏油；室內鞋底軟、抓地、比較不會留痕，適合木地板">
     {rows.map((r) => (
       <g>
         <text class="lab dark big" x="24" y={r.y}>{r.title}</text>

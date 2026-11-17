@@ -2,7 +2,7 @@
 
 - slug：pickleball-shoes
 - 分類：beginner
-- 狀態：寫作中
+- 狀態：查證完成
 
 ## 讀者與需求
 
@@ -28,6 +28,15 @@
 - 往內連：first-time-pickleball 鞋子那段
 
 ## 查證
+
+- 2026-11-17 獨立查證（fresh-context agent）：無 error；1 處 unsupported、多處 imprecise，主控確認後全部修正。
+  - 「兩隻腳都量」PW 沒寫，刪掉，改成「身體重量放在要量的那隻腳上」。
+  - 規則書 18.B.2 在 Part III 賽事規定，改「賽事規定」；衣服顏色是 Section 1 原則（全部打球適用），18.B.3 才是賽事總監可要求換衣。
+  - 試穿動作只出自 PC（踩定腳模擬換方向、踮腳模擬起跑），標明來源。
+  - 「不少室內場館也有同樣要求」沒有出處，改成「可能要求，先問一下」。
+  - 「最不建議慢跑鞋」最高級拿掉；圖的「不留痕」改「較不留痕」、「鞋底平穩」刪掉；室內段註明講的是木地板。
+  - 查證正確：PC（網球鞋 OK、外擴、torsional、shank、室內外通用、試穿、只在球場穿）、PW（heel-to-toe、firmer for longevity、gum rubber、室外鞋不建議上木地板、室內鞋外穿磨快、中底取捨、break-in、輕鞋磨快）、ASICS（2024-08-15）、教練 d3WTNjz9W2g 03:09–03:55。
+  - 附帶：first-time-pickleball「家裡有羽球鞋也可以先穿」沒有出處，之後修舊文時處理。
 
 ## 追蹤
 
