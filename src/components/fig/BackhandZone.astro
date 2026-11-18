@@ -1,0 +1,41 @@
+---
+// 俯視：右手持拍的球員站在網前、面向網（網在上方），球拍舉在約 11 點。
+// 身體左側到中間、一直到右髖附近都用反手；右髖外側才是正手。
+import Figure from './Figure.astro';
+const cx = 200, cy = 190, r = 150;
+const pt = (deg: number, rr = r) => [cx + rr * Math.cos((deg * Math.PI) / 180), cy - rr * Math.sin((deg * Math.PI) / 180)];
+const wedge = (a0: number, a1: number) => {
+  const [x0, y0] = pt(a0), [x1, y1] = pt(a1);
+  return `M${cx} ${cy} L${x0} ${y0} A${r} ${r} 0 ${a0 - a1 > 180 ? 1 : 0} 1 ${x1} ${y1} Z`;
+};
+const split = 72;
+const [px, py] = pt(118, 74);
+---
+<Figure caption="俯視示意圖，以右手持拍為準（左手持拍左右相反）。Coach Jess 建議在網前把球拍舉在身體中段、拍頭朝上約 11 點（左手持拍約 1 點）。這時打到身體中間的球都用反手保護，她說直到大約右髖的位置，多半都是反手；右髖外側的球才用正手。">
+  <svg class="gear-fig bhz" viewBox="0 0 400 290" role="img" aria-label="右手持拍時，身體左側到中間、直到右髖附近的球用反手，右髖外側用正手">
+    <line x1="20" y1="22" x2="380" y2="22" class="bhz-net" />
+    <text class="lab" x="200" y="16" text-anchor="middle">網</text>
+    <path d={wedge(180, split)} class="bhz-bh" />
+    <path d={wedge(split, 0)} class="bhz-fh" />
+    <ellipse cx={cx} cy={cy} rx="34" ry="20" class="bhz-body" />
+    <circle cx={cx} cy={cy} r="13" class="bhz-head" />
+    <line x1={cx + 24} y1={cy - 8} x2={px} y2={py} class="bhz-arm" />
+    <rect x={px - 9} y={py - 24} width="18" height="30" rx="7" transform={`rotate(-28 ${px} ${py})`} class="bhz-paddle" />
+    <text class="lab dark big" x="92" y="120" text-anchor="middle">反手</text>
+    <text class="lab" x="92" y="144" text-anchor="middle">左側到中間</text>
+    <text class="lab dark big" x="318" y="160" text-anchor="middle">正手</text>
+    <text class="lab" x="318" y="184" text-anchor="middle">右髖外側</text>
+    <text class="lab" x={px - 6} y={py - 34} text-anchor="middle">球拍約 11 點</text>
+    <text class="lab dark" x="200" y="252" text-anchor="middle">右手持拍</text>
+  </svg>
+</Figure>
+
+<style>
+  .bhz-net { stroke: var(--ink); stroke-width: 5; stroke-linecap: round; }
+  .bhz-bh { fill: var(--kitchen); opacity: .85; }
+  .bhz-fh { fill: var(--court); opacity: .35; }
+  .bhz-body { fill: var(--ink); }
+  .bhz-head { fill: var(--card); stroke: var(--ink); stroke-width: 3; }
+  .bhz-arm { stroke: var(--ink); stroke-width: 6; stroke-linecap: round; }
+  .bhz-paddle { fill: var(--ball); stroke: var(--ink); stroke-width: 2; }
+</style>

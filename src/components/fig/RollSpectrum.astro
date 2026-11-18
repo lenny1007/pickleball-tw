@@ -1,0 +1,30 @@
+---
+// 反手 roll volley 的光譜：純 roll（肩膀帶、手腕幾乎固定）到純 flick（手腕）。球越低越靠肩膀。
+import Figure from './Figure.astro';
+---
+<Figure caption="Coach Jess 把反手 roll volley 看成一條光譜：一端是純 roll，主要從肩膀帶、手腕相當固定；另一端是純 flick，用手腕。球越低越從肩膀出力，球高一點才多加手肘和手腕。她說只靠手腕甩，多數人打不出穩定的球。">
+  <svg class="gear-fig rsp" viewBox="0 0 400 230" role="img" aria-label="反手 roll volley 光譜：低球用肩膀的純 roll，高球可多加手腕接近 flick">
+    <defs>
+      <linearGradient id="rsp-g" x1="0" x2="1">
+        <stop offset="0" stop-color="var(--court)" />
+        <stop offset="1" stop-color="var(--ball)" />
+      </linearGradient>
+    </defs>
+    <rect x="30" y="96" width="340" height="26" rx="13" fill="url(#rsp-g)" />
+    <text class="lab dark big" x="30" y="80">純 roll</text>
+    <text class="lab dark big" x="370" y="80" text-anchor="end">純 flick</text>
+    <text class="lab" x="30" y="150">肩膀帶，手腕固定</text>
+    <text class="lab" x="370" y="150" text-anchor="end">手腕甩</text>
+    <circle cx="70" cy="196" r="9" class="ball-dot" />
+    <line x1="40" y1="206" x2="100" y2="206" class="rsp-floor" />
+    <text class="lab dark" x="112" y="202">球低</text>
+    <circle cx="330" cy="176" r="9" class="ball-dot" />
+    <line x1="300" y1="206" x2="360" y2="206" class="rsp-floor" />
+    <text class="lab dark" x="288" y="202" text-anchor="end">球高</text>
+    <text class="lab dark" x="200" y="30" text-anchor="middle">順序：腿 → 肩膀 → 手腕 → 轉體</text>
+  </svg>
+</Figure>
+
+<style>
+  .rsp-floor { stroke: var(--muted); stroke-width: 2; }
+</style>
