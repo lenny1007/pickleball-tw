@@ -2,7 +2,7 @@
 
 - slug：pickleball-singles
 - 分類：rules
-- 狀態：寫作中
+- 狀態：查證中
 
 ## 讀者與需求
 
@@ -29,7 +29,7 @@
 
 ## 大綱
 
-（待字幕到手後補）
+標題、H2 見文章 src/content/articles/pickleball-singles.mdx。圖：SingleServe（沿用）、MiniSingles（新）；表：單雙打對照、報分示範、三種球。往內連：pickleball-scoring 單打一節加連結。
 
 ## 查證
 
