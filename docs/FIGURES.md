@@ -60,6 +60,7 @@
 | `RollSpectrum` | 反手 roll volley 光譜：純 roll（肩膀）到純 flick（手腕），球低靠肩膀 | pickleball-backhand |
 | `ForehandSequence` | 正手抽球四步驟（直式）：整體轉身、快快慢、蓄力、先踏步再揮拍 | pickleball-forehand-drive |
 | `DropArc` | 側面：第三拍 drop 最高點在自己這邊、過網留 2 到 3 呎、落到對手腳邊；對照想擦網而過的虛線 | third-shot-drop |
+| `WarmupSteps` | 熱身三步（直式）：讓心跳上來、動態伸展、每一種球都熱過 | pickleball-warm-up |
 | `MiniSingles` | 迷你單打兩格：兩人都雙數打斜線、一雙一單打直線；淡色半邊出界、中線延伸過非截擊區 | pickleball-singles |
 | `ArticleCover` | 每篇的封面，依 slug 關鍵字選畫面 | 全部 |
 
