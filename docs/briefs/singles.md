@@ -2,7 +2,7 @@
 
 - slug：pickleball-singles
 - 分類：rules
-- 狀態：查證中
+- 狀態：查證完成
 
 ## 讀者與需求
 
@@ -32,6 +32,13 @@
 標題、H2 見文章 src/content/articles/pickleball-singles.mdx。圖：SingleServe（沿用）、MiniSingles（新）；表：單雙打對照、報分示範、三種球。往內連：pickleball-scoring 單打一節加連結。
 
 ## 查證
+
+2026-11-18 獨立 subagent 查 58 條：規則書 2026 年版（3.A.1、4.A、5.A–5.A.3、6.B.1、10.A、14.A、14.B、21.A、21.B）與四支 Better Pickleball 字幕。OK 52、minor 6、error 0。主控回字幕複核後修正：
+
+- cYt4CuXhQeM：接發球打到中間就衝網的示範者是 Jill，Tony 是打穿越球的一方；改成「CJ 和 Tony Roig 示範」，「回得不夠好時」改成「接發球回到中間這種球」（[02:26]–[02:41]）。嵌入時間 00:47 改 01:27。
+- vjNAuPVZ1uo [05:56]：原話是拍面打開「sets me up」，刪掉加料的「回球會變高」。
+- 「整個半場只有你一個人」易與半場單打混淆，改「你這一邊」。
+- 暫停補上 21 分局三次（21.A）。
 
 ## 追蹤
 
