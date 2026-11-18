@@ -1,0 +1,23 @@
+---
+// 俯視：四人都在非截擊區線。對手（左上）一直斜線打我方右下那位。
+// 被針對的人斜線回球（打回給攻擊他的人）＝對手可以再斜線打回來；改打直線。
+import Court from './Court.astro';
+import Figure from './Figure.astro';
+import Player from './Player.astro';
+import Path from './Path.astro';
+---
+<Figure caption="俯視示意圖。對手左上那位一直斜線打你。你把球斜線回給他，正好讓他再斜線打回來；教練建議改打直線，回到你正前方的對手，打破這個循環。dink 和第三拍被針對時都適用。">
+  <Court label="被針對時改打直線：斜線回給攻擊你的人會讓他一直餵同一個點，改打直線到你正前方的對手" x0={6} x1={38} y0={-4} y1={26}>
+    <Path x1={150} y1={46} x2={286} y2={140} bend={-16} />
+    <Path x1={280} y1={160} x2={160} y2={64} bend={-16} />
+    <Path x1={276} y1={168} x2={164} y2={168} bend={14} />
+    <Player x={140} y={40} side="them" label="攻" />
+    <Player x={140} y={160} side="them" />
+    <Player x={300} y={40} />
+    <Player x={300} y={150} label="你" />
+    <g transform="translate(206,96)" class="mk fault"><circle r="10" /><path d="M-4.5 -4.5 l9 9 M4.5 -4.5 l-9 9" fill="none" /></g>
+    <g transform="translate(220,188)" class="mk ok"><circle r="10" /><path d="M-5 0 l3.5 4 l6.5 -8" fill="none" /></g>
+    <text class="lab dark" x="230" y="-14" text-anchor="middle">斜線回給他：他再斜線打回來</text>
+    <text class="lab dark" x="220" y="240" text-anchor="middle">改打直線：打破循環</text>
+  </Court>
+</Figure>

@@ -78,7 +78,7 @@ for (const slug of slugs) {
     const before = m[0].slice(0, m[0].search(/[）」』】。，、：；！？]\*\*(?=[^\s*\p{P}])/u) + 1);
     if ((before.match(/\*\*/g) ?? []).length % 2 === 1) err(`粗體結尾的 ** 前面是全形標點，會顯示成字面星號：「${m[0].trim().slice(0, 40)}」`);
   }
-  if (/（影片\s*\d{1,2}:\d{2}）|\(\d{1,2}:\d{2}\)/.test(prose)) err('內文還有影片時間點，改用 VideoRef 卡');
+  if (/（影片\s*\d{1,2}:\d{2}）|\(\d{1,2}:\d{2}\)/.test(prose)) err('內文還有影片時間點，改用 VideoEmbed');
   for (const line of prose.split('\n')) {
     if (/\d\s*(?:ft|英尺|呎)/.test(line) && !/公分|公尺/.test(line)) warn(`英制單位沒附公制換算：「${line.trim().slice(0, 30)}…」`);
   }

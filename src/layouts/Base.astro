@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import GoogleAnalytics from '../components/GoogleAnalytics.astro';
 import { CATEGORIES, SITE_NAME, SITE_DESCRIPTION, SITE_URL } from '../consts';
 
 interface Props {
@@ -40,6 +41,7 @@ const siteLd = {
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Huninn&display=swap" />
+    <GoogleAnalytics />
     {[siteLd, ...jsonLd].map((ld) => <script type="application/ld+json" set:html={JSON.stringify(ld)} />)}
   </head>
   <body>
@@ -58,7 +60,7 @@ const siteLd = {
     </main>
     <footer class="site wrap">
       <span>{SITE_NAME}・pickleball-tw.com</span>
-      <span><a href="/about/">關於本站</a></span>
+      <span><a href="/about/">關於本站</a>・<a href="/privacy/">隱私權政策</a></span>
     </footer>
   </body>
 </html>

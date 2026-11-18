@@ -4,6 +4,7 @@ interface Props { slug: string; small?: boolean }
 const { slug, small = false } = Astro.props;
 const kind =
   slug.includes('backhand') ? 'backhand'
+  : slug.includes('doubles') ? 'doubles'
   : slug.includes('vs-padel') ? 'padel'
   : slug.includes('practice') ? 'practice'
   : slug.includes('shoes') ? 'shoes'
@@ -34,6 +35,21 @@ const kind =
       <line x1="300" y1="140" x2="250" y2="86" stroke="var(--ink)" stroke-width="12" stroke-linecap="round" />
       <rect x="226" y="40" width="34" height="58" rx="14" fill="var(--ball)" stroke="var(--ink)" stroke-width="5" transform="rotate(-30 243 69)" />
       <circle cx="170" cy="120" r="16" class="ball-dot" />
+  {kind === 'doubles' && (
+    <g transform="translate(100,40)">
+      <rect width="440" height="200" fill="var(--court)" />
+      <rect x="150" width="140" height="200" fill="var(--kitchen)" />
+      <g stroke="var(--line)" stroke-width="3" fill="none">
+        <rect width="440" height="200" /><line x1="150" x2="150" y2="200" /><line x1="290" x2="290" y2="200" />
+        <line y1="100" x2="150" y2="100" /><line x1="290" y1="100" x2="440" y2="100" />
+      </g>
+      <line x1="220" y1="-14" x2="220" y2="214" stroke="var(--ink)" stroke-width="6" stroke-linecap="round" />
+      <g stroke="var(--ball)" stroke-width="5" stroke-dasharray="12 9" stroke-linecap="round">
+        <line x1="130" y1="50" x2="310" y2="150" /><line x1="130" y1="150" x2="310" y2="50" />
+      </g>
+      {([[130, 50, 'var(--paper)'], [130, 150, 'var(--paper)'], [310, 50, 'var(--ink)'], [310, 150, 'var(--ink)']] as [number, number, string][]).map(([x, y, f]) => (
+        <circle cx={x} cy={y} r="20" fill={f} stroke="var(--ink)" stroke-width="5" />
+      ))}
     </g>
   )}
   {kind === 'shoes' && (
