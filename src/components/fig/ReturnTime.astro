@@ -1,0 +1,52 @@
+---
+// 側面：接發球低又快 vs 高一點、軟一點，對方打第三拍時接發球員走到哪。
+// 水平 1 呎 = 8 單位：自己底線 x=20、自己非截擊區線 x=140、網 x=196、對方非截擊區線 x=252、對方底線 x=372。
+// 高度放大示意，不是真實比例。
+import Figure from './Figure.astro';
+const base = 20, nvz = 140, net = 196, onvz = 252, obase = 372;
+const panels = [
+  { title: '低又快', peak: 18, land: 300, me: 60, note: '對方打第三拍時，你還差四五步' },
+  { title: '高一點、軟一點', peak: 70, land: 342, me: 136, note: '對方打第三拍時，你已經到非截擊區線' },
+];
+const arc = (peak: number, land: number, g: number) => {
+  const x0 = base + 4, y0 = g - 24;
+  const cx = (x0 + land) / 2, cy = g - peak * 2 + 10;
+  return `M${x0} ${y0} Q${cx} ${cy} ${land} ${g}`;
+};
+---
+<Figure caption="側面示意圖，高度放大。Better Pickleball 的教練 CJ Johnson 說，接發球壓低過網，球很快就到對面，你來不及走到非截擊區線；過網高一點、軟一點，球飛得比較久，你就有時間上網。">
+  <svg class="gear-fig rtt" viewBox="0 0 400 420" role="img" aria-label="接發球低又快時來不及上網；高一點、軟一點時，對方打第三拍前已經走到非截擊區線">
+    {panels.map((p, i) => {
+      const g = 130 + i * 200;
+      return (
+        <g>
+          <text class="lab dark big" x="0" y={g - 96}>{p.title}</text>
+          <rect x={nvz} y={g} width={onvz - nvz} height="6" class="rtt-k" />
+          <line x1="0" y1={g} x2="400" y2={g} class="rtt-floor" />
+          <line x1={net} y1={g} x2={net} y2={g - 34} class="rtt-net" />
+          <line x1={base} y1={g - 6} x2={base} y2={g + 8} class="rtt-tick" />
+          <line x1={obase} y1={g - 6} x2={obase} y2={g + 8} class="rtt-tick" />
+          <path d={arc(p.peak, p.land, g)} class="rtt-ball" />
+          <path d={`M${base + 6} ${g + 20} L${p.me - 12} ${g + 20}`} class="rtt-move" />
+          <path d={`M${p.me - 18} ${g + 14} L${p.me - 12} ${g + 20} L${p.me - 18} ${g + 26}`} class="rtt-move" />
+          <circle cx={p.me} cy={g - 14} r="11" class="rtt-me" />
+          <circle cx={obase + 10} cy={g - 14} r="11" class="rtt-opp" />
+          <text class="lab" x={base} y={g + 44} text-anchor="middle">底線</text>
+          <text class="lab" x={nvz} y={g + 44} text-anchor="middle">非截擊區線</text>
+          <text class="lab dark big" x="0" y={g + 72}>{p.note}</text>
+        </g>
+      );
+    })}
+  </svg>
+</Figure>
+
+<style>
+  .rtt-floor { stroke: var(--court); stroke-width: 6; }
+  .rtt-k { fill: var(--kitchen); }
+  .rtt-net { stroke: var(--ink); stroke-width: 4; }
+  .rtt-tick { stroke: var(--line); stroke-width: 3; }
+  .rtt-ball { fill: none; stroke: var(--ball); stroke-width: 3; stroke-dasharray: 7 6; }
+  .rtt-move { fill: none; stroke: var(--muted); stroke-width: 2.5; stroke-linecap: round; }
+  .rtt-me { fill: var(--ink); }
+  .rtt-opp { fill: var(--muted); }
+</style>

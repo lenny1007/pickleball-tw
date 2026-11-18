@@ -28,7 +28,7 @@
 | `PointFlow` | 一分球前三拍與站位：接發方上網、發球方留底線 | how-to-play-pickleball |
 | `ServeTypes` | 截擊式發球與落地發球的側面對照 | pickleball-serve |
 | `ServeLandings` | 發球落點：擦網落進、中線、底線算好球，非截擊區線失誤 | pickleball-serve |
-| `ReturnDepth` | 接發球：站底線後、過網高度、落點深度（側面） | pickleball-serve |
+| `ReturnDepth` | 接發球：站底線後、過網高度、落點深度（側面） | pickleball-serve、pickleball-return-of-serve |
 | `CourtLines` | 各條線的名稱（底線、邊線、中線、非截擊區線）與發球區 | pickleball-court-size |
 | `NetHeight` | 球網正面：邊線處 91.4、中間 86.4 公分，網柱間距 | pickleball-court-size |
 | `CourtClearance` | 球場一角：最小與建議的場外空間 | pickleball-court-size |
@@ -60,6 +60,8 @@
 | `RollSpectrum` | 反手 roll volley 光譜：純 roll（肩膀）到純 flick（手腕），球低靠肩膀 | pickleball-backhand |
 | `ForehandSequence` | 正手抽球四步驟（直式）：整體轉身、快快慢、蓄力、先踏步再揮拍 | pickleball-forehand-drive |
 | `DropArc` | 側面：第三拍 drop 最高點在自己這邊、過網留 2 到 3 呎、落到對手腳邊；對照想擦網而過的虛線 | third-shot-drop |
+| `ReturnTime` | 側面對照：接發球低又快來不及上網；高一點、軟一點走得到非截擊區線 | pickleball-return-of-serve |
+| `ReturnWind` | 接發球站位看風向：沒風底線後約 3 呎、風往臉上吹往後、風從背後吹往前 | pickleball-return-of-serve |
 | `WarmupSteps` | 熱身三步（直式）：讓心跳上來、動態伸展、每一種球都熱過 | pickleball-warm-up |
 | `MiniSingles` | 迷你單打兩格：兩人都雙數打斜線、一雙一單打直線；淡色半邊出界、中線延伸過非截擊區 | pickleball-singles |
 | `ArticleCover` | 每篇的封面，依 slug 關鍵字選畫面 | 全部 |
