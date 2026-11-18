@@ -48,6 +48,8 @@
 | `TargetLine` | 俯視：被針對時斜線回球 vs 改打直線 | pickleball-doubles-strategy |
 | `PaddleBudget` | 三支入門拍的價格長條與芯材厚度剖面（依比例） | paddle-recommendations |
 | `ApprovedListName` | 賣場上的品牌名 vs 核可清單上登記的名字（Kuikma → DECATHLON） | paddle-recommendations |
+| `VolleyElbow` | 側視兩格：截擊手肘在前有力 ✓ vs 手腕拱成山 ✗ | pickleball-volley |
+| `HighLowDecision` | 側視：擊球點高能往下打就攻，低只能往上就 reset | pickleball-volley |
 | `BackhandZone` | 俯視：球拍舉在 11 點時，左側到右髖用反手、右髖外側用正手 | pickleball-backhand |
 | `DriveRhythm` | 雙手反手抽球節奏：轉身、停、踏步揮拍；力量後腳→轉體→左手 | pickleball-backhand |
 | `RollSpectrum` | 反手 roll volley 光譜：純 roll（肩膀）到純 flick（手腕），球低靠肩膀 | pickleball-backhand |
