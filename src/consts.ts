@@ -5,11 +5,11 @@ export const SITE_DESCRIPTION =
 
 /** 文章分類。順序就是導覽列順序，依台灣搜尋需求排（規則、球拍最多人找）。 */
 export const CATEGORIES = [
-  { slug: 'rules', name: '規則' },
-  { slug: 'paddles', name: '球拍與裝備' },
-  { slug: 'beginner', name: '入門' },
-  { slug: 'where-to-play', name: '哪裡打' },
-  { slug: 'technique', name: '技術' },
+  { slug: 'rules', name: '規則', intro: '發球、計分、非截擊區、場地尺寸，對照 USA Pickleball 官方規則整理。' },
+  { slug: 'paddles', name: '球拍與裝備', intro: '球拍怎麼挑、握把、球、鞋，規格與核可清單都對照過廠商和官方資料。' },
+  { slug: 'beginner', name: '入門', intro: '匹克球是什麼、第一次去打要準備什麼、怎麼打一分、新手常犯的錯。' },
+  { slug: 'where-to-play', name: '哪裡打', intro: '台灣各地可以打匹克球的地方，以及怎麼找到臨打。' },
+  { slug: 'technique', name: '技術', intro: '發球、接發、第三拍、dink、截擊、正反手，整理自國內外教練的教學影片。' },
 ] as const;
 
 /** 球場分區：首頁球場圖與知識卡共用。 */

@@ -1,0 +1,24 @@
+---
+// 文章目錄（窄螢幕）：放在重點框下面，預設收合。寬螢幕（≥1200px）改由右側的 ArticleRail 顯示，這裡隱藏。
+import type { MarkdownHeading } from 'astro';
+import { tocItems } from '../lib/toc';
+interface Props { headings: MarkdownHeading[] }
+const items = tocItems(Astro.props.headings);
+---
+{items.length >= 3 && (
+  <details class="toc">
+    <summary>這篇的段落（{items.length}）</summary>
+    <ol>
+      {items.map((i) => <li><a href={`#${i.id}`}>{i.title}</a></li>)}
+    </ol>
+  </details>
+)}
+
+<style>
+  .toc { margin: 16px 0 8px; border: 1px solid var(--rule); border-radius: 12px; background: var(--paper); }
+  .toc summary { cursor: pointer; padding: 12px 16px; font-weight: 600; list-style-position: inside; }
+  .toc ol { margin: 0; padding: 0 16px 14px 2.4em; display: grid; gap: 6px; }
+  .toc a { text-decoration: none; }
+  .toc a:hover { text-decoration: underline; }
+  @media (min-width: 1200px) { .toc { display: none; } }
+</style>
