@@ -1,0 +1,20 @@
+---
+// GA4 評估 ID（不是機密，網頁原始碼本來就看得到）。留空 = 不追蹤。
+const GA4_MEASUREMENT_ID = 'G-SJGPJD59QS';
+// 只在正式網域送資料；本機、Vercel 預覽網址都不送，避免汙染數據
+const GA4_HOSTS = ['pickleball-tw.com', 'www.pickleball-tw.com'];
+---
+<script is:inline define:vars={{ gaId: GA4_MEASUREMENT_ID, gaHosts: GA4_HOSTS }}>
+  if (/^G-[A-Z0-9]+$/.test(gaId) && gaHosts.indexOf(location.hostname) !== -1) {
+    window.dataLayer = window.dataLayer || [];
+    var gtag = function () { window.dataLayer.push(arguments); };
+    // 掛到全域，其他元件之後要送自訂事件才找得到（golfer-tw 曾因沒掛導致事件靜默不送）
+    window.gtag = gtag;
+    gtag('js', new Date());
+    gtag('config', gaId);
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(gaId);
+    document.head.appendChild(s);
+  }
+</script>
