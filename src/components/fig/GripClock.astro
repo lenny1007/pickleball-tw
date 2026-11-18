@@ -1,0 +1,45 @@
+---
+// 從握把底端看過去（右手持拍、拍面直立）：用時鐘描述虎口 V 字的位置。
+// 大陸式：V 比較靠握把上方、偏左；東方式：V 約在 1 點、食指根部指節約在 3 點；中間是中性握拍。
+import Figure from './Figure.astro';
+const cx = 200, cy = 140, R = 66;
+const oct = Array.from({ length: 8 }, (_, i) => {
+  const a = ((i * 45 + 22.5) * Math.PI) / 180;
+  return `${cx + R * Math.cos(a)},${cy + R * Math.sin(a)}`;
+}).join(' ');
+const at = (h: number, r: number) => {
+  const a = ((h / 12) * 360 - 90) * (Math.PI / 180);
+  return [cx + r * Math.cos(a), cy + r * Math.sin(a)];
+};
+const nums = [12, 1, 3, 9];
+const [c1x, c1y] = at(11.6, R + 22);
+const [e1x, e1y] = at(1, R + 22);
+const [k3x, k3y] = at(3, R + 22);
+---
+<Figure caption="示意圖（視角是本站畫的）：從握把底端看過去，拍面上下直立，以右手持拍為準（左手持拍左右相反）。Coach Jess 用時鐘描述東方式：虎口 V 字大約在 1 點、指節大約在 3 點；她說大陸式的 V 比較靠握把上方、偏左。兩者之間就是她截擊時鼓勵的中性握拍。">
+  <svg class="gear-fig gck" viewBox="0 0 400 300" role="img" aria-label="握把時鐘：大陸式虎口在握把上方偏左，東方式虎口約 1 點、指節約 3 點，中間是中性握拍">
+    <line x1={cx} y1={cy - R - 50} x2={cx} y2={cy + R + 50} class="gck-face" />
+    <polygon points={oct} class="gck-handle" />
+    {nums.map((h) => { const [x, y] = at(h, R - 18); return <text x={x} y={y + 6} text-anchor="middle" class="gck-num">{h}</text>; })}
+    <path d={`M${at(11.6, R + 8).join(' ')} A${R + 8} ${R + 8} 0 0 1 ${at(1, R + 8).join(' ')}`} class="gck-band" />
+    <circle cx={c1x} cy={c1y} r="9" class="gck-cont" />
+    <circle cx={e1x} cy={e1y} r="9" class="gck-east" />
+    <circle cx={k3x} cy={k3y} r="7" class="gck-knuckle" />
+    <text class="lab dark big" x="20" y="44">大陸式</text>
+    <text class="lab" x="20" y="68">V 靠上方、偏左</text>
+    <text class="lab dark big" x="380" y="44" text-anchor="end">東方式</text>
+    <text class="lab" x="380" y="68" text-anchor="end">V 約 1 點</text>
+    <text class="lab" x="390" y={cy + 40} text-anchor="end">指節約 3 點</text>
+    <text class="lab dark" x={cx} y="290" text-anchor="middle">兩者之間：中性握拍</text>
+  </svg>
+</Figure>
+
+<style>
+  .gck-face { stroke: var(--rule); stroke-width: 10; stroke-linecap: round; }
+  .gck-handle { fill: var(--paper); stroke: var(--ink); stroke-width: 3; }
+  .gck-num { fill: var(--muted); font: 15px var(--display); }
+  .gck-band { fill: none; stroke: var(--kitchen); stroke-width: 10; stroke-linecap: round; }
+  .gck-cont { fill: var(--court); }
+  .gck-east { fill: var(--ball); stroke: var(--ink); stroke-width: 2; }
+  .gck-knuckle { fill: var(--ink); }
+</style>

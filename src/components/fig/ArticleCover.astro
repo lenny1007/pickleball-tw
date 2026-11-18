@@ -3,7 +3,12 @@
 interface Props { slug: string; small?: boolean }
 const { slug, small = false } = Astro.props;
 const kind =
-  slug.includes('vs-padel') ? 'padel'
+  slug.includes('dink') ? 'dink'
+  : slug.includes('hold-paddle') ? 'hold'
+  : slug.includes('pickleball-volley') ? 'volley'
+  : slug.includes('backhand') ? 'backhand'
+  : slug.includes('doubles') ? 'doubles'
+  : slug.includes('vs-padel') ? 'padel'
   : slug.includes('practice') ? 'practice'
   : slug.includes('shoes') ? 'shoes'
   : slug.includes('mistakes') ? 'mistakes'
@@ -25,6 +30,65 @@ const kind =
 ---
 <svg class:list={['cover', { small }]} viewBox="0 0 640 280" aria-hidden="true" focusable="false">
   <rect width="640" height="280" fill="var(--apron)" />
+  {kind === 'dink' && (
+    <g>
+      <rect x="0" y="220" width="640" height="60" fill="var(--court)" />
+      <rect x="180" y="220" width="280" height="60" fill="var(--kitchen)" />
+      <line x1="0" y1="220" x2="640" y2="220" stroke="var(--line)" stroke-width="5" />
+      <line x1="320" y1="220" x2="320" y2="150" stroke="var(--ink)" stroke-width="8" stroke-linecap="round" />
+      <path d="M210 214 Q320 90 420 214" fill="none" stroke="var(--ball)" stroke-width="6" stroke-dasharray="12 9" stroke-linecap="round" />
+      <circle cx="420" cy="206" r="16" class="ball-dot" />
+      <rect x="150" y="196" width="60" height="18" rx="9" fill="var(--ink)" />
+    </g>
+  )}
+  {kind === 'hold' && (
+    <g>
+      <rect x="0" y="200" width="640" height="80" fill="var(--court)" />
+      <polygon points="320,40 382,66 408,128 382,190 320,216 258,190 232,128 258,66" fill="var(--paper)" stroke="var(--ink)" stroke-width="8" />
+      <line x1="320" y1="0" x2="320" y2="280" stroke="var(--ink)" stroke-width="10" opacity=".25" />
+      <path d="M296 22 A110 110 0 0 1 376 30" fill="none" stroke="var(--kitchen)" stroke-width="16" stroke-linecap="round" />
+      <circle cx="296" cy="22" r="13" fill="var(--court)" />
+      <circle cx="378" cy="32" r="13" class="ball-dot" />
+    </g>
+  )}
+  {kind === 'volley' && (
+    <g>
+      <rect x="0" y="210" width="640" height="70" fill="var(--court)" />
+      <rect x="0" y="210" width="260" height="70" fill="var(--kitchen)" />
+      <line x1="260" y1="210" x2="260" y2="120" stroke="var(--ink)" stroke-width="7" stroke-linecap="round" />
+      <path d="M90 120 Q200 30 420 110" fill="none" stroke="var(--ball)" stroke-width="5" stroke-dasharray="10 8" stroke-linecap="round" />
+      <circle cx="420" cy="110" r="15" class="ball-dot" />
+      <rect x="440" y="80" width="38" height="64" rx="15" fill="var(--ball)" stroke="var(--ink)" stroke-width="5" transform="rotate(-12 459 112)" />
+      <line x1="468" y1="142" x2="500" y2="190" stroke="var(--ink)" stroke-width="12" stroke-linecap="round" />
+    </g>
+  )}
+  {kind === 'backhand' && (
+    <g>
+      <rect x="0" y="200" width="640" height="80" fill="var(--court)" />
+      <path d="M190 160 a130 130 0 0 1 260 0" fill="none" stroke="var(--kitchen)" stroke-width="36" />
+      <circle cx="320" cy="150" r="34" fill="var(--ink)" />
+      <line x1="300" y1="140" x2="250" y2="86" stroke="var(--ink)" stroke-width="12" stroke-linecap="round" />
+      <rect x="226" y="40" width="34" height="58" rx="14" fill="var(--ball)" stroke="var(--ink)" stroke-width="5" transform="rotate(-30 243 69)" />
+      <circle cx="170" cy="120" r="16" class="ball-dot" />
+    </g>
+  )}
+  {kind === 'doubles' && (
+    <g transform="translate(100,40)">
+      <rect width="440" height="200" fill="var(--court)" />
+      <rect x="150" width="140" height="200" fill="var(--kitchen)" />
+      <g stroke="var(--line)" stroke-width="3" fill="none">
+        <rect width="440" height="200" /><line x1="150" x2="150" y2="200" /><line x1="290" x2="290" y2="200" />
+        <line y1="100" x2="150" y2="100" /><line x1="290" y1="100" x2="440" y2="100" />
+      </g>
+      <line x1="220" y1="-14" x2="220" y2="214" stroke="var(--ink)" stroke-width="6" stroke-linecap="round" />
+      <g stroke="var(--ball)" stroke-width="5" stroke-dasharray="12 9" stroke-linecap="round">
+        <line x1="130" y1="50" x2="310" y2="150" /><line x1="130" y1="150" x2="310" y2="50" />
+      </g>
+      {([[130, 50, 'var(--paper)'], [130, 150, 'var(--paper)'], [310, 50, 'var(--ink)'], [310, 150, 'var(--ink)']] as [number, number, string][]).map(([x, y, f]) => (
+        <circle cx={x} cy={y} r="20" fill={f} stroke="var(--ink)" stroke-width="5" />
+      ))}
+    </g>
+  )}
   {kind === 'shoes' && (
     <g>
       <rect x="0" y="200" width="640" height="80" fill="var(--court)" />

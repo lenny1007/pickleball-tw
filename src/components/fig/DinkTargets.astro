@@ -1,0 +1,30 @@
+---
+// 俯視網前：兩隊都在非截擊區線。標出對手的外側腳、內側腳和中間。
+import Court from './Court.astro';
+import Figure from './Figure.astro';
+import Player from './Player.astro';
+import Path from './Path.astro';
+---
+<Figure caption="示意圖。Coach Jess 建議 dink 要移來移去，同一個點不超過兩次：例如先打兩顆到對手的外側腳，再塞一顆到內側腳。內側腳在中間，她說那通常是很難處理的一顆 dink。">
+  <Court label="dink 落點示意：對手外側腳、內側腳與中間" x0={7} x1={37} y0={-4} y1={27}>
+    <rect x="150" y="90" width="70" height="44" class="dkt-mid" />
+    <Player x={136} y={50} side="them" />
+    <Player x={136} y={150} side="them" />
+    <Player x={304} y={50} />
+    <Player x={304} y={150} label="打" />
+    <Path x1={292} y1={146} x2={164} y2={30} bend={-22} />
+    <Path x1={292} y1={154} x2={164} y2={72} bend={18} />
+    <circle cx="164" cy="30" r="8" class="dkt-target" />
+    <circle cx="164" cy="72" r="8" class="dkt-target" />
+    <text class="lab" x="176" y="24">1·2 外側腳</text>
+    <text class="lab" x="158" y="128">中間</text>
+    <text class="lab" x="176" y="68">3 內側腳</text>
+    <text class="lab dark" x="80" y="234">同一點不超過兩次</text>
+    <text class="lab dark" x="80" y="260">1、2 外側腳 → 3 內側腳</text>
+  </Court>
+</Figure>
+
+<style>
+  .dkt-mid { fill: var(--ball); opacity: 0.35; }
+  .dkt-target { fill: var(--ball); stroke: var(--ink); stroke-width: 2; }
+</style>

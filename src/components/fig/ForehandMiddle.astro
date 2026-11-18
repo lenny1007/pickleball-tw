@@ -1,0 +1,46 @@
+---
+// 俯視半場：我方兩人在非截擊區線、面向網（網在上方）。「正」「反」標出各自正手、反手那一側。
+// 三種組合：兩人右手、右手在左＋左手在右、左手在左＋右手在右。
+import Figure from './Figure.astro';
+const panels = [
+  { x: 0, title: '兩人都右手', l: 'R', r: 'R', note: '中間是左邊的正手' },
+  { x: 220, title: '右手在左、左手在右', l: 'R', r: 'L', note: '兩個正手都在中間' },
+  { x: 440, title: '左手在左、右手在右', l: 'L', r: 'R', note: '兩個正手都在外側' },
+];
+// 面向網時，右手球員正手在他的右邊，左手球員正手在他的左邊。
+const side = (hand: string, dir: number) => ((hand === 'R') === (dir > 0) ? '正' : '反');
+---
+<Figure caption="示意圖，我方兩人在網前、面向網。「正手在中間」的說法：中間球由正手在中間的那位接。兩位右手球員搭檔時有答案；換成一右一左，兩人的正手可能都在中間，也可能都在外側，這個說法就給不出答案。教練建議改用尊重 X，看球從哪條對角線來，跟慣用手無關。">
+  <svg class="gear-fig fhm" viewBox="0 0 420 486" role="img" aria-label="正手在中間的三種情況：兩人右手時中間是左邊那位的正手；一右一左時兩個正手可能都在中間或都在外側">
+    {panels.map((p, i) => (
+      <g transform={`translate(0,${i * 160})`}>
+        <rect x="12" y="20" width="190" height="124" class="fhm-court" />
+        <rect x="83" y="20" width="48" height="124" class="fhm-mid" />
+        <line x1="12" y1="20" x2="202" y2="20" class="fhm-net" />
+        <line x1="107" y1="20" x2="107" y2="144" class="fhm-line" />
+        <circle cx="60" cy="88" r="18" class="fhm-pl" />
+        <circle cx="154" cy="88" r="18" class="fhm-pl" />
+        <text class="fhm-hand" x="60" y="95" text-anchor="middle">{p.l === 'R' ? '右' : '左'}</text>
+        <text class="fhm-hand" x="154" y="95" text-anchor="middle">{p.r === 'R' ? '右' : '左'}</text>
+        <text class:list={['fhm-tag', { fh: side(p.l, -1) === '正' }]} x="28" y="95" text-anchor="middle">{side(p.l, -1)}</text>
+        <text class:list={['fhm-tag', { fh: side(p.l, 1) === '正' }]} x="94" y="128" text-anchor="middle">{side(p.l, 1)}</text>
+        <text class:list={['fhm-tag', { fh: side(p.r, -1) === '正' }]} x="120" y="128" text-anchor="middle">{side(p.r, -1)}</text>
+        <text class:list={['fhm-tag', { fh: side(p.r, 1) === '正' }]} x="186" y="95" text-anchor="middle">{side(p.r, 1)}</text>
+        <text class="lab dark big" x="216" y="62">{p.title}</text>
+        <text class="lab dark big" x="216" y="96">{p.note}</text>
+        <text class="lab big" x="216" y="130">{p.l === p.r ? '→ 有答案' : '→ 沒有答案'}</text>
+      </g>
+    ))}
+  </svg>
+</Figure>
+
+<style>
+  .fhm-court { fill: var(--court); }
+  .fhm-mid { fill: var(--kitchen); }
+  .fhm-net { stroke: var(--ink); stroke-width: 5; stroke-linecap: round; }
+  .fhm-line { stroke: var(--line); stroke-width: 2; }
+  .fhm-pl { fill: var(--marker-dark); stroke: var(--marker-light); stroke-width: 3; }
+  .fhm-hand { fill: var(--marker-light); font: 20px var(--display); }
+  .fhm-tag { fill: var(--on-court); font: 20px var(--display); }
+  .fhm-tag.fh { fill: var(--ball); font-size: 22px; }
+</style>
