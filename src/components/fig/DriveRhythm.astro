@@ -1,0 +1,33 @@
+---
+// 雙手反手抽球的節奏：轉身、停、踏步和揮拍一起；力量從後腳經過轉體到左手。
+import Figure from './Figure.astro';
+const steps = [
+  { n: '1', t: '轉身', s: '球拍從左口袋開始' },
+  { n: '2', t: '停一下', s: '把力量存住' },
+  { n: '3', t: '踏步＋揮拍', s: '兩個一起，不要急' },
+];
+---
+<Figure caption="Coach Jess 的雙手反手抽球節奏（右手持拍的說法）：整體轉身時球拍從左邊口袋的位置開始，短暫停住，再讓踏步和揮拍一起發生。力量從地面往上、經過轉體，最後到左手；不是靠手臂。">
+  <svg class="gear-fig drr" viewBox="0 0 400 250" role="img" aria-label="雙手反手抽球三步驟：轉身、停一下、踏步和揮拍一起；力量從後腳經過轉體到左手">
+    {steps.map((st, i) => (
+      <g transform={`translate(${20 + i * 128},20)`}>
+        <rect width="104" height="118" rx="12" class="drr-card" />
+        <circle cx="52" cy="30" r="17" class="drr-num" />
+        <text x="52" y="36" text-anchor="middle" class="drr-n">{st.n}</text>
+        <text class="lab dark big" x="52" y="76" text-anchor="middle">{st.t}</text>
+      </g>
+    ))}
+    {[0, 1].map((i) => <path d={`M${128 + i * 128} 79 l12 0 m-6 -6 l6 6 l-6 6`} class="drr-arrow" />)}
+    {steps.map((st, i) => <text class="lab" x={72 + i * 128} y="164" text-anchor="middle">{st.s}</text>)}
+    <rect x="20" y="192" width="360" height="36" rx="18" class="drr-bar" />
+    <text class="lab dark" x="200" y="216" text-anchor="middle">力量：後腳 → 轉體 → 左手</text>
+  </svg>
+</Figure>
+
+<style>
+  .drr-card { fill: var(--paper); stroke: var(--rule); stroke-width: 2; }
+  .drr-num { fill: var(--court); }
+  .drr-n { fill: var(--on-court); font: 18px var(--display); }
+  .drr-arrow { fill: none; stroke: var(--muted); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  .drr-bar { fill: var(--kitchen); }
+</style>

@@ -43,10 +43,18 @@
 | `StepBackDrill` | 側視：從非截擊區一步步退到底線的練習，越往後弧度越高 | pickleball-practice-drills |
 | `ShoeCompare` | 鞋子正面剖面：慢跑鞋鞋底外擴 vs 球場鞋側邊加強 | pickleball-shoes |
 | `SoleCompare` | 戶外鞋底硬耐磨 vs 室內鞋底軟、不留痕 | pickleball-shoes |
+| `TransitionReady` | 側視：發球方往前推進時，準備姿勢跟著位置變（過渡區放低→非截擊區線一般姿勢） | pickleball-doubles-strategy |
+| `ForehandMiddle` | 三格半場：兩人右手／一右一左時「正手在中間」有沒有答案 | pickleball-doubles-strategy |
+| `TargetLine` | 俯視：被針對時斜線回球 vs 改打直線 | pickleball-doubles-strategy |
 | `PaddleBudget` | 三支入門拍的價格長條與芯材厚度剖面（依比例） | paddle-recommendations |
 | `ApprovedListName` | 賣場上的品牌名 vs 核可清單上登記的名字（Kuikma → DECATHLON） | paddle-recommendations |
 | `GripClock` | 握把底端時鐘：大陸式 V 靠上偏左、東方式 V 約 1 點、指節約 3 點 | how-to-hold-paddle |
 | `GripPressure` | 握力量尺 1–10：兩位教練的 dink 與擋網截擊參考值 | how-to-hold-paddle |
+| `VolleyElbow` | 側視兩格：截擊手肘在前有力 ✓ vs 手腕拱成山 ✗ | pickleball-volley |
+| `HighLowDecision` | 側視：擊球點高能往下打就攻，低只能往上就 reset | pickleball-volley |
+| `BackhandZone` | 俯視：球拍舉在 11 點時，左側到右髖用反手、右髖外側用正手 | pickleball-backhand |
+| `DriveRhythm` | 雙手反手抽球節奏：轉身、停、踏步揮拍；力量後腳→轉體→左手 | pickleball-backhand |
+| `RollSpectrum` | 反手 roll volley 光譜：純 roll（肩膀）到純 flick（手腕），球低靠肩膀 | pickleball-backhand |
 | `ArticleCover` | 每篇的封面，依 slug 關鍵字選畫面 | 全部 |
 
 畫新圖用的零件：
