@@ -4,6 +4,7 @@ interface Props { slug: string; small?: boolean }
 const { slug, small = false } = Astro.props;
 const kind =
   slug.includes('forehand') ? 'forehand'
+  : slug.includes('third-shot') ? 'third'
   : slug.includes('dink') ? 'dink'
   : slug.includes('hold-paddle') ? 'hold'
   : slug.includes('pickleball-volley') ? 'volley'
@@ -39,6 +40,17 @@ const kind =
       <path d="M380 150 l150 -40" stroke="var(--ball)" stroke-width="6" stroke-dasharray="12 9" stroke-linecap="round" />
       <circle cx="540" cy="108" r="18" class="ball-dot" />
       <rect x="352" y="132" width="44" height="66" rx="18" fill="var(--ink)" transform="rotate(60 374 165)" />
+    </g>
+  )}
+  {kind === 'third' && (
+    <g>
+      <rect x="0" y="220" width="640" height="60" fill="var(--court)" />
+      <rect x="250" y="220" width="280" height="60" fill="var(--kitchen)" />
+      <line x1="0" y1="220" x2="640" y2="220" stroke="var(--line)" stroke-width="5" />
+      <line x1="390" y1="220" x2="390" y2="160" stroke="var(--ink)" stroke-width="8" stroke-linecap="round" />
+      <path d="M60 196 Q250 -10 470 214" fill="none" stroke="var(--ball)" stroke-width="6" stroke-dasharray="12 9" stroke-linecap="round" />
+      <circle cx="470" cy="206" r="16" class="ball-dot" />
+      <circle cx="60" cy="196" r="22" fill="var(--ink)" /><text x="60" y="203" text-anchor="middle" class="cv-step" fill="var(--paper)">3</text>
     </g>
   )}
   {kind === 'dink' && (
