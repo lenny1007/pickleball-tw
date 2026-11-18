@@ -40,7 +40,7 @@
 | `GripShapes` | 握把橫切面：圓形、方形、八角形 | paddle-grip |
 | `PadelCourtCompare` | 板式網球場與匹克球場大小疊圖（依比例，含牆） | pickleball-vs-padel |
 | `PadelWall` | 側視：板式網球球先落地可彈牆、匹克球碰圍網算失誤 | pickleball-vs-padel |
-| `StepBackDrill` | 側視：從非截擊區一步步退到底線的練習，越往後弧度越高 | pickleball-practice-drills |
+| `StepBackDrill` | 側視：從非截擊區一步步退到底線的練習，越往後弧度越高 | pickleball-practice-drills、pickleball-warm-up |
 | `ShoeCompare` | 鞋子正面剖面：慢跑鞋鞋底外擴 vs 球場鞋側邊加強 | pickleball-shoes |
 | `SoleCompare` | 戶外鞋底硬耐磨 vs 室內鞋底軟、不留痕 | pickleball-shoes |
 | `TransitionReady` | 側視：發球方往前推進時，準備姿勢跟著位置變（過渡區放低→非截擊區線一般姿勢） | pickleball-doubles-strategy |
@@ -60,6 +60,7 @@
 | `RollSpectrum` | 反手 roll volley 光譜：純 roll（肩膀）到純 flick（手腕），球低靠肩膀 | pickleball-backhand |
 | `ForehandSequence` | 正手抽球四步驟（直式）：整體轉身、快快慢、蓄力、先踏步再揮拍 | pickleball-forehand-drive |
 | `DropArc` | 側面：第三拍 drop 最高點在自己這邊、過網留 2 到 3 呎、落到對手腳邊；對照想擦網而過的虛線 | third-shot-drop |
+| `WarmupSteps` | 熱身三步（直式）：讓心跳上來、動態伸展、每一種球都熱過 | pickleball-warm-up |
 | `ArticleCover` | 每篇的封面，依 slug 關鍵字選畫面 | 全部 |
 
 畫新圖用的零件：
