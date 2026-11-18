@@ -1,0 +1,33 @@
+---
+// 迷你單打（半場單打）：每球只用半邊場，哪一半看各自的分數；中線要延伸穿過非截擊區。
+// 左邊的人面向右，右手邊（雙數）是下半；右邊的人面向左，右手邊是上半。
+import Court from './Court.astro';
+import Figure from './Figure.astro';
+import Player from './Player.astro';
+import Path from './Path.astro';
+import Bounce from './Bounce.astro';
+const panels = [
+  { title: '兩人分數都是雙數：打斜線', a: 100, b: 0 },
+  { title: '你雙數、對手單數：打直線', a: 100, b: 100 },
+];
+---
+<Figure caption="示意圖。迷你單打每一球只用半邊場，兩人各自看自己的分數決定用哪一半：雙數用右半、單數用左半，所以有時打斜線、有時打直線。顏色較淡的半邊算出界，中線要延伸畫過非截擊區。">
+  <div class="ms-pair">
+    {panels.map((p) => (
+      <Court label={p.title} x0={-6} x1={49} y0={-6} y1={23}>
+        <rect slot="under" x="0" y={100 - p.a} width="220" height="100" fill="var(--apron)" opacity="0.75" />
+        <rect slot="under" x="220" y={100 - p.b} width="220" height="100" fill="var(--apron)" opacity="0.75" />
+        <line x1="150" y1="100" x2="290" y2="100" stroke="var(--line)" stroke-width="2.5" stroke-dasharray="8 6" />
+        <text class="lab dark big" x="205" y="-26" text-anchor="middle">{p.title}</text>
+        <Path x1={-14} y1={p.a + 50} x2={370} y2={p.b + 50} bend={p.a === p.b ? 0 : -40} />
+        <Bounce x={370} y={p.b + 50} />
+        <Player x={-26} y={p.a + 50} label="你" />
+        <Player x={462} y={p.b + 50} side="them" label="對" />
+      </Court>
+    ))}
+  </div>
+</Figure>
+
+<style>
+  .ms-pair { display: grid; gap: 12px; }
+</style>
