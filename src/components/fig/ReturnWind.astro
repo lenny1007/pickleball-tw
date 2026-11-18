@@ -1,0 +1,42 @@
+---
+// 俯視一條直線：接發球員站在底線前後哪裡，看風向。水平 1 呎 = 10 單位，底線 x=140，往右是球網方向。
+import Figure from './Figure.astro';
+const base = 140, gap = 92;
+const rows = [
+  { title: '沒什麼風', me: 110, wind: 0, note: '底線後約 3 呎（約 90 公分）' },
+  { title: '逆風：風往你臉上吹', me: 60, wind: -1, note: '再退一兩步，風很大可以退到圍網' },
+  { title: '順風：風從背後吹', me: 162, wind: 1, note: '可能要站進底線內一兩呎' },
+];
+---
+<Figure caption="示意圖。Better Pickleball 的教練 CJ Johnson 和 Tony Roig 建議，接發球一般先站在底線後約 3 呎，再看風往哪吹前後調整：逆風球會變短，往後站；順風球會飛得比較深，往前站。">
+  <svg class="gear-fig rtw" viewBox="0 0 400 290" role="img" aria-label="接發球站位：沒風站底線後約 3 呎；逆風往後退；順風可能站進底線內">
+    <text class="lab" x="390" y="16" text-anchor="end">往網的方向 →</text>
+    {rows.map((r, i) => {
+      const y = 62 + i * gap;
+      return (
+        <g>
+          <text class="lab dark big" x="0" y={y - 22}>{r.title}</text>
+          <rect x={base} y={y - 8} width={260} height="16" class="rtw-court" />
+          <line x1={base} y1={y - 14} x2={base} y2={y + 14} class="rtw-base" />
+          {i === 1 && <line x1="22" y1={y - 16} x2="22" y2={y + 16} class="rtw-fence" />}
+          <circle cx={r.me} cy={y} r="11" class="rtw-me" />
+          {r.wind !== 0 && (
+            <g class="rtw-wind">
+              <path d={r.wind < 0 ? `M330 ${y} L250 ${y} M262 ${y - 8} L250 ${y} L262 ${y + 8}` : `M230 ${y} L310 ${y} M298 ${y - 8} L310 ${y} L298 ${y + 8}`} />
+            </g>
+          )}
+          <text class="lab" x="0" y={y + 34}>{r.note}</text>
+        </g>
+      );
+    })}
+    <text class="lab" x={base} y="36" text-anchor="middle">底線</text>
+  </svg>
+</Figure>
+
+<style>
+  .rtw-court { fill: var(--court); }
+  .rtw-base { stroke: var(--line); stroke-width: 4; }
+  .rtw-fence { stroke: var(--muted); stroke-width: 3; stroke-dasharray: 3 3; }
+  .rtw-me { fill: var(--ink); }
+  .rtw-wind path { fill: none; stroke: var(--paper); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+</style>
