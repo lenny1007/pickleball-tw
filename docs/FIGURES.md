@@ -48,6 +48,8 @@
 | `TargetLine` | 俯視：被針對時斜線回球 vs 改打直線 | pickleball-doubles-strategy |
 | `PaddleBudget` | 三支入門拍的價格長條與芯材厚度剖面（依比例） | paddle-recommendations |
 | `ApprovedListName` | 賣場上的品牌名 vs 核可清單上登記的名字（Kuikma → DECATHLON） | paddle-recommendations |
+| `GripClock` | 握把底端時鐘：大陸式 V 靠上偏左、東方式 V 約 1 點、指節約 3 點 | how-to-hold-paddle |
+| `GripPressure` | 握力量尺 1–10：兩位教練的 dink 與擋網截擊參考值 | how-to-hold-paddle |
 | `VolleyElbow` | 側視兩格：截擊手肘在前有力 ✓ vs 手腕拱成山 ✗ | pickleball-volley |
 | `HighLowDecision` | 側視：擊球點高能往下打就攻，低只能往上就 reset | pickleball-volley |
 | `BackhandZone` | 俯視：球拍舉在 11 點時，左側到右髖用反手、右髖外側用正手 | pickleball-backhand |
