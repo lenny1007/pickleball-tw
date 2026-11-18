@@ -1,0 +1,54 @@
+---
+// 側面：第三拍 drop 的弧線。左邊是自己（底線），右邊是對手（非截擊區線）。
+// 1 呎約 11.8 單位；網在 x=280，兩條非截擊區線在 x=197、363。
+import Figure from './Figure.astro';
+const g = 230;
+// 好的 drop：從底線約 2.5 呎高出手，最高點在自己這邊的非截擊區線上方，落到對手腳邊。
+const good = (() => {
+  const x0 = 48, h0 = 30, xa = 197, H = 80, x1 = 384;
+  const k = (H - h0) / ((x0 - xa) ** 2);
+  const p: string[] = [];
+  for (let x = x0; x <= x1; x += 4) p.push(`${x},${(g - (H - k * (x - xa) ** 2)).toFixed(1)}`);
+  return p.join(' ');
+})();
+// 想擦網而過：最高點在網上方、只比網高一點
+const tight = (() => {
+  const x0 = 48, h0 = 30, xa = 300, H = 36, x1 = 276;
+  const k = (H - h0) / ((x0 - xa) ** 2);
+  const p: string[] = [];
+  for (let x = x0; x <= x1; x += 4) p.push(`${x},${(g - (H - k * (x - xa) ** 2)).toFixed(1)}`);
+  return p.join(' ');
+})();
+---
+<Figure caption="側面示意圖，比例約略。Coach Jess 說好的 drop 不必擦網而過：過網留大約 2 到 3 呎（約 60 到 90 公分），最高點在自己這一邊、大約非截擊區線的上方，球再往下落到對手腳邊，對手只能由下往上打。Better Pickleball 的教練也說 drop 要多很多弧度。">
+  <svg class="gear-fig dra" viewBox="10 20 540 270" role="img" aria-label="第三拍 drop 的弧線：最高點在自己這邊的非截擊區線上方，過網留 2 到 3 呎，落到對手腳邊；想擦網而過的球容易掛網">
+    <rect x="20" y={g} width="520" height="12" class="dra-court" />
+    <rect x="197" y={g} width="166" height="12" class="dra-kitchen" />
+    <rect x="277" y={g - 35} width="6" height="35" class="dra-net" />
+    <polyline points={tight} class="dra-tight" />
+    <polyline points={good} class="dra-good" />
+    <line x1="197" y1={g - 80} x2="197" y2={g} class="dra-guide" />
+    <circle cx="197" cy={g - 80} r="7" class="dra-apex" />
+    <circle cx="384" cy={g - 6} r="8" class="ball-dot" />
+    <g transform={`translate(250,${g - 16})`} class="mk fault"><circle r="10" /><path d="M-4 -4 l8 8 M4 -4 l-8 8" fill="none" /></g>
+    <line x1="292" y1={g - 35} x2="292" y2={g - 70} class="dra-dim" />
+    <line x1="286" y1={g - 70} x2="298" y2={g - 70} class="dra-dim" />
+    <text class="lab dark big" x="40" y="40">最高點在自己這邊</text>
+    <text class="lab" x="40" y="64">約在非截擊區線上方</text>
+    <text class="lab dark big" x="304" y={g - 56}>過網留 2 到 3 呎</text>
+    <text class="lab dark big" x="540" y={g - 22} text-anchor="end">落到對手腳邊</text>
+    <text class="lab" x="120" y={g + 40}>虛線：想擦網而過，容錯很小</text>
+    <text class="lab" x="30" y={g - 12}>底線</text>
+  </svg>
+</Figure>
+
+<style>
+  .dra-court { fill: var(--court); }
+  .dra-kitchen { fill: var(--kitchen); }
+  .dra-net { fill: var(--ink); }
+  .dra-good { fill: none; stroke: var(--ball); stroke-width: 4; stroke-linecap: round; }
+  .dra-tight { fill: none; stroke: var(--muted); stroke-width: 3; stroke-dasharray: 7 6; }
+  .dra-guide { stroke: var(--muted); stroke-width: 1.5; stroke-dasharray: 4 4; }
+  .dra-apex { fill: var(--ball); stroke: var(--ink); stroke-width: 2; }
+  .dra-dim { stroke: var(--ink); stroke-width: 1.5; }
+</style>

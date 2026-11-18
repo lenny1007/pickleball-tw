@@ -2,7 +2,7 @@
 
 - slug：third-shot-drop
 - 分類：technique
-- 狀態：寫作中
+- 狀態：查證中
 
 ## 讀者與需求
 
