@@ -1,0 +1,409 @@
+網址：https://equipment.usapickleball.org/ball-list/?pagenum=1 至 ?pagenum=16
+讀取日期：2026-11-18
+讀取方式：curl
+
+Approved Ball List（全 399 列，依頁面順序原文照抄；欄位 Brand / Model / Ball Type / List Date）
+
+- Brand: A11N SPORTS ｜ Model: A11N G40: Green ｜ Ball Type: Out ｜ List Date: 08/15/2023
+- Brand: A11N SPORTS ｜ Model: A11N S26: Blue ｜ Ball Type: Ind ｜ List Date: 06/22/2023
+- Brand: A11N SPORTS ｜ Model: A11N S26: Yellow ｜ Ball Type: Ind ｜ List Date: 06/22/2023
+- Brand: A11N SPORTS ｜ Model: A11N S40:Fuchsia ｜ Ball Type: Out ｜ List Date: 11/17/2022
+- Brand: A11N SPORTS ｜ Model: A11N S40:Tangerine ｜ Ball Type: Out ｜ List Date: 11/17/2022
+- Brand: A11N SPORTS ｜ Model: A11N S40: Neon Green ｜ Ball Type: （此列無 Ball Type 欄位值） ｜ List Date: 03/02/2021
+- Brand: ACROSS THE POND (ATP) ｜ Model: ATP - PICKLE BALL ｜ Ball Type: Out ｜ List Date: 11/27/2023
+- Brand: ADZ ｜ Model: ADZ40 ｜ Ball Type: I/O ｜ List Date: 05/27/2026
+- Brand: Airavat ｜ Model: AER 40 ｜ Ball Type: Out ｜ List Date: 11/20/2025
+- Brand: Akawav ｜ Model: MANI26 ｜ Ball Type: Ind ｜ List Date: 08/08/2023
+- Brand: Akawav ｜ Model: SOL40 ｜ Ball Type: Out ｜ List Date: 08/08/2023
+- Brand: AKpro Pickleball ｜ Model: AK-X ｜ Ball Type: Out ｜ List Date: 03/18/2025
+- Brand: Albad ｜ Model: Q1 ｜ Ball Type: （此列無 Ball Type 欄位值） ｜ List Date: 12/29/2020
+- Brand: ALL YOUNG ｜ Model: HK-40 ｜ Ball Type: I/O ｜ List Date: 02/06/2026
+- Brand: Allwake ｜ Model: ACE-40 ｜ Ball Type: Out ｜ List Date: 09/22/2026
+- Brand: Alpha ｜ Model: Zero ｜ Ball Type: （此列無 Ball Type 欄位值） ｜ List Date: 08/10/2021
+- Brand: AMA Sport Goods Co., Ltd ｜ Model: X-ACE 40 ｜ Ball Type: Out ｜ List Date: 05/23/2024
+- Brand: Amazin' Aces ｜ Model: Maven 40R ｜ Ball Type: （此列無 Ball Type 欄位值） ｜ List Date: 07/28/2020
+- Brand: Amazon Basics ｜ Model: AB-02 ｜ Ball Type: Out ｜ List Date: 08/14/2025
+- Brand: Amoswiz ｜ Model: B-2DB01 ｜ Ball Type: I/O ｜ List Date: 01/16/2026
+- Brand: AMP ｜ Model: Easy Rally 40 ｜ Ball Type: Out ｜ List Date: 10/22/2026
+- Brand: Armour Pickleball ｜ Model: Armour Air 40 ｜ Ball Type: Out ｜ List Date: 01/08/2023
+- Brand: ARRONAX ｜ Model: X-5 ｜ Ball Type: Out ｜ List Date: 10/24/2025
+- Brand: Asbocer ｜ Model: As-P20 ｜ Ball Type: Out ｜ List Date: 05/04/2023
+- Brand: Astes ｜ Model: FlyingPea Pro ｜ Ball Type: Out ｜ List Date: 08/14/2024
+- Brand: Athletic Works ｜ Model: COW0625056 ｜ Ball Type: Out ｜ List Date: 03/20/2024
+- Brand: B-MART INCORPORATED ｜ Model: Cultec 26 ｜ Ball Type: （此列無 Ball Type 欄位值） ｜ List Date: 05/23/2021
+- Brand: Baden Sports ｜ Model: Pro1 ｜ Ball Type: Out ｜ List Date: 08/13/2024
+- Brand: Baden Sports ｜ Model: Rival 40 ｜ Ball Type: I/O ｜ List Date: 09/29/2023
+- Brand: Ball Boys ｜ Model: Velocity 40 Pink ｜ Ball Type: Out ｜ List Date: 08/11/2021
+- Brand: Ball Boys ｜ Model: Velocity 40 Orange ｜ Ball Type: Out ｜ List Date: 08/01/2021
+- Brand: Ball Boys ｜ Model: Velocity 40 Green ｜ Ball Type: Out ｜ List Date: 02/20/2019
+- Brand: Ball Boys ｜ Model: Velocity 40 Yellow ｜ Ball Type: Out ｜ List Date: 02/20/2019
+- Brand: Baseline Racket Sports ｜ Model: Baseline -G40- ｜ Ball Type: Out ｜ List Date: 09/29/2023
+- Brand: BEKEN ｜ Model: BEKEN PRO ｜ Ball Type: Out ｜ List Date: 05/30/2026
+- Brand: Black Knight PH ｜ Model: BK40 Orange ｜ Ball Type: Out ｜ List Date: 03/11/2026
+- Brand: Black Knight PH ｜ Model: BK26 ｜ Ball Type: Ind ｜ List Date: 12/11/2024
+- Brand: Black Knight PH ｜ Model: BK40 ｜ Ball Type: Out ｜ List Date: 04/22/2024
+- Brand: BLAZESTAR ｜ Model: PRO-X4 ｜ Ball Type: I/O ｜ List Date: 09/09/2025
+- Brand: BlooBallz ｜ Model: Xtreme 40 ｜ Ball Type: Out ｜ List Date: 12/26/2023
+- Brand: Booma ｜ Model: BOOMA 26 Orange ｜ Ball Type: Ind ｜ List Date: 09/26/2023
+- Brand: BOOMA ｜ Model: BOOMA 26 GREEN ｜ Ball Type: Ind ｜ List Date: 03/28/2023
+- Brand: BOOMA ｜ Model: BOOMA 40 ORANGE ｜ Ball Type: Out ｜ List Date: 03/28/2023
+- Brand: BOOMA ｜ Model: BOOMA 40 YELLOW ｜ Ball Type: Out ｜ List Date: 03/28/2023
+- Brand: BOOMA ｜ Model: BOOMA 40 GREEN ｜ Ball Type: Out ｜ List Date: 03/28/2023
+- Brand: BOOMA ｜ Model: BOOMA 26 YELLOW ｜ Ball Type: Ind ｜ List Date: （此列無 List Date 欄位值）
+- Brand: Bread and Butter Pickleball Company ｜ Model: BB40 ｜ Ball Type: Out ｜ List Date: 08/02/2023
+- Brand: BSK ｜ Model: H-40 ｜ Ball Type: Out ｜ List Date: 11/24/2023
+- Brand: BTOP ｜ Model: BT02 ｜ Ball Type: Out ｜ List Date: 10/10/2023
+- Brand: BTOP ｜ Model: BT01 ｜ Ball Type: Out ｜ List Date: 10/02/2023
+- Brand: Centaur Republic ｜ Model: ‎Strength-40 ｜ Ball Type: Out ｜ List Date: 04/22/2024
+- Brand: Champick Sports ｜ Model: C ｜ Ball Type: I/O ｜ List Date: 09/26/2025
+- Brand: Champion ｜ Model: Roto Molded Outdoor Ball ｜ Ball Type: Out ｜ List Date: （此列無 List Date 欄位值）
+- Brand: Champion Sports ｜ Model: Injected Molded Indoor Ball ｜ Ball Type: Ind ｜ List Date: 02/07/2019
+- Brand: Champion Sports ｜ Model: Injected Molded Outdoor Ball ｜ Ball Type: Out ｜ List Date: 02/07/2019
+- Brand: Cheetah Pickleball ｜ Model: Cheetah M45 ｜ Ball Type: （此列無 Ball Type 欄位值） ｜ List Date: 07/16/2021
+- Brand: Chung Yaw Co., Ltd ｜ Model: Cultec ｜ Ball Type: （此列無 Ball Type 欄位值） ｜ List Date: 05/25/2021
+- Brand: Core Pickleball ｜ Model: ECO ｜ Ball Type: Out ｜ List Date: 07/21/2025
+- Brand: CORE Pickleball ｜ Model: Rhombus 40 Neon Green ｜ Ball Type: Out ｜ List Date: 12/03/2022
+- Brand: CORE Pickleball ｜ Model: Pro ｜ Ball Type: I/O ｜ List Date: 01/26/2022
+- Brand: CORE Pickleball ｜ Model: Rhombus 40 ｜ Ball Type: Out ｜ List Date: 12/21/2021
+- Brand: CORE Pickleball ｜ Model: CORE ｜ Ball Type: Out ｜ List Date: 12/21/2020
+- Brand: CRBN ｜ Model: C40 ｜ Ball Type: Out ｜ List Date: 06/12/2025
+- Brand: CROWN PICKLEBALL ｜ Model: CROWN PICKLEBALL OUTDOOR ｜ Ball Type: Out ｜ List Date: 08/08/2023
+- Brand: CYCLOTRON ｜ Model: 002 ｜ Ball Type: I/O ｜ List Date: 03/18/2025
+- Brand: CYCLOTRON ｜ Model: P-40 ｜ Ball Type: Out ｜ List Date: 03/18/2025
+- Brand: CYCLOTRON ｜ Model: 001 ｜ Ball Type: I/O ｜ List Date: 02/16/2025
+- Brand: DASH ｜ Model: DASH 40 ｜ Ball Type: Out ｜ List Date: 11/22/2025
+- Brand: DECATHLON ｜ Model: Outdoor Ball Blue ｜ Ball Type: Out ｜ List Date: 09/22/2026
+- Brand: DECATHLON ｜ Model: Outdoor Ball Pink ｜ Ball Type: Out ｜ List Date: 09/22/2026
+- Brand: DECATHLON ｜ Model: INDOOR BALL ｜ Ball Type: Ind ｜ List Date: 09/22/2026
+- Brand: DECATHLON ｜ Model: PKL Outdoor ｜ Ball Type: Out ｜ List Date: 03/23/2026
+- Brand: Diadem Sports ｜ Model: Official ｜ Ball Type: I/O ｜ List Date: 04/26/2024
+- Brand: Diadem Sports ｜ Model: Power Pickleball Indoor ｜ Ball Type: Ind ｜ List Date: 09/06/2023
+- Brand: Diadem Sports ｜ Model: Premier Power ｜ Ball Type: I/O ｜ List Date: 01/08/2023
+- Brand: DIKETONE ｜ Model: DK40 ｜ Ball Type: Out ｜ List Date: 01/31/2024
+- Brand: diNGK Sports, Inc. ｜ Model: G-Force 40 ｜ Ball Type: Out ｜ List Date: 09/03/2020
+- Brand: Dink N' Dilly ｜ Model: Dill Ball - Dilly Green ｜ Ball Type: I/O ｜ List Date: 12/11/2024
+- Brand: DinkersClub ｜ Model: DC 26 Pro ｜ Ball Type: Ind ｜ List Date: 04/19/2024
+- Brand: DinkersClub ｜ Model: DC 40 Pro ｜ Ball Type: Out ｜ List Date: 04/19/2024
+- Brand: Dinkly ｜ Model: DK-40 ｜ Ball Type: I/O ｜ List Date: 06/12/2025
+- Brand: DINQ ｜ Model: DINQ PRO BALL ｜ Ball Type: Out ｜ List Date: 09/27/2024
+- Brand: DONG LUC ｜ Model: DONG LUC ｜ Ball Type: Out ｜ List Date: 06/30/2025
+- Brand: Drip Pickleball ｜ Model: Drip ｜ Ball Type: Out ｜ List Date: 10/22/2026
+- Brand: Dunlop ｜ Model: PRO-SPHERE ｜ Ball Type: Out ｜ List Date: 12/18/2025
+- Brand: DUOPRO ｜ Model: 1.0 ｜ Ball Type: I/O ｜ List Date: 07/21/2025
+- Brand: Eastpoint Sports ｜ Model: Topspin Outdoor Ball ｜ Ball Type: Out ｜ List Date: （此列無 List Date 欄位值）
+- Brand: Eastpoint Sports Ltd. ｜ Model: Topspin Outdoor ｜ Ball Type: Out ｜ List Date: 05/21/2019
+- Brand: Element 6 Pickleball ｜ Model: E6 Pro Outdoor Ball ｜ Ball Type: Out ｜ List Date: 12/11/2024
+- Brand: Engage ｜ Model: Tour 40 Outdoor ｜ Ball Type: Out ｜ List Date: （此列無 List Date 欄位值）
+- Brand: Engage Pickleball ｜ Model: Engage Pulse ｜ Ball Type: Out ｜ List Date: 09/08/2025
+- Brand: Engage Pickleball ｜ Model: Tour Neon 2.0 ｜ Ball Type: I/O ｜ List Date: 09/25/2022
+- Brand: Engage Pickleball ｜ Model: Tour Neon ｜ Ball Type: Out ｜ List Date: 01/27/2021
+- Brand: EP American ｜ Model: M#1 - Blue ｜ Ball Type: Out ｜ List Date: 11/11/2025
+- Brand: EP American ｜ Model: M#1 - White ｜ Ball Type: Out ｜ List Date: 11/11/2025
+- Brand: EP American ｜ Model: M#1 - Red ｜ Ball Type: Out ｜ List Date: 11/11/2025
+- Brand: EP American ｜ Model: RAFY AMERICAN - Yellow ｜ Ball Type: Out ｜ List Date: 10/07/2025
+- Brand: EP American ｜ Model: EPAF-Green ｜ Ball Type: Out ｜ List Date: 07/17/2025
+- Brand: EP American ｜ Model: EPAF-Yellow ｜ Ball Type: Out ｜ List Date: 07/17/2025
+- Brand: EP American ｜ Model: Mina - Green ｜ Ball Type: Out ｜ List Date: 03/18/2025
+- Brand: Everyday Social ｜ Model: THE ASAMA CLASSIC BALL ｜ Ball Type: Out ｜ List Date: 10/16/2024
+- Brand: Evolute Pickleball ｜ Model: EV-11 ｜ Ball Type: Out ｜ List Date: 08/12/2024
+- Brand: Facolos ｜ Model: F-Pro 3 ｜ Ball Type: Out ｜ List Date: 06/26/2026
+- Brand: Facolos ｜ Model: F-Eco ｜ Ball Type: Out ｜ List Date: 01/15/2026
+- Brand: Facolos ｜ Model: F-Pro Gen2 ｜ Ball Type: Out ｜ List Date: 01/20/2025
+- Brand: Facolos ｜ Model: F-Pro ｜ Ball Type: Out ｜ List Date: 07/20/2024
+- Brand: Ferocia ｜ Model: Energy S ｜ Ball Type: Out ｜ List Date: 06/30/2024
+- Brand: FILA ｜ Model: F-Pro Lite​ ｜ Ball Type: I/O ｜ List Date: 06/12/2025
+- Brand: FILA ｜ Model: F-Pro ｜ Ball Type: Out ｜ List Date: 06/12/2025
+- Brand: FirstEdge ｜ Model: PRO-40 ｜ Ball Type: Out ｜ List Date: 08/14/2025
+- Brand: FITROVERTS ｜ Model: FITROVERTS ｜ Ball Type: Out ｜ List Date: 04/20/2022
+- Brand: FRANC ｜ Model: PRO_40 ｜ Ball Type: Out ｜ List Date: 09/09/2025
+- Brand: Franklin Sports ｜ Model: FS Pro Indoor ｜ Ball Type: Ind ｜ List Date: 02/10/2025
+- Brand: Franklin Sports ｜ Model: X-40 Purple ｜ Ball Type: Out ｜ List Date: 12/11/2024
+- Brand: Franklin Sports ｜ Model: X-40 Blue ｜ Ball Type: Out ｜ List Date: 12/11/2024
+- Brand: Franklin Sports ｜ Model: X-40 Green ｜ Ball Type: Out ｜ List Date: 12/11/2024
+- Brand: Franklin Sports ｜ Model: FS PRO OUTDOOR ｜ Ball Type: Out ｜ List Date: 11/04/2024
+- Brand: Franklin Sports ｜ Model: ECO BETA ｜ Ball Type: Out ｜ List Date: 02/22/2024
+- Brand: Franklin Sports ｜ Model: X-40 Lava ｜ Ball Type: Out ｜ List Date: 03/02/2021
+- Brand: Franklin Sports ｜ Model: X-40 Ember ｜ Ball Type: Out ｜ List Date: 03/02/2021
+- Brand: Franklin Sports ｜ Model: X-26: Orange ｜ Ball Type: Ind ｜ List Date: 10/22/2020
+- Brand: Franklin Sports ｜ Model: X-26 ｜ Ball Type: Ind ｜ List Date: 06/01/2020
+- Brand: Franklin Sports Inc. ｜ Model: X-26 Indoor Ball ｜ Ball Type: Ind ｜ List Date: 12/01/2018
+- Brand: Franklin Sports Inc. ｜ Model: X-26 Indoor Ball ｜ Ball Type: Ind ｜ List Date: 12/01/2018
+- Brand: Franklin Sports Inc. ｜ Model: X-40 Performance Pickleball ｜ Ball Type: Out ｜ List Date: （此列無 List Date 欄位值）
+- Brand: Freedom Goods ｜ Model: FG-017b ｜ Ball Type: （此列無 Ball Type 欄位值） ｜ List Date: 08/10/2021
+- Brand: FZ FORZA ｜ Model: FZ_CP Outdoor ｜ Ball Type: Out ｜ List Date: 12/11/2024
+- Brand: Gamma ｜ Model: Photon Indoor Ball ｜ Ball Type: Ind ｜ List Date: （此列無 List Date 欄位值）
+- Brand: Gamma Sports ｜ Model: CHUCK ｜ Ball Type: Out ｜ List Date: 12/15/2023
+- Brand: Gamma Sports ｜ Model: Gamma Photon Outdoor ｜ Ball Type: Out ｜ List Date: 02/07/2019
+- Brand: GATORSTRIKE LLC ｜ Model: QUICK STRIKE 40 ｜ Ball Type: Out ｜ List Date: 08/13/2024
+- Brand: Gearbox ｜ Model: GB1 ｜ Ball Type: Out ｜ List Date: 07/21/2023
+- Brand: GIGAPOWER ｜ Model: BSAA004 ｜ Ball Type: Out ｜ List Date: 08/30/2022
+- Brand: GITOE ｜ Model: GT 40 ｜ Ball Type: Out ｜ List Date: 10/08/2024
+- Brand: GOALSO ｜ Model: GOALSO Dark Blue ｜ Ball Type: I/O ｜ List Date: 07/16/2023
+- Brand: GOALSO ｜ Model: GOALSO Blue ｜ Ball Type: I/O ｜ List Date: 07/16/2023
+- Brand: GOALSO ｜ Model: GOALSO Neon Green ｜ Ball Type: I/O ｜ List Date: 07/16/2023
+- Brand: GOALSO ｜ Model: GOALSO Pink ｜ Ball Type: I/O ｜ List Date: 07/16/2023
+- Brand: GOALSO ｜ Model: GOALSO Purple ｜ Ball Type: I/O ｜ List Date: 07/16/2023
+- Brand: GOALSO ｜ Model: GOALSO Red ｜ Ball Type: I/O ｜ List Date: 07/16/2023
+- Brand: GOALSO ｜ Model: GOALSO Turquoise ｜ Ball Type: I/O ｜ List Date: 07/16/2023
+- Brand: GOALSO ｜ Model: GOALSO Yellow ｜ Ball Type: I/O ｜ List Date: 07/16/2023
+- Brand: Golden Set ｜ Model: Endure 40 ｜ Ball Type: Out ｜ List Date: 11/16/2023
+- Brand: Gopher Rally ｜ Model: Pro 40 ｜ Ball Type: Out ｜ List Date: 08/26/2026
+- Brand: Gorilla Gear ｜ Model: Pickleball- Indoor ｜ Ball Type: Ind ｜ List Date: 02/15/2025
+- Brand: GoSports ｜ Model: GS 40 ｜ Ball Type: Out ｜ List Date: 04/21/2023
+- Brand: GRAND SLAM ｜ Model: GRAND SLAM ｜ Ball Type: Out ｜ List Date: 02/14/2025
+- Brand: Gualta ｜ Model: Gualta123 ｜ Ball Type: Out ｜ List Date: 06/22/2023
+- Brand: Gualta ｜ Model: Gualta1234 ｜ Ball Type: Out ｜ List Date: 06/22/2023
+- Brand: GUNICA ｜ Model: G-Pro1 ｜ Ball Type: I/O ｜ List Date: 10/22/2026
+- Brand: Gutuguin ｜ Model: YO-40 ｜ Ball Type: Out ｜ List Date: 04/19/2024
+- Brand: Hajimari ｜ Model: 30902 Outdoor Ball ｜ Ball Type: Out ｜ List Date: 09/16/2022
+- Brand: Hajimari ｜ Model: 30901 Indoor Ball ｜ Ball Type: Ind ｜ List Date: 09/16/2022
+- Brand: Handz Pickleball Co. ｜ Model: Handz - 40 ｜ Ball Type: I/O ｜ List Date: 07/20/2023
+- Brand: HEAD ｜ Model: TOUR 40 ｜ Ball Type: Out ｜ List Date: 03/18/2025
+- Brand: HEAD ｜ Model: HEAD P40 ｜ Ball Type: Out ｜ List Date: 12/12/2023
+- Brand: HEAD ｜ Model: HEAD C40 ｜ Ball Type: Out ｜ List Date: 12/12/2023
+- Brand: HEAD ｜ Model: HEAD C26 ｜ Ball Type: Ind ｜ List Date: 12/12/2023
+- Brand: HEAD ｜ Model: Pro Penn 40 ｜ Ball Type: Out ｜ List Date: 01/25/2022
+- Brand: HEAD ｜ Model: Penn 26 ｜ Ball Type: Ind ｜ List Date: 06/01/2021
+- Brand: HEAD ｜ Model: Penn 40 ｜ Ball Type: Out ｜ List Date: 07/07/2018
+- Brand: HEICK ｜ Model: G1 ｜ Ball Type: （此列無 Ball Type 欄位值） ｜ List Date: 10/08/2021
+- Brand: Hiro ｜ Model: Hiro ｜ Ball Type: Out ｜ List Date: 09/03/2020
+- Brand: HNDRD ｜ Model: Delta P500 PRO ｜ Ball Type: Out ｜ List Date: 12/11/2024
+- Brand: HTPICK ｜ Model: HT-PRO ｜ Ball Type: Out ｜ List Date: 05/27/2026
+- Brand: Hudef Sports ｜ Model: HUDEF HD-40H ｜ Ball Type: Out ｜ List Date: 01/28/2022
+- Brand: HyperDot ｜ Model: Pro 40 ｜ Ball Type: Out ｜ List Date: 11/03/2025
+- Brand: IANONI ｜ Model: IANONI G01 OUTDOOR BALL ｜ Ball Type: Out ｜ List Date: 03/29/2023
+- Brand: ICKM ｜ Model: ICKM ｜ Ball Type: I/O ｜ List Date: 11/24/2023
+- Brand: IE ｜ Model: IE Orange ｜ Ball Type: Out ｜ List Date: 09/22/2026
+- Brand: IE ｜ Model: IE Green ｜ Ball Type: Out ｜ List Date: 09/22/2026
+- Brand: IE ｜ Model: IE Yellow ｜ Ball Type: Out ｜ List Date: 09/22/2026
+- Brand: INFMARC ｜ Model: TW-40 ｜ Ball Type: Out ｜ List Date: 12/11/2024
+- Brand: innovative ｜ Model: CY403 ｜ Ball Type: Out ｜ List Date: 06/26/2026
+- Brand: innovative ｜ Model: CY401 ｜ Ball Type: Out ｜ List Date: 04/20/2026
+- Brand: innovative ｜ Model: CY401 ｜ Ball Type: Out ｜ List Date: 04/20/2026
+- Brand: INV ｜ Model: INV01 ｜ Ball Type: Out ｜ List Date: 03/18/2025
+- Brand: ITS ｜ Model: ITS* ｜ Ball Type: Out ｜ List Date: 08/26/2026
+- Brand: JCM ｜ Model: JCM01 ｜ Ball Type: Out ｜ List Date: 06/30/2024
+- Brand: Jeonpickleball ｜ Model: PANDA ｜ Ball Type: Out ｜ List Date: 02/14/2025
+- Brand: JIRU ｜ Model: TOUR X-7 ｜ Ball Type: Out ｜ List Date: 04/14/2025
+- Brand: JNICE ｜ Model: J45 ｜ Ball Type: Out ｜ List Date: 03/18/2025
+- Brand: JOGARBOLA ｜ Model: COREX Pro ｜ Ball Type: I/O ｜ List Date: 03/16/2026
+- Brand: JOOLA ｜ Model: HC-40 ｜ Ball Type: Out ｜ List Date: 06/11/2025
+- Brand: JOOLA ｜ Model: JOOLA Primo Indoor Plus ｜ Ball Type: Ind ｜ List Date: 03/18/2025
+- Brand: JOOLA ｜ Model: JOOLA Heleus ｜ Ball Type: Out ｜ List Date: 05/31/2023
+- Brand: JOOLA ｜ Model: JOOLA Primo ｜ Ball Type: Out ｜ List Date: 03/20/2022
+- Brand: Jugs Inc. ｜ Model: 26 Hole Indoor ｜ Ball Type: Ind ｜ List Date: （此列無 List Date 欄位值）
+- Brand: KAIROS ｜ Model: KS101-Yellow ｜ Ball Type: Out ｜ List Date: 09/06/2023
+- Brand: KAIWIN ｜ Model: PRO ｜ Ball Type: I/O ｜ List Date: 04/14/2025
+- Brand: Kamito ｜ Model: Kamito X- FORCE ｜ Ball Type: I/O ｜ List Date: 12/11/2024
+- Brand: Kenetik ｜ Model: Air Bender Pro - Sunburst Orange ｜ Ball Type: Out ｜ List Date: 07/29/2025
+- Brand: KENKO ｜ Model: OLA-40 ｜ Ball Type: Out ｜ List Date: 02/04/2026
+- Brand: KINGTEK ｜ Model: K-ELITE ｜ Ball Type: I/O ｜ List Date: 04/14/2025
+- Brand: Komodo pickleball ｜ Model: Bioball ｜ Ball Type: Out ｜ List Date: 09/18/2024
+- Brand: Komodo pickleball ｜ Model: K - 40 ｜ Ball Type: Out ｜ List Date: 01/08/2023
+- Brand: KOMTIK ｜ Model: Jade ｜ Ball Type: Out ｜ List Date: 10/06/2025
+- Brand: Konnek Sports LLC ｜ Model: KNNK ｜ Ball Type: I/O ｜ List Date: 09/08/2025
+- Brand: Kuche Sports LLC ｜ Model: PickleOn ｜ Ball Type: Out ｜ List Date: 09/06/2023
+- Brand: Kunpick ｜ Model: KAMAZ ｜ Ball Type: I/O ｜ List Date: 09/09/2025
+- Brand: Li Ning ｜ Model: PG40 ｜ Ball Type: Out ｜ List Date: 03/18/2025
+- Brand: Lotto ｜ Model: Lotto Tour ｜ Ball Type: Out ｜ List Date: 05/01/2024
+- Brand: LOTUS ｜ Model: Lotus Five Stars ｜ Ball Type: Out ｜ List Date: 12/11/2024
+- Brand: Luft ｜ Model: TOUR 40 ｜ Ball Type: Out ｜ List Date: 01/30/2024
+- Brand: Luft ｜ Model: ARROW 40 ｜ Ball Type: Out ｜ List Date: 01/30/2024
+- Brand: Luft ｜ Model: ARROW 26 ｜ Ball Type: Ind ｜ List Date: 01/30/2024
+- Brand: Luzz ｜ Model: Gen 2 ｜ Ball Type: Out ｜ List Date: 06/26/2026
+- Brand: LVL-UP ｜ Model: TOUR ｜ Ball Type: Out ｜ List Date: 06/26/2026
+- Brand: LVL-UP ｜ Model: Indoor-26 ｜ Ball Type: Ind ｜ List Date: 06/26/2026
+- Brand: M40 ｜ Model: M40 ｜ Ball Type: （此列無 Ball Type 欄位值） ｜ List Date: 02/28/2021
+- Brand: Maisse ｜ Model: Luna Pro ｜ Ball Type: Out ｜ List Date: 08/20/2024
+- Brand: Manh Thang Pickleball ｜ Model: E-WIN ｜ Ball Type: I/O ｜ List Date: 09/08/2025
+- Brand: Mas Pow ｜ Model: MP 40 ｜ Ball Type: Out ｜ List Date: 04/10/2025
+- Brand: Master Athletics ｜ Model: M40 Outdoor ｜ Ball Type: Out ｜ List Date: 09/29/2023
+- Brand: Matrix ｜ Model: 184-0154-6 ｜ Ball Type: Ind ｜ List Date: 10/06/2025
+- Brand: Matrix ｜ Model: 084-4799-6 ｜ Ball Type: Out ｜ List Date: 10/06/2025
+- Brand: MAXBOLT ｜ Model: M77 ｜ Ball Type: Out ｜ List Date: 12/11/2024
+- Brand: Mercer Pickleball ｜ Model: Mercer ｜ Ball Type: Out ｜ List Date: 11/02/2023
+- Brand: MINGLR ｜ Model: MX40 ｜ Ball Type: I/O ｜ List Date: 10/22/2026
+- Brand: Mint ｜ Model: Cannonballz™ Outdoor Pickleballs ｜ Ball Type: Out ｜ List Date: 04/10/2025
+- Brand: Mint ｜ Model: Cannonballz™ Indoor Pickleballs ｜ Ball Type: Ind ｜ List Date: 04/10/2025
+- Brand: Monarch ｜ Model: Monarch Indoor Ball ｜ Ball Type: Ind ｜ List Date: （此列無 List Date 欄位值）
+- Brand: Monarch ｜ Model: Monarch Outdoor Ball ｜ Ball Type: Out ｜ List Date: （此列無 List Date 欄位值）
+- Brand: Monarch ｜ Model: Monarch 2nd Gen Outdoor Ball ｜ Ball Type: Out ｜ List Date: （此列無 List Date 欄位值）
+- Brand: MOTIVE ｜ Model: Ball No.1 ｜ Ball Type: I/O ｜ List Date: 11/24/2025
+- Brand: MOZKUIB ｜ Model: 002 ｜ Ball Type: I/O ｜ List Date: 02/14/2025
+- Brand: MOZKUIB ｜ Model: 001 Lime Green ｜ Ball Type: Out ｜ List Date: 03/27/2023
+- Brand: MTEN ｜ Model: MT-12 ｜ Ball Type: Out ｜ List Date: 09/20/2023
+- Brand: Neoslick ｜ Model: Vega 40 ｜ Ball Type: Out ｜ List Date: 10/24/2022
+- Brand: Net World Sports ｜ Model: Vermont Competition Outdoor ｜ Ball Type: Out ｜ List Date: 06/03/2020
+- Brand: Net World Sports ｜ Model: Vermont Competition Indoor ｜ Ball Type: Ind ｜ List Date: 06/03/2020
+- Brand: Niupipo ｜ Model: MX-27 Green ｜ Ball Type: Out ｜ List Date: 05/07/2022
+- Brand: Niupipo ｜ Model: MX-21 Orange ｜ Ball Type: （此列無 Ball Type 欄位值） ｜ List Date: 07/02/2021
+- Brand: Niupipo ｜ Model: MX-21 Yellow ｜ Ball Type: （此列無 Ball Type 欄位值） ｜ List Date: 07/01/2021
+- Brand: NIVIA ｜ Model: ZPRO ｜ Ball Type: Out ｜ List Date: 11/03/2025
+- Brand: NOX ｜ Model: NOX Pickleball Balls ｜ Ball Type: Out ｜ List Date: 06/26/2026
+- Brand: O'BON ｜ Model: S-45 ｜ Ball Type: Out ｜ List Date: 07/29/2025
+- Brand: Odysportsz ｜ Model: Odysportsz 40 ｜ Ball Type: Out ｜ List Date: 09/06/2023
+- Brand: OLIN ｜ Model: ULTRA40 ｜ Ball Type: I/O ｜ List Date: 06/14/2024
+- Brand: Omni Tech ｜ Model: Omni Tech 26 ｜ Ball Type: Ind ｜ List Date: 06/26/2026
+- Brand: Omni Tech ｜ Model: Omni Tech 40 ｜ Ball Type: Out ｜ List Date: 04/20/2026
+- Brand: Onix Sports ｜ Model: 503 Outdoor ｜ Ball Type: Out ｜ List Date: （此列無 List Date 欄位值）
+- Brand: Onix Sports ｜ Model: Fuse Indoor Ball ｜ Ball Type: Ind ｜ List Date: （此列無 List Date 欄位值）
+- Brand: Onix Sports ｜ Model: Fuse Outdoor Ball ｜ Ball Type: Out ｜ List Date: （此列無 List Date 欄位值）
+- Brand: Onix Sports ｜ Model: Fuse G2 Outdoor Ball ｜ Ball Type: Out ｜ List Date: （此列無 List Date 欄位值）
+- Brand: Orca Paddle Company ｜ Model: Orca Pi 26 ｜ Ball Type: （此列無 Ball Type 欄位值） ｜ List Date: 04/26/2024
+- Brand: Orca Paddle Company ｜ Model: Orca Pi 40 ｜ Ball Type: Out ｜ List Date: 04/26/2024
+- Brand: Orca Paddle Company ｜ Model: Orca Pro 26 ｜ Ball Type: （此列無 Ball Type 欄位值） ｜ List Date: 03/01/2024
+- Brand: Orca Paddle Company ｜ Model: Orca Pro 40 ｜ Ball Type: Out ｜ List Date: 11/30/2023
+- Brand: Osaka ｜ Model: PT40 ｜ Ball Type: I/O ｜ List Date: 10/16/2025
+- Brand: Oso Pickleball ｜ Model: Fury ｜ Ball Type: Out ｜ List Date: 09/08/2022
+- Brand: Oso Pickleball ｜ Model: Oso ｜ Ball Type: Out ｜ List Date: 03/02/2021
+- Brand: OSUNO ｜ Model: OSUNO BALL ｜ Ball Type: Out ｜ List Date: 01/26/2026
+- Brand: Ovare Ventures ｜ Model: BaddleBall 40 ｜ Ball Type: （此列無 Ball Type 欄位值） ｜ List Date: 02/05/2021
+- Brand: OWL SPORT, INC. ｜ Model: OWL CK-40 ｜ Ball Type: Out ｜ List Date: 12/27/2023
+- Brand: OXIKEN ｜ Model: S40 ｜ Ball Type: Out ｜ List Date: 10/20/2023
+- Brand: OZO ｜ Model: MP-40 ｜ Ball Type: Out ｜ List Date: 06/25/2025
+- Brand: PACE ｜ Model: P-FORTY ｜ Ball Type: Out ｜ List Date: 06/30/2025
+- Brand: paddlemvp ｜ Model: PADDLE MVP ｜ Ball Type: Out ｜ List Date: 03/01/2024
+- Brand: Paddletek ｜ Model: Universal ｜ Ball Type: Out ｜ List Date: 08/26/2026
+- Brand: PASSION ｜ Model: Passion pro - 40 ｜ Ball Type: I/O ｜ List Date: 02/10/2025
+- Brand: PB Pro ｜ Model: PB40 ｜ Ball Type: （此列無 Ball Type 欄位值） ｜ List Date: 08/12/2021
+- Brand: PCKL ｜ Model: Optic Indoor Orange ｜ Ball Type: Ind ｜ List Date: 09/06/2023
+- Brand: PCKL ｜ Model: Optic Outdoor Pickleballs - Green ｜ Ball Type: Out ｜ List Date: 07/06/2023
+- Brand: PCKL ｜ Model: Optic Outdoor Pickleballs - Yellow ｜ Ball Type: Out ｜ List Date: 07/06/2023
+- Brand: PCKL ｜ Model: Elite 40 ｜ Ball Type: Out ｜ List Date: 02/20/2023
+- Brand: PICAPICA ｜ Model: P40 Pro ｜ Ball Type: I/O ｜ List Date: 03/11/2026
+- Brand: PICKA ｜ Model: Ballie ｜ Ball Type: Out ｜ List Date: 01/29/2026
+- Brand: Pickle Jargon ｜ Model: The Jar 2.0 ｜ Ball Type: Out ｜ List Date: 09/09/2025
+- Brand: Pickle O Joe ｜ Model: POJ LE Members Performance Ball ｜ Ball Type: Out ｜ List Date: 04/14/2025
+- Brand: Pickleball Central ｜ Model: TOP ｜ Ball Type: Out ｜ List Date: （此列無 List Date 欄位值）
+- Brand: Pickleball Inc. ｜ Model: Dura Fast 40 ｜ Ball Type: Out ｜ List Date: （此列無 List Date 欄位值）
+- Brand: Pickleball Inc. ｜ Model: Dura Fast 26 ｜ Ball Type: Ind ｜ List Date: （此列無 List Date 欄位值）
+- Brand: Pickleball Korea ｜ Model: deufox df40 ｜ Ball Type: Out ｜ List Date: 11/04/2024
+- Brand: Picklemaster ｜ Model: X40 ｜ Ball Type: I/O ｜ List Date: 08/28/2024
+- Brand: PickPeak ｜ Model: P-40 ｜ Ball Type: I/O ｜ List Date: 08/13/2024
+- Brand: PIXA Pickleball ｜ Model: Titan Pro 26 ｜ Ball Type: Ind ｜ List Date: 02/14/2025
+- Brand: PIXA Pickleball ｜ Model: Velocity Pro 40 Yellow ｜ Ball Type: Out ｜ List Date: 08/13/2024
+- Brand: PIXA Pickleball ｜ Model: Velocity Pro 40 Green ｜ Ball Type: Out ｜ List Date: 08/13/2024
+- Brand: PIXA Pickleball ｜ Model: ProPick 40 Green ｜ Ball Type: Out ｜ List Date: 05/23/2024
+- Brand: PIXA Pickleball ｜ Model: ProPick 40 Yellow ｜ Ball Type: Out ｜ List Date: 05/23/2024
+- Brand: PlayBolt ｜ Model: PB PRO 40 ｜ Ball Type: I/O ｜ List Date: 03/11/2026
+- Brand: Prado ｜ Model: Taino Sun Pickleball Ball ｜ Ball Type: Out ｜ List Date: 03/18/2025
+- Brand: Precise ｜ Model: A-40 ｜ Ball Type: Out ｜ List Date: 08/14/2025
+- Brand: Preston ｜ Model: Mach 40 ｜ Ball Type: Out ｜ List Date: 12/11/2024
+- Brand: Prince ｜ Model: Prince Indoor 3-PACK PICKLEBALL ｜ Ball Type: Ind ｜ List Date: 03/28/2025
+- Brand: Prince ｜ Model: Prince Outdoor 3-PACK PICKLEBALL BALL ｜ Ball Type: Out ｜ List Date: 03/28/2025
+- Brand: Prince ｜ Model: Prince Performance Pickleballs ｜ Ball Type: Out ｜ List Date: 01/05/2024
+- Brand: Pro Aviana ｜ Model: Tempo ｜ Ball Type: Out ｜ List Date: 12/09/2023
+- Brand: Pro Aviana ｜ Model: Aviana Outdoor Green A210G ｜ Ball Type: Out ｜ List Date: 12/01/2021
+- Brand: Pro Aviana ｜ Model: AA301 ｜ Ball Type: （此列無 Ball Type 欄位值） ｜ List Date: 02/05/2020
+- Brand: PRO-SPIN ｜ Model: PS-40 ｜ Ball Type: Out ｜ List Date: 07/20/2024
+- Brand: Pro38 ｜ Model: Pro38 L ｜ Ball Type: I/O ｜ List Date: 01/26/2022
+- Brand: Pro38 ｜ Model: Pro38 S ｜ Ball Type: Out ｜ List Date: 01/19/2022
+- Brand: Professor Sports LLC ｜ Model: Professor Premo 40 ｜ Ball Type: I/O ｜ List Date: 12/09/2023
+- Brand: Prokennex ｜ Model: Premium Outdoor 40 ｜ Ball Type: Out ｜ List Date: 07/29/2025
+- Brand: Prokennex ｜ Model: Premium Indoor 26 ｜ Ball Type: Ind ｜ List Date: 07/29/2025
+- Brand: Protech XP ｜ Model: Pro 40X ｜ Ball Type: I/O ｜ List Date: 03/26/2025
+- Brand: ProXR Pickleball ｜ Model: The Universal Ball ｜ Ball Type: Out ｜ List Date: 12/10/2024
+- Brand: PURE Pickleball ｜ Model: P7 Outdoor Ball ｜ Ball Type: Out ｜ List Date: （此列無 List Date 欄位值）
+- Brand: Qiangtai ｜ Model: Fitprowin ｜ Ball Type: I/O ｜ List Date: 10/06/2025
+- Brand: Qiangtai ｜ Model: QT40 ｜ Ball Type: Out ｜ List Date: 03/25/2024
+- Brand: Qranc ｜ Model: Q ｜ Ball Type: I/O ｜ List Date: 12/27/2023
+- Brand: Qranc ｜ Model: Qranc Hudson Professional Outdoor ｜ Ball Type: Out ｜ List Date: 10/31/2022
+- Brand: QSPORT ｜ Model: H-40 ｜ Ball Type: I/O ｜ List Date: 08/14/2025
+- Brand: Queen City Pickleball Hub Inc. ｜ Model: Crown Premium ｜ Ball Type: Out ｜ List Date: 06/02/2023
+- Brand: Quickhand ｜ Model: Q-40 ｜ Ball Type: I/O ｜ List Date: 02/22/2024
+- Brand: Quietstorm ｜ Model: QUIET SLAM MAGENTA ｜ Ball Type: I/O ｜ List Date: 04/10/2025
+- Brand: RAD Pickleball Co. ｜ Model: Rad Ball ｜ Ball Type: Out ｜ List Date: 06/02/2023
+- Brand: RAE.X SPORTS ｜ Model: RAE.X PRO SERIES ｜ Ball Type: Out ｜ List Date: 02/23/2026
+- Brand: Raise ｜ Model: Raise ｜ Ball Type: Out ｜ List Date: 06/30/2025
+- Brand: Ramsports ｜ Model: RAM ｜ Ball Type: Ind ｜ List Date: 01/15/2026
+- Brand: River ｜ Model: V-40 ｜ Ball Type: Out ｜ List Date: 06/25/2025
+- Brand: Riverstyks ｜ Model: Riverstyks ｜ Ball Type: （此列無 Ball Type 欄位值） ｜ List Date: （此列無 List Date 欄位值）
+- Brand: SAKURA ｜ Model: pickleball ｜ Ball Type: I/O ｜ List Date: 08/26/2026
+- Brand: Sanrio ｜ Model: Hello Kitty ｜ Ball Type: Out ｜ List Date: 10/08/2024
+- Brand: scuddles ｜ Model: Scuddles ｜ Ball Type: （此列無 Ball Type 欄位值） ｜ List Date: 09/24/2020
+- Brand: Scuffle Pickleball ｜ Model: FORTY ｜ Ball Type: （此列無 Ball Type 欄位值） ｜ List Date: 05/30/2020
+- Brand: Selkirk Sport ｜ Model: Q1 Quiet Ball ｜ Ball Type: I/O ｜ List Date: 01/29/2026
+- Brand: Selkirk Sport ｜ Model: Pro S1 ｜ Ball Type: Out ｜ List Date: 02/25/2023
+- Brand: Selkirk Sport ｜ Model: SLK Hybrid ｜ Ball Type: Out ｜ List Date: 07/28/2020
+- Brand: Shenzhen Yunzhongyun Technology Co., Ltd. ｜ Model: IUZIT ｜ Ball Type: （此列無 Ball Type 欄位值） ｜ List Date: 08/10/2021
+- Brand: SHREDD ｜ Model: BLAZE 400 PRO ｜ Ball Type: Out ｜ List Date: 10/05/2026
+- Brand: SIMSII ｜ Model: S-40 Yellow ｜ Ball Type: Out ｜ List Date: 08/13/2024
+- Brand: SIMSII ｜ Model: S-40 Orange ｜ Ball Type: Out ｜ List Date: （此列無 List Date 欄位值）
+- Brand: Singa Megatrades Pte Ltd ｜ Model: Riffball ｜ Ball Type: （此列無 Ball Type 欄位值） ｜ List Date: 09/24/2020
+- Brand: Sinowest ｜ Model: ST40 ｜ Ball Type: （此列無 Ball Type 欄位值） ｜ List Date: （此列無 List Date 欄位值）
+- Brand: Six Zero ｜ Model: 6.0 Pro 40 ｜ Ball Type: I/O ｜ List Date: 06/26/2026
+- Brand: SLAPP Pickleball ｜ Model: SlappSHOT 40 ｜ Ball Type: Out ｜ List Date: 03/15/2024
+- Brand: SLK by Selkirk ｜ Model: SLK Hybrid+ ｜ Ball Type: I/O ｜ List Date: 02/25/2023
+- Brand: SLK By Selkirk ｜ Model: SLK Competition ｜ Ball Type: （此列無 Ball Type 欄位值） ｜ List Date: 12/01/2020
+- Brand: Spark Sport ｜ Model: SPARK 100 ｜ Ball Type: Out ｜ List Date: 03/01/2024
+- Brand: Spartan Pickleball ｜ Model: CRISP40 ｜ Ball Type: I/O ｜ List Date: 12/10/2024
+- Brand: SPIKOPOLL ｜ Model: SPI-40 ELITE ｜ Ball Type: Out ｜ List Date: 09/28/2024
+- Brand: SPIKOPOLL ｜ Model: SPI-40 ｜ Ball Type: Out ｜ List Date: 06/14/2024
+- Brand: SPYDERPICK ｜ Model: SP40 Orange ｜ Ball Type: Out ｜ List Date: 06/30/2025
+- Brand: Srikel ｜ Model: XS-40 ｜ Ball Type: I/O ｜ List Date: 10/24/2025
+- Brand: Supra ｜ Model: Supra-Ball ｜ Ball Type: （此列無 Ball Type 欄位值） ｜ List Date: 02/20/2019
+- Brand: Sweetspot ｜ Model: CS40 ｜ Ball Type: I/O ｜ List Date: 04/25/2024
+- Brand: SWELL PBG PICKLEBALL ｜ Model: PBG-40 ｜ Ball Type: Out ｜ List Date: 07/29/2025
+- Brand: SWELL PBG PICKLEBALL LLC ｜ Model: PBG 40 ｜ Ball Type: Out ｜ List Date: 03/15/2024
+- Brand: SWELL PBG PICKLEBALL LLC ｜ Model: PBG 26 ｜ Ball Type: Ind ｜ List Date: 03/15/2024
+- Brand: Swin ｜ Model: Swin Pro T40 ｜ Ball Type: Out ｜ List Date: 10/04/2024
+- Brand: Synergy Pickleball ｜ Model: All In 40 Green ｜ Ball Type: I/O ｜ List Date: 06/30/2024
+- Brand: Synergy Pickleball ｜ Model: All In 40 Yellow ｜ Ball Type: I/O ｜ List Date: 06/30/2024
+- Brand: Synergy Pickleball ｜ Model: All In 40 Pink ｜ Ball Type: I/O ｜ List Date: 06/30/2024
+- Brand: T TICCI ｜ Model: PKB001 ｜ Ball Type: （此列無 Ball Type 欄位值） ｜ List Date: 08/10/2021
+- Brand: Takeya USA ｜ Model: Takeya Pickleball Ball ｜ Ball Type: Out ｜ List Date: 01/08/2023
+- Brand: Takeya USA ｜ Model: Takeya_Susan G. Komen Pink ball ｜ Ball Type: Out ｜ List Date: 10/24/2022
+- Brand: Tecnifibre ｜ Model: X-Point ｜ Ball Type: Out ｜ List Date: 05/27/2026
+- Brand: Tensindo Sports ｜ Model: Tensindo Shine Outdoor ｜ Ball Type: Out ｜ List Date: （此列無 List Date 欄位值）
+- Brand: Thanh Phat ｜ Model: XPRO-40 ｜ Ball Type: I/O ｜ List Date: 02/23/2026
+- Brand: Things Of Skill ｜ Model: TOSB ｜ Ball Type: Out ｜ List Date: 06/02/2023
+- Brand: Things Of Skill ｜ Model: TOS ｜ Ball Type: Out ｜ List Date: 04/21/2023
+- Brand: TIENTRUONG BUILDING MATERIALS TRADING CO., LTD ｜ Model: T-PICK ｜ Ball Type: Ind ｜ List Date: 11/24/2025
+- Brand: Titan Pickleball ｜ Model: TP ｜ Ball Type: Out ｜ List Date: 08/13/2024
+- Brand: Topball USA ｜ Model: Topball USA 1 ｜ Ball Type: Out ｜ List Date: 04/21/2023
+- Brand: Trion ｜ Model: T-1 ｜ Ball Type: Out ｜ List Date: 10/21/2026
+- Brand: Triple Ace ｜ Model: T 40 ｜ Ball Type: Out ｜ List Date: 12/24/2022
+- Brand: TRUPICKLEBALL ｜ Model: TRU-40 ｜ Ball Type: Out ｜ List Date: 04/25/2024
+- Brand: Tumaz ｜ Model: PQ01 ｜ Ball Type: （此列無 Ball Type 欄位值） ｜ List Date: 08/29/2021
+- Brand: Uniker Sports ｜ Model: Uniker Ace 40 ｜ Ball Type: （此列無 Ball Type 欄位值） ｜ List Date: （此列無 List Date 欄位值）
+- Brand: Unique Sports ｜ Model: Tourna Strike Indoor ｜ Ball Type: Ind ｜ List Date: 02/17/2019
+- Brand: Unique Sports ｜ Model: Tourna Strike Outdoor Ball ｜ Ball Type: Out ｜ List Date: （此列無 List Date 欄位值）
+- Brand: Universal Sourcing Solutions, LLC. ｜ Model: PickleBallz Z40 ｜ Ball Type: Out ｜ List Date: 08/26/2022
+- Brand: Urane ｜ Model: Urane ｜ Ball Type: Out ｜ List Date: 03/18/2025
+- Brand: VICC ｜ Model: H-40 ｜ Ball Type: Out ｜ List Date: 06/12/2025
+- Brand: Vigel ｜ Model: Vigel 40 ｜ Ball Type: Out ｜ List Date: 03/01/2023
+- Brand: VINSA ｜ Model: Vinsa Green ｜ Ball Type: Out ｜ List Date: 06/14/2024
+- Brand: Vivid Sports ｜ Model: VS40 ｜ Ball Type: Out ｜ List Date: 08/12/2022
+- Brand: VOAS ｜ Model: Gold ｜ Ball Type: I/O ｜ List Date: 08/13/2024
+- Brand: Volair ｜ Model: Volair Outdoor Ball ｜ Ball Type: Out ｜ List Date: 03/01/2023
+- Brand: Vole Sporting Goods Company Limited ｜ Model: AeroPro ｜ Ball Type: I/O ｜ List Date: 02/14/2025
+- Brand: Vulcan Sporting Goods ｜ Model: VTRU Classic Indoor Pickleball ｜ Ball Type: Ind ｜ List Date: 04/14/2025
+- Brand: Vulcan Sporting Goods ｜ Model: VPRO Flight Outdoor ｜ Ball Type: Out ｜ List Date: 05/05/2023
+- Brand: Warping Point ｜ Model: ASCENT-40 ｜ Ball Type: Out ｜ List Date: 06/14/2024
+- Brand: Wika ｜ Model: W-PRO ｜ Ball Type: Out ｜ List Date: 03/18/2025
+- Brand: Wilson ｜ Model: Max 40 ｜ Ball Type: Out ｜ List Date: 04/22/2024
+- Brand: Wilson ｜ Model: TRU 32 INDOOR ｜ Ball Type: Ind ｜ List Date: 11/02/2023
+- Brand: Wilson ｜ Model: TRU 32 Pro ｜ Ball Type: Out ｜ List Date: 12/01/2020
+- Brand: Wilson ｜ Model: PB Team ｜ Ball Type: （此列無 Ball Type 欄位值） ｜ List Date: 11/14/2019
+- Brand: Wilson ｜ Model: TRU32 ｜ Ball Type: Out ｜ List Date: 06/19/2019
+- Brand: WINX40 ｜ Model: WIN X40 ｜ Ball Type: I/O ｜ List Date: 09/08/2025
+- Brand: Wowlly Sports Inc. ｜ Model: Comet ｜ Ball Type: I/O ｜ List Date: 06/22/2023
+- Brand: WSI ｜ Model: Test ｜ Ball Type: （此列無 Ball Type 欄位值） ｜ List Date: 10/01/2020
+- Brand: Xenon Paddle ｜ Model: Pro 40 ｜ Ball Type: I/O ｜ List Date: 03/22/2023
+- Brand: XenonPaddle ｜ Model: Tour 40 ｜ Ball Type: I/O ｜ List Date: 01/22/2026
+- Brand: Xowak ｜ Model: Ace Flight 26 ｜ Ball Type: Ind ｜ List Date: 08/13/2024
+- Brand: Xowak ｜ Model: Ace Flight 40 ｜ Ball Type: Out ｜ List Date: 06/30/2024
+- Brand: Yaan Composite ｜ Model: Y-40 ｜ Ball Type: Out ｜ List Date: 11/03/2025
+- Brand: YAIT ｜ Model: Rovo ｜ Ball Type: I/O ｜ List Date: 04/20/2026
+- Brand: YMA ｜ Model: PK Ball#Pink ｜ Ball Type: I/O ｜ List Date: 01/22/2026
+- Brand: YUDINO ｜ Model: YUDINO40 ｜ Ball Type: I/O ｜ List Date: 10/06/2025
+- Brand: ZCEBRA ｜ Model: Madness 40 ｜ Ball Type: I/O ｜ List Date: 03/28/2023
+- Brand: ZCEBRA ｜ Model: ONSIGHT SERIES ｜ Ball Type: （此列無 Ball Type 欄位值） ｜ List Date: 08/03/2021
+- Brand: Zocker ｜ Model: Five Star Gen 2 ｜ Ball Type: I/O ｜ List Date: 07/29/2025
+- Brand: Zocker ｜ Model: ZB01 ｜ Ball Type: Out ｜ List Date: 09/28/2024
+- Brand: Zone Pickleball ｜ Model: Zone PB Neon ｜ Ball Type: （此列無 Ball Type 欄位值） ｜ List Date: 05/23/2021
+- Brand: Zsports ｜ Model: ZBALL ｜ Ball Type: Out ｜ List Date: 10/01/2024
+
+## 蒐集者註記
+
+- 每頁 25 列，共 16 頁、399 列；"（此列無 … 欄位值）" 是蒐集者標註該列該欄位空白，非原文。
