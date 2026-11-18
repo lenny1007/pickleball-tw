@@ -40,7 +40,7 @@
 | `GripShapes` | 握把橫切面：圓形、方形、八角形 | paddle-grip |
 | `PadelCourtCompare` | 板式網球場與匹克球場大小疊圖（依比例，含牆） | pickleball-vs-padel |
 | `PadelWall` | 側視：板式網球球先落地可彈牆、匹克球碰圍網算失誤 | pickleball-vs-padel |
-| `StepBackDrill` | 側視：從非截擊區一步步退到底線的練習，越往後弧度越高 | pickleball-practice-drills、pickleball-warm-up |
+| `StepBackDrill` | 側視：從非截擊區一步步退到底線的練習，越往後弧度越高 | pickleball-practice-drills |
 | `ShoeCompare` | 鞋子正面剖面：慢跑鞋鞋底外擴 vs 球場鞋側邊加強 | pickleball-shoes |
 | `SoleCompare` | 戶外鞋底硬耐磨 vs 室內鞋底軟、不留痕 | pickleball-shoes |
 | `TransitionReady` | 側視：發球方往前推進時，準備姿勢跟著位置變（過渡區放低→非截擊區線一般姿勢） | pickleball-doubles-strategy |
