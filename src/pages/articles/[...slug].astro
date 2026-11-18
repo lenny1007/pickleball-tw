@@ -4,6 +4,7 @@ import Base from '../../layouts/Base.astro';
 import { CATEGORIES, SITE_NAME, SITE_URL } from '../../consts';
 import ArticleCover from '../../components/fig/ArticleCover.astro';
 import ArticleRail from '../../components/ArticleRail.astro';
+import { Image } from 'astro:assets';
 
 export async function getStaticPaths() {
   const articles = await getCollection('articles', ({ data }) => !data.draft);
@@ -34,7 +35,14 @@ const ld = {
     <p class="date">
       {d.updatedDate ? <>更新於 <time datetime={fmt(d.updatedDate)}>{fmt(d.updatedDate)}</time></> : <time datetime={fmt(d.pubDate)}>{fmt(d.pubDate)}</time>}
     </p>
-    <div class="cover-wrap"><ArticleCover slug={article.id} /></div>
+    {d.cover ? (
+      <figure class="cover">
+        <Image src={d.cover} alt={d.cover_alt ?? ''} widths={[480, 760, 1140]} sizes="(max-width: 640px) 100vw, 38em" loading="eager" fetchpriority="high" />
+        <figcaption>示意圖（AI 生成）</figcaption>
+      </figure>
+    ) : (
+      <div class="cover-wrap"><ArticleCover slug={article.id} /></div>
+    )}
     {d.takeaways && (
       <aside class="takeaways" aria-label="重點">
         <ul>{d.takeaways.map((t) => <li>{t}</li>)}</ul>
@@ -49,6 +57,9 @@ const ld = {
   .crumb, .date { font-size: .9rem; color: var(--muted); margin: 0; }
   .prose h1 { font-size: clamp(1.8rem, 4.2vw, 2.6rem); line-height: 1.28; margin: .3em 0 .3em; }
   .cover-wrap { margin: 20px 0 4px; }
+  .cover { margin: 20px 0 4px; }
+  .cover img { display: block; width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 12px; }
+  .cover figcaption { font-size: .8rem; color: var(--muted); margin-top: 6px; }
   .takeaways { margin: 24px 0 8px; padding: 16px 20px; border-left: 6px solid var(--ball); background: var(--card); border-radius: 0 12px 12px 0; }
   .takeaways ul { margin: 0; padding-left: 1.2em; }
 </style>

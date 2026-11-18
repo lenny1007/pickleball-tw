@@ -46,6 +46,8 @@
 | `TransitionReady` | 側視：發球方往前推進時，準備姿勢跟著位置變（過渡區放低→非截擊區線一般姿勢） | pickleball-doubles-strategy |
 | `ForehandMiddle` | 三格半場：兩人右手／一右一左時「正手在中間」有沒有答案 | pickleball-doubles-strategy |
 | `TargetLine` | 俯視：被針對時斜線回球 vs 改打直線 | pickleball-doubles-strategy |
+| `PaddleBudget` | 三支入門拍的價格長條與芯材厚度剖面（依比例） | paddle-recommendations |
+| `ApprovedListName` | 賣場上的品牌名 vs 核可清單上登記的名字（Kuikma → DECATHLON） | paddle-recommendations |
 | `ArticleCover` | 每篇的封面，依 slug 關鍵字選畫面 | 全部 |
 
 畫新圖用的零件：
