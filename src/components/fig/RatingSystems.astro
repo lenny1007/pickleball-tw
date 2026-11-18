@@ -7,7 +7,7 @@ const ticks = [2, 3, 4, 5, 6, 7, 8];
 const levels = ['2.0–2.9', '3.0–3.9', '4.0–4.9', '5.0＋'];
 ---
 <Figure caption="示意圖。各場比賽怎麼切組、要不要 DUPR，以簡章為準。">
-  <svg class="gear-fig" viewBox="0 0 540 300" role="img" aria-label="中華民國匹克球總會的比賽看 DUPR 分數，新玩家是 NR，分數從 2.000 到 8.000；中華民國匹克球協會的比賽看分級辦法，分 2.0 到 5.0 以上四個級別">
+  <svg class="gear-fig" viewBox="0 0 540 300" role="img" aria-label="中華民國匹克球總會的比賽看 DUPR 分數，新玩家是 NR，分數從 2.000 到 8.000；中華民國匹克球協會體系的個人賽看分級辦法，分 2.0 到 5.0 以上四個級別">
     <text class="lab dark big" x="20" y="30">總會的比賽：看 DUPR 分數</text>
     <rect x="20" y="58" width="72" height="40" rx="8" class="rs-nr" />
     <text class="lab dark" x="56" y="84" text-anchor="middle">NR</text>
@@ -22,7 +22,7 @@ const levels = ['2.0–2.9', '3.0–3.9', '4.0–4.9', '5.0＋'];
     ))}
     <text class="lab" x={x0} y="148">打越多場、越近期，分數越可靠</text>
 
-    <text class="lab dark big" x="20" y="200">協會的比賽：看分級辦法</text>
+    <text class="lab dark big" x="20" y="200">協會的個人賽：看分級辦法</text>
     {levels.map((l, i) => (
       <g>
         <rect x={20 + i * 128} y="220" width="116" height="44" rx="8" class="rs-level" />
