@@ -61,7 +61,7 @@
 | `ForehandSequence` | 正手抽球四步驟（直式）：整體轉身、快快慢、蓄力、先踏步再揮拍 | pickleball-forehand-drive |
 | `DropArc` | 側面：第三拍 drop 最高點在自己這邊、過網留 2 到 3 呎、落到對手腳邊；對照想擦網而過的虛線 | third-shot-drop |
 | `ReturnTime` | 側面對照：接發球低又快來不及上網；高一點、軟一點走得到非截擊區線 | pickleball-return-of-serve |
-| `ReturnWind` | 接發球站位看風向：沒風底線後約 3 呎、逆風往後、順風往前 | pickleball-return-of-serve |
+| `ReturnWind` | 接發球站位看風向：沒風底線後約 3 呎、風往臉上吹往後、風從背後吹往前 | pickleball-return-of-serve |
 | `ArticleCover` | 每篇的封面，依 slug 關鍵字選畫面 | 全部 |
 
 畫新圖用的零件：
