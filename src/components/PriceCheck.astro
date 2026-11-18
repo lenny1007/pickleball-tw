@@ -1,0 +1,41 @@
+---
+// 「在蝦皮看價格」外連：量讀者有沒有購買意圖。比照 badminton-tw 的同名元件（docs/specs/2026-11-13-gear-price-check-links.md）。
+// 連到蝦皮搜尋結果，不帶聯盟參數、不指向特定賣場。點擊送 GA4 事件 shop_outbound_click；GA 沒載入（本機、預覽網址）時什麼都不送。
+interface Props { keyword: string; label: string; note?: string }
+const { keyword, label, note } = Astro.props;
+---
+<div class="price-check">
+  <a
+    href={`https://shopee.tw/search?keyword=${encodeURIComponent(keyword)}`}
+    target="_blank"
+    rel="nofollow noopener"
+    data-shop-outbound
+    data-keyword={keyword}
+  >{label}</a>
+  <p>連到蝦皮搜尋結果；價格、賣家與保固以蝦皮頁面為準。{note}</p>
+</div>
+
+<script>
+  document.addEventListener('click', (event) => {
+    if (!(event.target instanceof Element)) return;
+    const link = event.target.closest<HTMLAnchorElement>('[data-shop-outbound]');
+    const gtag = (window as unknown as { gtag?: (...args: unknown[]) => void }).gtag;
+    if (!link || typeof gtag !== 'function') return;
+    gtag('event', 'shop_outbound_click', {
+      article_slug: location.pathname.replace(/^\/+|\/+$/g, ''),
+      keyword: link.dataset.keyword,
+      link_domain: 'shopee.tw',
+    });
+  });
+</script>
+
+<style>
+  .price-check { margin: 1.4em 0; }
+  .price-check a {
+    display: inline-flex; align-items: center; min-height: 44px; padding: 10px 18px;
+    border-radius: 10px; background: var(--court); color: var(--on-court); font-weight: 700; text-decoration: none;
+  }
+  .price-check a:hover { filter: brightness(1.08); }
+  .price-check a:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+  .price-check p { margin: 8px 0 0; font-size: .85rem; color: var(--muted); line-height: 1.6; }
+</style>
