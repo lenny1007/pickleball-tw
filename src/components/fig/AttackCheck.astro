@@ -1,0 +1,40 @@
+---
+// speed up 前的三個檢查：離網距離、穩不穩、球的高度。三個都對才攻，有一個不對就 dink 或 reset 回中間。
+import Figure from './Figure.astro';
+const checks = [
+  { n: '1', t: '離網的距離對嗎？' },
+  { n: '2', t: '我站得穩嗎？' },
+  { n: '3', t: '球夠高嗎？' },
+];
+---
+<Figure caption="示意圖。Coach Jess 說「死球」不等於可以攻擊的球：真正能攻擊，要看你離網的距離、你穩不穩、球的高度。任何一項不對，就是在硬打；她說球太貼網又低很難攻，站不穩時就先 reset 回中間。">
+  <svg class="gear-fig atk" viewBox="0 0 400 360" role="img" aria-label="speed up 前三個檢查：離網距離、穩不穩、球的高度；三個都對才 speed up，否則 dink 或 reset 回中間">
+    {checks.map((c, i) => (
+      <g>
+        <rect x="40" y={20 + i * 66} width="320" height="50" rx="25" class="atk-pill" />
+        <circle cx="70" cy={45 + i * 66} r="16" class="atk-num" />
+        <text x="70" y={51 + i * 66} text-anchor="middle" class="atk-n">{c.n}</text>
+        <text class="lab dark big" x="100" y={52 + i * 66}>{c.t}</text>
+      </g>
+    ))}
+    <line x1="200" y1="220" x2="200" y2="240" class="atk-stem" />
+    <line x1="110" y1="240" x2="290" y2="240" class="atk-stem" />
+    <line x1="110" y1="240" x2="110" y2="262" class="atk-stem" />
+    <line x1="290" y1="240" x2="290" y2="262" class="atk-stem" />
+    <rect x="20" y="266" width="180" height="76" rx="12" class="atk-yes" />
+    <text class="lab dark" x="110" y="296" text-anchor="middle">三個都對</text>
+    <text class="lab dark big" x="110" y="326" text-anchor="middle">可以 speed up</text>
+    <rect x="210" y="266" width="170" height="76" rx="12" class="atk-no" />
+    <text class="lab dark" x="295" y="296" text-anchor="middle">有一個不對：先別攻</text>
+    <text class="lab dark big" x="295" y="326" text-anchor="middle">繼續 dink</text>
+  </svg>
+</Figure>
+
+<style>
+  .atk-pill { fill: var(--card); stroke: var(--rule); stroke-width: 1.5; }
+  .atk-num { fill: var(--court); }
+  .atk-n { fill: var(--on-court); font: 16px var(--display); }
+  .atk-stem { stroke: var(--muted); stroke-width: 2; }
+  .atk-yes { fill: var(--ball); stroke: var(--ink); stroke-width: 1.5; }
+  .atk-no { fill: var(--kitchen); stroke: var(--ink); stroke-width: 1.5; }
+</style>
