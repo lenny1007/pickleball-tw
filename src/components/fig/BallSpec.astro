@@ -1,0 +1,45 @@
+---
+// 比賽用球的規格：左邊是球的大小、重量、洞數，右邊是彈跳測試。數字來源見使用這張圖的文章文末。
+import Figure from './Figure.astro';
+// 彈跳測試的高度比例：198 公分 = 220 單位。
+const floor = 282, scale = 220 / 198;
+const yAt = (cm: number) => floor - cm * scale;
+const holes = [
+  [0, 0], [-28, -18], [28, -18], [-28, 18], [28, 18], [0, -36], [0, 36],
+  [-50, 0], [50, 0], [-14, -54], [14, 54], [-46, -38], [46, 38], [-46, 38], [46, -38],
+];
+---
+<Figure caption="示意圖，不是實際比例。這些是 USA Pickleball 器材標準手冊對比賽用球的要求，通過測試、列進核可清單的球才算數。">
+  <svg class="gear-fig" viewBox="0 0 540 320" role="img" aria-label="比賽用球的規格：直徑 7.29 到 7.54 公分、重量 22.1 到 26.5 公克、26 到 40 個圓洞；從 198 公分高落到花崗岩平台，要彈到 76 到 86 公分">
+    <text class="lab dark big" x="130" y="26" text-anchor="middle">球本身</text>
+    <circle cx="130" cy="124" r="76" class="ball-body" />
+    {holes.map(([x, y]) => <circle cx={130 + x} cy={124 + y} r="6" class="ball-hole" />)}
+    <line x1="54" y1="222" x2="206" y2="222" class="bs-dim" />
+    <line x1="54" y1="214" x2="54" y2="230" class="bs-dim" />
+    <line x1="206" y1="214" x2="206" y2="230" class="bs-dim" />
+    <text class="lab dark" x="130" y="248" text-anchor="middle">直徑 7.29–7.54 公分</text>
+    <text class="lab dark" x="130" y="276" text-anchor="middle">重量 22.1–26.5 公克</text>
+    <text class="lab dark" x="130" y="304" text-anchor="middle">26–40 個圓洞、單一顏色</text>
+
+    <text class="lab dark big" x="400" y="26" text-anchor="middle">彈跳測試</text>
+    <rect x="300" y={floor} width="200" height="16" rx="3" class="bs-plate" />
+    <text class="lab" x="400" y={floor + 34} text-anchor="middle">花崗岩平台</text>
+    <circle cx="330" cy={yAt(198) + 10} r="10" class="ball-body" />
+    <line x1="330" y1={yAt(198) + 26} x2="330" y2={floor - 6} class="bs-drop" />
+    <path d={`M322 ${floor - 16} L330 ${floor - 4} L338 ${floor - 16}`} class="bs-drop" fill="none" />
+    <text class="lab dark" x="348" y={yAt(198) + 15}>從 198 公分落下</text>
+    <rect x="380" y={yAt(86)} width="110" height={(86 - 76) * scale} rx="3" class="bs-band" />
+    <circle cx="410" cy={yAt(81)} r="10" class="ball-body" />
+    <line x1="410" y1={floor - 6} x2="410" y2={yAt(76) + 14} class="bs-drop" />
+    <path d={`M402 ${yAt(76) + 22} L410 ${yAt(76) + 10} L418 ${yAt(76) + 22}`} class="bs-drop" fill="none" />
+    <text class="lab dark" x="435" y={yAt(86) - 30} text-anchor="middle">彈到</text>
+    <text class="lab dark" x="435" y={yAt(86) - 10} text-anchor="middle">76–86 公分</text>
+  </svg>
+</Figure>
+
+<style>
+  .bs-dim { stroke: var(--ink); stroke-width: 2; }
+  .bs-drop { stroke: var(--muted); stroke-width: 2; stroke-dasharray: 5 5; stroke-linecap: round; }
+  .bs-plate { fill: var(--muted); }
+  .bs-band { fill: var(--court); fill-opacity: .25; }
+</style>
