@@ -10,7 +10,7 @@ const holes = [
 ];
 ---
 <Figure caption="示意圖，不是實際比例。這些是 USA Pickleball 器材標準手冊對比賽用球的要求，通過測試、列進核可清單的球才算數。">
-  <svg class="gear-fig" viewBox="0 0 540 320" role="img" aria-label="比賽用球的規格：直徑 7.29 到 7.54 公分、重量 22.1 到 26.5 公克、26 到 40 個圓洞；從 198 公分高落到花崗岩平台，要彈到 76 到 86 公分">
+  <svg class="gear-fig" viewBox="0 0 540 320" role="img" aria-label="比賽用球的規格：直徑 7.29 到 7.54 公分、重量 22.1 到 26.5 公克、26 到 40 個圓洞；從 198 公分高落到花崗岩平台，球頂要彈到約 76 到 86 公分">
     <text class="lab dark big" x="130" y="26" text-anchor="middle">球本身</text>
     <circle cx="130" cy="124" r="76" class="ball-body" />
     {holes.map(([x, y]) => <circle cx={130 + x} cy={124 + y} r="6" class="ball-hole" />)}
@@ -33,7 +33,7 @@ const holes = [
     <line x1="410" y1={floor - 6} x2="410" y2={yAt(76) + 14} class="bs-drop" />
     <path d={`M402 ${yAt(76) + 22} L410 ${yAt(76) + 10} L418 ${yAt(76) + 22}`} class="bs-drop" fill="none" />
     <text class="lab dark" x="435" y={yAt(86) - 30} text-anchor="middle">彈到</text>
-    <text class="lab dark" x="435" y={yAt(86) - 10} text-anchor="middle">76–86 公分</text>
+    <text class="lab dark" x="435" y={yAt(86) - 10} text-anchor="middle">約 76–86 公分</text>
   </svg>
 </Figure>
 
