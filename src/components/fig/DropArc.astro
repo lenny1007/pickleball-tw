@@ -5,7 +5,7 @@ import Figure from './Figure.astro';
 const g = 230;
 // 好的 drop：從底線約 2.5 呎高出手，最高點在自己這邊的非截擊區線上方，落到對手腳邊。
 const good = (() => {
-  const x0 = 48, h0 = 30, xa = 197, H = 80, x1 = 384;
+  const x0 = 48, h0 = 13, xa = 197, H = 80, x1 = 360;
   const k = (H - h0) / ((x0 - xa) ** 2);
   const p: string[] = [];
   for (let x = x0; x <= x1; x += 4) p.push(`${x},${(g - (H - k * (x - xa) ** 2)).toFixed(1)}`);
@@ -29,7 +29,7 @@ const tight = (() => {
     <polyline points={good} class="dra-good" />
     <line x1="197" y1={g - 80} x2="197" y2={g} class="dra-guide" />
     <circle cx="197" cy={g - 80} r="7" class="dra-apex" />
-    <circle cx="384" cy={g - 6} r="8" class="ball-dot" />
+    <circle cx="358" cy={g - 6} r="8" class="ball-dot" />
     <g transform={`translate(250,${g - 16})`} class="mk fault"><circle r="10" /><path d="M-4 -4 l8 8 M4 -4 l-8 8" fill="none" /></g>
     <line x1="292" y1={g - 35} x2="292" y2={g - 70} class="dra-dim" />
     <line x1="286" y1={g - 70} x2="298" y2={g - 70} class="dra-dim" />
