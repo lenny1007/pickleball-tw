@@ -1,0 +1,42 @@
+---
+// 台灣兩種比賽分級：總會的比賽看 DUPR 分數（NR 起步，2.000–8.000），協會的比賽看分級辦法的四個級別。
+import Figure from './Figure.astro';
+const x0 = 120, x1 = 500;
+const xAt = (v: number) => x0 + ((v - 2) / 6) * (x1 - x0);
+const ticks = [2, 3, 4, 5, 6, 7, 8];
+const levels = ['2.0–2.9', '3.0–3.9', '4.0–4.9', '5.0＋'];
+---
+<Figure caption="示意圖。各場比賽怎麼切組、要不要 DUPR，以簡章為準。">
+  <svg class="gear-fig" viewBox="0 0 540 300" role="img" aria-label="中華民國匹克球總會的比賽看 DUPR 分數，新玩家是 NR，分數從 2.000 到 8.000；中華民國匹克球協會的比賽看分級辦法，分 2.0 到 5.0 以上四個級別">
+    <text class="lab dark big" x="20" y="30">總會的比賽：看 DUPR 分數</text>
+    <rect x="20" y="58" width="72" height="40" rx="8" class="rs-nr" />
+    <text class="lab dark" x="56" y="84" text-anchor="middle">NR</text>
+    <text class="lab" x="56" y="122" text-anchor="middle">未評分</text>
+    <line x1="96" y1="78" x2={x0 - 6} y2="78" class="rs-arrow" />
+    <rect x={x0} y="66" width={x1 - x0} height="24" rx="12" class="rs-bar" />
+    {ticks.map((t) => (
+      <g>
+        <line x1={xAt(t)} y1="92" x2={xAt(t)} y2="100" class="rs-tick" />
+        <text class="lab" x={xAt(t)} y="120" text-anchor="middle">{t === 2 || t === 8 ? `${t}.000` : t}</text>
+      </g>
+    ))}
+    <text class="lab" x={x0} y="148">打越多場、越近期，分數越可靠</text>
+
+    <text class="lab dark big" x="20" y="200">協會的比賽：看分級辦法</text>
+    {levels.map((l, i) => (
+      <g>
+        <rect x={20 + i * 128} y="220" width="116" height="44" rx="8" class="rs-level" />
+        <text class="lab dark" x={78 + i * 128} y="248" text-anchor="middle">{l} 級</text>
+      </g>
+    ))}
+    <text class="lab" x="20" y="288">第一次參賽依技能表自選，拿過前三名下次要升級</text>
+  </svg>
+</Figure>
+
+<style>
+  .rs-nr { fill: var(--paper); stroke: var(--rule); stroke-width: 2; stroke-dasharray: 5 4; }
+  .rs-bar { fill: var(--court); fill-opacity: .3; stroke: var(--court); stroke-width: 2; }
+  .rs-tick { stroke: var(--muted); stroke-width: 2; }
+  .rs-arrow { stroke: var(--muted); stroke-width: 2; }
+  .rs-level { fill: var(--card); stroke: var(--rule); stroke-width: 2; }
+</style>
