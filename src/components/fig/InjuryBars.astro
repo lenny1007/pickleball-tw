@@ -2,9 +2,9 @@
 // 美國急診資料的三組百分比，水平長條，100% = 220 單位，數值標在長條右側。數字來源見使用這張圖的文章文末。
 import Figure from './Figure.astro';
 const groups = [
-  { title: '60 歲以上球友，急診診斷', rows: [['拉傷、扭傷', 33.2], ['骨折', 28.1], ['挫傷', 10.6]] },
-  { title: '因匹克球骨折的人', rows: [['因為跌倒', 92], ['骨折在上肢', 66]] },
-  { title: '眼睛受傷怎麼發生', rows: [['被球打到', 43], ['跌倒', 28], ['被球拍打到', 12]] },
+  { title: '60 歲以上球友，急診診斷', rows: [['拉傷、扭傷', '31.0'], ['骨折', '30.4'], ['挫傷、擦傷', '11.1']] },
+  { title: '因匹克球骨折的人', rows: [['因為跌倒', '92'], ['骨折在上肢', '66']] },
+  { title: '眼睛受傷怎麼發生', rows: [['被球打到', '43'], ['跌倒', '28'], ['被球拍打到', '12']] },
 ];
 const x0 = 120, W = 220, rowH = 30;
 let y = 0;
@@ -22,7 +22,7 @@ const H = y;
             <g>
               <text class="lab" x={x0 - 8} y={ry + 15} text-anchor="end">{label}</text>
               <rect x={x0} y={ry} width={W} height="20" rx="4" class="inb-bg" />
-              <rect x={x0} y={ry} width={(W * (v as number)) / 100} height="20" rx="4" class="inb-bar" />
+              <rect x={x0} y={ry} width={(W * Number(v)) / 100} height="20" rx="4" class="inb-bar" />
               <text class="lab dark" x={x0 + W + 6} y={ry + 15}>{`${v}%`}</text>
             </g>
           );
