@@ -5,7 +5,7 @@ import Figure from './Figure.astro';
 const x0 = 30, per = 55; // 每 1 MET 55 單位
 const X = (m: number) => x0 + m * per;
 ---
-<Figure caption="示意圖。強度分級依 2024 年版成人身體活動代謝當量表：3.0 到 5.9 MET 算中等強度，6.0 以上算費力。匹克球的數字來自一份 15 位中老年球友的實測研究：打 60 分鐘平均 4.1 MET，過程中最低 1.5、最高 7.7。">
+<Figure caption="示意圖。強度分級依 2024 年版成人身體活動代謝當量表：3.0 到 5.9 MET 算中等強度，6.0 以上算費力。匹克球的數字來自一份 15 位中老年受試者打雙打的實測研究：平均 4.1 MET，範圍 1.5 到 7.7。">
   <svg class="gear-fig mz" viewBox="0 0 560 250" role="img" aria-label="強度刻度：1.6 到 2.9 MET 輕度、3.0 到 5.9 中等、6.0 以上費力；匹克球實測平均 4.1 MET，範圍 1.5 到 7.7">
     <rect x={X(1.6)} y="120" width={X(3) - X(1.6)} height="34" class="mz-light" />
     <rect x={X(3)} y="120" width={X(6) - X(3)} height="34" class="mz-mod" />

@@ -2,7 +2,7 @@
 
 - slug：pickleball-calories-benefits
 - 分類：beginner
-- 狀態：寫作中
+- 狀態：查證完成，待上線
 
 ## 讀者與需求
 
@@ -33,6 +33,7 @@
 | 數字或說法（照文章原樣） | 一手來源（網址、規則條號、影片＋時間點） | 查證年月 |
 |---|---|---|
 | 4.1 MET、1.5 到 7.7、1.5、7.7；15 位、平均 65 歲、76 公斤；60 分鐘、約 354 大卡（353.5）；5.9 大卡；108.8 | Smith、Buchanan、Dalleck 2018 https://acefitnessmediastorage.blob.core.windows.net/webcontent/August2018/ACE_PickleballStudy.pdf ；https://ijrep.org/?p=2291 | 2026-11 |
+| 雙打；一場約 15 分鐘、一天約 4 場、合計 1 小時（Methods：~15min、~4 doubles matches、1hr；354 是每分鐘熱量 × 60 換算，Methods 稱扣掉 1 MET 的 net） | 同上，期刊全文 https://ijrep.org/wp-content/uploads/lana-downloads/2018/06/smith.et_.al_.spring.2018.pdf | 2026-11 |
 | 6 週、每週 3 次、每次 1 小時；收縮壓 4.75 mmHg、舒張壓 2.50 mmHg；HDL 3.08 mg/dL、LDL 3.67 mg/dL；VO2max 3.11；體重 0.13 公斤（不顯著） | 同上，表 3 | 2026-11 |
 | 輕度 1.6 到 2.9、中等 3.0 到 5.9、費力 6.0 以上；1 MET 約每公斤每小時 1 大卡 | 2024 Adult Compendium https://pmc.ncbi.nlm.nih.gov/articles/PMC10818145/ | 2026-11 |
 | 網球單打 8.0、網球雙打 4.5 到 6.0、羽球休閒 5.5、快走 4.8（5.6 到 6.3 公里／小時） | https://pacompendium.com/sports/ ；walking 17200 https://pacompendium.com/wp-content/uploads/2024/01/2024-adult-compendium_1_2024.pdf | 2026-11 |
@@ -43,7 +44,7 @@
 | 825 位、50 歲以上；1.53 倍 | Kurth 等 2025 https://pure.psu.edu/en/publications/association-of-pickleball-participation-with-decreased-perceived-/ | 2026-11 |
 | 每週 150 到 300 分鐘中等、75 到 150 分鐘費力；150 分鐘、75 分鐘；18 到 64 歲；65 歲以上；每週 2 天、每週 3 天 | WHO https://www.who.int/europe/news-room/fact-sheets/item/physical-activity ；國健署 https://www.mohw.gov.tw/cp-6653-77830-1.html | 2026-11 |
 | 180 分鐘（每週 3 次 × 60 分鐘，本站計算） | 同上 | 2026-11 |
-| 跌倒、滑倒為主（約 66.9%）；拉傷扭傷最多、其次骨折；60 歲以上 | Weiss 等 2021 https://pmc.ncbi.nlm.nih.gov/articles/PMC8091689/ | 2026-11 |
+| 跌倒、滑倒為主（約 66.9%）；拉傷扭傷和骨折差不多多（31.0%、30.4%）；60 歲以上 | Weiss 等 2021 https://pmc.ncbi.nlm.nih.gov/articles/PMC8091689/ | 2026-11 |
 
 ## 刻意不寫
 
@@ -54,7 +55,8 @@
 - 年長者研究直接套到年輕人：範圍回顧寫年輕族群幾乎沒研究，內文要標明受試者年齡。
 - MET 6 的熱量示意：沒有研究直接支持匹克球平均到 6，不寫。
 - Zarei 2025、PMC12536712：單位不明或沒讀到，不用。
-- Smith 2018 打的是單打或雙打：研究摘要沒寫清楚，不寫。
+- 354 大卡說成「打滿 60 分鐘實測」：原文是一場約 15 分鐘雙打量到的強度乘 60 換算，且 Methods 說扣掉安靜代謝；不跟公式值 304 直接比高低。
+- 總膽固醇、三酸甘油酯：6 週沒有改善，內文只寫「好壞膽固醇（HDL、LDL）」。
 
 ## 大綱
 
@@ -72,5 +74,9 @@
 - 往內連：what-is-pickleball、first-time-pickleball、pickleball-injuries、pickleball-warm-up、pickleball-vs-tennis-badminton、pickleball-singles
 
 ## 查證
+
+- 2026-11-19 獨立查證（subagent，讀 ACE 摘要、IJREP 期刊全文、2024 Compendium、Webber、Navalta、Stroesser、Kurth、WHO、國健署、Weiss）：56 句，ok 42、minor 14、error 0、找不到 0。
+- 主控自己回 IJREP 全文確認：急性測試是雙打（摘要「played a doubles match」），一場約 15 分鐘、一天約 4 場；熱量先扣 1 MET 再乘 60 分鐘。選題卡原先「Smith 沒寫單打雙打」更正。
+- minor 全修：354 改「換算成一小時」並拿掉跟 304 的高低比較；受試者改稱「受試者」並標明雙打；Webber「中等以上」改「中等強度」；穿戴裝置改「有估熱量的兩款都不準」；「膽固醇改善」改「好壞膽固醇」；回顧「不錯的證據」改「初步證據」；孤獨「比例」改「可能性」；傷害改「拉傷扭傷和骨折差不多多」（60 歲以上 31.0%、30.4%）；MetZones「過程中最低最高」改「範圍」；FAQ 單打改引 Webber；「容易上手」改成條件句；ACE「委託」改「贊助」；資料來源補國民健康署。
 
 ## 追蹤
