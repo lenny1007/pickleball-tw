@@ -3,13 +3,13 @@
 import Figure from './Figure.astro';
 const base = 140, gap = 92;
 const rows = [
-  { title: '沒什麼風', me: 110, wind: 0, note: '底線後約 3 呎（約 90 公分）' },
+  { title: '沒什麼風', me: 110, wind: 0, note: '底線後約 90 公分' },
   { title: '風往你臉上吹', me: 60, wind: -1, note: '再退一兩步，風很大可以退到圍網' },
-  { title: '風從背後吹', me: 162, wind: 1, note: '可能要站進底線內一兩呎' },
+  { title: '風從背後吹', me: 162, wind: 1, note: '可能要站進底線內 30 到 60 公分' },
 ];
 ---
-<Figure caption="示意圖。Better Pickleball 的教練 CJ Johnson 和 Tony Roig 建議，接發球一般先站在底線後約 3 呎，再看風往哪吹前後調整：風往你臉上吹，發球會更深，往後站；風從背後吹，發球會比較短，往前站。">
-  <svg class="gear-fig rtw" viewBox="0 0 400 290" role="img" aria-label="接發球站位：沒風站底線後約 3 呎；風往臉上吹往後退；風從背後吹可能站進底線內">
+<Figure caption="示意圖。Better Pickleball 的教練 CJ Johnson 和 Tony Roig 建議，接發球一般先站在底線後約 90 公分，再看風往哪吹前後調整：風往你臉上吹，發球會更深，往後站；風從背後吹，發球會比較短，往前站。">
+  <svg class="gear-fig rtw" viewBox="0 0 400 290" role="img" aria-label="接發球站位：沒風站底線後約 90 公分；風往臉上吹往後退；風從背後吹可能站進底線內">
     <text class="lab" x="390" y="16" text-anchor="end">往網的方向 →</text>
     {rows.map((r, i) => {
       const y = 62 + i * gap;
