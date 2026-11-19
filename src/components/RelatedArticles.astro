@@ -1,0 +1,49 @@
+---
+// 文末「同主題的其他文章」：先挑同分類、內文還沒連過的，不夠再補同分類已連過的，最後補其他分類的新文章。最多 3 篇。
+import type { CollectionEntry } from 'astro:content';
+import ArticleCover from './fig/ArticleCover.astro';
+import { CATEGORIES } from '../consts';
+interface Props { current: CollectionEntry<'articles'>; all: CollectionEntry<'articles'>[] }
+const { current, all } = Astro.props;
+const body = current.body ?? '';
+const linked = (a: CollectionEntry<'articles'>) => body.includes(`/articles/${a.id}/`);
+const others = all
+  .filter((a) => a.id !== current.id)
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+const same = others.filter((a) => a.data.category === current.data.category);
+const picks = [
+  ...same.filter((a) => !linked(a)),
+  ...same.filter(linked),
+  ...others.filter((a) => a.data.category !== current.data.category && !linked(a)),
+].slice(0, 3);
+const category = CATEGORIES.find((c) => c.slug === current.data.category)!;
+---
+{picks.length > 0 && (
+  <section class="related" aria-labelledby="related-head">
+    <h2 id="related-head">同主題的其他文章</h2>
+    <ul>
+      {picks.map((a) => (
+        <li>
+          <a href={`/articles/${a.id}/`}>
+            <ArticleCover slug={a.id} small />
+            <span>{a.data.title}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+    <p class="more"><a href={`/topics/${category.slug}/`}>看全部「{category.name}」文章</a></p>
+  </section>
+)}
+
+<style>
+  .related { max-width: 46em; margin-top: 48px; padding-top: 28px; border-top: 1px solid var(--rule); }
+  .related h2 { font-size: 1.35rem; margin: 0 0 16px; }
+  .related ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .related li a { display: grid; gap: 8px; text-decoration: none; font-weight: 600; line-height: 1.45; }
+  .related li a:hover span { text-decoration: underline; }
+  .more { margin: 18px 0 0; }
+  @media (max-width: 640px) {
+    .related ul { grid-template-columns: 1fr; }
+    .related li a { grid-template-columns: 120px 1fr; align-items: center; }
+  }
+</style>
