@@ -1,0 +1,281 @@
+{
+  "_comment": "舊文寬限：逐句列出允許的舊命中（鍵＝規則:句子指紋），只能變少。新句子、改寫過的舊句子都不在清單內。不得為了讓檢查通過而調高；調高需站主同意，CI 會擋（claims-guard，需站主加 claims-baseline-ok 標籤）。見 docs/ARTICLE_WORKFLOW.md「自動檢查」。",
+  "generated": "2026-11-19",
+  "totals": {
+    "absolute": 1,
+    "injury-no-doctor": 4,
+    "superlative": 30,
+    "unsourced-percent": 15
+  },
+  "files": {
+    "first-time-pickleball": {
+      "superlative:43b4ecf366ae": {
+        "rule": "superlative",
+        "n": 1,
+        "text": "匹克球規則不多，但下面三條是其他球類少見、新手最常被糾正的。"
+      },
+      "superlative:d0b66dd9dad0": {
+        "rule": "superlative",
+        "n": 1,
+        "text": "報分最容易亂，第一次打記不住很正常，聽發球員報就好。"
+      }
+    },
+    "how-to-choose-paddle": {
+      "superlative:d34d45131967": {
+        "rule": "superlative",
+        "n": 1,
+        "text": "這篇把挑拍時最常看到的四個規格講清楚：**拍面材質、拍面厚度、重量、拍型**。"
+      },
+      "superlative:fdcd0281355b": {
+        "rule": "superlative",
+        "n": 1,
+        "text": "剛開始打，最常失分的是網前小球控制不住、打到拍面邊緣，厚一點的球拍比較能容錯。"
+      }
+    },
+    "how-to-play-pickleball": {
+      "superlative:728623e3bc34": {
+        "rule": "superlative",
+        "n": 1,
+        "text": "最常見的是 **dink**：在網前把球輕輕打進對方的非截擊區。"
+      },
+      "superlative:a6f7ade289ac": {
+        "rule": "superlative",
+        "n": 1,
+        "text": "想知道自己最常犯哪些錯，見[匹克球新手常犯的錯誤]；第一次去球場要帶什麼、臨打怎麼排，見[第一次打匹克球]。"
+      }
+    },
+    "non-volley-zone": {
+      "superlative:1ce737082b86": {
+        "rule": "superlative",
+        "n": 1,
+        "text": "它是匹克球最容易被糾正的規則，但比賽中它其實只管一件事：**在這塊區域不能截擊**（發球另有規定，見文末常見情境）。"
+      },
+      "superlative:4be160b1e76a": {
+        "rule": "superlative",
+        "n": 1,
+        "text": "這條最常發生在網前快速對打：人站在線外截擊，收不住腳往前踩了一步。"
+      }
+    },
+    "paddle-grip": {
+      "injury-no-doctor:21b8bd940e45": {
+        "rule": "injury-no-doctor",
+        "n": 1,
+        "text": "（全文）"
+      }
+    },
+    "pickleball-dink": {
+      "superlative:64f5cfdf14c7": {
+        "rule": "superlative",
+        "n": 1,
+        "text": "dink 最常見的六個被打高的錯誤，我們在[匹克球怎麼打]和[新手常犯的錯誤]整理過，這篇不重複。"
+      }
+    },
+    "pickleball-doubles-strategy": {
+      "absolute:334a6a32189b": {
+        "rule": "absolute",
+        "n": 1,
+        "text": "沒被針對的那位，教練說看搭檔一直失誤，會挫折甚至生氣，是百分之百正常的。"
+      },
+      "superlative:7629cc7a1b86": {
+        "rule": "superlative",
+        "n": 1,
+        "text": "| 最常見的錯 | 發完球就往場內走，或像接發球方一樣衝網 | 接發球打太短，一開始就落入防守 |"
+      },
+      "superlative:b75ce817db67": {
+        "rule": "superlative",
+        "n": 1,
+        "text": "雙打打久了，最常卡住的通常不是哪一拍打不好，而是兩個人沒有說好：中間球兩人都伸拍、或兩人都不動；發完球衝上去，結果被打腳邊；對手一直打同一個人，另一個人只能乾著"
+      }
+    },
+    "pickleball-injuries": {
+      "superlative:16258e4d37cb": {
+        "rule": "superlative",
+        "n": 1,
+        "text": "最常見的是眼睛周圍的撕裂傷和角膜擦傷；少數是眼眶骨折、視網膜剝離這類嚴重的傷。"
+      },
+      "superlative:19bf3b1f614c": {
+        "rule": "superlative",
+        "n": 1,
+        "text": "## 最常見的傷是什麼"
+      },
+      "superlative:2173c533867f": {
+        "rule": "superlative",
+        "n": 1,
+        "text": "| 最常見的診斷 | 拉傷、扭傷 31.0%，骨折 30.4%，兩者差不多多；挫傷、擦傷 11.1% |"
+      },
+      "superlative:57970ca68f09": {
+        "rule": "superlative",
+        "n": 1,
+        "text": "- 三分之二傷在上肢，最常見的是前臂的橈骨。"
+      },
+      "superlative:ad57c3456264": {
+        "rule": "superlative",
+        "n": 1,
+        "text": "- 眼睛受傷最常是被球打到，其次是跌倒和被球拍打到；目前規則沒有強制戴護目鏡。"
+      },
+      "superlative:dc99fd060006": {
+        "rule": "superlative",
+        "n": 1,
+        "text": "title: 匹克球受傷：最常見的傷是什麼、怎麼預防"
+      },
+      "superlative:fd776f1f65d7": {
+        "rule": "superlative",
+        "n": 1,
+        "text": "| 怎麼受傷 | 滑倒、絆倒、跌倒和撲救佔 66.9%，是最主要的方式 |"
+      },
+      "unsourced-percent:0ee64b816849": {
+        "rule": "unsourced-percent",
+        "n": 3,
+        "text": "| 最常見的診斷 | 拉傷、扭傷 31.0%，骨折 30.4%，兩者差不多多；挫傷、擦傷 11.1% |"
+      },
+      "unsourced-percent:7b26f5c89c7c": {
+        "rule": "unsourced-percent",
+        "n": 1,
+        "text": "- 骨折的人裡，**92% 是跌倒造成的**。"
+      },
+      "unsourced-percent:895ed74eb110": {
+        "rule": "unsourced-percent",
+        "n": 1,
+        "text": "| 被球拍打到 | 12% |"
+      },
+      "unsourced-percent:9fc41aacc8b4": {
+        "rule": "unsourced-percent",
+        "n": 1,
+        "text": "| 被球打到 | 43% |"
+      },
+      "unsourced-percent:c9ec470c8501": {
+        "rule": "unsourced-percent",
+        "n": 1,
+        "text": "- 因匹克球骨折的人，九成以上是跌倒造成，三分之二傷在上肢，女性又比男性多。"
+      },
+      "unsourced-percent:cf6dad270120": {
+        "rule": "unsourced-percent",
+        "n": 2,
+        "text": "- 87% 是 60 歲以上，女性約佔七成。"
+      },
+      "unsourced-percent:cf72dcabcf04": {
+        "rule": "unsourced-percent",
+        "n": 1,
+        "text": "| 怎麼受傷 | 滑倒、絆倒、跌倒和撲救佔 66.9%，是最主要的方式 |"
+      },
+      "unsourced-percent:f33f7810091f": {
+        "rule": "unsourced-percent",
+        "n": 1,
+        "text": "研究也提醒，60 歲以上球友在球場上送急診的案例裡，有一成多不是運動傷害，而是心臟血管問題或昏厥。"
+      },
+      "unsourced-percent:f7169eeb73ba": {
+        "rule": "unsourced-percent",
+        "n": 1,
+        "text": "| 跌倒 | 28% |"
+      }
+    },
+    "pickleball-practice-drills": {
+      "injury-no-doctor:21b8bd940e45": {
+        "rule": "injury-no-doctor",
+        "n": 1,
+        "text": "（全文）"
+      }
+    },
+    "pickleball-rules-2026": {
+      "injury-no-doctor:21b8bd940e45": {
+        "rule": "injury-no-doctor",
+        "n": 1,
+        "text": "（全文）"
+      },
+      "superlative:2626d2781a8f": {
+        "rule": "superlative",
+        "n": 1,
+        "text": "2026 年最常影響臨打的是喊出界的時機："
+      }
+    },
+    "pickleball-scoring": {
+      "superlative:797b3aa12d73": {
+        "rule": "superlative",
+        "n": 1,
+        "text": "最後一行是新手最常卡住的地方：**第一位發球員不一定是開局發球的人**，要看當下誰站右邊。"
+      }
+    },
+    "pickleball-tournaments": {
+      "unsourced-percent:0aaa9393357c": {
+        "rule": "unsourced-percent",
+        "n": 1,
+        "text": "- 另外有一個**可靠度分數**（1 到 100%），越高代表分數越能反映你現在的程度。"
+      }
+    },
+    "pickleball-vs-padel": {
+      "unsourced-percent:1a2997bc18b7": {
+        "rule": "unsourced-percent",
+        "n": 1,
+        "text": "- 板式網球場 20 × 10 公尺，匹克球場 13.41 × 6.10 公尺，大約是板式網球場的四成。"
+      },
+      "unsourced-percent:59f333526484": {
+        "rule": "unsourced-percent",
+        "n": 1,
+        "text": "換算面積，匹克球場大約是板式網球場的四成。"
+      }
+    },
+    "pickleball-vs-tennis-badminton": {
+      "superlative:7a8db1d07190": {
+        "rule": "superlative",
+        "n": 1,
+        "text": "- 匹克球獨有的兩條規則是雙彈跳和非截擊區，網球、羽球球友轉打最容易在這裡被糾正。"
+      },
+      "superlative:bb04564cee20": {
+        "rule": "superlative",
+        "n": 1,
+        "text": "這兩條是第一次打最常被糾正的規則，細節見[規則總整理]和[非截擊區規則]。"
+      },
+      "superlative:d78a0d4bd0ff": {
+        "rule": "superlative",
+        "n": 1,
+        "text": "計分是網球、羽球球友最容易搞混的地方，逐球例子見[匹克球計分規則]。"
+      }
+    },
+    "pickleball-warm-up": {
+      "injury-no-doctor:21b8bd940e45": {
+        "rule": "injury-no-doctor",
+        "n": 1,
+        "text": "（全文）"
+      },
+      "superlative:78130ca562ec": {
+        "rule": "superlative",
+        "n": 1,
+        "text": "- 停車場離球場有一段路，就用最快的速度走過去，或慢跑。"
+      }
+    },
+    "third-shot-drop": {
+      "superlative:0a0958168410": {
+        "rule": "superlative",
+        "n": 1,
+        "text": "- **讓球落到拍面上**：球剛彈起來時最快、最難控制。"
+      }
+    },
+    "what-is-pickleball": {
+      "superlative:3f29e53c2d55": {
+        "rule": "superlative",
+        "n": 1,
+        "text": "- 美國運動用品產業協會的調查，匹克球連續五年是美國成長最快的運動，2025 年約 2,430 萬人打過。"
+      },
+      "superlative:58a2fff77025": {
+        "rule": "superlative",
+        "n": 1,
+        "text": "教練也說，跟網球不同，雙打是匹克球最普遍的打法。"
+      },
+      "superlative:5b3799ab9ac6": {
+        "rule": "superlative",
+        "n": 1,
+        "text": "一次看懂它怎麼唸、名字從哪來、1965 年怎麼發明、基本怎麼打，以及為什麼在美國連續五年成長最快。"
+      },
+      "superlative:d08773313839": {
+        "rule": "superlative",
+        "n": 1,
+        "text": "1965 年在美國發明，這幾年是美國成長最快的運動。"
+      },
+      "superlative:dae5f93c2551": {
+        "rule": "superlative",
+        "n": 1,
+        "text": "| 人數 | 單打或雙打，雙打最普遍 |"
+      }
+    }
+  }
+}
