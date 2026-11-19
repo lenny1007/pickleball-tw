@@ -1,0 +1,71 @@
+---
+// 主題頁：一個分類一頁，列出這個分類的全部文章。技術主題另外連到知識卡。
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Breadcrumb from '../../components/Breadcrumb.astro';
+import ArticleCover from '../../components/fig/ArticleCover.astro';
+import { CATEGORIES } from '../../consts';
+import { breadcrumbLd } from '../../lib/breadcrumb';
+
+export function getStaticPaths() {
+  return CATEGORIES.map((c) => ({ params: { slug: c.slug }, props: { category: c } }));
+}
+interface Props { category: (typeof CATEGORIES)[number] }
+const { category } = Astro.props;
+const articles = (await getCollection('articles', ({ data }) => !data.draft && data.category === category.slug)).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+const others = CATEGORIES.filter((c) => c.slug !== category.slug);
+const crumbs = [
+  { name: '首頁', url: '/' },
+  { name: category.name, url: `/topics/${category.slug}/` },
+];
+const listLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  name: `匹克球${category.name}`,
+  description: category.intro,
+  inLanguage: 'zh-Hant-TW',
+};
+---
+<Base title={`匹克球${category.name}`} description={category.intro} jsonLd={[listLd, breadcrumbLd(crumbs)]} noindex={articles.length === 0}>
+  <header class="page-head">
+    <Breadcrumb items={crumbs} />
+    <h1>匹克球{category.name}</h1>
+    <p>{category.intro}</p>
+  </header>
+  {articles.length === 0 ? (
+    <p class="none">這個主題的文章整理中。</p>
+  ) : (
+    <ul class="list">
+      {articles.map((a) => (
+        <li>
+          <a class="thumb" href={`/articles/${a.id}/`} tabindex="-1" aria-hidden="true"><ArticleCover slug={a.id} small /></a>
+          <div><a href={`/articles/${a.id}/`}>{a.data.title}</a><p>{a.data.description}</p></div>
+        </li>
+      ))}
+    </ul>
+  )}
+  {category.slug === 'technique' && (
+    <p class="cards">想看單一技巧的重點，可以翻<a href="/knowledge/">技術卡</a>：每張整理一位教練的一個重點，附原片時間點。</p>
+  )}
+  <nav class="others" aria-label="其他主題">
+    <h2>其他主題</h2>
+    <ul>{others.map((c) => <li><a href={`/topics/${c.slug}/`}>{c.name}</a></li>)}</ul>
+  </nav>
+</Base>
+
+<style>
+  .page-head h1 { margin-top: .3em; }
+  .none { color: var(--muted); }
+  .list { list-style: none; margin: 28px 0 0; padding: 0; display: grid; gap: 22px; max-width: 46em; }
+  .list li { display: grid; grid-template-columns: 168px 1fr; gap: 18px; align-items: start; }
+  .thumb { display: block; }
+  @media (max-width: 560px) { .list li { grid-template-columns: 1fr; gap: 10px; } }
+  .list li a { font-weight: 600; font-size: 1.08rem; }
+  .list li p { margin: 2px 0 0; color: var(--muted); }
+  .cards { margin-top: 28px; max-width: 46em; }
+  .others { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--rule); }
+  .others h2 { font-size: 1.2rem; margin: 0 0 10px; }
+  .others ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px 20px; }
+</style>

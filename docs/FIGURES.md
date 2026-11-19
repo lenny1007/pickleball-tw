@@ -65,6 +65,8 @@
 | `WarmupSteps` | 熱身三步（直式）：讓心跳上來、動態伸展、每一種球都熱過 | pickleball-warm-up |
 | `MiniSingles` | 迷你單打兩格：兩人都雙數打斜線、一雙一單打直線；淡色半邊出界、中線延伸過非截擊區 | pickleball-singles |
 | `RatingSystems` | 總會看 DUPR（NR、2.000–8.000）vs 協會分級辦法四級 | pickleball-tournaments |
+| `BallSpec` | 比賽用球規格：直徑、重量、洞數＋彈跳測試 | pickleball-balls |
+| `InjuryBars` | 美國急診資料三組水平長條：60 歲以上診斷、骨折原因與部位、眼傷原因 | pickleball-injuries |
 | `ArticleCover` | 每篇的封面，依 slug 關鍵字選畫面 | 全部 |
 
 畫新圖用的零件：
