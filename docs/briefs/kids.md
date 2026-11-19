@@ -33,15 +33,16 @@
 | 數字或說法（照文章原樣） | 一手來源（網址、規則條號、影片＋時間點） | 查證年月 |
 |---|---|---|
 | U12、U10、U8；民國 102、104、106 年次 9 月以後出生；15 分；雙打每隊 800 元、單打 400 元；USA Pickleball 規則；DUOPRO | 新竹市 115 年度竹塹盃競賽規程 https://www.hc.edu.tw/edub/upload/新竹市115年度竹塹盃匹克球錦標賽-競賽規程20260617174602.pdf | 2026-11 |
-| 中正盃學生組國小、國中、高中、大專；青少年組 2009 年以後出生；11 分；GPF 規則 | 115 年度全國中正盃競賽規程 https://sports.tainan.gov.tw/app_tnsport/views/web/upload_file/MES-1777528478747.pdf | 2026-11 |
-| U12、U15（港都盃） | 114 年度港都盃競賽規程 https://sports.tainan.gov.tw/app_tnsport/views/web/upload_file/MES-1743125854109.pdf | 2026-11 |
+| 中正盃學生組國小、國中、高中、大專；青少年組 2009 年以後出生；11 分；GPF 規則；只有社會組要求認證拍 | 115 年度全國中正盃競賽規程 https://sports.tainan.gov.tw/app_tnsport/views/web/upload_file/MES-1777528478747.pdf | 2026-11 |
+| U12、U15（港都盃）；所有選手須用 USAPA 或 USAPA-A 認證球拍 | 114 年度港都盃競賽規程 https://sports.tainan.gov.tw/app_tnsport/views/web/upload_file/MES-1743125854109.pdf | 2026-11 |
 | 縮短場地（非截擊區線和底線中間貼膠帶）、拿掉球網、室內球或高彈跳戶外球、多彈一次、多發一次 | USA Pickleball Rec Programs Guide 2023 p.11 https://usapickleball.org/docs/educators/usap-rec-programs-guide-march-2023.pdf | 2026-11 |
 | 8 到 18 歲（USA Pickleball 教案） | USA Pickleball Educator Program https://usapickleball.org/?p=67032 | 2026-11 |
-| 18 歲以下（青少年項目）；12 歲以下、13–14、15–16 | USA Pickleball 2026 規則書 15.A.4 https://pickleballcanada.org/wp-content/uploads/2026/03/2026-Official-Rulebook-EN.pdf ；https://usapickleball.org/juniors | 2026-11 |
+| 18 歲以下（青少年項目）；12 歲以下、13–14、15–16；GPF 也沒有起始年齡 | USA Pickleball 2026 規則書 15.A.4；GPF 2025 規則書 12.L.2 https://www.pickleball.ph/uploads/1/2/5/9/125919777/2025_gpf_rulebook_1.pdf https://pickleballcanada.org/wp-content/uploads/2026/03/2026-Official-Rulebook-EN.pdf ；https://usapickleball.org/juniors | 2026-11 |
 | 0 到 6 歲、6 到 9 歲、8 到 12 歲（約）；6–9；8–12；0–6 | Long-Term Pickleball Development（Pickleball Canada、PAO，2019） https://sportforlife.ca/wp-content/uploads/2019/10/Pickleball_LTP_APRIL.pdf | 2026-11 |
 | 43.18 公分（17 英寸）、43.2 公分；60.96 公分（24 英寸） | USA Pickleball 2026 規則書 2.E.3 | 2026-11 |
-| Onix Z Junior：36.8 公分（14.5 英寸）、19.4 公分（7.625 英寸）、176 到 193 公克、9.8 公分（3.875 英寸）；36.8；19.4；176–193 | https://www.onixpickleball.com/products/onix-zjr-pickleball-paddle-1 | 2026-11 |
+| Onix Z Junior：握把長 11.4 公分（4.5 英寸）；Franklin 握把長 12.1 公分（4.75 英寸）；Onix Z Junior：36.8 公分（14.5 英寸）、19.4 公分（7.625 英寸）、176 到 193 公克、9.8 公分（3.875 英寸）；36.8；19.4；176–193 | https://www.onixpickleball.com/products/onix-zjr-pickleball-paddle-1 | 2026-11 |
 | Franklin Youth Rockstar：38.9 公分（15.3 英寸）、19.1 公分（7.5 英寸）、204 到 215 公克；38.9；19.1；204–215 | https://franklinsports.com/youth-rockstar-pickleball-paddles | 2026-11 |
+| 176 到 215 公克（兩款兒童拍重量範圍：Onix 176–193、Franklin 204–215） | 同上兩個廠商規格頁 | 2026-11 |
 | 歸仁：國小一到六年級、5 天、每天 9:00–10:30、1,200 元一梯 | https://eventgo.tw/event/9fce90c8-7752-4add-9693-b772272bdc12 | 2026-11 |
 | 長佳盃體驗營：國小一到六年級、48 名、免費；親子賽國小二年級以上 | https://ipickleball.com.tw/events/115%E5%B9%B4%E9%95%B7%E4%BD%B3%E7%9B%83%E5%85%AC%E7%9B%8A%E5%85%92%E7%AB%A5%E5%8C%B9%E5%85%8B%E7%90%83%E9%AB%94%E9%A9%97%E7%87%9F%E8%88%87%E8%AA%BF%E7%9A%AE%E8%A6%AA%E5%AD%90%E8%B3%BD/ | 2026-11 |
 | 匹克球眼傷、目前沒有強制戴護目鏡；43%（被球打到） | AMA 整理 JAMA Ophthalmology 2025 https://www.ama-assn.org/about/publications-newsletters/look-out-pickleball-s-popularity-soars-so-do-eye-injuries | 2026-11 |

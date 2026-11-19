@@ -1,0 +1,37 @@
+---
+// 年齡分期：Pickleball Canada 與安大略省匹克球協會〈Long-Term Pickleball Development〉（2019）。
+// Active Start 0–6 歲；FUNdamentals 6–9 歲用球拍、球、改良場地玩遊戲；Learn to Train 約 8–12 歲用標準場地和器材。
+import Figure from './Figure.astro';
+const x0 = 40, per = 40; // 每歲 40 單位，0 到 12 歲
+const X = (a: number) => x0 + a * per;
+const rows = [
+  { a: 0, b: 6, name: 'Active Start', note: '', cls: 'kas-a' },
+  { a: 6, b: 9, name: 'FUNdamentals', note: '改良場地玩遊戲', cls: 'kas-b' },
+  { a: 8, b: 12, name: 'Learn to Train', note: '標準場地和器材', cls: 'kas-c' },
+];
+---
+<Figure caption="示意圖，依加拿大匹克球協會和安大略省匹克球協會的長期發展文件。6 到 9 歲用球拍、球和改良過的場地玩遊戲，還不是正式的匹克球；大約 8 到 12 歲開始用標準場地和器材。這是一份發展建議，不是比賽規定。">
+  <svg class="gear-fig kas" viewBox="0 0 560 300" role="img" aria-label="年齡分期：0 到 6 歲 Active Start；6 到 9 歲 FUNdamentals，用改良場地玩遊戲；約 8 到 12 歲 Learn to Train，用標準場地和器材">
+    {rows.map((r, i) => (
+      <g>
+        <text class="lab dark big" x={r.b === 6 ? X(r.a) : X(r.b)} y={44 + i * 70} text-anchor={r.b === 6 ? 'start' : 'end'}>{r.name}</text>
+        <rect x={X(r.a)} y={54 + i * 70} width={(r.b - r.a) * per} height="30" rx="8" class={r.cls} />
+        {r.note && <text class="lab dark" x={X(r.a) - 10} y={76 + i * 70} text-anchor="end">{r.note}</text>}
+      </g>
+    ))}
+    <line x1={X(0)} y1="258" x2={X(12)} y2="258" class="kas-axis" />
+    {[0, 2, 4, 6, 8, 10, 12].map((a) => (
+      <g>
+        <line x1={X(a)} y1="252" x2={X(a)} y2="264" class="kas-axis" />
+        <text class="lab" x={X(a)} y="288" text-anchor="middle">{a === 12 ? '12 歲' : a}</text>
+      </g>
+    ))}
+  </svg>
+</Figure>
+
+<style>
+  .kas-a { fill: var(--muted); opacity: .45; }
+  .kas-b { fill: var(--kitchen); }
+  .kas-c { fill: var(--court); }
+  .kas-axis { stroke: var(--ink); stroke-width: 3; }
+</style>

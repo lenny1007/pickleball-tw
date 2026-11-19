@@ -1,0 +1,23 @@
+---
+// 俯視：USA Pickleball 推廣手冊（Rec Programs Guide 2023）建議，給孩子玩時在非截擊區線和底線中間貼膠帶，把場地縮短。
+// 座標同 Court：1 呎 = 10 單位。非截擊區線 x=150／290，底線 x=0／440，中間點 x=75／365。
+import Court from './Court.astro';
+import Figure from './Figure.astro';
+---
+<Figure caption="俯視示意圖，依 USA Pickleball 的推廣手冊。在非截擊區線和底線中間各貼一條膠帶，孩子只打膠帶以內的範圍，球不用打那麼遠。">
+  <Court label="縮短場地：在兩邊非截擊區線和底線中間各貼一條膠帶，膠帶外面先不用" x0={-3} x1={47} y0={-6} y1={27}>
+    <rect x="0" y="0" width="75" height="200" class="kc-off" />
+    <rect x="365" y="0" width="75" height="200" class="kc-off" />
+    <line x1="75" y1="-6" x2="75" y2="206" class="kc-tape" />
+    <line x1="365" y1="-6" x2="365" y2="206" class="kc-tape" />
+    <text class="lab dark" x="75" y="-18" text-anchor="middle">膠帶</text>
+    <text class="lab dark" x="365" y="-18" text-anchor="middle">膠帶</text>
+    <text class="lab" x="220" y="108" text-anchor="middle">孩子打這一段</text>
+    <text class="lab dark" x="220" y="242" text-anchor="middle">膠帶外面先不用</text>
+  </Court>
+</Figure>
+
+<style>
+  .kc-off { fill: var(--paper); opacity: .55; }
+  .kc-tape { stroke: var(--ball); stroke-width: 6; stroke-linecap: round; }
+</style>
