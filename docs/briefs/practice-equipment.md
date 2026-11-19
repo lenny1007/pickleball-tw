@@ -2,7 +2,7 @@
 
 - slug：pickleball-practice-equipment
 - 分類：beginner
-- 狀態：寫作中
+- 狀態：查證完成，待上線
 
 ## 讀者與需求
 
@@ -32,7 +32,7 @@
 |---|---|---|
 | 86.4 公分（34 英寸）、86.4 公分：球網中間高度；牆上網高線 | USA Pickleball 2026 規則書 3.B（網高中央 34 英寸）；PPA Tour 文章 "tape a line exactly 34 inches high" https://ppatour.com/practicing-pickleball-on-your-own/ ；My Pickleball Connect "Mark a horizontal line at 34 inches" https://www.mypickleballconnect.com/guides/pickleball-garage-wall-practice/ | 2026-11 |
 | 91.4 公分：邊線處網高 | USA Pickleball 2026 規則書 3.B（邊線外緣 36 英寸） | 2026-11 |
-| 6.71 公尺：可攜式球網寬度（見 Onix 列）；約 3.7 公尺以上：牆前要留的空間＝練 drop 站的距離（本站推論） | Onix 官網；My Pickleball Connect 12 feet for drops | 2026-11 |
+| 6.71 公尺：可攜式球網寬度（見 Onix 列）；約 6.71 公尺以上：照 PPA 擺法 2.13 + 4.57 公尺到底線（本站推論）；約 3.7 公尺：練網前球＝drop 站距 | Onix 官網；My Pickleball Connect 12 feet for drops | 2026-11 |
 | 2.13 公尺：離牆貼非截擊區線 | PPA Tour 文章 "designate a line 7 feet from the wall" https://ppatour.com/practicing-pickleball-on-your-own/ | 2026-11 |
 | 4.57 公尺：非截擊區線再往後貼底線 | PPA Tour 文章 "15 feet behind your non-volley zone line" https://ppatour.com/practicing-pickleball-on-your-own/ | 2026-11 |
 | 寬 2.4 公尺、高 3 公尺：牆面最小尺寸 | My Pickleball Connect "at least 8 feet wide and 10 feet tall" https://www.mypickleballconnect.com/guides/pickleball-garage-wall-practice/ | 2026-11 |
@@ -84,5 +84,11 @@
 - 往內連：practice-drills、pickleball-dink、third-shot-drop、pickleball-volley、pickleball-serve、pickleball-balls、pickleball-court-size
 
 ## 查證
+
+- 2026-11-19 獨立查證（沒寫過這篇的 subagent，WebFetch 對一手來源）：檢查 74 條，對得上 57、對不上 7、找不到 10；0 error、17 minor，全部照建議修正。
+  - 歸屬寫多了：手冊沒說「想哪裡不好」→改「恢復體力、重新集中」；dink「球落地再打」→改 MPC 原文「回來的球在腰到膝蓋」；drop 目標補「慢到可以接著 dink」；PPA「看彈回方向」→「牆會告訴你」；pickleball.com 後的評語刪掉；OnCourt「兩三個人」→「多人」；Kevin Duff 的「教練」頭銜刪掉；看醫生那句改成本站提醒、另起一段。
+  - 規格：Lobster 擺頭補「隨機擺頭」（手冊 Horizontal Sweep）；Mini 電源改「電池款，另購變壓器可插電」；Mini 旋轉改「商品頁沒寫」；Plus Ultra 電池欄註明內建時間未標示；表前說明改成「整理自 Pickleball Central 商品頁和廠商手冊」。
+  - 推論：發球機缺點改「價格不低、機器重、要夠大的場地」；牆前空間改分網前 3.7 公尺、照球場距離發球 6.71 公尺以上；接發球擺法改「轉向左區或右區」。
+  - 圖 MachineSpots：抽球、drop 的人移到底線外中間；斜線 dink 的人移到對角半邊中間。
 
 ## 追蹤
