@@ -32,6 +32,7 @@ const siteLd = {
     {noindex && <meta name="robots" content="noindex" />}
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="alternate" type="application/rss+xml" title={SITE_NAME} href="/rss.xml" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={SITE_NAME} />
     <meta property="og:title" content={fullTitle} />
@@ -51,7 +52,7 @@ const siteLd = {
         {SITE_NAME}
       </a>
       <nav aria-label="主要分類">
-        {CATEGORIES.filter((c) => c.slug !== 'technique').map((c) => <a href={`/articles/#${c.slug}`}>{c.name}</a>)}
+        {CATEGORIES.filter((c) => c.slug !== 'technique').map((c) => <a href={`/topics/${c.slug}/`}>{c.name}</a>)}
         <a href="/knowledge/">技術卡</a>
       </nav>
     </header>
@@ -60,7 +61,7 @@ const siteLd = {
     </main>
     <footer class="site wrap">
       <span>{SITE_NAME}・pickleball-tw.com</span>
-      <span><a href="/about/">關於本站</a>・<a href="/privacy/">隱私權政策</a></span>
+      <span><a href="/about/">關於本站</a>・<a href="/privacy/">隱私權政策</a>・<a href="/rss.xml">RSS</a></span>
     </footer>
   </body>
 </html>
