@@ -1,0 +1,38 @@
+---
+// 美國急診資料的三組百分比，水平長條，100% = 220 單位，數值標在長條右側。數字來源見使用這張圖的文章文末。
+import Figure from './Figure.astro';
+const groups = [
+  { title: '60 歲以上球友，急診診斷', rows: [['拉傷、扭傷', '31.0'], ['骨折', '30.4'], ['挫傷、擦傷', '11.1']] },
+  { title: '因匹克球骨折的人', rows: [['因為跌倒', '92'], ['骨折在上肢', '66']] },
+  { title: '眼睛受傷怎麼發生', rows: [['被球打到', '43'], ['跌倒', '28'], ['被球拍打到', '12']] },
+];
+const x0 = 120, W = 220, rowH = 30;
+let y = 0;
+const laid = groups.map((g) => { const top = y; y += 34 + g.rows.length * rowH + 18; return { ...g, top }; });
+const H = y;
+---
+<Figure caption="示意圖，數字來自美國急診室的傷害監測資料，不是台灣的統計。三組來自不同研究，百分比各自計算，不能互相相加。">
+  <svg class="gear-fig inb" viewBox={`0 0 400 ${H}`} role="img" aria-label="美國急診資料：60 歲以上球友的診斷以拉傷扭傷、骨折最多；骨折九成以上因為跌倒；眼傷最常是被球打到">
+    {laid.map((g) => (
+      <g>
+        <text class="lab dark big" x="0" y={g.top + 20}>{g.title}</text>
+        {g.rows.map(([label, v], i) => {
+          const ry = g.top + 34 + i * rowH;
+          return (
+            <g>
+              <text class="lab" x={x0 - 8} y={ry + 15} text-anchor="end">{label}</text>
+              <rect x={x0} y={ry} width={W} height="20" rx="4" class="inb-bg" />
+              <rect x={x0} y={ry} width={(W * Number(v)) / 100} height="20" rx="4" class="inb-bar" />
+              <text class="lab dark" x={x0 + W + 6} y={ry + 15}>{`${v}%`}</text>
+            </g>
+          );
+        })}
+      </g>
+    ))}
+  </svg>
+</Figure>
+
+<style>
+  .inb-bg { fill: var(--apron); }
+  .inb-bar { fill: var(--court); }
+</style>
