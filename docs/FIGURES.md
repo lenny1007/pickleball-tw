@@ -69,6 +69,12 @@
 | `InjuryBars` | 美國急診資料三組水平長條：60 歲以上診斷、骨折原因與部位、眼傷原因 | pickleball-injuries |
 | `DuprThresholds` | DUPR 分數門檻（港都盃 2.5／3.5 組）與可靠度門檻（30、40） | pickleball-tournaments |
 | `VenueRegions` | 兩份清單都有列的公共場地，一格一個場地，室內／室外／風雨球場分色 | where-to-play-taiwan |
+| `WallSetup` | 側面：對牆練習的網高線 86.4 公分、目標框，截擊／dink、reset／drop 站離牆多遠 | pickleball-practice-equipment |
+| `MachineSpots` | 俯視：發球機兩種擺位（底線後中間、邊線與非截擊區線交叉角落）與你站哪裡 | pickleball-practice-equipment |
+| `WallTargets` | 牆面正面：86.4 公分網高線、dink 瞄準帶（線上 8–15 公分）、30 × 30 公分目標框（線上 15–30 公分） | pickleball-practice-equipment |
+| `NetTypes` | 兩格：回彈網側面（球彈回來、可後傾）vs 可攜式球網正面（91.4 公分 × 6.71 公尺） | pickleball-practice-equipment |
+| `MachineCompare` | 三台發球機橫條：裝球數、電池款重量、美國零售價（依比例） | pickleball-practice-equipment |
+| `GearPicker` | 一個人練球器材怎麼選：四個問題由上往下對到牆、回彈網、可攜式球網、發球機 | pickleball-practice-equipment |
 | `ArticleCover` | 每篇的封面，依 slug 關鍵字選畫面 | 全部 |
 
 畫新圖用的零件：
