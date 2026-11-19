@@ -15,6 +15,7 @@ import VideoEmbed from '../../components/VideoEmbed.astro';
 import ServeDots from '../../components/fig/ServeDots.astro';
 import RespectX from '../../components/fig/RespectX.astro';
 import StepGuide from '../../components/StepGuide.astro';
+import StepCards from '../../components/fig/StepCards.astro';
 
 新手看教學影片，常常越看越亂：這支說要壓低過網，那支說要加旋轉，每個錯誤都好像要馬上改。
 
@@ -34,6 +35,17 @@ import StepGuide from '../../components/StepGuide.astro';
 
 - **先錄影，再決定先改什麼**。拿手機錄下自己打球，對照錯誤清單，看自己犯的是哪幾個。
 - **一次只練一件事**。把所有技巧一次帶上場，教練說多半會「原地打轉」；挑你認為最需要改進的一項先練，進步會快很多。
+
+<StepCards
+  steps={[
+    { t: '錄下自己打球', s: '用手機就可以' },
+    { t: '對照錯誤清單', s: '看自己犯的是哪幾個' },
+    { t: '一次只改一個', s: '最需要改的那一項先練' },
+  ]}
+  footer="少失誤，比打出好球重要"
+  caption="示意圖：教練的出發點是先減少失誤，再照這三步挑要練的東西。"
+  label="先錄下自己打球、對照錯誤清單、一次只改一個；少失誤比打出好球重要"
+/>
 
 ## 第一步：別再白白送分
 
