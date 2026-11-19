@@ -14,6 +14,8 @@ takeaways:
 import PaddleBudget from '../../components/fig/PaddleBudget.astro';
 import ApprovedListName from '../../components/fig/ApprovedListName.astro';
 import PriceCheck from '../../components/PriceCheck.astro';
+import StepCards from '../../components/fig/StepCards.astro';
+import PickCards from '../../components/fig/PickCards.astro';
 
 第一支球拍不用買貴的。**預算最少，買迪卡儂 Kuikma Open（NT$799）；想要碳纖維拍面，買 Kuikma React（NT$1,249）；想要大品牌，買 JOOLA Journey（NT$2,199）。**
 
@@ -44,6 +46,17 @@ import PriceCheck from '../../components/PriceCheck.astro';
 1. **在 USA Pickleball 的核可球拍清單上**。上了清單，代表通過 USA Pickleball 的器材測試，可以用在它認可的賽事；其他賽事以主辦單位規定為準。
 2. **從官方或授權通路買得到**。迪卡儂自己賣的 Kuikma 是迪卡儂的品牌；JOOLA 官網的授權通路頁，把 JOOLA 台灣官網列為台灣的授權通路。
 3. **規格寫清楚**。重量、厚度、拍面材質都查得到。
+
+<StepCards
+  marker="check"
+  steps={[
+    { t: '在核可球拍清單上', s: '通過 USA Pickleball 測試' },
+    { t: '官方或授權通路買得到', s: '迪卡儂、JOOLA 台灣官網' },
+    { t: '規格寫清楚', s: '重量、厚度、拍面材質' },
+  ]}
+  caption="示意圖：這篇挑拍子只看這三個條件。我們沒有實際試打，所以不排名。"
+  label="挑拍三條件：在核可球拍清單上、官方或授權通路買得到、規格寫清楚"
+/>
 
 Selkirk、Franklin、HEAD、Onix、Paddletek 這些美國品牌，我們找不到台灣的官網或總代理，所以先不列。
 
@@ -76,6 +89,16 @@ JOOLA 有 Ben Johns、Anna Bright 等職業選手的簽名款。台灣官網賣�
 - **適合誰**：想要大品牌，或喜歡出球快、有力。
 
 要注意的是厚度：**10 mm 是薄芯**，出球快、反應直接，但比較不好控制。如果你照[怎麼挑](/articles/how-to-choose-paddle/)那篇建議先從 16 mm 開始，兩支 Kuikma 比較符合。
+
+<PickCards
+  items={[
+    { q: '還不確定會不會一直打？', a: 'Kuikma Open', s: 'NT$799' },
+    { q: '網前小球常控制不住？', a: 'Kuikma React', s: '碳纖維拍面' },
+    { q: '想要大品牌、出球快？', a: 'JOOLA Journey', s: '10 mm 薄芯' },
+  ]}
+  caption="示意圖：三支入門拍各適合誰。想照「先從 16 mm 開始」的建議，選兩支 Kuikma。"
+  label="還不確定會不會一直打選 Kuikma Open；網前小球常控制不住選 Kuikma React；想要大品牌、出球快選 JOOLA Journey"
+/>
 
 JOOLA 台灣官網也有六、七千元的職業選手簽名款，那是給進階球員的，第一支拍子不需要。
 
