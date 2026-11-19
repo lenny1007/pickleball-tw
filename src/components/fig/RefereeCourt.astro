@@ -1,0 +1,28 @@
+---
+// 俯視：比賽裡誰判什麼（USA Pickleball 2026 規則書）。座標同 Court：1 呎 = 10 單位。
+// 裁判站在網柱旁，判發球腳誤、短發球、非截擊區失誤、報分；司線站在負責的線旁，判那條線和腳誤。
+import Court from './Court.astro';
+import Figure from './Figure.astro';
+---
+<Figure caption="俯視示意圖，依 USA Pickleball 規則書。有裁判的比賽，裁判負責每球開始前報分，判發球腳誤、短發球和非截擊區（廚房區）失誤；有司線時，司線判自己負責的那條線。沒有司線時，球員判自己這一邊的線。">
+  <Court label="比賽裡誰判什麼：裁判在網柱旁，判腳誤、短發球、非截擊區失誤並報分；司線在邊線和底線旁，判負責的那條線" x0={-5} x1={49} y0={-8} y1={30}>
+    <rect x="204" y="-58" width="34" height="34" rx="7" class="rc-ref" />
+    <text x="221" y="-34" text-anchor="middle" class="rc-id">裁</text>
+    {[[110, 224], [330, 224], [-30, 60], [470, 140]].map(([x, y]) => (
+      <g>
+        <circle cx={x} cy={y} r="18" class="rc-lj" />
+        <text x={x} y={y + 7} text-anchor="middle" class="rc-lj-t">線</text>
+      </g>
+    ))}
+    <text class="lab dark" x="250" y="-40">裁判：報分、腳誤</text>
+    <text class="lab dark" x="250" y="-16">短發球、非截擊區</text>
+    <text class="lab dark" x="220" y="268" text-anchor="middle">司線：判負責的那條線</text>
+  </Court>
+</Figure>
+
+<style>
+  .rc-ref { fill: var(--ink); }
+  .rc-id { fill: var(--paper); font: 700 18px var(--display); }
+  .rc-lj { fill: var(--paper); stroke: var(--ink); stroke-width: 3; }
+  .rc-lj-t { fill: var(--ink); font: 18px var(--display); }
+</style>

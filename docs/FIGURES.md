@@ -77,6 +77,8 @@
 | `NetTypes` | 兩格：回彈網側面（球彈回來、可後傾）vs 可攜式球網正面（91.4 公分 × 6.71 公尺） | pickleball-practice-equipment |
 | `MachineCompare` | 三台發球機橫條：裝球數、電池款重量、美國零售價（依比例） | pickleball-practice-equipment |
 | `GearPicker` | 一個人練球器材怎麼選：四個問題由上往下對到牆、回彈網、可攜式球網、發球機 | pickleball-practice-equipment |
+| `RefereeCourt` | 比賽裡誰判什麼：裁判在網柱旁判腳誤、短發球、非截擊區並報分，司線判負責的那條線 | pickleball-referee |
+| `RefereeTimeline` | 裁判證時間軸：效期 4 年、每年進修、第 2 年起可報乙級 | pickleball-referee |
 | `ArticleCover` | 每篇的封面，依 slug 關鍵字選畫面 | 全部 |
 
 畫新圖用的零件：
