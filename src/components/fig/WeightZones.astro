@@ -1,0 +1,38 @@
+---
+// 球拍重量三區（Paddletek 的分法）：輕拍 207 克以下、中等 207–235 克、重拍 235 克以上；底下的範圍是 Wilson 說的大多數球拍 198–255 克。軸依比例。
+import Figure from './Figure.astro';
+const g0 = 198, g1 = 255, x0 = 40, x1 = 480;
+const x = (g: number) => x0 + ((g - g0) / (g1 - g0)) * (x1 - x0);
+const zones = [
+  { a: 198, b: 207, t: '輕', cls: 'l' },
+  { a: 207, b: 235, t: '中等', cls: 'm' },
+  { a: 235, b: 255, t: '重', cls: 'h' },
+];
+---
+<Figure caption="示意圖，軸依比例。大多數球拍在約 198 到 255 克之間；照 Paddletek 的分法，207 到 235 克是中等重量，最不容易選錯。太輕、太重都可能讓手臂負擔變大。">
+  <svg class="gear-fig wz" viewBox="0 0 520 200" role="img" aria-label="球拍重量：輕拍 207 克以下，中等 207 到 235 克，重拍 235 克以上；大多數球拍在 198 到 255 克之間">
+    {zones.map((z) => (
+      <g>
+        <rect x={x(z.a)} y="40" width={x(z.b) - x(z.a)} height="56" class={`wz-${z.cls}`} />
+        <text class="lab dark big" x={(x(z.a) + x(z.b)) / 2} y="76" text-anchor="middle">{z.t}</text>
+      </g>
+    ))}
+    <rect x={x0} y="40" width={x1 - x0} height="56" rx="4" class="wz-frame" />
+    {[198, 207, 235, 255].map((g) => (
+      <g>
+        <line x1={x(g)} y1="96" x2={x(g)} y2="108" class="wz-tick" />
+        <text class="lab" x={x(g)} y="132" text-anchor={g === 198 ? 'start' : g === 255 ? 'end' : 'middle'}>{g}</text>
+      </g>
+    ))}
+    <text class="lab" x={x1} y="168" text-anchor="end">單位：克</text>
+    <text class="lab dark" x={(x(207) + x(235)) / 2} y="168" text-anchor="middle">最不容易選錯</text>
+  </svg>
+</Figure>
+
+<style>
+  .wz-l { fill: var(--kitchen); fill-opacity: .45; }
+  .wz-m { fill: var(--ok); fill-opacity: .35; }
+  .wz-h { fill: var(--court); fill-opacity: .45; }
+  .wz-frame { fill: none; stroke: var(--rule); stroke-width: 2; }
+  .wz-tick { stroke: var(--muted); stroke-width: 2; }
+</style>

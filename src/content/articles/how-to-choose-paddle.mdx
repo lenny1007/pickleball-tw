@@ -14,6 +14,10 @@ takeaways:
 
 import CoreThickness from '../../components/fig/CoreThickness.astro';
 import PaddleShapes from '../../components/fig/PaddleShapes.astro';
+import TwoCards from '../../components/fig/TwoCards.astro';
+import MaterialSpectrum from '../../components/fig/MaterialSpectrum.astro';
+import WeightZones from '../../components/fig/WeightZones.astro';
+import StepCards from '../../components/fig/StepCards.astro';
 
 匹克球拍的規格表上，術語對新手不太友善。這篇把挑拍時最常看到的四個規格講清楚：**拍面材質、拍面厚度、重量、拍型**。
 
@@ -25,6 +29,15 @@ USA Pickleball 規則對球拍尺寸的限制是：長加寬合計不能超過 6
 
 所以市面上的厚度、重量差異，全是為了打起來的手感，不是規則逼出來的。
 
+<TwoCards
+  cards={[
+    { head: '規則有限制', rows: [['長度', '不超過 43.18 公分'], ['長＋寬', '合計不超過 60.96 公分']] },
+    { head: '規則沒限制', rows: [['厚度', '看手感自己選'], ['重量', '看手感自己選']] },
+  ]}
+  caption="示意圖：球拍尺寸有上限，厚度和重量規則不管。材質和比賽用拍的認證另有規定。"
+  label="規則限制球拍長度不超過 43.18 公分、長加寬合計不超過 60.96 公分；厚度和重量沒有限制"
+/>
+
 ## 拍面材質：玻璃纖維 vs 碳纖維
 
 這是規格表上最顯眼的一項。
@@ -35,6 +48,8 @@ USA Pickleball 規則對球拍尺寸的限制是：長加寬合計不能超過 6
 | 控球 | 力量、控制、旋轉較平均 | 較好控制、手感穩定 |
 | 甜區 | 較小、容錯較低 | — |
 | 適合 | 想要把球打深、打有力 | 網前小球多、想要穩 |
+
+<MaterialSpectrum />
 
 幾家廠商的說法：
 
@@ -68,6 +83,8 @@ Wilson 說大多數球拍在 7–9 盎司之間，換算約 198–255 克。Padd
 | 中等 | 7.3–8.3 | 207–235 克 |
 | 重拍 | 8.3 以上 | 235 克以上 |
 
+<WeightZones />
+
 - **輕拍**：揮得快、網前反應快。但 Paddletek 提醒，輕拍吸收的衝擊較少，手臂反而會感覺到，太輕還得更用力揮。
 - **重拍**：比較穩、底線抽球有份量。Paddletek 也說太重的球拍會造成手臂負擔。
 
@@ -93,6 +110,18 @@ Wilson 說大多數球拍在 7–9 盎司之間，換算約 198–255 克。Padd
 - 厚度：16 mm 左右
 - 重量：中等（約 207–235 克）
 - 材質：想要力量選玻璃纖維，想要控制、容錯選碳纖維
+
+<StepCards
+  marker="check"
+  steps={[
+    { t: '拍型', s: '寬拍或標準拍型' },
+    { t: '厚度', s: '16 mm 左右' },
+    { t: '重量', s: '中等，約 207–235 克' },
+    { t: '材質', s: '要力量選玻纖，要控制選碳纖' },
+  ]}
+  caption="示意圖：不知道從哪裡開始，就照這個組合找第一支球拍。"
+  label="第一支球拍：寬拍或標準拍型、厚度 16 mm 左右、中等重量約 207 到 235 克、要力量選玻璃纖維要控制選碳纖維"
+/>
 
 有機會的話，**先借球友的球拍打打看**。同樣規格的球拍，握把粗細和手感還是會差很多。握把長度和粗細怎麼選見[匹克球拍握把怎麼選](/articles/paddle-grip/)。
 

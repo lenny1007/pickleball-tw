@@ -1,0 +1,40 @@
+---
+// 通用：分組水平長條（寬 560），每組各自以最大值為滿格，長條依比例。名稱 ≤ 9 字，數值標籤 ≤ 7 字。hl 的長條畫成綠色，用來標「符合某條件」，圖說要講綠色代表什麼。
+// 數字只放文章內文已經寫、已經查證過的。
+import Figure from './Figure.astro';
+interface Row { name: string; value: number; label: string; hl?: boolean }
+interface Group { title?: string; rows: Row[]; max?: number }
+interface Props { groups: Group[]; caption: string; label: string }
+const { groups, caption, label } = Astro.props;
+const W = 210, rowH = 36;
+let y = 8;
+const laid = groups.map((g) => {
+  const top = y;
+  y += (g.title ? 40 : 6) + g.rows.length * rowH + 16;
+  return { ...g, top, max: g.max ?? Math.max(...g.rows.map((r) => r.value)) };
+});
+const H = y;
+---
+<Figure caption={caption}>
+  <svg class="gear-fig bcm" viewBox={`0 0 560 ${H}`} role="img" aria-label={label}>
+    {laid.map((g) => (
+      <g transform={`translate(0,${g.top})`}>
+        {g.title && <text class="lab dark big" x="24" y="28">{g.title}</text>}
+        {g.rows.map((r, i) => (
+          <g transform={`translate(0,${(g.title ? 40 : 6) + i * rowH})`}>
+            <text class="lab" x="24" y="19">{r.name}</text>
+            <rect x="196" y="2" width={W} height="24" rx="4" class="bcm-bg" />
+            <rect x="196" y="2" width={Math.max(4, (r.value / g.max) * W)} height="24" rx="4" class:list={['bcm-bar', { hl: r.hl }]} />
+            <text class="lab dark" x={414} y="20">{r.label}</text>
+          </g>
+        ))}
+      </g>
+    ))}
+  </svg>
+</Figure>
+
+<style>
+  .bcm-bg { fill: var(--paper); }
+  .bcm-bar { fill: var(--kitchen); }
+  .bcm-bar.hl { fill: var(--ok); }
+</style>

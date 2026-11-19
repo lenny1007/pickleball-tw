@@ -67,6 +67,8 @@
 | `RatingSystems` | 總會看 DUPR（NR、2.000–8.000）vs 協會分級辦法四級 | pickleball-tournaments |
 | `BallSpec` | 比賽用球規格：直徑、重量、洞數＋彈跳測試 | pickleball-balls |
 | `InjuryBars` | 美國急診資料三組水平長條：60 歲以上診斷、骨折原因與部位、眼傷原因 | pickleball-injuries |
+| `MaterialSpectrum` | 拍面材質光譜：玻璃纖維偏力量、碳纖維偏控制 | how-to-choose-paddle |
+| `WeightZones` | 球拍重量三區（輕、中等 207–235 克、重），軸依比例 | how-to-choose-paddle |
 | `ArticleCover` | 每篇的封面，依 slug 關鍵字選畫面 | 全部 |
 
 畫新圖用的零件：
