@@ -1,0 +1,37 @@
+---
+// 俯視：發球機擺位（Pickleball Tutor 訓練手冊）。座標同 Court：1 呎 = 10 單位。
+// A：底線後中間朝正前方，練截擊（對面非截擊區線）或抽球、drop（對面底線）。
+// B：邊線與非截擊區線交叉的角落，朝對角送斜線 dink。
+import Court from './Court.astro';
+import Figure from './Figure.astro';
+import Player from './Player.astro';
+import Path from './Path.astro';
+const machines = [
+  { x: -32, y: 100, id: 'A' },
+  { x: 150, y: -22, id: 'B' },
+];
+---
+<Figure caption="俯視示意圖。A：大部分練習把發球機放在底線後面的中間、朝正前方，你站在對面非截擊區線練截擊，或退到對面底線後面練抽球、drop。B：練斜線 dink 時，把機器放在邊線和非截擊區線交叉的角落，朝對角送球。">
+  <Court label="發球機擺位俯視圖：A 放底線後中間朝正前方，練截擊或底線抽球、drop；B 放邊線與非截擊區線交叉的角落，朝對角送斜線 dink" x0={-6} x1={48} y0={-7} y1={27}>
+    <Path x1={-14} y1={100} x2={286} y2={100} bend={0} />
+    <Path x1={-14} y1={108} x2={436} y2={114} bend={-12} />
+    <Path x1={156} y1={-4} x2={290} y2={144} bend={14} />
+    {machines.map((mc) => (
+      <g>
+        <rect x={mc.x - 20} y={mc.y - 16} width="40" height="32" rx="6" class="ms-box" />
+        <text x={mc.x} y={mc.y + 8} text-anchor="middle" class="ms-id">{mc.id}</text>
+      </g>
+    ))}
+    <Player x={300} y={100} label="你" />
+    <Player x={452} y={110} label="你" />
+    <Player x={304} y={152} label="你" />
+    <text class="lab dark" x="310" y="74">截擊</text>
+    <text class="lab dark" x="440" y="146" text-anchor="end">抽球、drop</text>
+    <text class="lab dark" x="304" y="196" text-anchor="middle">斜線 dink</text>
+  </Court>
+</Figure>
+
+<style>
+  .ms-box { fill: var(--ink); }
+  .ms-id { fill: var(--paper); font-family: var(--display); font-size: 22px; font-weight: 700; }
+</style>
