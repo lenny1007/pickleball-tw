@@ -67,6 +67,8 @@
 | `RatingSystems` | 總會看 DUPR（NR、2.000–8.000）vs 協會分級辦法四級 | pickleball-tournaments |
 | `BallSpec` | 比賽用球規格：直徑、重量、洞數＋彈跳測試 | pickleball-balls |
 | `InjuryBars` | 美國急診資料三組水平長條：60 歲以上診斷、骨折原因與部位、眼傷原因 | pickleball-injuries |
+| `WallSetup` | 側面：對牆練習的網高線 86.4 公分、目標框，截擊／dink、reset／drop 站離牆多遠 | pickleball-practice-equipment |
+| `MachineSpots` | 俯視：發球機兩種擺位（底線後中間、邊線與非截擊區線交叉角落）與你站哪裡 | pickleball-practice-equipment |
 | `ArticleCover` | 每篇的封面，依 slug 關鍵字選畫面 | 全部 |
 
 畫新圖用的零件：
