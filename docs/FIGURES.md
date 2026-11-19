@@ -79,6 +79,9 @@
 | `GearPicker` | 一個人練球器材怎麼選：四個問題由上往下對到牆、回彈網、可攜式球網、發球機 | pickleball-practice-equipment |
 | `RefereeCourt` | 比賽裡誰判什麼：裁判在網柱旁判腳誤、短發球、非截擊區並報分，司線判負責的那條線 | pickleball-referee |
 | `RefereeTimeline` | 裁判證時間軸：效期 4 年、每年進修、第 2 年起可報乙級 | pickleball-referee |
+| `KidsAgeStages` | 年齡分期：0–6 Active Start、6–9 改良場地玩遊戲、約 8–12 標準場地（加拿大長期發展文件） | pickleball-for-kids |
+| `KidsCourt` | 給孩子的縮短場地：非截擊區線和底線中間貼膠帶 | pickleball-for-kids |
+| `KidsPaddles` | 兩支兒童拍依比例的長寬重，加規則長度上限 | pickleball-for-kids |
 | `ArticleCover` | 每篇的封面，依 slug 關鍵字選畫面 | 全部 |
 
 畫新圖用的零件：

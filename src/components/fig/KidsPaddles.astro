@@ -1,0 +1,36 @@
+---
+// 依比例畫兩支兒童拍和規則上限：Onix Z Junior 36.8 × 19.4 公分、Franklin Youth Rockstar 38.9 × 19.1 公分（廠商規格頁）；
+// USA Pickleball 規則書球拍長度上限 43.18 公分。1 公分 = 5 單位，拍子直立，底部對齊 y=260。
+import Figure from './Figure.astro';
+const s = 5, base = 260;
+const paddles = [
+  { name: 'Onix Z Junior', L: 36.8, W: 19.4, grip: 11.4, x: 70, w: '176–193 公克' },
+  { name: 'Franklin Youth', L: 38.9, W: 19.1, grip: 12.1, x: 250, w: '204–215 公克' },
+];
+const maxL = 43.18;
+---
+<Figure caption="依比例的示意圖。兩支兒童拍的長、寬、重量取自廠商規格頁；握把長度也照廠商標示畫。虛線是 USA Pickleball 規則允許的球拍最長長度 43.2 公分。Onix 的頁面寫明這支拍子不符合 USA Pickleball 的比賽規定；Franklin 的頁面則寫它的兒童拍符合 USA Pickleball 標準。">
+  <svg class="gear-fig kp" viewBox="0 0 480 330" role="img" aria-label="兩支兒童拍依比例：Onix Z Junior 長 36.8、寬 19.4 公分，176 到 193 公克；Franklin Youth Rockstar 長 38.9、寬 19.1 公分，204 到 215 公克；規則允許最長 43.2 公分">
+    <line x1="30" y1={base - maxL * s} x2="450" y2={base - maxL * s} class="kp-max" />
+    <text class="lab" x="450" y={base - maxL * s - 8} text-anchor="end">規則上限 43.2 公分</text>
+    {paddles.map((p) => {
+      const top = base - p.L * s, headH = (p.L - p.grip) * s, cx = p.x + (p.W * s) / 2;
+      return (
+        <g>
+          <rect x={p.x} y={top} width={p.W * s} height={headH} rx="26" class="kp-face" />
+          <rect x={cx - 12} y={top + headH - 4} width="24" height={p.grip * s + 4} rx="6" class="kp-grip" />
+          <text class="lab dark" x={cx} y={top + headH / 2 - 6} text-anchor="middle">{p.L} 公分</text>
+          <text class="lab dark" x={cx} y={top + headH / 2 + 18} text-anchor="middle">寬 {p.W} 公分</text>
+          <text class="lab dark" x={cx} y={base + 26} text-anchor="middle">{p.name}</text>
+          <text class="lab" x={cx} y={base + 50} text-anchor="middle">{p.w}</text>
+        </g>
+      );
+    })}
+  </svg>
+</Figure>
+
+<style>
+  .kp-face { fill: var(--kitchen); stroke: var(--ink); stroke-width: 3; }
+  .kp-grip { fill: var(--ink); }
+  .kp-max { stroke: var(--muted); stroke-width: 2; stroke-dasharray: 6 5; }
+</style>

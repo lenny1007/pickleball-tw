@@ -4,6 +4,7 @@ interface Props { slug: string; small?: boolean }
 const { slug, small = false } = Astro.props;
 const kind =
   slug.includes('referee') ? 'ref'
+  : slug.includes('for-kids') ? 'kids'
   : slug.includes('tournaments') ? 'tour'
   : slug.includes('-balls') ? 'balls'
   : slug.includes('injuries') ? 'injury'
@@ -40,6 +41,20 @@ const kind =
 ---
 <svg class:list={['cover', { small }]} viewBox="0 0 640 280" aria-hidden="true" focusable="false">
   <rect width="640" height="280" fill="var(--apron)" />
+  {kind === 'kids' && (
+    <g>
+      <rect x="40" y="150" width="560" height="110" fill="var(--court)" />
+      <rect x="250" y="150" width="140" height="110" fill="var(--kitchen)" />
+      <rect x="40" y="150" width="105" height="110" fill="var(--paper)" opacity=".5" />
+      <rect x="495" y="150" width="105" height="110" fill="var(--paper)" opacity=".5" />
+      <line x1="145" y1="144" x2="145" y2="266" stroke="var(--ball)" stroke-width="8" stroke-linecap="round" />
+      <line x1="495" y1="144" x2="495" y2="266" stroke="var(--ball)" stroke-width="8" stroke-linecap="round" />
+      <line x1="320" y1="140" x2="320" y2="270" stroke="var(--ink)" stroke-width="6" stroke-linecap="round" />
+      <g transform="translate(170 26) rotate(-12)"><rect width="74" height="96" rx="30" fill="var(--card)" stroke="var(--ink)" stroke-width="5" /><rect x="29" y="92" width="16" height="44" rx="5" fill="var(--ink)" /></g>
+      <g transform="translate(400 40) rotate(10)"><rect width="56" height="70" rx="24" fill="var(--ball)" stroke="var(--ink)" stroke-width="5" /><rect x="21" y="66" width="14" height="34" rx="5" fill="var(--ink)" /></g>
+      <circle cx="320" cy="96" r="15" class="ball-dot" />
+    </g>
+  )}
   {kind === 'ref' && (
     <g>
       <rect x="0" y="222" width="640" height="58" fill="var(--court)" />
