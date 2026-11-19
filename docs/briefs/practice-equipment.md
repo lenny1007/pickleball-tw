@@ -65,7 +65,7 @@
 - Lobster 使用手冊的延長保固價格：手冊內前後不一致，不寫。
 - Onix 球網附的練習網尺寸：官網寫「34' H x 10' W」，單位看起來打錯，不寫。
 - 「練習板」「練習拍」指的是什麼：搜尋建議有，但查不到一致的定義，不寫。
-- PrimeTime Pickleball 的對牆截擊三級練習（知識卡 ptp-hma6btbjghc-*）：卡片沒有 source_quote，還沒對過字幕，這次不用。
+- PrimeTime Pickleball 的對牆截擊三級練習的細節（知識卡 ptp-hma6btbjghc-*，卡片沒有 source_quote、還沒對過字幕）：內文不引用教練說法，只用 VideoEmbed 放影片片段給讀者看示範（05:23 對牆截擊、10:42 對牆 reset，時間點取自知識卡）。
 
 ## 大綱
 
