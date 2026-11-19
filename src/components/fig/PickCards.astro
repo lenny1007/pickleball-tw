@@ -5,7 +5,9 @@ interface Item { q: string; a: string; s?: string }
 interface Props { items: Item[]; caption: string; label: string }
 const { items, caption, label } = Astro.props;
 const H = 12 + items.length * 102 - 6;
-const pillW = (a: string) => Math.max(110, a.length * 19 + 34);
+// 中文字約 19 單位寬、英數約 10。
+const textW = (t: string) => [...t].reduce((w, c) => w + (/[\x00-\x7f]/.test(c) ? 10 : 19), 0);
+const pillW = (a: string) => Math.max(110, textW(a) + 34);
 ---
 <Figure caption={caption}>
   <svg class="gear-fig pkc" viewBox={`0 0 400 ${H}`} role="img" aria-label={label}>
