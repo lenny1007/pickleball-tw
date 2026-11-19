@@ -16,6 +16,7 @@ takeaways:
 import VideoEmbed from '../../components/VideoEmbed.astro';
 import SingleServe from '../../components/fig/SingleServe.astro';
 import MiniSingles from '../../components/fig/MiniSingles.astro';
+import StepCards from '../../components/fig/StepCards.astro';
 
 匹克球大部分人打雙打，但場上人數不夠、或想多練腳步時，就會打單打。單打的規則跟雙打幾乎一樣，真正不同的只有三件事：**發球站哪一邊、怎麼報分、什麼時候換發**。打法上的差別反而更大，因為你這一邊的場地只有你一個人要守。
 
@@ -67,6 +68,17 @@ import MiniSingles from '../../components/fig/MiniSingles.astro';
 **換場地。** 只打一局的比賽，或多局制的決勝局，打到一半要換邊：11 分的局在任一方先到 6 分時換，15 分的局先到 8 分，21 分的局先到 11 分。換完由同一個人繼續發。
 
 **暫停。** 11 分和 15 分的局，每位單打選手各有兩次一般暫停；21 分的局有三次。
+
+<StepCards
+  marker="dot"
+  steps={[
+    { t: '11 分的局', s: '先到 6 分換邊，暫停各 2 次' },
+    { t: '15 分的局', s: '先到 8 分換邊，暫停各 2 次' },
+    { t: '21 分的局', s: '先到 11 分換邊，暫停各 3 次' },
+  ]}
+  caption="示意圖：單打的換邊時機和一般暫停次數。換邊只在只打一局的比賽，或多局制的決勝局。"
+  label="11 分的局先到 6 分換邊、暫停各 2 次；15 分的局先到 8 分換邊、暫停各 2 次；21 分的局先到 11 分換邊、暫停各 3 次"
+/>
 
 **每球得分制。** 2026 年版規則另有每球得分制（rally scoring），單打雙打都可以用，目前仍是暫行規則。差別是每一球都計分，贏的人得 1 分，不管是誰發球。2026 年版的新變化見[匹克球 2026 規則改了什麼](/articles/pickleball-rules-2026/)。
 
