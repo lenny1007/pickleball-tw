@@ -1,0 +1,44 @@
+---
+// 通用：直式步驟卡或檢查清單（寬 400，手機也好讀）。marker="num" 顯示 1、2、3 並畫往下的箭頭；"check" 顯示勾勾、不畫箭頭。
+// 每張卡：標題 ≤ 14 字（lab big）、說明 ≤ 17 字（lab）。footer 是最下面一條結論，≤ 18 字。
+import Figure from './Figure.astro';
+interface Step { t: string; s?: string; n?: string }
+interface Props { steps: Step[]; caption: string; label: string; marker?: 'num' | 'check'; footer?: string }
+const { steps, caption, label, marker = 'num', footer } = Astro.props;
+const gap = 86, cardH = 70;
+const listH = 12 + steps.length * gap - (gap - cardH);
+const H = listH + (footer ? 54 : 12);
+---
+<Figure caption={caption}>
+  <svg class="gear-fig stc" viewBox={`0 0 400 ${H}`} role="img" aria-label={label}>
+    {steps.map((st, i) => (
+      <g transform={`translate(20,${12 + i * gap})`}>
+        <rect width="360" height={cardH} rx="14" class="stc-card" />
+        <circle cx="38" cy="35" r="18" class:list={['stc-num', { chk: marker === 'check' }]} />
+        {marker === 'check'
+          ? <path d="M29 35 l6 7 l12 -14" class="stc-tick" />
+          : <text x="38" y="42" text-anchor="middle" class="stc-n">{st.n ?? i + 1}</text>}
+        <text class="lab dark big" x="72" y={st.s ? 30 : 42}>{st.t}</text>
+        {st.s && <text class="lab" x="72" y="56">{st.s}</text>}
+      </g>
+    ))}
+    {marker === 'num' && steps.slice(1).map((_, i) => <path d={`M58 ${84 + i * gap} l0 12 m-6 -6 l6 6 l6 -6`} class="stc-arrow" />)}
+    {footer && (
+      <g>
+        <rect x="20" y={listH + 8} width="360" height="34" rx="17" class="stc-bar" />
+        <text class="lab dark" x="200" y={listH + 31} text-anchor="middle">{footer}</text>
+      </g>
+    )}
+  </svg>
+</Figure>
+
+<style>
+  .stc-card { fill: var(--paper); stroke: var(--rule); stroke-width: 2; }
+  .stc-num { fill: var(--court); }
+  .stc-num.chk { fill: var(--ok); }
+  .stc-n { fill: var(--on-court); font: 18px var(--display); }
+  .stc-tick { fill: none; stroke: var(--marker-light); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  .stc-arrow { fill: none; stroke: var(--muted); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+  .stc-bar { fill: var(--ball); }
+  .stc .stc-bar + text { fill: var(--ball-ink); }
+</style>
