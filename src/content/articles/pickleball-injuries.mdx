@@ -15,6 +15,7 @@ takeaways:
 
 import VideoEmbed from '../../components/VideoEmbed.astro';
 import InjuryBars from '../../components/fig/InjuryBars.astro';
+import StepCards from '../../components/fig/StepCards.astro';
 
 匹克球場地小、球速慢，很多人以為不太會受傷。可是隨著打的人變多，美國急診室看到的匹克球傷害也跟著增加，而且多數發生在 60 歲以上的球友身上。
 
@@ -34,7 +35,7 @@ import InjuryBars from '../../components/fig/InjuryBars.astro';
 
 研究也提醒，60 歲以上球友在球場上送急診的案例裡，有一成多不是運動傷害，而是心臟血管問題或昏厥。年紀大的球友，身體有狀況時更要留意。
 
-<InjuryBars />
+<InjuryBars only="diag" />
 
 ## 跌倒：最需要防的一件事
 
@@ -43,6 +44,8 @@ import InjuryBars from '../../components/fig/InjuryBars.astro';
 - 骨折的人裡，**92% 是跌倒造成的**。
 - 三分之二傷在上肢，最常見的是前臂的橈骨。
 - 87% 是 60 歲以上，女性約佔七成。
+
+<InjuryBars only="fracture" />
 
 研究的結論是，匹克球骨折大多發生在 60 歲以上的女性、在跌倒之後傷到上肢。換句話說，對年紀較大的球友，防跌倒是預防骨折的重點。
 
@@ -59,6 +62,8 @@ import InjuryBars from '../../components/fig/InjuryBars.astro';
 | 被球打到 | 43% |
 | 跌倒 | 28% |
 | 被球拍打到 | 12% |
+
+<InjuryBars only="eye" />
 
 最常見的是眼睛周圍的撕裂傷和角膜擦傷；少數是眼眶骨折、視網膜剝離這類嚴重的傷。
 
@@ -91,6 +96,17 @@ YouTube 教學頻道 **Better Pickleball** 的教練 CJ Johnson 常提醒的是�
 他們的另一項建議是**知道自己的極限**：打太猛或打太久，可能讓有關節炎的膝蓋腫起來，可以考慮縮短每次打球的時間。
 
 他們另外建議找教練學正確動作。揮拍和移動的方式不對，本身就可能造成受傷。
+
+<StepCards
+  marker="check"
+  steps={[
+    { t: '知道自己的極限', s: '不要打太猛、打太久' },
+    { t: '膝蓋會腫就縮短時間', s: '有關節炎的人特別留意' },
+    { t: '找教練學正確動作', s: '揮拍、移動不對也會受傷' },
+  ]}
+  caption="示意圖，整理美國骨科醫學會對過度使用傷害的三項建議。"
+  label="預防過度使用：知道自己的極限、膝蓋會腫就縮短打球時間、找教練學正確動作"
+/>
 
 ## 上場前後的檢查清單
 

@@ -14,6 +14,9 @@ takeaways:
 ---
 
 import BallSpec from '../../components/fig/BallSpec.astro';
+import TwoCards from '../../components/fig/TwoCards.astro';
+import StepCards from '../../components/fig/StepCards.astro';
+import BarCompare from '../../components/fig/BarCompare.astro';
 
 匹克球的球看起來都差不多，都是有洞的塑膠球，但比賽用的球有一套規格，還要列在 USA Pickleball 的核可清單上。平常打球不用太講究，**要比賽，或想買一盒自己練，才需要分清楚**。
 
@@ -58,6 +61,15 @@ USA Pickleball 的器材標準手冊，對比賽用球的大小、重量、彈�
 | 中華民國匹克球總會 2026 年的臺北公開賽、港都盃、中正盃 | DUOPRO | 有。簡章沒寫型號，清單上 DUOPRO 名下只有 1.0 一款 |
 | 2026 臺中國際匹克球公開賽 | JOOLA HC-40 | 有 |
 
+<TwoCards
+  cards={[
+    { head: '總會的比賽', rows: [['規則', 'GPF 規則'], ['指定用球', 'DUOPRO'], ['例如', '臺北公開賽、港都盃、中正盃']] },
+    { head: '臺中國際公開賽', rows: [['規則', 'USA Pickleball 規則'], ['指定用球', 'JOOLA HC-40']] },
+  ]}
+  caption="示意圖，以 2026 年的簡章為例。不同主辦單位指定的球不一樣，報名前看簡章，再買同一款來練。"
+  label="總會的比賽採 GPF 規則、指定 DUOPRO；臺中國際公開賽採 USA Pickleball 規則、指定 JOOLA HC-40"
+/>
+
 兩邊指定的球都在核可清單上，但不同主辦單位用的球不一樣。報名前先看清楚，**用同一款球練**，上場才不會覺得球突然變快、變彈。
 
 比賽怎麼報名、等級怎麼分，之後會另外寫一篇整理。
@@ -78,6 +90,17 @@ USA Pickleball 的[核可球清單](https://equipment.usapickleball.org/ball-lis
 - **商品頁寫「USAPA 認證」不算數**。以清單查得到為準。台灣賣場的商品名常寫「美國 USAPA 認證」，清單上卻不一定找得到對應的型號。
 - **賣場上的品牌名，不一定是清單上的名字**。迪卡儂台灣賣場的球掛 KUIKMA 品牌，清單上沒有 KUIKMA，但有幾款球登記在 DECATHLON 名下。台灣的商品頁沒寫對應哪一款，所以沒辦法確認是同一顆。查不到時，可以換母公司名稱或型號再搜一次。
 
+<StepCards
+  steps={[
+    { t: '到核可清單搜品牌', s: '包裝寫「認證」不算數' },
+    { t: '查不到，換個名字', s: '試母公司名稱或型號' },
+    { t: '對型號和顏色', s: '同一款不同顏色常分開列' },
+  ]}
+  footer="以清單查得到為準"
+  caption="示意圖：買球前自己查一次核可清單。賣場上的品牌名可能跟清單不一樣，例如迪卡儂的 KUIKMA 在清單上登記成 DECATHLON。"
+  label="查核可清單三步：搜品牌、查不到換母公司名稱或型號、對型號和顏色；以清單查得到為準"
+/>
+
 球拍也是一樣的查法，例子見[匹克球拍推薦](/articles/paddle-recommendations/)最後一段。
 
 ## 台灣買得到哪些球
@@ -94,6 +117,20 @@ USA Pickleball 的[核可球清單](https://equipment.usapickleball.org/ball-lis
 | KASACA 比賽級 40 孔室外球 | 迪卡儂合作廠商出貨，3 顆 210 元起 | 查不到，商品頁也沒寫核可 |
 | JOOLA Primo | JOOLA 台灣官網，4 顆一組，價格以官網或官方蝦皮商城為準 | 有 |
 | Selkirk Q1 Quiet Ball | Selkirk 亞洲官網跨境寄送，3 顆起，網站換算台幣，可能另有關稅 | 有，標室內外兩用 |
+
+<BarCompare
+  groups={[{ title: '換算一顆多少錢', rows: [
+    { name: 'INFMARC TW-40', value: 60, label: '約 60 元', hl: true },
+    { name: 'KUIKMA 戶外', value: 62, label: '約 62 元' },
+    { name: 'ARTENGO 室外', value: 69, label: '69 元' },
+    { name: 'KASACA 40 孔', value: 70, label: '約 70 元起' },
+    { name: 'BLAZESTAR', value: 83, label: '約 83 元' },
+    { name: 'Franklin X-40', value: 119, label: '119 元', hl: true },
+    { name: 'Selkirk Q1', value: 130, label: '約 130 元起', hl: true },
+  ] }]}
+  caption="長條依比例，用上表的價格換算，有大包裝的用大包裝算；綠色是核可清單查得到的。Selkirk 是跨境寄送，另計關稅。價格會變動，以商品頁為準。"
+  label="換算一顆的價格：INFMARC 約 60 元、KUIKMA 約 62 元、ARTENGO 69 元、KASACA 約 70 元起、BLAZESTAR 約 83 元、Franklin X-40 119 元、Selkirk Q1 約 130 元起"
+/>
 
 幾個觀察：
 
@@ -113,6 +150,17 @@ USA Pickleball 的[核可球清單](https://equipment.usapickleball.org/ball-lis
 球只是變軟、還沒裂，這一分照算，不重打；要換球也要所有球員同意。
 
 有裁判的比賽，球員可以請裁判判斷：裁判認定球裂了就換球，認定影響了結果就用新球重打。
+
+<StepCards
+  steps={[
+    { t: '先把這一分打完', s: '不能打到一半停下來' },
+    { t: '大家都同意就換球', s: '有裁判時由裁判判斷' },
+    { t: '影響結果才重打', s: '沒有共識，這一分照算' },
+  ]}
+  footer="只是變軟、沒裂：照算，不重打"
+  caption="示意圖：球在一分當中裂開，照這個順序處理。"
+  label="球裂了：先把這一分打完，大家同意就換球，大家同意影響了結果才重打，否則照算；只是變軟沒裂照算"
+/>
 
 平常打球，看到球有裂痕就換掉。裂開的球彈跳會變得不規則，打起來也不準。
 

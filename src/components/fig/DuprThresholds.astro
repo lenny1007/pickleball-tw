@@ -1,0 +1,42 @@
+---
+// 2026 台灣比賽的 DUPR 門檻例子：上半是分數（2.000 起，最高 8.000），兩條長條是港都盃 2.5 組、3.5 組能報的範圍（各自是上限以下）；下半是可靠度（0–100%），標出港都盃 3.5 組 30、中正盃社會組 40。
+// 數字都來自 pickleball-tournaments 內文（各場競賽規程）。
+import Figure from './Figure.astro';
+const x0 = 40, x1 = 500;
+// 分數軸只畫 2.0 到 4.5 讓兩個門檻看得清楚，右端標「往上到 8.000」。
+const x0x = 130;
+const sx = (v: number) => x0x + ((v - 2) / 2.5) * (x1 - x0x);
+const rx = (v: number) => x0 + (v / 100) * (x1 - x0);
+---
+<Figure caption="示意圖，以 2026 年港都盃、中正盃的規程為例。分數要在門檻以下才能報那一組，可靠度則要到門檻以上；可靠度要靠多打、近期打才會升，所以要提早累積。各場比賽門檻不同，以簡章為準。">
+  <svg class="gear-fig dpt" viewBox="0 0 540 330" role="img" aria-label="DUPR 門檻例子：港都盃 2.5 組要 2.49 以下、3.5 組要 3.49 以下；可靠度港都盃 3.5 組至少 30、中正盃社會組至少 40">
+    <text class="lab dark big" x={x0} y="32">DUPR 分數</text>
+    {[['2.5 組', 2.49, 'dpt-a'], ['3.5 組', 3.49, 'dpt-b']].map(([name, v, cls], i) => (
+      <g transform={`translate(0,${50 + i * 40})`}>
+        <rect x={x0x} y="0" width={x1 - x0x} height="26" rx="6" class="dpt-rest" />
+        <rect x={x0x} y="0" width={sx(v as number) - x0x} height="26" rx="6" class={cls as string} />
+        <text class="lab dark" x={x0} y="20">{name}</text>
+        <text class="lab dark" x={sx(v as number) + 8} y="20">{`${v} 以下`}</text>
+      </g>
+    ))}
+    <text class="lab" x={x0x} y="150">2.000</text>
+    <text class="lab" x={x1} y="150" text-anchor="end">往上到 8.000</text>
+
+    <text class="lab dark big" x={x0} y="200">可靠度</text>
+    <rect x={x0} y="222" width={x1 - x0} height="26" rx="6" class="dpt-rest" />
+    <line x1={rx(40)} y1="214" x2={rx(40)} y2="256" class="dpt-mark" />
+    <line x1={rx(30)} y1="214" x2={rx(30)} y2="256" class="dpt-mark" />
+    <text class="lab" x={x0} y="278">0</text>
+    <text class="lab dark" x={rx(30)} y="278" text-anchor="end">30</text>
+    <text class="lab dark" x={rx(40)} y="278">40</text>
+    <text class="lab" x={x1} y="278" text-anchor="end">100%</text>
+    <text class="lab" x={x0} y="312">港都盃 3.5 組至少 30，中正盃社會組至少 40</text>
+  </svg>
+</Figure>
+
+<style>
+  .dpt-a { fill: var(--kitchen); }
+  .dpt-b { fill: var(--court); }
+  .dpt-rest { fill: var(--paper); stroke: var(--rule); stroke-width: 2; }
+  .dpt-mark { stroke: var(--ink); stroke-width: 3; }
+</style>

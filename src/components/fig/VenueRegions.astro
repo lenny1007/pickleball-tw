@@ -1,0 +1,36 @@
+---
+// 兩份清單（總會、協會）都有列的公共場地，北到南，一格一個場地：室內、室外、風雨球場分色。數量照 where-to-play-taiwan 內文的表。
+import Figure from './Figure.astro';
+type K = 'in' | 'out' | 'roof';
+const rows: { name: string; v: K[] }[] = [
+  { name: '台北市', v: ['out', 'out', 'in', 'in', 'in'] },
+  { name: '新北市', v: ['in', 'in', 'in', 'in', 'in', 'out'] },
+  { name: '台中市', v: ['in', 'out'] },
+  { name: '彰化、南投', v: ['out', 'out', 'roof'] },
+  { name: '台南、高雄', v: ['out', 'in', 'out'] },
+];
+const legend: [K, string][] = [['in', '室內'], ['out', '室外'], ['roof', '風雨球場']];
+const rowH = 50, top = 20;
+---
+<Figure caption="示意圖，一格一個場地，由北到南。新北的室外場是總會另外列的新北大都會公園。室內場多半是運動中心，匹克球不一定天天開，出發前先查時段。">
+  <svg class="gear-fig vrg" viewBox={`0 0 520 ${top + rows.length * rowH + 50}`} role="img" aria-label="兩份清單都有列的公共場地：台北市 3 室內 2 室外；新北市 5 室內 1 室外；台中市 1 室內 1 室外；彰化南投 2 室外 1 風雨球場；台南高雄 1 室內 2 室外">
+    {rows.map((r, i) => (
+      <g transform={`translate(0,${top + i * rowH})`}>
+        <text class="lab dark big" x="24" y="27">{r.name}</text>
+        {r.v.map((k, j) => <rect x={190 + j * 50} y="4" width="40" height="32" rx="6" class={`vrg-${k}`} />)}
+      </g>
+    ))}
+    {legend.map(([k, t], i) => (
+      <g transform={`translate(${24 + i * 150},${top + rows.length * rowH + 12})`}>
+        <rect width="26" height="22" rx="5" class={`vrg-${k}`} />
+        <text class="lab" x="36" y="18">{t}</text>
+      </g>
+    ))}
+  </svg>
+</Figure>
+
+<style>
+  .vrg-in { fill: var(--court); }
+  .vrg-out { fill: var(--apron); }
+  .vrg-roof { fill: var(--paper); stroke: var(--kitchen); stroke-width: 3; }
+</style>

@@ -1,0 +1,37 @@
+---
+// 通用：上下兩張對照卡（寬 480；手機上左右並排太小，所以上下排）。每張卡一個標題（≤ 14 字）和幾列「項目：內容」（項目 ≤ 5 字、內容 ≤ 15 字）。
+import Figure from './Figure.astro';
+interface Card { head: string; rows: [string, string][]; tone?: 'a' | 'b' }
+interface Props { cards: Card[]; caption: string; label: string }
+const { cards, caption, label } = Astro.props;
+const rowH = 34;
+let y = 12;
+const laid = cards.map((c) => { const top = y; const h = 56 + c.rows.length * rowH + 8; y += h + 16; return { ...c, top, h }; });
+const H = y - 4;
+---
+<Figure caption={caption}>
+  <svg class="gear-fig twc" viewBox={`0 0 480 ${H}`} role="img" aria-label={label}>
+    {laid.map((c, ci) => (
+      <g transform={`translate(16,${c.top})`}>
+        <rect width="448" height={c.h} rx="14" class="twc-card" />
+        <rect width="448" height="46" rx="14" class:list={['twc-head', c.tone ?? (ci === 0 ? 'a' : 'b')]} />
+        <rect y="30" width="448" height="16" class:list={['twc-head', c.tone ?? (ci === 0 ? 'a' : 'b')]} />
+        <text class="twc-h" x="20" y="31">{c.head}</text>
+        {c.rows.map(([k, v], i) => (
+          <g>
+            <text class="lab" x="20" y={78 + i * rowH}>{k}</text>
+            <text class="lab dark" x="124" y={78 + i * rowH}>{v}</text>
+          </g>
+        ))}
+      </g>
+    ))}
+  </svg>
+</Figure>
+
+<style>
+  .twc-card { fill: var(--paper); stroke: var(--rule); stroke-width: 2; }
+  .twc-head.a { fill: var(--court); }
+  .twc-head.b { fill: var(--apron); }
+  .twc-h { fill: var(--on-court); font: 18px var(--display); }
+  @media (max-width: 560px) { .twc-h { font-size: 21px; } }
+</style>
