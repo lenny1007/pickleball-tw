@@ -1,0 +1,30 @@
+---
+// 通用：「什麼情況選什麼」卡片（寬 400）。每張卡上面一個情況（q ≤ 17 字），下面一顆答案膠囊（a ≤ 7 字）＋補充（s ≤ 9 字）。
+import Figure from './Figure.astro';
+interface Item { q: string; a: string; s?: string }
+interface Props { items: Item[]; caption: string; label: string }
+const { items, caption, label } = Astro.props;
+const H = 12 + items.length * 102 - 6;
+// 中文字約 19 單位寬、英數約 10。
+const textW = (t: string) => [...t].reduce((w, c) => w + (/[\x00-\x7f]/.test(c) ? 10 : 19), 0);
+const pillW = (a: string) => Math.max(110, textW(a) + 34);
+---
+<Figure caption={caption}>
+  <svg class="gear-fig pkc" viewBox={`0 0 400 ${H}`} role="img" aria-label={label}>
+    {items.map((it, i) => (
+      <g transform={`translate(16,${12 + i * 102})`}>
+        <rect width="368" height="84" rx="14" class="pkc-card" />
+        <text class="lab dark" x="18" y="32">{it.q}</text>
+        <rect x="18" y="44" width={pillW(it.a)} height="30" rx="15" class="pkc-pill" />
+        <text class="pkc-a" x={18 + pillW(it.a) / 2} y="65" text-anchor="middle">{it.a}</text>
+        {it.s && <text class="lab" x={32 + pillW(it.a)} y="66">{it.s}</text>}
+      </g>
+    ))}
+  </svg>
+</Figure>
+
+<style>
+  .pkc-card { fill: var(--paper); stroke: var(--rule); stroke-width: 2; }
+  .pkc-pill { fill: var(--court); }
+  .pkc-a { fill: var(--on-court); font: 17px var(--display); }
+</style>

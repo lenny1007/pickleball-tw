@@ -16,6 +16,7 @@ takeaways:
 import HistoryTimeline from '../../components/fig/HistoryTimeline.astro';
 import PointFlow from '../../components/fig/PointFlow.astro';
 import CourtCompare from '../../components/fig/CourtCompare.astro';
+import BarCompare from '../../components/fig/BarCompare.astro';
 
 **匹克球**（pickleball）是一種隔網運動：兩邊各一或兩人，用實心的球拍把有洞的塑膠球打過一張低網。球場跟羽球雙打場差不多大，大部分人打雙打。1965 年在美國發明，這幾年是美國成長最快的運動。
 
@@ -57,6 +58,15 @@ import CourtCompare from '../../components/fig/CourtCompare.astro';
 
 網子一開始放在羽球的高度，約 152 公分，很快就降到 91 公分左右，接近現在的網高。之後 Barney McCallum 加入，三個人一起把規則定下來，球拍也從車庫工作間裡臨時做的，慢慢改成比較耐用、好看的版本。
 
+<BarCompare
+  groups={[{ title: '網子高度', rows: [
+    { name: '一開始（羽球高度）', value: 152, label: '約 152 公分' },
+    { name: '很快改成', value: 91, label: '約 91 公分', hl: true },
+  ] }]}
+  caption="長條依比例。網子一開始架在羽球的高度，很快就降到接近現在的網高。"
+  label="網子高度：一開始約 152 公分，很快改成約 91 公分"
+/>
+
 之後的發展：
 
 - **1967 年**：第一座永久的匹克球場蓋在鄰居的後院。
@@ -82,6 +92,15 @@ import CourtCompare from '../../components/fig/CourtCompare.astro';
 ## 為什麼這麼紅
 
 **人數**：美國運動用品產業協會（SFIA）2026 年的參與調查，匹克球連續五年是美國成長最快的運動。2025 年約有 2,430 萬人打過，比前一年多 22.8%；2020 年大約是 420 萬人，五年多了五倍以上。
+
+<BarCompare
+  groups={[{ title: '美國打過匹克球的人數', rows: [
+    { name: '2020 年', value: 420, label: '約 420 萬' },
+    { name: '2025 年', value: 2430, label: '約 2,430 萬', hl: true },
+  ] }]}
+  caption="長條依比例，數字來自美國運動用品產業協會（SFIA）的參與調查。五年多了五倍以上。"
+  label="美國打過匹克球的人數：2020 年約 420 萬，2025 年約 2,430 萬"
+/>
 
 **好學、好玩、好交朋友**。YouTube 頻道 Better Pickleball 的教練認為，這項運動爆紅是因為好學、好玩，打起來又有運動量和策略；他覺得最棒的是社交性，就算沒有固定搭檔也能去學。
 

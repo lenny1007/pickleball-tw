@@ -17,6 +17,9 @@ import ScorePositions from '../../components/fig/ScorePositions.astro';
 import ScoreCall from '../../components/fig/ScoreCall.astro';
 import SingleServe from '../../components/fig/SingleServe.astro';
 import SideOutLoop from '../../components/fig/SideOutLoop.astro';
+import StepCards from '../../components/fig/StepCards.astro';
+import TwoCards from '../../components/fig/TwoCards.astro';
+import RallyVsSideOut from '../../components/fig/RallyVsSideOut.astro';
 
 匹克球的計分只要記住三件事：
 
@@ -30,6 +33,17 @@ import SideOutLoop from '../../components/fig/SideOutLoop.astro';
 
 一般一局打到 **11 分**，而且要**領先至少 2 分**才算贏。打到 10 比 10 時，要打到 12 比 10、13 比 11 這樣拉開 2 分才結束。
 
+<StepCards
+  steps={[
+    { t: '10 比 10', s: '還沒結束' },
+    { t: '11 比 10', s: '只領先 1 分，繼續打' },
+    { t: '12 比 10', s: '領先 2 分，這局結束' },
+  ]}
+  footer="一般 11 分一局，要贏 2 分"
+  caption="示意圖：打到 10 比 10 之後，要拉開 2 分才結束。"
+  label="10 比 10 還沒結束，11 比 10 只領先 1 分繼續打，12 比 10 領先 2 分這局結束"
+/>
+
 比賽也可以打 15 分或 21 分一局，一樣要贏 2 分（團體賽允許只贏 1 分）。臨打幾乎都是 11 分一局。
 
 ## 只有發球方能得分
@@ -38,6 +52,15 @@ import SideOutLoop from '../../components/fig/SideOutLoop.astro';
 
 - 單打：發球方輸一球，發球權就換到對方，這叫 side out（換發）。
 - 雙打：發球方要兩個人都輸過一球，才換對方發。每局開頭例外，下面會講。
+
+<TwoCards
+  cards={[
+    { head: '發球方贏這一球', rows: [['結果', '得 1 分，繼續發']] },
+    { head: '接發方贏這一球', rows: [['結果', '不加分，換發球'], ['單打', '直接換對方發'], ['雙打', '兩個人都輸過才換']] },
+  ]}
+  caption="示意圖：傳統計分只有發球方能得分。接發方贏球只能把發球權搶回來，每局開頭的雙打例外。"
+  label="發球方贏球得 1 分繼續發；接發方贏球不加分、換發球，單打直接換對方發，雙打兩個人都輸過才換"
+/>
 
 所以匹克球常常打很久分數才動一下。接發方要先把發球權搶回來，才有機會得分。
 
@@ -124,6 +147,8 @@ USA Pickleball 另有每球得分制（rally scoring），在 2026 年版仍然�
 - **每一球都計分**：贏的一方得 1 分，不管是誰發球。
 - **報兩個數字**：發球方分數、接發方分數，雙打也不報發球員號碼。
 - **雙打每次只有一個人發**：發球方輸一球就換對方發。換到發球權時，一樣由依分數站在右邊的人發。
+
+<RallyVsSideOut />
 
 用每球得分制的比賽，一局可以打 11、15 或 21 分。一般臨打還是用傳統計分，要用哪一種，開打前先講好。
 
