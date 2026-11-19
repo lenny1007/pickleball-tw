@@ -69,6 +69,12 @@
 | `InjuryBars` | 美國急診資料三組水平長條：60 歲以上診斷、骨折原因與部位、眼傷原因 | pickleball-injuries |
 | `MaterialSpectrum` | 拍面材質光譜：玻璃纖維偏力量、碳纖維偏控制 | how-to-choose-paddle |
 | `WeightZones` | 球拍重量三區（輕、中等 207–235 克、重），軸依比例 | how-to-choose-paddle |
+| `WallSetup` | 側面：對牆練習的網高線 86.4 公分、目標框，截擊／dink、reset／drop 站離牆多遠 | pickleball-practice-equipment |
+| `MachineSpots` | 俯視：發球機兩種擺位（底線後中間、邊線與非截擊區線交叉角落）與你站哪裡 | pickleball-practice-equipment |
+| `WallTargets` | 牆面正面：86.4 公分網高線、dink 瞄準帶（線上 8–15 公分）、30 × 30 公分目標框（線上 15–30 公分） | pickleball-practice-equipment |
+| `NetTypes` | 兩格：回彈網側面（球彈回來、可後傾）vs 可攜式球網正面（91.4 公分 × 6.71 公尺） | pickleball-practice-equipment |
+| `MachineCompare` | 三台發球機橫條：裝球數、電池款重量、美國零售價（依比例） | pickleball-practice-equipment |
+| `GearPicker` | 一個人練球器材怎麼選：四個問題由上往下對到牆、回彈網、可攜式球網、發球機 | pickleball-practice-equipment |
 | `ArticleCover` | 每篇的封面，依 slug 關鍵字選畫面 | 全部 |
 
 畫新圖用的零件：
