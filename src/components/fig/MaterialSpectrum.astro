@@ -1,0 +1,36 @@
+---
+// 拍面材質的取捨：一條「力量 ↔ 控制」光譜，玻璃纖維偏力量、碳纖維偏控制。內容照 how-to-choose-paddle 內文（Selkirk、Paddletek、Wilson 的說法）。
+import Figure from './Figure.astro';
+---
+<Figure caption="示意圖，不是量測值。廠商的說法大致一致：玻璃纖維出球有力但甜區較小、容錯較低；碳纖維力量較少，但比較好控制、手感穩。">
+  <svg class="gear-fig msp" viewBox="0 0 520 250" role="img" aria-label="拍面材質光譜：玻璃纖維偏力量、甜區較小；碳纖維偏控制、手感穩">
+    <text class="lab dark big" x="40" y="42">力量</text>
+    <text class="lab dark big" x="480" y="42" text-anchor="end">控制</text>
+    <rect x="40" y="60" width="440" height="16" rx="8" class="msp-bar" />
+    <path d="M40 68 l14 -10 v20 z M480 68 l-14 -10 v20 z" class="msp-tip" />
+    <g transform="translate(130,104)">
+      <circle r="12" class="msp-dot a" cy="-36" />
+      <rect x="-100" y="0" width="200" height="40" rx="20" class="msp-pill a" />
+      <text class="msp-t" x="0" y="27" text-anchor="middle">玻璃纖維</text>
+      <text class="lab" x="0" y="76" text-anchor="middle">出球有力</text>
+      <text class="lab" x="0" y="104" text-anchor="middle">甜區較小</text>
+    </g>
+    <g transform="translate(390,104)">
+      <circle r="12" class="msp-dot b" cy="-36" />
+      <rect x="-100" y="0" width="200" height="40" rx="20" class="msp-pill b" />
+      <text class="msp-t" x="0" y="27" text-anchor="middle">碳纖維</text>
+      <text class="lab" x="0" y="76" text-anchor="middle">好控制</text>
+      <text class="lab" x="0" y="104" text-anchor="middle">手感穩</text>
+    </g>
+  </svg>
+</Figure>
+
+<style>
+  .msp-bar { fill: var(--paper); stroke: var(--rule); stroke-width: 2; }
+  .msp-tip { fill: var(--muted); }
+  .msp-dot { fill: var(--ball); stroke: var(--ball-ink); stroke-opacity: .35; stroke-width: 1.5; }
+  .msp-pill.a { fill: var(--kitchen); }
+  .msp-pill.b { fill: var(--court); }
+  .msp-t { fill: var(--on-court); font: 19px var(--display); }
+  @media (max-width: 560px) { .msp-t { font-size: 22px; } }
+</style>

@@ -67,6 +67,8 @@
 | `RatingSystems` | 總會看 DUPR（NR、2.000–8.000）vs 協會分級辦法四級 | pickleball-tournaments |
 | `BallSpec` | 比賽用球規格：直徑、重量、洞數＋彈跳測試 | pickleball-balls |
 | `InjuryBars` | 美國急診資料三組水平長條：60 歲以上診斷、骨折原因與部位、眼傷原因 | pickleball-injuries |
+| `MaterialSpectrum` | 拍面材質光譜：玻璃纖維偏力量、碳纖維偏控制 | how-to-choose-paddle |
+| `WeightZones` | 球拍重量三區（輕、中等 207–235 克、重），軸依比例 | how-to-choose-paddle |
 | `DuprThresholds` | DUPR 分數門檻（港都盃 2.5／3.5 組）與可靠度門檻（30、40） | pickleball-tournaments |
 | `VenueRegions` | 兩份清單都有列的公共場地，一格一個場地，室內／室外／風雨球場分色 | where-to-play-taiwan |
 | `WallSetup` | 側面：對牆練習的網高線 86.4 公分、目標框，截擊／dink、reset／drop 站離牆多遠 | pickleball-practice-equipment |

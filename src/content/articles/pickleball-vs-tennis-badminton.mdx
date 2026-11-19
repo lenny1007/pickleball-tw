@@ -16,6 +16,9 @@ takeaways:
 import CourtCompare from '../../components/fig/CourtCompare.astro';
 import NetCompare from '../../components/fig/NetCompare.astro';
 import VideoEmbed from '../../components/VideoEmbed.astro';
+import StepCards from '../../components/fig/StepCards.astro';
+import TwoBounce from '../../components/fig/TwoBounce.astro';
+import BarCompare from '../../components/fig/BarCompare.astro';
 
 匹克球的場地像羽球、計分和發球卻跟網球、羽球都不一樣。先看一張表：
 
@@ -63,6 +66,17 @@ import VideoEmbed from '../../components/VideoEmbed.astro';
 
 **匹克球**：有兩種發法。截擊式發球要由下往上揮、拍頭不高過手腕、擊球點不高過腰；落地發球讓球自然落下、彈起來再打。發到對角，要越過非截擊區，**只有一次機會**；擦網後落進發球區就繼續打，不重發。
 
+<StepCards
+  marker="dot"
+  steps={[
+    { t: '網球', s: '高手低手都可以，有第二發' },
+    { t: '羽球', s: '1.15 公尺以下發，一次機會' },
+    { t: '匹克球', s: '低手往上或落地發，一次機會' },
+  ]}
+  caption="示意圖：三種運動的發球。匹克球不能高手發球，失誤也沒有第二發。"
+  label="發球：網球高手低手都可以、有第二發；羽球 1.15 公尺以下發、一次機會；匹克球低手往上或落地發、一次機會"
+/>
+
 從網球轉來的人最要改的是**不能高手發球**：截擊式發球要低手往上揮，不想管這些條件就用落地發球。
 
 ## 計分：三種算法
@@ -73,11 +87,24 @@ import VideoEmbed from '../../components/VideoEmbed.astro';
 
 **匹克球**：一般打到 11 分、要領先 2 分，**只有發球方贏球才得分**，接發球方贏球只換發球。雙打報三個數字，第三個是第一或第二位發球員。規則書也有暫行的每球得分制，臨打時先問清楚。
 
+<StepCards
+  marker="dot"
+  steps={[
+    { t: '網球', s: '15、30、40，先贏 6 局一盤' },
+    { t: '羽球', s: '每球得分，現行一局 21 分' },
+    { t: '匹克球', s: '發球方才得分，打到 11 分' },
+  ]}
+  caption="示意圖：三種運動的計分。匹克球一般只有發球方贏球才得分，要贏 2 分。"
+  label="計分：網球 15、30、40，先贏 6 局一盤；羽球每球得分，現行一局 21 分；匹克球只有發球方得分，打到 11 分"
+/>
+
 計分是網球、羽球球友最容易搞混的地方，逐球例子見[匹克球計分規則](/articles/pickleball-scoring/)。
 
 ## 兩條匹克球獨有的規則
 
 **雙彈跳**：發球要等球落地彈起才能接，接發球也要等球落地彈起才能打，第三拍開始才能截擊。網球只規定接發球要等球落地；羽球則是球落地這一分就結束了。
+
+<TwoBounce />
 
 **非截擊區**：網子兩側各 2.13 公尺的區域，人站在裡面（含踩線）不能截擊。網球、羽球都沒有這條。習慣上網截擊的人，在匹克球裡要先確認腳在區外。
 
@@ -88,6 +115,16 @@ import VideoEmbed from '../../components/VideoEmbed.astro';
 **匹克球拍**沒有線，是一整片硬的拍面。規則限制長加寬合計不超過 60.96 公分（24 英寸）、長度不超過 43.18 公分（17 英寸），厚度和重量沒有限制；拍面不能有橡膠、砂紙這類增加旋轉的材質。
 
 **網球拍**有線，最長 73.7 公分、最寬 31.7 公分。**羽球拍**最長 68 公分、最寬 23 公分。
+
+<BarCompare
+  groups={[{ title: '球拍最長', rows: [
+    { name: '匹克球拍', value: 43.18, label: '43.18 公分' },
+    { name: '羽球拍', value: 68, label: '68 公分' },
+    { name: '網球拍', value: 73.7, label: '73.7 公分' },
+  ] }]}
+  caption="長條依比例，都是規則允許的最長長度。匹克球拍比羽球拍、網球拍短很多，拍面沒有線。"
+  label="球拍最長：匹克球拍 43.18 公分、羽球拍 68 公分、網球拍 73.7 公分"
+/>
 
 **球**也完全不同：匹克球是有洞的硬塑膠球，室內外都可以用核可的球，習慣上室內用洞比較大的球、戶外用洞比較小的球；網球是毛氈球；羽球有 16 根羽毛。
 
