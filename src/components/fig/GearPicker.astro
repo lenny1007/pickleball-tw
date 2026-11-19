@@ -1,0 +1,29 @@
+---
+// 怎麼選：先看空間，再看預算。四個問題由上往下，各自對到一種器材（本站整理）。
+import Figure from './Figure.astro';
+const qs = [
+  { q: '家裡或社區有平整的牆？', a: '對牆練', s: '只要膠帶' },
+  { q: '沒牆，但有空地或車庫？', a: '回彈網', s: '能搬的牆' },
+  { q: '想對真的網高練發球？', a: '可攜式球網', s: '有人時也能打' },
+  { q: '常一個人去球場？', a: '發球機', s: '來球像比賽' },
+];
+---
+<Figure caption="本站整理的選法：從上往下問，先看手邊有什麼空間，再看預算。發球機價格高、機器重，也要夠大的場地，放在最後考慮。">
+  <svg class="gear-fig gp" viewBox="0 0 400 420" role="img" aria-label="怎麼選：有平整的牆就對牆練；沒牆有空地用回彈網；想對真的網高練發球買可攜式球網；常一個人去球場再考慮發球機">
+    {qs.map((it, i) => (
+      <g transform={`translate(16,${12 + i * 102})`}>
+        <rect width="368" height="84" rx="14" class="gp-card" />
+        <text class="lab dark" x="18" y="32">{it.q}</text>
+        <rect x="18" y="44" width="150" height="30" rx="15" class="gp-pill" />
+        <text class="gp-a" x="93" y="65" text-anchor="middle">{it.a}</text>
+        <text class="lab" x="182" y="66">{it.s}</text>
+      </g>
+    ))}
+  </svg>
+</Figure>
+
+<style>
+  .gp-card { fill: var(--paper); stroke: var(--rule); stroke-width: 2; }
+  .gp-pill { fill: var(--court); }
+  .gp-a { fill: var(--on-court); font: 17px var(--display); }
+</style>
