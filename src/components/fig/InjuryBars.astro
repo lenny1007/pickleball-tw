@@ -1,18 +1,32 @@
 ---
 // 美國急診資料的三組百分比，水平長條，100% = 220 單位，數值標在長條右側。數字來源見使用這張圖的文章文末。
+// only="diag|fracture|eye" 只畫其中一組，放在講那件事的段落（站主 2026-11-19：約每段一張圖）。不給就三組一起畫。
 import Figure from './Figure.astro';
-const groups = [
-  { title: '60 歲以上球友，急診診斷', rows: [['拉傷、扭傷', '31.0'], ['骨折', '30.4'], ['挫傷、擦傷', '11.1']] },
-  { title: '因匹克球骨折的人', rows: [['因為跌倒', '92'], ['骨折在上肢', '66']] },
-  { title: '眼睛受傷怎麼發生', rows: [['被球打到', '43'], ['跌倒', '28'], ['被球拍打到', '12']] },
+interface Props { only?: 'diag' | 'fracture' | 'eye' }
+const { only } = Astro.props;
+const all = [
+  { key: 'diag', title: '60 歲以上球友，急診診斷', rows: [['拉傷、扭傷', '31.0'], ['骨折', '30.4'], ['挫傷、擦傷', '11.1']] },
+  { key: 'fracture', title: '因匹克球骨折的人', rows: [['因為跌倒', '92'], ['骨折在上肢', '66']] },
+  { key: 'eye', title: '眼睛受傷怎麼發生', rows: [['被球打到', '43'], ['跌倒', '28'], ['被球拍打到', '12']] },
 ];
+const groups = only ? all.filter((g) => g.key === only) : all;
+const captions: Record<string, string> = {
+  diag: '示意圖，數字來自美國 2010 到 2019 年急診室的資料，不是台灣的統計。60 歲以上球友送急診，拉傷扭傷和骨折差不多多。',
+  fracture: '示意圖，數字來自美國 2002 到 2022 年急診室的骨折資料。九成以上的骨折是跌倒造成的，三分之二傷在上肢。',
+  eye: '示意圖，數字來自美國急診室的眼睛傷害資料。最常見的是被球打到，其次是跌倒。',
+};
+const aria: Record<string, string> = {
+  diag: '60 歲以上球友的急診診斷：拉傷扭傷 31.0%、骨折 30.4%、挫傷擦傷 11.1%',
+  fracture: '因匹克球骨折的人：92% 因為跌倒、66% 骨折在上肢',
+  eye: '眼睛受傷怎麼發生：被球打到 43%、跌倒 28%、被球拍打到 12%',
+};
 const x0 = 120, W = 220, rowH = 30;
 let y = 0;
 const laid = groups.map((g) => { const top = y; y += 34 + g.rows.length * rowH + 18; return { ...g, top }; });
 const H = y;
 ---
-<Figure caption="示意圖，數字來自美國急診室的傷害監測資料，不是台灣的統計。三組來自不同研究，百分比各自計算，不能互相相加。">
-  <svg class="gear-fig inb" viewBox={`0 0 400 ${H}`} role="img" aria-label="美國急診資料：60 歲以上球友的診斷以拉傷扭傷、骨折最多；骨折九成以上因為跌倒；眼傷最常是被球打到">
+<Figure caption={only ? captions[only] : "示意圖，數字來自美國急診室的傷害監測資料，不是台灣的統計。三組來自不同研究，百分比各自計算，不能互相相加。"}>
+  <svg class="gear-fig inb" viewBox={`-16 -12 432 ${H + 12}`} role="img" aria-label={only ? aria[only] : "美國急診資料：60 歲以上球友的診斷以拉傷扭傷、骨折最多；骨折九成以上因為跌倒；眼傷最常是被球打到"}>
     {laid.map((g) => (
       <g>
         <text class="lab dark big" x="0" y={g.top + 20}>{g.title}</text>
