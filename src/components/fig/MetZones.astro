@@ -1,0 +1,42 @@
+---
+// 強度刻度：MET 0–9。分級依 2024 Adult Compendium：輕度 1.6–2.9、中等 3.0–5.9、費力 ≥6.0。
+// 匹克球實測：Smith、Buchanan、Dalleck 2018（ACE 委託），15 人平均 65 歲，60 分鐘平均 4.1 MET，範圍 1.5–7.7。
+import Figure from './Figure.astro';
+const x0 = 30, per = 55; // 每 1 MET 55 單位
+const X = (m: number) => x0 + m * per;
+---
+<Figure caption="示意圖。強度分級依 2024 年版成人身體活動代謝當量表：3.0 到 5.9 MET 算中等強度，6.0 以上算費力。匹克球的數字來自一份 15 位中老年球友的實測研究：打 60 分鐘平均 4.1 MET，過程中最低 1.5、最高 7.7。">
+  <svg class="gear-fig mz" viewBox="0 0 560 250" role="img" aria-label="強度刻度：1.6 到 2.9 MET 輕度、3.0 到 5.9 中等、6.0 以上費力；匹克球實測平均 4.1 MET，範圍 1.5 到 7.7">
+    <rect x={X(1.6)} y="120" width={X(3) - X(1.6)} height="34" class="mz-light" />
+    <rect x={X(3)} y="120" width={X(6) - X(3)} height="34" class="mz-mod" />
+    <rect x={X(6)} y="120" width={X(9) - X(6)} height="34" class="mz-vig" />
+    <text class="lab dark" x={(X(1.6) + X(3)) / 2} y="110" text-anchor="middle">輕度</text>
+    <text class="lab dark" x={(X(3) + X(6)) / 2} y="110" text-anchor="middle">中等</text>
+    <text class="lab dark" x={(X(6) + X(9)) / 2} y="110" text-anchor="middle">費力</text>
+    <line x1={X(1.5)} y1="60" x2={X(7.7)} y2="60" class="mz-range" />
+    <line x1={X(1.5)} y1="50" x2={X(1.5)} y2="70" class="mz-range" />
+    <line x1={X(7.7)} y1="50" x2={X(7.7)} y2="70" class="mz-range" />
+    <circle cx={X(4.1)} cy="60" r="13" class="ball-dot" />
+    <text class="lab dark big" x={X(4.1)} y="34" text-anchor="middle">匹克球平均 4.1</text>
+    <path d={`M${X(4.1)} 73 L${X(4.1)} 118`} class="mz-arrow" />
+    <text class="lab" x={X(1.5)} y="92" text-anchor="middle">1.5</text>
+    <text class="lab" x={X(7.7)} y="92" text-anchor="middle">7.7</text>
+    <line x1={X(0)} y1="176" x2={X(9)} y2="176" class="mz-axis" />
+    {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((m) => (
+      <g>
+        <line x1={X(m)} y1="170" x2={X(m)} y2="182" class="mz-axis" />
+        <text class="lab" x={X(m)} y="204" text-anchor="middle">{m}</text>
+      </g>
+    ))}
+    <text class="lab" x={X(9)} y="234" text-anchor="end">MET（安靜坐著約 1）</text>
+  </svg>
+</Figure>
+
+<style>
+  .mz-light { fill: var(--muted); opacity: .35; }
+  .mz-mod { fill: var(--kitchen); }
+  .mz-vig { fill: var(--court); }
+  .mz-range { stroke: var(--ink); stroke-width: 4; stroke-linecap: round; }
+  .mz-arrow { stroke: var(--muted); stroke-width: 2; stroke-dasharray: 5 4; }
+  .mz-axis { stroke: var(--ink); stroke-width: 3; }
+</style>

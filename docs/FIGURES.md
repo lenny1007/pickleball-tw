@@ -82,6 +82,7 @@
 | `KidsAgeStages` | 年齡分期：0–6 Active Start、6–9 改良場地玩遊戲、約 8–12 標準場地（加拿大長期發展文件） | pickleball-for-kids |
 | `KidsCourt` | 給孩子的縮短場地：非截擊區線和底線中間貼膠帶 | pickleball-for-kids |
 | `KidsPaddles` | 兩支兒童拍依比例的長寬重，加規則長度上限 | pickleball-for-kids |
+| `MetZones` | 強度刻度：輕度、中等、費力的 MET 範圍，加匹克球實測平均 4.1 與範圍 1.5–7.7 | pickleball-calories-benefits |
 | `ArticleCover` | 每篇的封面，依 slug 關鍵字選畫面 | 全部 |
 
 畫新圖用的零件：

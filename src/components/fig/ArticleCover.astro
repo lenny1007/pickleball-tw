@@ -5,6 +5,7 @@ const { slug, small = false } = Astro.props;
 const kind =
   slug.includes('referee') ? 'ref'
   : slug.includes('for-kids') ? 'kids'
+  : slug.includes('calories') ? 'cal'
   : slug.includes('tournaments') ? 'tour'
   : slug.includes('-balls') ? 'balls'
   : slug.includes('injuries') ? 'injury'
@@ -41,6 +42,19 @@ const kind =
 ---
 <svg class:list={['cover', { small }]} viewBox="0 0 640 280" aria-hidden="true" focusable="false">
   <rect width="640" height="280" fill="var(--apron)" />
+  {kind === 'cal' && (
+    <g>
+      <rect x="0" y="222" width="640" height="58" fill="var(--court)" />
+      <line x1="0" y1="222" x2="640" y2="222" stroke="var(--line)" stroke-width="5" />
+      <path d="M120 150 Q120 70 200 70 Q240 70 240 110 Q240 70 280 70 Q360 70 360 150 Q360 200 240 250 Q120 200 120 150 Z" fill="var(--kitchen)" stroke="var(--ink)" stroke-width="5" stroke-linejoin="round" transform="translate(-40 -40) scale(1)" />
+      <polyline points="100,130 160,130 180,100 205,165 230,115 250,130 300,130" fill="none" stroke="var(--paper)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+      <rect x="400" y="60" width="180" height="140" rx="14" fill="var(--card)" stroke="var(--ink)" stroke-width="5" />
+      <rect x="430" y="150" width="28" height="30" fill="var(--muted)" />
+      <rect x="476" y="120" width="28" height="60" fill="var(--kitchen)" />
+      <rect x="522" y="88" width="28" height="92" fill="var(--court)" />
+      <circle cx="600" cy="236" r="16" class="ball-dot" />
+    </g>
+  )}
   {kind === 'kids' && (
     <g>
       <rect x="40" y="150" width="560" height="110" fill="var(--court)" />
