@@ -1,0 +1,40 @@
+---
+// 時間軸：拿到丙級（C 級）證之後。依運動部〈特定體育團體建立運動裁判資格檢定及管理辦法〉：
+// 效期 4 年、效期內累計 48 小時進修且每年至少 6 小時才能展延；取得 C 級 2 年以上、有實務經驗可報 B 級（乙級）。
+import Figure from './Figure.astro';
+const x0 = 50, step = 110; // 每年 110 單位，0 到 4 年
+const X = (y: number) => x0 + y * step;
+---
+<Figure caption="示意圖，依運動部的裁判檢定辦法。裁判證效期 4 年，效期內要累計 48 小時專業進修、而且每年至少 6 小時，才能展延；取得丙級（C 級）證 2 年以上、有實際執法經驗，就能報名乙級（B 級）講習；展延要在到期前 3 到 6 個月申請。實際規定以發證團體為準。">
+  <svg class="gear-fig rtl" viewBox="0 0 560 300" role="img" aria-label="裁判證時間軸：第 0 年拿到丙級證；滿 2 年且有執法經驗可報乙級講習；效期 4 年，期間每年至少進修 6 小時、累計 48 小時，到期前 3 到 6 個月申請展延">
+    <line x1={X(0)} y1="150" x2={X(4)} y2="150" class="rtl-axis" />
+    {[0, 1, 2, 3, 4].map((y) => (
+      <g>
+        <circle cx={X(y)} cy="150" r="7" class="rtl-dot" />
+        <text class="lab" x={X(y)} y="182" text-anchor="middle">{y === 0 ? '拿到證' : `第 ${y} 年`}</text>
+      </g>
+    ))}
+    {[0, 1, 2, 3].map((y) => (
+      <g>
+        <rect x={X(y) + 14} y="200" width={step - 28} height="30" rx="8" class="rtl-cpd" />
+        <text class="rtl-cpd-t" x={X(y) + step / 2} y="222" text-anchor="middle">≥6 小時</text>
+      </g>
+    ))}
+    <text class="lab dark" x={X(2)} y="262" text-anchor="middle">4 年內累計 48 小時進修</text>
+    <path d={`M${X(2)} 138 L${X(2)} 58`} class="rtl-arrow" />
+    <rect x={X(2) - 92} y="16" width="184" height="40" rx="20" class="rtl-pill" />
+    <text class="rtl-pill-t" x={X(2)} y="42" text-anchor="middle">滿 2 年＋執法經驗</text>
+    <path d={`M${X(4)} 138 L${X(4)} 104`} class="rtl-arrow" />
+    <text class="lab dark big" x={X(4)} y="96" text-anchor="end">到期前 3–6 個月申請展延</text>
+  </svg>
+</Figure>
+
+<style>
+  .rtl-axis { stroke: var(--ink); stroke-width: 4; }
+  .rtl-dot { fill: var(--ink); }
+  .rtl-cpd { fill: var(--kitchen); }
+  .rtl-cpd-t { fill: var(--on-court); font: 18px var(--display); }
+  .rtl-arrow { stroke: var(--muted); stroke-width: 2; stroke-dasharray: 5 4; }
+  .rtl-pill { fill: var(--court); }
+  .rtl-pill-t { fill: var(--on-court); font: 19px var(--display); }
+</style>
