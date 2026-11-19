@@ -1,0 +1,53 @@
+name: Claims Guard
+
+# 品質鎖：PR 不能自己放寬文章宣稱檢查。
+# 1. 寬限清單（config/article-claims-baseline.json）比 base 多了任何一句或次數變高 → 擋
+# 2. 改了檢查器（check-article-claims.mjs、check-article-sources.mjs）、舊文豁免清單
+#    （config/article-sources-legacy.json）、這支 workflow 或 build-check.yml → 擋
+# 站主看過、同意後，在 PR 加上 claims-baseline-ok 標籤即放行（加標籤會自動重跑）。
+# 見 docs/ARTICLE_WORKFLOW.md「自動檢查與品質鎖」。
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, labeled, unlabeled]
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Owner approval label
+        id: label
+        run: echo "ok=${{ contains(github.event.pull_request.labels.*.name, 'claims-baseline-ok') }}" >> "$GITHUB_OUTPUT"
+
+      - name: Baseline must not grow
+        if: steps.label.outputs.ok != 'true'
+        run: |
+          BASE="origin/${{ github.base_ref }}"
+          if git cat-file -e "$BASE:config/article-claims-baseline.json" 2>/dev/null; then
+            git show "$BASE:config/article-claims-baseline.json" > "$RUNNER_TEMP/base-baseline.json"
+          fi
+          node scripts/check-article-claims.mjs --compare-baseline="$RUNNER_TEMP/base-baseline.json"
+
+      - name: Checker and guard must not change
+        if: steps.label.outputs.ok != 'true'
+        run: |
+          BASE="origin/${{ github.base_ref }}"
+          changed=""
+          for f in scripts/check-article-claims.mjs scripts/check-article-sources.mjs config/article-sources-legacy.json .github/workflows/claims-guard.yml .github/workflows/build-check.yml; do
+            if git cat-file -e "$BASE:$f" 2>/dev/null && ! git diff --quiet "$BASE...HEAD" -- "$f"; then
+              changed="$changed $f"
+            fi
+          done
+          if [ -n "$changed" ]; then
+            echo "::error::這個 PR 改了品質鎖檔案：$changed。站主同意後加上 claims-baseline-ok 標籤即可放行。"
+            exit 1
+          fi
+          echo "品質鎖檔案沒有變動。"
