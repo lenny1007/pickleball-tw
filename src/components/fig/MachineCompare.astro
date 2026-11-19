@@ -1,0 +1,36 @@
+---
+// 三台發球機三組橫條：裝球數、重量（電池款）、美國零售價（Pickleball Central 標價）。長條依比例。
+import Figure from './Figure.astro';
+const names = ['Tutor Mini', 'Lobster Pickle Two', 'Tutor Plus Ultra'];
+const groups = [
+  { title: '裝球數', labels: ['55 顆', '135 顆', '110 顆'], vals: [55, 135, 110] },
+  { title: '重量（電池款）', labels: ['約 11 公斤', '約 19 公斤', '約 15 公斤'], vals: [11, 19, 15] },
+  { title: '美國零售價', labels: ['US$849', 'US$1,449', 'US$1,799'], vals: [849, 1449, 1799] },
+];
+const W = 210;
+---
+<Figure caption="長條依比例。三台發球機的裝球數、電池款重量和美國零售價（Pickleball Central 標價）。裝球數決定撿一次球能打多久，重量決定一個人搬不搬得動。">
+  <svg class="gear-fig mc" viewBox="0 0 560 480" role="img" aria-label="三台發球機比較：裝球數 55、135、110 顆；重量約 11、19、15 公斤；美國零售價 849、1,449、1,799 美元">
+    {groups.map((gr, gi) => {
+      const max = Math.max(...gr.vals);
+      return (
+        <g transform={`translate(0,${gi * 156})`}>
+          <text class="lab dark big" x="24" y="34">{gr.title}</text>
+          {gr.vals.map((v, i) => (
+            <g transform={`translate(0,${52 + i * 34})`}>
+              <text class="lab" x="24" y="18">{names[i]}</text>
+              <rect x="200" y="2" width={(v / max) * W} height="22" rx="4" class={`mc-bar b${i}`} />
+              <text class="lab dark" x={208 + (v / max) * W} y="19">{gr.labels[i]}</text>
+            </g>
+          ))}
+        </g>
+      );
+    })}
+  </svg>
+</Figure>
+
+<style>
+  .mc-bar.b0 { fill: var(--kitchen); }
+  .mc-bar.b1 { fill: var(--court); }
+  .mc-bar.b2 { fill: var(--ink); }
+</style>

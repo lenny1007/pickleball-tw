@@ -1,0 +1,28 @@
+---
+// 正面示意：牆上的網高線與兩個瞄準區（My Pickleball Connect）。垂直 1 公分 = 1.6 單位，地面 y=236。
+// 網高線 86.4 公分；dink 瞄線上方 8–15 公分；目標框 30 × 30 公分，下緣在線上方 15–30 公分（圖取 15）。
+import Figure from './Figure.astro';
+const g = 236;
+const cm = 1.6;
+const tape = g - 86.4 * cm;
+---
+<Figure caption="牆面正面示意圖。86.4 公分高的膠帶是球網，打在線下面就是掛網。打 dink 時瞄線上方 8 到 15 公分這一帶；練 reset 時，貼一個 30 × 30 公分的目標框，下緣離線 15 到 30 公分，大力打牆後把回來的球輕輕擋進框裡。">
+  <svg class="gear-fig wt" viewBox="0 0 560 270" role="img" aria-label="牆面正面示意圖：86.4 公分網高線，線上方 8 到 15 公分是 dink 瞄準帶，30 × 30 公分目標框下緣在線上方 15 到 30 公分">
+    <rect x="20" y="20" width="520" height={g - 20} class="wt-wall" />
+    <line x1="10" y1={g} x2="550" y2={g} stroke="var(--rule)" stroke-width="3" />
+    <rect x="20" y={tape - 15 * cm} width="300" height={7 * cm} class="wt-band" />
+    <rect x="400" y={tape - 45 * cm} width={30 * cm} height={30 * cm} class="wt-box" />
+    <line x1="20" y1={tape} x2="540" y2={tape} class="wt-tape" />
+    <text class="lab dark big" x="34" y={tape + 34}>網高線 86.4 公分</text>
+    <text class="lab dark" x="34" y={tape - 15 * cm - 10}>dink 瞄這一帶</text>
+    <text class="lab dark" x="476" y={tape - 26 * cm}>目標框</text>
+    <text class="lab" x="34" y={g - 16}>線下面＝掛網</text>
+  </svg>
+</Figure>
+
+<style>
+  .wt-wall { fill: var(--muted); opacity: .14; }
+  .wt-tape { stroke: var(--ball); stroke-width: 8; stroke-linecap: round; }
+  .wt-band { fill: var(--kitchen); opacity: .55; }
+  .wt-box { fill: none; stroke: var(--ink); stroke-width: 4; }
+</style>

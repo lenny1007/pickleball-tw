@@ -1,0 +1,42 @@
+---
+// 兩種練習網，上下兩格。上：回彈網側面，網面可往後傾，球打上去彈回來。
+// 下：可攜式球網正面，Onix 標示高 91.4 公分、寬 6.71 公尺（示意，不依比例）。
+import Figure from './Figure.astro';
+---
+<Figure caption="示意圖，不依比例。上：回彈網是立起來的網面，球打上去會彈回來，等於一面能搬的牆；OnCourt OffCourt 那款網面可以從垂直往後調到 15 度。下：可攜式球網是一張真的球網，Onix 那款照正式規格做，高 91.4 公分、寬 6.71 公尺，一個人練時可以對著真的網高練發球。">
+  <svg class="gear-fig nt" viewBox="0 0 560 420" role="img" aria-label="上：回彈網側面，球打上去彈回來；下：可攜式球網正面，高 91.4 公分、寬 6.71 公尺">
+    <text class="lab dark big" x="24" y="40">回彈網：把球彈回來</text>
+    <line x1="20" y1="180" x2="540" y2="180" stroke="var(--rule)" stroke-width="3" />
+    <line x1="113" y1="180" x2="94" y2="70" class="nt-mesh" />
+    <line x1="120" y1="180" x2="96" y2="64" class="nt-frame" />
+    <line x1="120" y1="180" x2="170" y2="180" class="nt-frame" />
+    <path d="M396 150 Q260 60 112 120" class="nt-path" />
+    <path d="M112 120 Q220 110 330 172" class="nt-path back" />
+    <circle cx="112" cy="120" r="8" class="ball-dot" />
+    <circle cx="410" cy="158" r="13" class="nt-you" />
+    <text class="lab dark" x="440" y="164">你</text>
+    <text class="lab" x="70" y="206">網面可往後傾</text>
+
+    <text class="lab dark big" x="24" y="250">可攜式球網：一張真的網</text>
+    <line x1="20" y1="390" x2="540" y2="390" stroke="var(--rule)" stroke-width="3" />
+    <rect x="40" y="300" width="8" height="90" fill="var(--ink)" rx="3" />
+    <rect x="432" y="300" width="8" height="90" fill="var(--ink)" rx="3" />
+    <rect x="48" y="304" width="384" height="56" class="nt-net" />
+    <line x1="48" y1="304" x2="432" y2="304" class="nt-tape" />
+    <text class="lab dark" x="452" y="330">高 91.4</text>
+    <text class="lab dark" x="452" y="354">公分</text>
+    <line x1="48" y1="284" x2="432" y2="284" class="nt-dim" />
+    <text class="lab dark" x="240" y="276" text-anchor="middle">寬 6.71 公尺</text>
+  </svg>
+</Figure>
+
+<style>
+  .nt-frame { stroke: var(--ink); stroke-width: 5; stroke-linecap: round; }
+  .nt-mesh { stroke: var(--muted); stroke-width: 10; opacity: .5; }
+  .nt-path { fill: none; stroke: var(--ink); stroke-width: 2.5; stroke-dasharray: 7 6; }
+  .nt-path.back { stroke: var(--kitchen); }
+  .nt-you { fill: var(--ink); }
+  .nt-net { fill: var(--muted); opacity: .2; }
+  .nt-tape { stroke: var(--ink); stroke-width: 6; }
+  .nt-dim { stroke: var(--muted); stroke-width: 1.5; stroke-dasharray: 5 4; }
+</style>
