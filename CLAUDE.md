@@ -4,6 +4,7 @@ Codex 與 Claude Code 都會讀這份。只寫讀程式看不出來的事。
 
 ## 基本
 - 回覆、PR 說明、commit 訊息一律繁體中文。
+- 2026-11-19 起本站有獨立的 Claude 專案。接手先讀 `docs/HANDOFF-2026-11-19.md`（現況、等站主的事、排程、站主偏好、站主電腦的路徑）。
 - 正式站 https://pickleball-tw.com 。推到 `main` = Vercel 自動部署上線。
 - Astro 5 靜態站，沒有後端。驗收順序：`npm run check`（0 errors）→ `npm run build`。動到文章時先跑 `npm run check:articles`。CI 跑同樣兩步。
 

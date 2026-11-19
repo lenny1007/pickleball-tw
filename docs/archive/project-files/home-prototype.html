@@ -1,0 +1,221 @@
+<title>匹克球知識站首頁原型</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Huninn&display=swap">
+<style>
+/* Layout: the court is the map. A top-down pickleball court (portrait, like a phone) is the homepage navigation; every zone of the court opens one kind of question. Everything else stays quiet. */
+:root{
+  --paper:#EDF2F3;      /* cool concrete, not cream */
+  --ink:#14293A;        /* navy, court-side ink */
+  --muted:#4F6575;
+  --court:#2D6E8E;      /* painted hard-court blue */
+  --kitchen:#4F97B4;    /* non-volley zone, lighter paint */
+  --apron:#6E9A6A;      /* green surround outside the lines */
+  --line:#FFFFFF;
+  --ball:#D9E244;       /* outdoor ball, yellow-green */
+  --ballInk:#2B3300;
+  --rule:#C9D6DB;
+  --card:#FFFFFF;
+  --display:"Huninn","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  --body:"PingFang TC","Microsoft JhengHei","Noto Sans TC",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --paper:#0E1C25;--ink:#E2ECEF;--muted:#9DB2BD;--court:#235A75;--kitchen:#357C99;--apron:#3F6342;
+  --line:#EAF3F6;--ball:#D9E244;--ballInk:#2B3300;--rule:#24394A;--card:#13252F;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0E1C25;--ink:#E2ECEF;--muted:#9DB2BD;--court:#235A75;--kitchen:#357C99;--apron:#3F6342;
+  --line:#EAF3F6;--ball:#D9E244;--ballInk:#2B3300;--rule:#24394A;--card:#13252F;color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.75;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ball);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto}
+
+header.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:18px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-size:1.25rem;text-decoration:none}
+.brand svg{width:30px;height:30px;flex:none}
+nav.top{display:flex;gap:18px;flex-wrap:wrap;font-size:.95rem}
+nav.top a{text-decoration:none;color:var(--muted)}
+nav.top a:hover{color:var(--ink)}
+
+/* Hero: words on the left, the court on the right */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,420px);gap:48px;align-items:center;padding-block:28px 56px}
+.hero h1{font-family:var(--display);font-weight:400;font-size:clamp(2.1rem,5.4vw,3.6rem);line-height:1.18;margin:0 0 18px;text-wrap:balance}
+.hero p.lede{font-size:1.1rem;color:var(--muted);max-width:30em;margin:0 0 28px}
+form.search{display:flex;gap:8px;max-width:520px}
+form.search input{flex:1;min-width:0;font:inherit;padding:12px 16px;border:2px solid var(--ink);border-radius:999px;background:var(--card);color:var(--ink)}
+form.search button{font:inherit;font-weight:600;padding:12px 20px;border:0;border-radius:999px;background:var(--ink);color:var(--paper);cursor:pointer}
+.tries{margin-top:14px;font-size:.92rem;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 14px}
+.tries button{font:inherit;color:var(--ink);background:none;border:0;padding:0;text-decoration:underline;text-decoration-color:var(--rule);text-underline-offset:4px;cursor:pointer}
+
+/* The court */
+.court-wrap{position:relative}
+.court{display:block;width:100%;max-width:420px;height:auto;margin:0 auto}
+.court .zone{cursor:pointer;transition:filter .15s}
+.court .zone:hover,.court .zone:focus-visible{filter:brightness(1.12)}
+.court .zone:focus{outline:none}
+.court text{font-family:var(--display);fill:var(--line);pointer-events:none}
+.court .dim{font-family:var(--body);font-size:11px;fill:var(--ink);opacity:.7}
+.ball{transform-origin:center;animation:drop .9s cubic-bezier(.3,1.6,.5,1) .2s both}
+@keyframes drop{from{transform:translateY(-40px);opacity:0}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.ball{animation:none}}
+.zone-note{min-height:3.5em;margin:14px auto 0;max-width:420px;font-size:.95rem;color:var(--muted)}
+.zone-note strong{color:var(--ink);font-weight:600}
+
+/* Sections */
+section.block{padding-block:48px;border-top:1px solid var(--rule)}
+section.block h2{font-family:var(--display);font-weight:400;font-size:1.75rem;line-height:1.3;margin:0 0 6px}
+section.block .sub{color:var(--muted);margin:0 0 28px;max-width:38em}
+
+/* Rules Q&A: a plain list, the answer is the content */
+.qa{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 48px;margin:0;padding:0;list-style:none}
+.qa li{padding-block:16px;border-bottom:1px dashed var(--rule);min-width:0}
+.qa h3{font-size:1.05rem;margin:0 0 4px;font-weight:600}
+.qa p{margin:0;color:var(--muted)}
+.qa .n{font-variant-numeric:tabular-nums;color:var(--ink);font-weight:600}
+
+/* Paddle chooser: three spec rows, each a real decision */
+.specs{display:grid;gap:0;border:2px solid var(--ink);border-radius:14px;overflow:hidden;background:var(--card)}
+.spec{display:grid;grid-template-columns:9em minmax(0,1fr) minmax(0,1fr);gap:16px;padding:18px 20px;border-top:1px solid var(--rule)}
+.spec:first-child{border-top:0}
+.spec .k{font-family:var(--display);font-size:1.1rem}
+.spec .side{min-width:0}
+.spec .side b{display:block;font-weight:600}
+.spec .side span{color:var(--muted);font-size:.93rem}
+
+/* Knowledge cards from videos: the one place we use a card, because each is a separate object with a source */
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.kc{background:var(--card);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:10px;min-width:0;border:1px solid var(--rule)}
+.kc .zone-tag{align-self:flex-start;font-size:.8rem;padding:2px 10px;border-radius:999px;background:var(--kitchen);color:#fff}
+.kc .zone-tag.base{background:var(--court)}
+.kc h3{font-size:1.08rem;margin:0;line-height:1.5}
+.kc p{margin:0;color:var(--muted);font-size:.95rem}
+.kc .src{margin-top:auto;font-size:.85rem;color:var(--muted);border-top:1px dashed var(--rule);padding-top:10px}
+.sample{font-size:.85rem;color:var(--muted);margin-top:14px}
+
+footer{padding-block:40px 56px;border-top:1px solid var(--rule);color:var(--muted);font-size:.9rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+
+@media (max-width:860px){
+  .hero{grid-template-columns:minmax(0,1fr);gap:28px}
+  .cards{grid-template-columns:minmax(0,1fr)}
+  .qa{grid-template-columns:minmax(0,1fr)}
+  .spec{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:520px){ nav.top{display:none} form.search{flex-direction:column} }
+</style>
+
+<div class="wrap">
+<header class="top">
+  <a class="brand" href="#">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="var(--ball)"/><g fill="var(--ballInk)" opacity=".55"><circle cx="16" cy="9" r="2"/><circle cx="10" cy="14" r="2"/><circle cx="22" cy="14" r="2"/><circle cx="12" cy="21" r="2"/><circle cx="20" cy="21" r="2"/><circle cx="16" cy="16" r="1.4"/></g></svg>
+    匹克球 TW
+  </a>
+  <nav class="top" aria-label="主要分類">
+    <a href="#rules">規則</a><a href="#paddles">球拍</a><a href="#cards">技術卡</a><a href="#">哪裡打</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>第一次打匹克球，<br>不知道的事都在球場上找得到</h1>
+    <p class="lede">規則、球拍怎麼挑、網前小球怎麼打。把國內外教學影片整理成一張張看得懂的中文卡片，每張都附原片秒數。</p>
+    <form class="search" role="search" onsubmit="event.preventDefault()">
+      <label for="q" class="sr" style="position:absolute;left:-9999px">搜尋匹克球問題</label>
+      <input id="q" name="q" type="search" placeholder="例如：廚房區可以踩線嗎">
+      <button type="submit">搜尋</button>
+    </form>
+    <div class="tries" aria-label="常見搜尋">
+      <span>大家在找：</span>
+      <button type="button" data-q="雙彈跳規則">雙彈跳規則</button>
+      <button type="button" data-q="計分怎麼算">計分怎麼算</button>
+      <button type="button" data-q="碳纖維球拍">碳纖維球拍</button>
+      <button type="button" data-q="dink 小球">dink 小球</button>
+    </div>
+  </div>
+
+  <div class="court-wrap">
+    <!-- Court 20ft x 44ft drawn portrait; 1ft = 8 units. Kitchen 7ft each side of net. -->
+    <svg class="court" viewBox="0 0 220 400" role="img" aria-labelledby="ct">
+      <title id="ct">匹克球場俯視圖，點區域看對應主題</title>
+      <rect x="0" y="0" width="220" height="400" rx="16" fill="var(--apron)"/>
+      <g transform="translate(30,24)">
+        <!-- far half -->
+        <rect class="zone" tabindex="0" data-z="base" x="0" y="0" width="160" height="120" fill="var(--court)"/>
+        <rect class="zone" tabindex="0" data-z="kitchen" x="0" y="120" width="160" height="56" fill="var(--kitchen)"/>
+        <!-- near half -->
+        <rect class="zone" tabindex="0" data-z="kitchen" x="0" y="176" width="160" height="56" fill="var(--kitchen)"/>
+        <rect class="zone" tabindex="0" data-z="serve" x="0" y="232" width="80" height="120" fill="var(--court)"/>
+        <rect class="zone" tabindex="0" data-z="serve" x="80" y="232" width="80" height="120" fill="var(--court)"/>
+        <!-- lines -->
+        <g stroke="var(--line)" stroke-width="2.5" fill="none">
+          <rect x="0" y="0" width="160" height="352"/>
+          <line x1="0" y1="120" x2="160" y2="120"/><line x1="0" y1="232" x2="160" y2="232"/>
+          <line x1="80" y1="0" x2="80" y2="120"/><line x1="80" y1="232" x2="80" y2="352"/>
+        </g>
+        <line x1="-10" y1="176" x2="170" y2="176" stroke="var(--ink)" stroke-width="4"/>
+        <text x="80" y="66" text-anchor="middle" font-size="15">打法與戰術</text>
+        <text x="80" y="153" text-anchor="middle" font-size="15">非截擊區・小球</text>
+        <text x="80" y="208" text-anchor="middle" font-size="13">不能截擊的地方</text>
+        <text x="80" y="296" text-anchor="middle" font-size="15">發球與計分</text>
+        <circle class="ball" cx="120" cy="330" r="8" fill="var(--ball)" stroke="var(--ballInk)" stroke-opacity=".3"/>
+      </g>
+      <text class="dim" x="110" y="392" text-anchor="middle">6.1 × 13.41 公尺，雙打單打同一張場</text>
+    </svg>
+    <p class="zone-note" id="zn" aria-live="polite">點球場的區域，看那一區最常被問的問題。</p>
+  </div>
+</section>
+
+<section class="block" id="rules">
+  <h2>新手最常卡住的規則</h2>
+  <p class="sub">第一次上場前看完這幾條，跟陌生球友打臨打就不會一直被糾正。</p>
+  <ul class="qa">
+    <li><h3>非截擊區（廚房區）是什麼？</h3><p>網子兩側各 <span class="n">2.13 公尺</span>（7 呎）的區域。站在裡面不能截擊，也就是球沒落地前不能打。</p></li>
+    <li><h3>雙彈跳規則</h3><p>發球後，接發方要等球彈地一次再打，發球方回擊時也要等彈地一次。之後才可以截擊。</p></li>
+    <li><h3>發球一定要低手嗎？</h3><p>傳統發球要低手、擊球點在腰部以下，往對角發。另有「落地發球」可以先讓球落地再打。</p></li>
+    <li><h3>分數怎麼算？</h3><p>一般打到 <span class="n">11</span> 分、領先 2 分獲勝；傳統計分只有發球方能得分，雙打報分會報三個數字。</p></li>
+  </ul>
+</section>
+
+<section class="block" id="paddles">
+  <h2>球拍怎麼挑</h2>
+  <p class="sub">台灣搜尋「匹克球拍」的人比搜尋羽球拍推薦的還多。先搞懂這三個取捨，再看型號。</p>
+  <div class="specs">
+    <div class="spec"><div class="k">拍面材質</div><div class="side"><b>玻璃纖維</b><span>彈性大、好把球送深，入門價位常見</span></div><div class="side"><b>碳纖維</b><span>控球穩、手感扎實，價格較高</span></div></div>
+    <div class="spec"><div class="k">拍面厚度</div><div class="side"><b>厚（約 16 mm）</b><span>甜區大、小球好控制</span></div><div class="side"><b>薄（約 13 mm）</b><span>出球快、力量傳得直接</span></div></div>
+    <div class="spec"><div class="k">重量</div><div class="side"><b>輕</b><span>網前反應快、手腕負擔小</span></div><div class="side"><b>重</b><span>穩定、底線抽球有份量</span></div></div>
+  </div>
+</section>
+
+<section class="block" id="cards">
+  <h2>從教學影片整理的技術卡</h2>
+  <p class="sub">每張卡只講一件事：做什麼、為什麼、怎麼練，附原片時間點，點下去直接看那一段。</p>
+  <div class="cards">
+    <article class="kc"><span class="zone-tag">廚房區</span><h3>小球打不穩：拍面先擺好，不要用手腕挑</h3><p>擊球前拍面就對準落點，用肩膀帶動往前推，球過網後落在對方廚房區。</p><div class="src">影片來源頻道・03:12</div></article>
+    <article class="kc"><span class="zone-tag base">底線</span><h3>第三拍為什麼要放小球</h3><p>發球方被雙彈跳卡在底線，第三拍放進廚房區，才有時間往前站到網前。</p><div class="src">影片來源頻道・07:45</div></article>
+    <article class="kc"><span class="zone-tag">廚房區</span><h3>腳在廚房線上算不算犯規</h3><p>線屬於廚房區。截擊時腳踩到線、或擊球後的動量讓你踩進去，都算違規。</p><div class="src">影片來源頻道・01:58</div></article>
+  </div>
+  <p class="sample">示意卡片。正式內容由影片萃取產生，上線前逐張對照原片。</p>
+</section>
+
+<footer>
+  <span>匹克球 TW・pickleball-tw.com</span>
+  <span>首頁設計原型，內容與數字上線前會再查證</span>
+</footer>
+</div>
+
+<script>
+const notes={
+  kitchen:'<strong>非截擊區（廚房區）・小球</strong>：非截擊區規則、dink 小球、網前對抽、腳踩線算不算違規。',
+  base:'<strong>打法與戰術</strong>：第三拍、雙打站位、什麼時候往前、怎麼守底線。',
+  serve:'<strong>發球與計分</strong>：低手發球、落地發球、報分三個數字、換發規則。'
+};
+const zn=document.getElementById('zn');
+document.querySelectorAll('.court .zone').forEach(z=>{
+  const show=()=>{zn.innerHTML=notes[z.dataset.z]};
+  z.addEventListener('click',show);z.addEventListener('focus',show);
+  z.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();show()}});
+});
+document.querySelectorAll('.tries button').forEach(b=>b.addEventListener('click',()=>{const q=document.getElementById('q');q.value=b.dataset.q;q.focus()}));
+</script>
