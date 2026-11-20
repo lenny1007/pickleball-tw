@@ -26,6 +26,7 @@ const kind =
   : slug.includes('mistakes') ? 'mistakes'
   : slug.includes('scoring') ? 'scoring'
   : slug.includes('non-volley') ? 'nvz'
+  : slug.includes('where-to-buy') ? 'buy'
   : slug.includes('paddle-recommendations') ? 'picks'
   : slug.includes('paddle-grip') ? 'grip'
   : slug.includes('paddle') ? 'paddle'
@@ -289,6 +290,25 @@ const kind =
       <line x1="320" y1="18" x2="320" y2="262" stroke="var(--line)" stroke-width="5" stroke-linecap="round" />
       <path d="M220 200 L520 120 L430 70" fill="none" stroke="var(--ball)" stroke-width="5" stroke-dasharray="10 8" stroke-linecap="round" />
       <circle cx="430" cy="70" r="16" class="ball-dot" />
+    </g>
+  )}
+  {kind === 'buy' && (
+    <g>
+      <rect x="0" y="216" width="640" height="64" fill="var(--court)" />
+      <line x1="0" y1="216" x2="640" y2="216" stroke="var(--line)" stroke-width="5" />
+      <path d="M150 84 L330 84 L350 216 L130 216 Z" fill="var(--card)" stroke="var(--ink)" stroke-width="5" stroke-linejoin="round" />
+      <path d="M190 84 Q190 40 240 40 Q290 40 290 84" fill="none" stroke="var(--ink)" stroke-width="5" stroke-linecap="round" />
+      <g transform="rotate(14 270 120)">
+        <rect x="236" y="20" width="96" height="112" rx="26" class="paddle-face" />
+        <rect x="272" y="126" width="24" height="60" rx="7" class="paddle-grip" />
+      </g>
+      <rect x="420" y="70" width="150" height="116" rx="12" fill="var(--card)" stroke="var(--ink)" stroke-width="5" />
+      <rect x="420" y="70" width="150" height="26" rx="12" fill="var(--kitchen)" />
+      <rect x="420" y="86" width="150" height="10" fill="var(--kitchen)" />
+      <g stroke="var(--line)" stroke-width="6" stroke-linecap="round">
+        <line x1="444" y1="124" x2="520" y2="124" /><line x1="444" y1="152" x2="500" y2="152" />
+      </g>
+      <circle cx="560" cy="196" r="16" class="ball-dot" />
     </g>
   )}
   {kind === 'picks' && (
