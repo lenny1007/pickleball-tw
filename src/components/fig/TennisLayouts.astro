@@ -1,0 +1,56 @@
+---
+// 俯視三格：一面網球場（連場外 18.29 × 36.58 公尺，60 × 120 英尺）放一面、兩面、四面匹克球場。
+// 依比例，1 公尺 = 13 單位，原點在網球網中央；x 沿球場長邊，y 沿寬邊。
+// 網球雙打場 23.77 × 10.97、單打寬 8.23、發球線離網 6.40、網柱在雙打邊線外 0.914（y = ±6.40）。
+// 匹克球場 13.41 × 6.10、非截擊區 2.13；兩面時各置中在半場，四面時各置中在 9.14 × 18.29 的格子。
+import Figure from './Figure.astro';
+const s = 13;
+const E = { hx: 18.29, hy: 9.145 };
+const panels = [
+  { title: '一面：直接用網球網', courts: [{ cx: 0, cy: 0 }], tennisNet: true },
+  { title: '兩面：各架一張移動式球網', courts: [{ cx: -9.145, cy: 0 }, { cx: 9.145, cy: 0 }] },
+  { title: '四面：最多，但很擠', courts: [{ cx: -9.145, cy: -4.5725 }, { cx: -9.145, cy: 4.5725 }, { cx: 9.145, cy: -4.5725 }, { cx: 9.145, cy: 4.5725 }] },
+];
+const PW = E.hx * 2 * s, PH = E.hy * 2 * s;
+const gap = PH + 64;
+const H = panels.length * gap + 4;
+const X = (m: number) => m * s;
+---
+<Figure caption="俯視示意圖，依比例畫。灰色細線是網球場的線，藍色是匹克球場，外框是連同場外的整塊場地（18.29 × 36.58 公尺）。一面網球場可以畫一面（用網球網）、兩面（網的兩邊各一面）或最多四面；四面時球場之間只剩很少的空間。">
+  <svg class="gear-fig tl3" viewBox={`0 0 ${PW + 40} ${H}`} role="img" aria-label="一面網球場可以畫幾面匹克球場：一面時直接用網球網，兩面時網的兩邊各一面、各架一張移動式球網，四面時每個半場左右各一面，球場之間很擠">
+    {panels.map((p, i) => (
+      <g transform={`translate(${20 + PW / 2},${i * gap + 44 + PH / 2})`}>
+        <text class="lab dark big" x={-PW / 2} y={-PH / 2 - 14}>{p.title}</text>
+        <rect x={-PW / 2} y={-PH / 2} width={PW} height={PH} class="tl3-area" />
+        <g class="tl3-tennis">
+          <rect x={X(-11.885)} y={X(-5.485)} width={X(23.77)} height={X(10.97)} />
+          <line x1={X(-11.885)} y1={X(-4.115)} x2={X(11.885)} y2={X(-4.115)} />
+          <line x1={X(-11.885)} y1={X(4.115)} x2={X(11.885)} y2={X(4.115)} />
+          <line x1={X(-6.4)} y1={X(-4.115)} x2={X(-6.4)} y2={X(4.115)} />
+          <line x1={X(6.4)} y1={X(-4.115)} x2={X(6.4)} y2={X(4.115)} />
+          <line x1={X(-6.4)} y1="0" x2={X(6.4)} y2="0" />
+        </g>
+        {p.courts.map((c) => (
+          <g transform={`translate(${X(c.cx)},${X(c.cy)})`}>
+            <rect x={X(-6.705)} y={X(-3.05)} width={X(13.41)} height={X(6.1)} class="tl3-pb" />
+            <rect x={X(-2.13)} y={X(-3.05)} width={X(4.26)} height={X(6.1)} class="tl3-k" />
+            <rect x={X(-6.705)} y={X(-3.05)} width={X(13.41)} height={X(6.1)} class="tl3-pl" />
+            {!p.tennisNet && <line x1="0" y1={X(-3.5)} x2="0" y2={X(3.5)} class="tl3-pnet" />}
+          </g>
+        ))}
+        <line x1="0" y1={X(-6.4)} x2="0" y2={X(6.4)} class:list={['tl3-tnet', { used: p.tennisNet }]} />
+      </g>
+    ))}
+  </svg>
+</Figure>
+
+<style>
+  .tl3-area { fill: var(--apron); stroke: var(--rule); stroke-width: 2; stroke-dasharray: 6 5; }
+  .tl3-tennis { fill: none; stroke: var(--muted); stroke-width: 1.5; opacity: .8; }
+  .tl3-pb { fill: var(--court); }
+  .tl3-k { fill: var(--kitchen); }
+  .tl3-pl { fill: none; stroke: var(--line); stroke-width: 2; }
+  .tl3-pnet { stroke: var(--ink); stroke-width: 4; stroke-linecap: round; }
+  .tl3-tnet { stroke: var(--muted); stroke-width: 3; stroke-dasharray: 4 4; }
+  .tl3-tnet.used { stroke: var(--ink); stroke-width: 5; stroke-dasharray: none; }
+</style>

@@ -3,7 +3,8 @@
 interface Props { slug: string; small?: boolean }
 const { slug, small = false } = Astro.props;
 const kind =
-  slug.includes('referee') ? 'ref'
+  slug.includes('tennis-court') ? 'tennis'
+  : slug.includes('referee') ? 'ref'
   : slug.includes('for-kids') ? 'kids'
   : slug.includes('calories') ? 'cal'
   : slug.includes('tournaments') ? 'tour'
@@ -42,6 +43,25 @@ const kind =
 ---
 <svg class:list={['cover', { small }]} viewBox="0 0 640 280" aria-hidden="true" focusable="false">
   <rect width="640" height="280" fill="var(--apron)" />
+  {kind === 'tennis' && (
+    <g>
+      <rect x="20" y="40" width="600" height="220" fill="var(--court)" opacity=".35" />
+      <g stroke="var(--line)" stroke-width="3" fill="none" opacity=".7">
+        <rect x="20" y="40" width="600" height="220" />
+        <line x1="20" y1="72" x2="620" y2="72" /><line x1="20" y1="228" x2="620" y2="228" />
+        <line x1="158" y1="72" x2="158" y2="228" /><line x1="482" y1="72" x2="482" y2="228" />
+        <line x1="158" y1="150" x2="482" y2="150" />
+      </g>
+      <rect x="148" y="92" width="344" height="116" fill="var(--court)" />
+      <rect x="265" y="92" width="110" height="116" fill="var(--kitchen)" />
+      <g stroke="var(--ball)" stroke-width="5" fill="none" stroke-linecap="round">
+        <rect x="148" y="92" width="344" height="116" />
+        <line x1="265" y1="92" x2="265" y2="208" /><line x1="375" y1="92" x2="375" y2="208" />
+      </g>
+      <line x1="320" y1="26" x2="320" y2="274" stroke="var(--ink)" stroke-width="7" stroke-linecap="round" />
+      <circle cx="550" cy="248" r="14" class="ball-dot" />
+    </g>
+  )}
   {kind === 'cal' && (
     <g>
       <rect x="0" y="222" width="640" height="58" fill="var(--court)" />
