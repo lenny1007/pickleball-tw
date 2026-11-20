@@ -41,7 +41,10 @@
 | 最貴是最便宜的十倍以上（9,990 ÷ 799 ≈ 12.5） | 由上面價格計算 | 2026-11 |
 | 熱壓：加熱加壓、注入泡棉；力量和手感好；脫層時三明治拍出現死點、熱壓拍更彈更不穩；脫層多半是製造問題、看保固 | Selkirk https://www.selkirk.com/blogs/paddles-and-product-education/comparing-types-of-pickleball-paddle-construction-the-sandwich-method-and-thermoforming "constructed using a combination of pressure and heat"、"heat-molded and then injected with a foam core"、"offer exceptional power and feel"、"often makes it unusable"、"becomes inconsistent but also more powerful"、"delamination is often a manufacturing issue"（2024-02-13） | 2026-11 |
 | 冷壓：耐用、不用磨合期；加熱加壓可能壓壞芯材；熱壓表現較快變差；保固較短 | Paddletek https://www.paddletek.com/pages/cold-pressed "Heat and pressure can collapse the core structure"、"don't require a 'break-in' period"、"don't degrade in performance over time as quickly as thermoformed"、"Most thermoformed paddles offer a 3–12 month warranty" vs "limited lifetime warranty" | 2026-11 |
-| Selkirk 2025 年擴展亞洲，從越南和馬來西亞開始 | https://www.selkirk.com/blogs/community-highlights/selkirk-sponsors-key-pickleball-tournaments-to-fuel-asian-expansion "beginning with Vietnam and Malaysia"（2025-07-17），全文沒有 Taiwan | 2026-11 |
+| Selkirk 亞洲保固表單列台灣、收據要能由授權經銷商驗證 | https://form.jotform.com/260277595261059 〈Asia Paddle Warranty Form〉11 國含 Taiwan；"verification from an authorized Selkirk dealer"（只保邊框瑕疵、MSRP US$99.99 以上、6 個月，文中不寫細節） | 2026-11 |
+| Selkirk：兩種做法各有好處；三明治讓廠商自由搭配 | Selkirk 構造文 "there are benefits to each"、sandwich method "flexibility" | 2026-11 |
+| HEAD 台灣由 INFIN 代理經銷，官網有匹克球拍專區 | https://www.headsports.com.tw 「INFIN 代理經銷 HEAD、LACOSTE、ADIDAS、K-SWISS 等國際知名品牌」；導覽列「匹克球」「匹克球拍專區」 | 2026-11 |
+| KASACA Mighty Force：熱壓一體成型 | 好市多 Mighty Force 頁「16mm一體成型結構結合熱壓成型技術」 | 2026-11 |
 | 高階球拍單價達 250 到 350 美元 | 經濟日報〈高爾夫三雄 進擊匹克球〉https://money.udn.com/money/story/5607/9661427 （2026-07-31）「高階球拍單價達250至350美元」 | 2026-11 |
 | 復盛應用、明安已接品牌代工訂單出貨；大田規劃自創品牌 | 同上 | 2026-11 |
 | TXCP：台灣球拍品牌兼 OEM/ODM | 工商時報 https://www.ctee.com.tw/news/20260611700202-439901 （2026-06-11） | 2026-11 |
@@ -62,6 +65,9 @@
 - 熱壓 vs 冷壓誰比較好：廠商互相對立，只並陳兩家說法。
 - 11SIX24 的熱壓說法（甜區較大、幾乎不會壞）：同樣是賣熱壓拍的廠商，說法較誇張，不用。
 - 店家清單：留給「球拍哪裡買」那篇（A6）。
+- Selkirk 2025-07 亞洲擴展文（從越南、馬來西亞開始）：跟保固表單列台灣放在一起會混淆，刪掉。
+- 蝦皮「台灣現貨」：沒找到實例，只寫 momo。
+- HEAD 是不是「總代理」：INFIN 官網寫「代理經銷」，照原字寫。
 
 ## 大綱
 
@@ -73,7 +79,10 @@
 
 ## 查證
 
-- （待補）
+- 2026-11-20，雲端獨立 subagent（WebFetch／WebSearch）：拆 47 項，對得上 35、error 5（3 大項）、minor 7、找不到 8（joola.tw、迪卡儂、核可清單搜尋讀不到）。
+  - error（主控自己回原頁確認後才改）：(1) Selkirk 構造文原文 "there are benefits to each"，不是替熱壓說話 → 改成「各有好處」，偏向自家的只寫 Paddletek；(2)「沒有台灣代理」寫成事實，且 Selkirk 亞洲保固表單列台灣、HEAD 由 INFIN 代理經銷 → H2 和 description 改「找不到台灣總代理」，加「先問是不是授權經銷」，HEAD 通路補 INFIN 官網；(3) Pro Max II 寫的是 T700 碳纖維不是原生碳纖維 → 分開寫。
+  - minor 已改：「貴的拍子常提到熱壓」→ NT$1,500 以上（Mighty Force 就寫熱壓）；KASACA 產地改「部分商品頁」；HEAD 不再只叫網球品牌；HEAD 用的是 momo 促銷價，註明；「多半」→「常」；Journey 薄芯偏力量改成引用怎麼挑那篇；蝦皮刪掉；Perseus 價格來源改寫；250–350 美元移到代工段。
+  - 找不到的項目：JOOLA 台灣官網、迪卡儂價格沿用 paddle-recommendations 11-18 查證，待在站主電腦重對。
 
 ## 追蹤
 
