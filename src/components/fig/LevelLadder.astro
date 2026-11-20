@@ -1,0 +1,34 @@
+---
+// 自評分級階梯 2.0–5.0：每級一個最好認的特徵（摘自 Pickleball Canada 兩位數分級定義，見 pickleball-skill-levels 選題卡）。
+// 長條越往下越長，只表示「越來越高」，長度沒有比例意義。
+import Figure from './Figure.astro';
+const rows = [
+  { lv: '2.0', t: '能打短的來回' },
+  { lv: '2.5', t: '能上網截擊' },
+  { lv: '3.0', t: '發球穩定' },
+  { lv: '3.5', t: '中速球控得住' },
+  { lv: '4.0', t: 'dink、drop 穩' },
+  { lv: '4.5', t: '會依對手調整' },
+  { lv: '5.0', t: '各種球都精熟' },
+];
+const rowH = 54;
+const H = 16 + rows.length * rowH;
+---
+<Figure caption="示意圖：自評分級從 2.0 到 5.0，每一級挑一個最好認的特徵，完整說明見下表。長條只表示程度往上，長度沒有比例意義。">
+  <svg class="gear-fig ll" viewBox={`0 0 480 ${H}`} role="img" aria-label="自評分級：2.0 能打短的來回、2.5 能上網截擊、3.0 發球穩定、3.5 中速球控得住、4.0 dink 和 drop 穩、4.5 會依對手調整打法、5.0 各種球都精熟">
+    {rows.map((r, i) => (
+      <g transform={`translate(0,${12 + i * rowH})`}>
+        <rect x="16" y="0" width="66" height="42" rx="21" class:list={['ll-pill', { hi: i >= 4 }]} />
+        <text class="lab dark big" x="49" y="28" text-anchor="middle">{r.lv}</text>
+        <rect x="94" y="4" width={190 + i * 28} height="34" rx="8" class="ll-bar" style={`opacity:${0.35 + i * 0.1}`} />
+        <text class="lab dark" x="108" y="27">{r.t}</text>
+      </g>
+    ))}
+  </svg>
+</Figure>
+
+<style>
+  .ll-pill { fill: var(--card); stroke: var(--rule); stroke-width: 2; }
+  .ll-pill.hi { fill: var(--kitchen); stroke: var(--ink); }
+  .ll-bar { fill: var(--court); fill-opacity: .35; stroke: var(--court); stroke-width: 2; }
+</style>

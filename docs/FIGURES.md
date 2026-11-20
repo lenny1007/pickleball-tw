@@ -83,6 +83,9 @@
 | `KidsCourt` | 給孩子的縮短場地：非截擊區線和底線中間貼膠帶 | pickleball-for-kids |
 | `KidsPaddles` | 兩支兒童拍依比例的長寬重，加規則長度上限 | pickleball-for-kids |
 | `MetZones` | 強度刻度：輕度、中等、費力的 MET 範圍，加匹克球實測平均 4.1 與範圍 1.5–7.7 | pickleball-calories-benefits |
+| `LevelLadder` | 自評分級階梯 2.0–5.0，每級一個最好認的特徵（長度無比例意義） | pickleball-skill-levels |
+| `DuprBands` | DUPR 分數對照（3.0 以下起步到 5.5 以上頂尖），右側 2–8 全刻度小尺 | pickleball-skill-levels |
+| `ReliabilityDecay` | DUPR 可靠度沒有新紀錄時往下掉：100→60%（約 6 個月）→30%（約 3 個月）→不到 10%（約 6 個月） | pickleball-skill-levels |
 | `ArticleCover` | 每篇的封面，依 slug 關鍵字選畫面 | 全部 |
 
 畫新圖用的零件：
