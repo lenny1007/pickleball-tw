@@ -1,0 +1,38 @@
+---
+// 依比例：長＋寬合計剛好到上限 60.96 公分（24 英寸）的三種組合，加長度上限 43.18 公分（17 英寸）虛線。
+// 組合用英寸整數換算（16×8、17×7、15.5×8.5），只示範規則上限，不是某支球拍的規格。
+// 1 公分 = 5 單位，拍子直立，底部對齊 y=262；握把一律畫 13 公分，只為了看起來像球拍。
+import Figure from './Figure.astro';
+const s = 5, base = 262, grip = 13;
+const paddles = [
+  { name: '標準拍', L: 40.6, W: 20.3, x: 28 },
+  { name: '長拍', L: 43.18, W: 17.78, x: 180 },
+  { name: '寬拍', L: 39.4, W: 21.6, x: 326 },
+];
+const maxL = 43.18;
+---
+<Figure caption="依比例的示意圖。三種組合的長加寬都剛好是 60.96 公分（24 英寸），所以拍子做得越長，就得做得越窄。虛線是長度上限 43.18 公分（17 英寸）。厚度和重量規則沒有限制。">
+  <svg class="gear-fig psl" viewBox="0 0 480 340" role="img" aria-label="三種剛好到上限的球拍：標準拍長 40.6、寬 20.3 公分；長拍長 43.18、寬 17.78 公分；寬拍長 39.4、寬 21.6 公分；長度上限 43.18 公分">
+    <line x1="16" y1={base - maxL * s} x2="464" y2={base - maxL * s} class="psl-max" />
+    <text class="lab" x="464" y={base - maxL * s - 8} text-anchor="end">長度上限 43.18 公分</text>
+    {paddles.map((p) => {
+      const top = base - p.L * s, headH = (p.L - grip) * s, cx = p.x + (p.W * s) / 2;
+      return (
+        <g>
+          <rect x={p.x} y={top} width={p.W * s} height={headH} rx="22" class="psl-face" />
+          <rect x={cx - 12} y={top + headH - 4} width="24" height={grip * s + 4} rx="6" class="psl-grip" />
+          <text class="lab dark" x={cx} y={top + headH / 2 - 6} text-anchor="middle">長 {p.L}</text>
+          <text class="lab dark" x={cx} y={top + headH / 2 + 18} text-anchor="middle">寬 {p.W}</text>
+          <text class="lab dark big" x={cx} y={base + 30} text-anchor="middle">{p.name}</text>
+          <text class="lab" x={cx} y={base + 56} text-anchor="middle">合計 60.96</text>
+        </g>
+      );
+    })}
+  </svg>
+</Figure>
+
+<style>
+  .psl-face { fill: var(--kitchen); stroke: var(--ink); stroke-width: 3; }
+  .psl-grip { fill: var(--ink); }
+  .psl-max { stroke: var(--fault); stroke-width: 2.5; stroke-dasharray: 7 5; }
+</style>
