@@ -4,6 +4,7 @@ interface Props { slug: string; small?: boolean }
 const { slug, small = false } = Astro.props;
 const kind =
   slug.includes('referee') ? 'ref'
+  : slug.includes('faults') ? 'faults'
   : slug.includes('for-kids') ? 'kids'
   : slug.includes('calories') ? 'cal'
   : slug.includes('tournaments') ? 'tour'
@@ -67,6 +68,16 @@ const kind =
       <g transform="translate(170 26) rotate(-12)"><rect width="74" height="96" rx="30" fill="var(--card)" stroke="var(--ink)" stroke-width="5" /><rect x="29" y="92" width="16" height="44" rx="5" fill="var(--ink)" /></g>
       <g transform="translate(400 40) rotate(10)"><rect width="56" height="70" rx="24" fill="var(--ball)" stroke="var(--ink)" stroke-width="5" /><rect x="21" y="66" width="14" height="34" rx="5" fill="var(--ink)" /></g>
       <circle cx="320" cy="96" r="15" class="ball-dot" />
+    </g>
+  )}
+  {kind === 'faults' && (
+    <g>
+      <rect x="0" y="222" width="640" height="58" fill="var(--court)" />
+      <line x1="0" y1="222" x2="640" y2="222" stroke="var(--line)" stroke-width="5" />
+      <rect x="314" y="120" width="12" height="102" fill="var(--ink)" />
+      <g transform="translate(236 64) rotate(24)"><rect width="64" height="84" rx="26" fill="var(--card)" stroke="var(--ink)" stroke-width="5" /><rect x="25" y="80" width="14" height="40" rx="5" fill="var(--ink)" /></g>
+      <circle cx="380" cy="104" r="15" class="ball-dot" />
+      <g transform="translate(520 80)"><circle r="40" fill="var(--fault)" /><path d="M-16 -16 L16 16 M16 -16 L-16 16" stroke="var(--marker-light)" stroke-width="9" stroke-linecap="round" /></g>
     </g>
   )}
   {kind === 'ref' && (
