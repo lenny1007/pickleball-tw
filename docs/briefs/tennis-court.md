@@ -33,10 +33,9 @@
 | 2.13 公尺（7 英尺） | 規則 3.A.4.c | 2026-11 |
 | 6.71 公尺（22 英尺） | 13.41 ÷ 2；USA Pickleball 畫線指南 22 呎記號 | 2026-11 |
 | 6.40 公尺 | ITF 規則第 1 條發球線 21 ft (6.40 m) | 2026-11 |
-| 31 公分 | 6.71 − 6.40 計算（量到線外緣） | 2026-11 |
 | 3.05 公尺（10 英尺）、3.05 公尺 | 規則 3.B.5 中央帶在邊線外緣 10 呎；畫線指南 10 呎記號 | 2026-11 |
 | 1.07 公尺（邊線往內） | (8.23 − 6.10) ÷ 2 計算；Better Pickleball「about 3½ feet」 | 2026-11 |
-| 30 公分 | Better Pickleball「only a foot short」 | 2026-11 |
+| 30 公分 | 6.71 − 6.40 = 0.31 m（精確 22 − 21 ft = 30.48 cm），全文統一寫「約 30 公分」；Better Pickleball「only a foot short」 | 2026-11 |
 | 91.4 公分（3 英尺）、91.4 公分 | ITF 第 1 條網中央 3 ft (0.914 m)；規則 3.B.6 邊線處 36 吋 | 2026-11 |
 | 1.07 公尺（網柱） | ITF 第 1 條 3½ ft (1.07 m) | 2026-11 |
 | 86.4 公分（34 英寸）、86.4 公分 | 規則 3.B.7 | 2026-11 |
@@ -49,15 +48,15 @@
 | 60 公尺 | 畫線指南「minimum of 198 feet of tape」 | 2026-11 |
 | 3.81 公分（1½ 英寸） | Tennis Canada p. 87 | 2026-11 |
 | 7.62 公分（3 英寸） | Tennis Canada p. 87 | 2026-11 |
-| 8 面、6 面、2 面 | 畫線指南 6 on 2、up to eight | 2026-11 |
+| 8 面、6 面 | 畫線指南：「a standard two-court tennis facility can accommodate up to eight lined pickleball courts」「it's more comfortable to replace the tennis pair with six pickleball courts」（6 on 2，留等候休息區、遮陽） | 2026-11 |
 
 ## 刻意不寫
 
 - 台灣哪些網球場已畫匹克球線、哪些公共網球場准不准貼線：查不到可靠清單，各場管理規定不同，只寫「先問管理單位」。
-- USA Pickleball 指南的「網球發球線可以當非截擊區線」：要看匹克球場怎麼擺，沒有圖的座標，怕讀者用錯；只畫一面置中時發球線比較接近底線。
+- USA Pickleball 指南的示意圖 #1–#3 是圖片，讀不到座標；文中只寫「兩面時拿網球發球線當其中一條非截擊區線」（指南原文 use the tennis service line as a line marker for the non-volley zone line），TennisLayouts 依此把匹克球網畫在離網球網 8.53 公尺。
+- ITF 附錄 X 場外建議值（國際比賽 21 ft／12 ft、休閒 18 ft／10 ft，休閒約 17.07 × 34.75 m 放不下四面）：只寫「很多休閒球場的場外沒留那麼大，先量過」。
 - 粉筆：LTA 說可以先用膠帶或粉筆，Better Pickleball 說不要用粉筆；來源互相矛盾，文中只寫 Better Pickleball 的提醒與 USA Pickleball 的膠帶建議。
 - 網球網在匹克球邊線處的確切高度：網子是曲線，規則沒給，只寫「比 91.4 公分高」。
-- ITF 場外建議值（休閒 5.48 m／3.05 m）：跟 60 × 120 英尺不同，寫進來會讓讀者混淆，只提醒「先量過」。
 - Tennis Canada「1:1 換算不是最佳解」、LTA 風速：跟讀者關係不大。
 - ATP（繞柱球）用網球網打不了：Pickleball.com 有寫，但對臨打讀者不重要。
 
@@ -74,5 +73,11 @@
 - 往內連：pickleball-vs-tennis-badminton 常見問題「網球場可以打匹克球嗎」、pickleball-court-size 延伸閱讀。
 
 ## 查證
+
+- 2026-11-20 獨立 subagent 查證（WebFetch 讀九份來源原文）：81 句，69 句通過，error 2、minor 8。
+  - error 1：「推薦畫 6 面、留 2 面網球場」錯，原文是兩面網球場整個改成 6 面匹克球場（replace the tennis pair with six）。主控另派 fetch 確認原文後改寫。
+  - error 2：只畫一面置中時，第 3 種做法「另外架移動式球網」跟網球網位置衝突。改成「移動式球網架在半場，線照兩面擺法」，開頭也同步。
+  - minor 已改：FAQ 補發球壓非截擊區線的例外；31／30 公分統一成「約 30 公分」；「美國常見」改「美國標準尺寸」並提醒休閒球場場外常較小；「看起來亂」改照原文；FAQ 刪掉來源沒有的「打得比較穩」改用原話；PickCards「不留殘膠」限定綠色膠帶；補中線膠帶跨記號正中；TennisOverlay 中央發球線只畫非截擊區線以後；MeasureCourt 補非截擊區線上的 3.05 刻度；資料來源歸屬拆開（一面＝Pickleball.com、先問場地＝Pickleball.com、SportMaster 只支持 60 × 120），補 BWF。
+  - 待確認改掉：兩面、四面的擺法改照 USA Pickleball「發球線當非截擊區線」，匹克球網離網球網 8.53 公尺。
 
 ## 追蹤

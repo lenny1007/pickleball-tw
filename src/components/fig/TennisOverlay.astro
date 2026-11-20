@@ -7,7 +7,7 @@ const s = 40;
 const X = (m: number) => m * s;
 ---
 <Figure caption="俯視示意圖，依比例畫，只畫一個半場。灰線是網球場本來的線，黃線是要自己貼或放標記的線。網球的中央發球線剛好在匹克球中線的位置；非截擊區線、兩條邊線和底線都要另外貼。">
-  <svg class="gear-fig tov" viewBox={`${X(-0.6)} ${X(-6.9)} ${X(9.4)} ${X(13.6)}`} role="img" aria-label="網球場半場上的匹克球場：非截擊區線離網 2.13 公尺要自己貼，邊線在網球單打邊線往內約 1.07 公尺，底線在網球發球線後面約 31 公分，網球中央發球線可以當匹克球中線">
+  <svg class="gear-fig tov" viewBox={`${X(-0.6)} ${X(-6.9)} ${X(9.4)} ${X(13.6)}`} role="img" aria-label="網球場半場上的匹克球場：非截擊區線離網 2.13 公尺要自己貼，邊線在網球單打邊線往內約 1.07 公尺，底線在網球發球線後面約 30 公分，網球中央發球線可以當匹克球中線">
     <rect x={X(-0.6)} y={X(-6.9)} width={X(9.4)} height={X(13.6)} fill="var(--apron)" />
     <rect x={X(0)} y={X(-3.05)} width={X(6.705)} height={X(6.1)} class="tov-pb" />
     <rect x={X(0)} y={X(-3.05)} width={X(2.13)} height={X(6.1)} class="tov-k" />
@@ -18,7 +18,7 @@ const X = (m: number) => m * s;
       <line x1="0" y1={X(4.115)} x2={X(8.8)} y2={X(4.115)} />
       <line x1={X(6.4)} y1={X(-4.115)} x2={X(6.4)} y2={X(4.115)} />
     </g>
-    <line x1="0" y1="0" x2={X(6.4)} y2="0" class="tov-reuse" />
+    <line x1={X(2.13)} y1="0" x2={X(6.4)} y2="0" class="tov-reuse" />
     <g class="tov-tape">
       <line x1={X(2.13)} y1={X(-3.05)} x2={X(2.13)} y2={X(3.05)} />
       <line x1="0" y1={X(-3.05)} x2={X(6.705)} y2={X(-3.05)} />
