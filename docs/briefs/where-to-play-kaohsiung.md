@@ -2,7 +2,7 @@
 
 - slug：where-to-play-kaohsiung
 - 分類：where-to-play
-- 狀態：寫作中
+- 狀態：查證完成，待站主看預覽
 
 ## 讀者與需求
 
@@ -25,7 +25,7 @@
 |---|---|---|
 | 鼓山匹克球場：室外 3 面；雄峰路18號（中山國小舊址）；114/7/1–116/6/30（2027 年 6 月底）由社團法人多元照顧專業發展協會認養，免費開放；團體先問協會檔期，使用日前 25 天到 3 個月內向運發局申請 | https://sports.kcg.gov.tw/StadiumDetailC003100.aspx?Cond=38e06be6-d31c-40f6-bff4-1d6c1ea7cb6c | 2026-11 |
 | 前金：3F 綜合球場（籃/羽/桌/匹克球場）；鼓山：桃子園路1號，綜合球場可容納 6 面羽球場，結合匹克球複合式；楠仔坑：楠梓，綜合球場（籃球/羽球/匹克球） | https://sports.kcg.gov.tw/StadiumListC003101.aspx?CategoryID=82fd77e2-3919-493d-9b6b-bf0789df33e9 ；同頁 Pindex=2 | 2026-11 |
-| 前金：匹克球場共 6 面，和羽球場共用；先用前金運動中心 APP 訂，再來電／私訊換匹克球場；取消最晚 3 小時前；可租匹克球拍組 | https://www.cianjin-sc.com/venues.html ；https://www.cianjin-sc.com/venues13.html | 2026-11 |
+| 前金：匹克球場共 6 面，和羽球場共用；開放承租的是 1、3、4 號場；先用前金運動中心 APP 預約，再來電／私訊換匹克球場；取消最晚 3 小時前；可租匹克球拍組 | https://www.cianjin-sc.com/venues.html ；https://www.cianjin-sc.com/venues13.html | 2026-11 |
 | 前金辦過新手歡迎的匹克球臨打團 | https://www.cianjin-sc.com/news-20260923.html | 2026-11 |
 | 鼓山運動中心室內匹克球場（2026-05 啟用） | https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=65DF0351348FB346 | 2026-11 |
 | 球聚：正勤活動中心（前鎮，室內）、三民公園（三民，室外） | https://pickleball.org.tw/stadium/ ；https://www.ctpf.org.tw/#/news/141 | 2026-11 |
@@ -49,5 +49,10 @@
 - 圖：PickCards、CityCourts、StepCards
 
 ## 查證
+
+2026-11-20 獨立查證（子代理對照運發局存檔、前金官網、協會清單、總會 API 與攻略文）：58 項，45 項相符，1 項錯誤、12 項小問題，全部已修。
+
+- 錯誤：takeaway 寫「前金有 6 面匹克球場」。venues13.html 寫共六面，但「開放承租的場地為1、3、4號場」。我另外抓原頁確認後，改成開放租的是 1、3、4 號場，表格同步補上。
+- 小問題：館方只寫「APP線上預約」，沒寫訂羽球場，改成「APP 預約場地」；楠仔坑綜合球場沒有來源寫是室內，FAQ 和 CityCourts 分組拿掉「室內」；器材、協會社群、球聚負責人改成有根據的說法；CityCourts 圖說改「本文整理的」；「常調整」改「可能調整」；開頭改「官方列管的免費球場」。
 
 ## 追蹤
