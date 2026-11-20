@@ -28,6 +28,7 @@ const kind =
   : slug.includes('non-volley') ? 'nvz'
   : slug.includes('paddle-recommendations') ? 'picks'
   : slug.includes('paddle-grip') ? 'grip'
+  : slug.includes('paddle-rules') ? 'prules'
   : slug.includes('paddle') ? 'paddle'
   : slug.includes('what-is') ? 'whatis'
   : slug.includes('first-time') ? 'first'
@@ -431,6 +432,23 @@ const kind =
       <g class="pl us"><circle cx="210" cy="140" r="22" /></g>
       <ellipse cx="248" cy="104" rx="16" ry="20" class="cv-paddle" transform="rotate(20 248 104)" />
       <circle cx="292" cy="78" r="11" class="ball-dot" />
+    </g>
+  )}
+  {kind === 'prules' && (
+    <g>
+      <rect x="0" y="0" width="300" height="280" fill="var(--court)" />
+      <line x1="300" y1="0" x2="300" y2="280" stroke="var(--line)" stroke-width="4" />
+      <rect x="220" y="34" width="140" height="160" rx="30" class="paddle-face" />
+      <rect x="276" y="190" width="28" height="74" rx="7" class="paddle-grip" />
+      <g stroke="var(--ink)" stroke-width="4" stroke-linecap="round" fill="none">
+        <line x1="392" y1="34" x2="392" y2="264" /><line x1="382" y1="34" x2="402" y2="34" /><line x1="382" y1="264" x2="402" y2="264" />
+        <line x1="220" y1="18" x2="360" y2="18" /><line x1="220" y1="8" x2="220" y2="28" /><line x1="360" y1="8" x2="360" y2="28" />
+      </g>
+      <rect x="440" y="86" width="150" height="108" rx="12" fill="var(--card)" stroke="var(--ink)" stroke-width="5" />
+      <g stroke="var(--ok)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none">
+        <path d="M478 140 l22 24 l42 -50" />
+      </g>
+      <circle cx="560" cy="236" r="16" class="ball-dot" />
     </g>
   )}
   {kind === 'paddle' && (
