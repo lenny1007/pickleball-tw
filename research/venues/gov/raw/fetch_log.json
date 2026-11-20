@@ -1,0 +1,230 @@
+[
+ {
+  "file": "raw/taipei_01.html",
+  "url": "https://vbs.sports.taipei/news/?U=single&K=263",
+  "http": "200",
+  "bytes": 13051
+ },
+ {
+  "file": "raw/taipei_02.html",
+  "url": "https://vbs.sports.taipei/news/?U=single&K=248",
+  "http": "200",
+  "bytes": 13099
+ },
+ {
+  "file": "raw/taipei_03.html",
+  "url": "https://vbs.sports.taipei/news/?U=single&K=274",
+  "http": "200",
+  "bytes": 12865
+ },
+ {
+  "file": "raw/taipei_04.html",
+  "url": "https://vbs.sports.taipei/news/?U=single&K=275",
+  "http": "200",
+  "bytes": 12883
+ },
+ {
+  "file": "raw/taipei_05.html",
+  "url": "https://vbs.sports.taipei/venues/?K=1107",
+  "http": "200",
+  "bytes": 34412
+ },
+ {
+  "file": "raw/taipei_06.html",
+  "url": "https://vbs.sports.taipei/venues/?K=1105",
+  "http": "200",
+  "bytes": 34486
+ },
+ {
+  "file": "raw/taipei_07.html",
+  "url": "https://vbs.sports.taipei/venues/?K=119",
+  "http": "200",
+  "bytes": 41810
+ },
+ {
+  "file": "raw/taipei_08.html",
+  "url": "https://vbs.sports.taipei/venues/?K=569",
+  "http": "200",
+  "bytes": 102218
+ },
+ {
+  "file": "raw/taipei_09.html",
+  "url": "https://vbs.sports.taipei/venues/?K=922",
+  "http": "200",
+  "bytes": 39169
+ },
+ {
+  "file": "raw/taipei_10.html",
+  "url": "https://www.tsc.taipei/%E5%A0%B4%E9%A4%A8%E4%BB%8B%E7%B4%B9/%E5%8C%B9%E5%85%8B%E7%90%83%E7%90%83%E5%A0%B4pickleball/",
+  "http": "200",
+  "bytes": 55492
+ },
+ {
+  "file": "raw/taipei_11.html",
+  "url": "https://sports.gov.taipei/News_Content.aspx?n=1FF3DE0605A74B47&sms=72544237BBE4C5F6&s=7579DBFB4D299E97",
+  "http": "200",
+  "bytes": 121849
+ },
+ {
+  "file": "raw/taipei_12.html",
+  "url": "https://sports.gov.taipei/News_Content.aspx?n=1FF3DE0605A74B47&sms=72544237BBE4C5F6&s=2F2ED0F98A8E78B4",
+  "http": "200",
+  "bytes": 115796
+ },
+ {
+  "file": "raw/taichung_01.html",
+  "url": "https://www.taichung.gov.tw/3214863/post",
+  "http": "200",
+  "bytes": 74033
+ },
+ {
+  "file": "raw/taichung_02.html",
+  "url": "https://www.taichung.gov.tw/3257117/post",
+  "http": "200",
+  "bytes": 74019
+ },
+ {
+  "file": "raw/taichung_03.html",
+  "url": "https://www.taichung.gov.tw/3374453/post",
+  "http": "200",
+  "bytes": 75280
+ },
+ {
+  "file": "raw/taichung_04.html",
+  "url": "https://www.taichung.gov.tw/3381652/post",
+  "http": "200",
+  "bytes": 72899
+ },
+ {
+  "file": "raw/taichung_05.html",
+  "url": "https://www.taichung.gov.tw/3389406/post",
+  "http": "200",
+  "bytes": 74671
+ },
+ {
+  "file": "raw/taichung_06.html",
+  "url": "https://www.taichung.gov.tw/3392081/post",
+  "http": "200",
+  "bytes": 83739
+ },
+ {
+  "file": "raw/taichung_07.html",
+  "url": "https://www.taichung.gov.tw/3277309/post",
+  "http": "200",
+  "bytes": 67956
+ },
+ {
+  "file": "raw/taichung_08.pdf",
+  "url": "https://www.sport.taichung.gov.tw/media/1444888/115年臺中市第十六屆全市運動大會場地資訊.pdf",
+  "http": "200",
+  "bytes": 86356
+ },
+ {
+  "file": "raw/taichung_09.pdf",
+  "url": "https://www.rdec.taichung.gov.tw/media/1443286/1150730-2-甲安埔地區推動大型運動場館專案報告-運動.pdf",
+  "http": "200",
+  "bytes": 2097758
+ },
+ {
+  "file": "raw/taichung_10.html",
+  "url": "https://www.sport.taichung.gov.tw/2596605/post",
+  "http": "200",
+  "bytes": 55154
+ },
+ {
+  "file": "raw/taichung_11.html",
+  "url": "https://www.sport.taichung.gov.tw/2596643/post",
+  "http": "200",
+  "bytes": 53959
+ },
+ {
+  "file": "raw/taichung_12.html",
+  "url": "https://cmcsc.cyc.org.tw/news_content/6921",
+  "http": "200",
+  "bytes": 16846
+ },
+ {
+  "file": "raw/taichung_13.html",
+  "url": "https://tzcsc.com.tw/news/%E5%A5%BD%E5%BA%B7%E5%A0%B1%E5%A0%B1/%E5%8C%B9%E5%85%8B%E7%90%83%E6%9A%A2%E6%89%93CLUB",
+  "http": "200",
+  "bytes": 26262
+ },
+ {
+  "file": "raw/taichung_14.html",
+  "url": "https://www.taichung.gov.tw/3358093/post",
+  "http": "200",
+  "bytes": 71056
+ },
+ {
+  "file": "raw/kaohsiung_01.html",
+  "url": "https://sports.kcg.gov.tw/StadiumDetailC003100.aspx?Cond=38e06be6-d31c-40f6-bff4-1d6c1ea7cb6c",
+  "http": "200",
+  "bytes": 154788
+ },
+ {
+  "file": "raw/kaohsiung_02.html",
+  "url": "https://sports.kcg.gov.tw/StadiumListC003101.aspx?CategoryID=82fd77e2-3919-493d-9b6b-bf0789df33e9",
+  "http": "200",
+  "bytes": 213437
+ },
+ {
+  "file": "raw/kaohsiung_03.html",
+  "url": "https://sports.kcg.gov.tw/StadiumListC003101.aspx?Pindex=2&CategoryID=82fd77e2-3919-493d-9b6b-bf0789df33e9",
+  "http": "200",
+  "bytes": 168347
+ },
+ {
+  "file": "raw/kaohsiung_04.html",
+  "url": "https://www.kcg.gov.tw/CityNews_Detail1.aspx?n=3A379BB94CA5F12D&ss=65DF0351348FB346",
+  "http": "200",
+  "bytes": 231915
+ },
+ {
+  "file": "raw/kaohsiung_05.html",
+  "url": "https://takao.kcg.gov.tw/article/3828",
+  "http": "200",
+  "bytes": 126660
+ },
+ {
+  "file": "raw/kaohsiung_06.html",
+  "url": "https://www.cianjin-sc.com/toll.html",
+  "http": "200",
+  "bytes": 15379
+ },
+ {
+  "file": "raw/kaohsiung_07.html",
+  "url": "https://www.cianjin-sc.com/venues.html",
+  "http": "200",
+  "bytes": 18438
+ },
+ {
+  "file": "raw/kaohsiung_08.html",
+  "url": "https://www.cianjin-sc.com/course-20261017.html",
+  "http": "200",
+  "bytes": 27373
+ },
+ {
+  "file": "raw/kaohsiung_09.html",
+  "url": "https://www.cianjin-sc.com/news-20260923.html",
+  "http": "200",
+  "bytes": 12700
+ },
+ {
+  "file": "raw/kaohsiung_10.pdf",
+  "url": "https://orgws.kcg.gov.tw/001/KcgOrgUploadFiles/412/RelFile/74415/532382/87e20b19-45b8-4b5d-9d82-aa7190622dff.pdf",
+  "http": "200",
+  "bytes": 677161
+ },
+ {
+  "file": "raw/kaohsiung_11.pdf",
+  "url": "https://orgws.kcg.gov.tw/001/KcgOrgUploadFiles/412/RelFile/74415/516867/c935f658-d03a-4919-9244-ffcc61cd45f7.pdf",
+  "http": "200",
+  "bytes": 750832
+ },
+ {
+  "file": "raw/kaohsiung_12.pdf",
+  "url": "https://orgws.kcg.gov.tw/001/KcgOrgUploadFiles/412/RelFile/74414/528305/de9918f5-b6a7-4931-8249-adc240867b4a.pdf",
+  "http": "200",
+  "bytes": 446833
+ }
+]
