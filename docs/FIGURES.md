@@ -86,6 +86,7 @@
 | `LevelLadder` | 自評分級階梯 2.0–5.0，每級一個最好認的特徵（長度無比例意義） | pickleball-skill-levels |
 | `DuprBands` | DUPR 分數對照（3.0 以下起步到 5.5 以上頂尖），右側 2–8 全刻度小尺 | pickleball-skill-levels |
 | `ReliabilityDecay` | DUPR 可靠度沒有新紀錄時往下掉：100→60%（約 6 個月）→30%（約 3 個月）→不到 10%（約 6 個月） | pickleball-skill-levels |
+| `CityCourts` | 一個城市的公共球場依行政區分組，每列一個場地＋專用／共用標籤（通用，傳 groups） | where-to-play-taipei |
 | `ArticleCover` | 每篇的封面，依 slug 關鍵字選畫面 | 全部 |
 
 畫新圖用的零件：
