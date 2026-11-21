@@ -1,0 +1,44 @@
+---
+// DUPR 官網〈What's my DUPR?〉（2026-11）的分級對照：3.0 以下 Developing、3.5 Intermediate、4.0 Competitive、
+// 4.5 Advanced、5.0 High-level、5.5+ Elite。右側小尺是 2.000–8.000 全刻度，黑點標這一級的位置（依比例）。
+import Figure from './Figure.astro';
+const rows = [
+  { lv: '3.0 以下', t: '起步', v: [2, 3.0] },
+  { lv: '3.5', t: '中級', v: [3.5, 3.5] },
+  { lv: '4.0', t: '有競爭力', v: [4.0, 4.0] },
+  { lv: '4.5', t: '進階', v: [4.5, 4.5] },
+  { lv: '5.0', t: '高水準', v: [5.0, 5.0] },
+  { lv: '5.5 以上', t: '頂尖、職業', v: [5.5, 8] },
+];
+const rowH = 50;
+const s0 = 330, s1 = 460;
+const X = (v: number) => s0 + ((v - 2) / 6) * (s1 - s0);
+const H = 40 + rows.length * rowH;
+---
+<Figure caption="示意圖，整理自 DUPR 官網的分級說明。右邊的小尺是 2.000 到 8.000 的全刻度（依比例），可以看出 5.5 以上的範圍很寬，但人數很少。">
+  <svg class="gear-fig db" viewBox={`0 0 480 ${H}`} role="img" aria-label="DUPR 分數對照：3.0 以下起步、3.5 中級、4.0 有競爭力、4.5 進階、5.0 高水準、5.5 以上是頂尖和職業選手">
+    <text class="lab" x={s0} y="24" text-anchor="middle">2</text>
+    <text class="lab" x={s1} y="24" text-anchor="middle">8</text>
+    {rows.map((r, i) => {
+      const y = 36 + i * rowH;
+      return (
+        <g>
+          <rect x="16" y={y} width="300" height="40" rx="10" class="db-card" />
+          <text class="lab dark big" x="30" y={y + 27}>{r.lv}</text>
+          <text class="lab dark" x="150" y={y + 27}>{r.t}</text>
+          <line x1={s0} y1={y + 20} x2={s1} y2={y + 20} class="db-scale" />
+          {r.v[0] === r.v[1]
+            ? <circle cx={X(r.v[0])} cy={y + 20} r="7" class="db-dot" />
+            : <line x1={X(r.v[0])} y1={y + 20} x2={X(r.v[1])} y2={y + 20} class="db-range" />}
+        </g>
+      );
+    })}
+  </svg>
+</Figure>
+
+<style>
+  .db-card { fill: var(--card); stroke: var(--rule); stroke-width: 2; }
+  .db-scale { stroke: var(--rule); stroke-width: 4; stroke-linecap: round; }
+  .db-dot { fill: var(--ink); }
+  .db-range { stroke: var(--ink); stroke-width: 8; stroke-linecap: round; }
+</style>

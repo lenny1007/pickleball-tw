@@ -1,0 +1,35 @@
+---
+// DUPR 可靠度沒有新紀錄時怎麼掉：官網〈DUPR Reliability Score〉舉的三段例子接起來畫。
+// 100% → 60% 約 6 個月；60% → 30% 約 3 個月；30% → 不到 10% 約 6 個月。x 軸 1 個月 = 22 單位。
+import Figure from './Figure.astro';
+const x0 = 60, per = 22, y0 = 250, yTop = 40;
+const X = (m: number) => x0 + m * per;
+const Y = (p: number) => y0 - (p / 100) * (y0 - yTop);
+const pts: [number, number][] = [[0, 100], [6, 60], [9, 30], [15, 9]];
+---
+<Figure caption="示意圖：DUPR 官網舉的例子，一直沒有新的比賽紀錄時，可靠度會慢慢往下掉。三段例子接成一條線，實際速度依每個人的紀錄而定。60% 以上算可靠。">
+  <svg class="gear-fig rd" viewBox="0 0 480 300" role="img" aria-label="沒有新紀錄時的可靠度：從 100% 約 6 個月掉到 60%，再約 3 個月掉到 30%，再約 6 個月掉到不到 10%；60% 以上算可靠">
+    <rect x={x0} y={Y(100)} width={X(15) - x0} height={Y(60) - Y(100)} class="rd-ok" />
+    <text class="lab dark" x={X(15) - 8} y={Y(100) + 24} text-anchor="end">60% 以上算可靠</text>
+    <line x1={x0} y1={Y(60)} x2={X(15)} y2={Y(60)} class="rd-guide" />
+    <polyline points={pts.map(([m, p]) => `${X(m)},${Y(p)}`).join(' ')} class="rd-line" />
+    {pts.map(([m, p]) => <circle cx={X(m)} cy={Y(p)} r="7" class="rd-dot" />)}
+    <text class="lab dark" x={X(6) + 12} y={Y(60) - 10}>60%</text>
+    <text class="lab dark" x={X(9) + 12} y={Y(30) - 6}>30%</text>
+    <text class="lab dark" x={X(15) + 12} y={Y(9) + 6}>不到 10%</text>
+    <line x1={x0} y1={y0} x2={X(15)} y2={y0} class="rd-axis" />
+    <line x1={x0} y1={y0} x2={x0} y2={yTop} class="rd-axis" />
+    <text class="lab" x={x0 - 10} y={Y(100) + 6} text-anchor="end">100%</text>
+    <text class="lab" x={x0 - 10} y={y0 + 6} text-anchor="end">0</text>
+    {[0, 6, 9, 15].map((m) => <text class="lab" x={X(m)} y={y0 + 26} text-anchor="middle">{m}</text>)}
+    <text class="lab" x={X(15)} y={y0 + 46} text-anchor="end">沒打比賽的月數</text>
+  </svg>
+</Figure>
+
+<style>
+  .rd-ok { fill: var(--court); fill-opacity: .18; }
+  .rd-guide { stroke: var(--court); stroke-width: 2; stroke-dasharray: 6 5; }
+  .rd-line { fill: none; stroke: var(--ink); stroke-width: 4; stroke-linejoin: round; }
+  .rd-dot { fill: var(--ball); stroke: var(--ink); stroke-width: 2; }
+  .rd-axis { stroke: var(--muted); stroke-width: 2; }
+</style>
