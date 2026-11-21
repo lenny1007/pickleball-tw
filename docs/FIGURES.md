@@ -87,6 +87,7 @@
 | `TennisOverlay` | 網球半場上的匹克球場：非截擊區線 2.13、底線 6.71（發球線 6.40 後約 30 公分）、邊線在單打邊線內 1.07、中線沿用中央發球線 | pickleball-on-tennis-court |
 | `TennisNetHeight` | 正面：網球網（網柱 107、中間 91.4）vs 匹克球網應有高度（邊線 91.4、中間 86.4），依比例 | pickleball-on-tennis-court |
 | `MeasureCourt` | 兩把捲尺量四個角：邊線 13.41、底線 6.10、對角線 14.73；4.57／6.71／8.84 記號與 3.05 中線 | pickleball-on-tennis-court |
+| `NetFaults` | 側面三格：在自己這邊擊球後收拍過網合法、球沒過網就伸過去打失誤、碰網失誤 | pickleball-faults |
 | `CityCourts` | 一個城市的公共球場依行政區分組，每列一個場地＋專用／共用標籤（通用，傳 groups） | where-to-play-taipei |
 | `ArticleCover` | 每篇的封面，依 slug 關鍵字選畫面 | 全部 |
 
