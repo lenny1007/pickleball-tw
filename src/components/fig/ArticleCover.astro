@@ -28,6 +28,7 @@ const kind =
   : slug.includes('scoring') ? 'scoring'
   : slug.includes('non-volley') ? 'nvz'
   : slug.includes('paddle-recommendations') ? 'picks'
+  : slug.includes('paddle-brands') ? 'brands'
   : slug.includes('paddle-grip') ? 'grip'
   : slug.includes('paddle') ? 'paddle'
   : slug.includes('what-is') ? 'whatis'
@@ -442,6 +443,21 @@ const kind =
       <g class="pl us"><circle cx="210" cy="140" r="22" /></g>
       <ellipse cx="248" cy="104" rx="16" ry="20" class="cv-paddle" transform="rotate(20 248 104)" />
       <circle cx="292" cy="78" r="11" class="ball-dot" />
+    </g>
+  )}
+  {kind === 'brands' && (
+    <g>
+      <rect x="0" y="220" width="640" height="60" fill="var(--court)" />
+      <line x1="0" y1="220" x2="640" y2="220" stroke="var(--line)" stroke-width="5" />
+      {[{ x: 150, c: 'var(--muted)', t: 1 }, { x: 320, c: 'var(--kitchen)', t: 2 }, { x: 490, c: 'var(--court)', t: 3 }].map((p) => (
+        <g>
+          <rect x={p.x - 46} y="40" width="92" height="112" rx="26" fill={p.c} stroke="var(--ink)" stroke-width="5" />
+          <rect x={p.x - 12} y="150" width="24" height="70" rx="7" class="paddle-grip" />
+          {Array.from({ length: p.t }).map((_, i) => (
+            <rect x={p.x + 52} y={196 - i * 22} width="44" height="16" rx="8" fill="var(--ball)" stroke="var(--ink)" stroke-width="3" />
+          ))}
+        </g>
+      ))}
     </g>
   )}
   {kind === 'paddle' && (
