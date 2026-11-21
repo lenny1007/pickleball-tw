@@ -2,7 +2,7 @@
 
 - slug：paddle-brands
 - 分類：paddle
-- 狀態：查證中
+- 狀態：已上線（2026-11-21）
 
 ## 讀者與需求
 
@@ -48,6 +48,7 @@
 | 高階球拍單價達 250 到 350 美元 | 經濟日報〈高爾夫三雄 進擊匹克球〉https://money.udn.com/money/story/5607/9661427 （2026-07-31）「高階球拍單價達250至350美元」 | 2026-11 |
 | 復盛應用、明安已接品牌代工訂單出貨；大田規劃自創品牌 | 同上 | 2026-11 |
 | TXCP：台灣球拍品牌兼 OEM/ODM | 工商時報 https://www.ctee.com.tw/news/20260611700202-439901 （2026-06-11） | 2026-11 |
+| KASACA 在清單登記為代號；Mighty Force 代號 SANKC23TP019 | 核可清單 https://equipment.usapickleball.org/paddle-list/?gv_search_view=11045&filter_5=KASACA&mode=all 共 6 筆：SKCTP023（2024-06-13）、SANKC23TP019／TP014／TP018（2023-05-30）、SANKC22TP017（2022-06-20）、SANKC22TP012（2022-05-30）；好市多 Mighty Force 型號 SANKC23TP019-02、七件組 SANKC22TP012-13（2026-11-21 站主電腦查） | 2026-11 |
 | 核可清單超過 5,000 款 | https://equipment.usapickleball.org/paddle-list/ 「Displaying 1 - 25 of 5,428」 | 2026-11 |
 | JOOLA 台灣官網為授權通路 | joola.com 授權通路頁 Chinese Taipei → joola.tw（paddle-recommendations 查證） | 2026-11 |
 | Kuikma 在清單登記為 DECATHLON | 核可清單（paddle-recommendations 查證） | 2026-11 |
@@ -82,9 +83,9 @@
 - 2026-11-20，雲端獨立 subagent（WebFetch／WebSearch）：拆 47 項，對得上 35、error 5（3 大項）、minor 7、找不到 8（joola.tw、迪卡儂、核可清單搜尋讀不到）。
   - error（主控自己回原頁確認後才改）：(1) Selkirk 構造文原文 "there are benefits to each"，不是替熱壓說話 → 改成「各有好處」，偏向自家的只寫 Paddletek；(2)「沒有台灣代理」寫成事實，且 Selkirk 亞洲保固表單列台灣、HEAD 由 INFIN 代理經銷 → H2 和 description 改「找不到台灣總代理」，加「先問是不是授權經銷」，HEAD 通路補 INFIN 官網；(3) Pro Max II 寫的是 T700 碳纖維不是原生碳纖維 → 分開寫。
   - minor 已改：「貴的拍子常提到熱壓」→ NT$1,500 以上（Mighty Force 就寫熱壓）；KASACA 產地改「部分商品頁」；HEAD 不再只叫網球品牌；HEAD 用的是 momo 促銷價，註明；「多半」→「常」；Journey 薄芯偏力量改成引用怎麼挑那篇；蝦皮刪掉；Perseus 價格來源改寫；250–350 美元移到代工段。
-  - 找不到的項目：JOOLA 台灣官網、迪卡儂價格沿用 paddle-recommendations 11-18 查證，待在站主電腦重對。
+  - 找不到的項目：2026-11-21 在站主電腦重對，JOOLA 台灣官網 Journey NT$2,199（10 mm）、Hyperion CFS 16 NT$6,699、Anna Bright Scorpeus CFS 14 NT$7,675，皆無特價；迪卡儂 Open $799、React $1,249，厚度 16 mm。全部對得上，不用改。HEAD 在清單上有 78 筆（含 Radical TEAM15，2025-08-08），文中未寫型號核可結論。
 
 ## 追蹤
 
-- 第 4 週：
-- 第 8 週：
+- 第 4 週（2026-12-19）：
+- 第 8 週（2027-01-16）：
