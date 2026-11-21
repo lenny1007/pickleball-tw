@@ -46,6 +46,7 @@
 | 歸仁：國小一到六年級、5 天、每天 9:00–10:30、1,200 元一梯 | https://eventgo.tw/event/9fce90c8-7752-4add-9693-b772272bdc12 | 2026-11 |
 | 長佳盃體驗營：國小一到六年級、48 名、免費；親子賽國小二年級以上 | https://ipickleball.com.tw/events/115%E5%B9%B4%E9%95%B7%E4%BD%B3%E7%9B%83%E5%85%AC%E7%9B%8A%E5%85%92%E7%AB%A5%E5%8C%B9%E5%85%8B%E7%90%83%E9%AB%94%E9%A9%97%E7%87%9F%E8%88%87%E8%AA%BF%E7%9A%AE%E8%A6%AA%E5%AD%90%E8%B3%BD/ | 2026-11 |
 | 匹克球眼傷、目前沒有強制戴護目鏡；43%（被球打到） | AMA 整理 JAMA Ophthalmology 2025 https://www.ama-assn.org/about/publications-newsletters/look-out-pickleball-s-popularity-soars-so-do-eye-injuries | 2026-11 |
+| 2024 年約 1,262 件；2005–2024 年整體約 43% 被球擊中；未列兒童件數（2026-11-20 站主指正：43% 是整個研究期間的比例，不是 2024 年） | JAMA Ophthalmology 2025 研究，報導 https://newatlas.com/health-wellbeing/pickleball-related-eye-injuries-rise 、https://www.thedinkpickleball.com/pickleball-eye-injuries-are-growing-at-an-alarming-rate-with-a-few-caveats/ | 2026-11 |
 | ASTM F3164 加入匹克球測試 | https://newsroom.astm.org/newsroom-articles/F3164-eye-protection | 2026-11 |
 
 ## 刻意不寫
