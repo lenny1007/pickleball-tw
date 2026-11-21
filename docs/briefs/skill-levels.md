@@ -2,7 +2,7 @@
 
 - slug：pickleball-skill-levels
 - 分類：beginner
-- 狀態：寫作中
+- 狀態：查證完成
 
 ## 讀者與需求
 
