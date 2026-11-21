@@ -1,0 +1,70 @@
+---
+// 側面示意圖：網子附近三種情況，上下三格（寬 480）。我方在左、對方在右，網在 x=240。
+// 1. 在自己這邊擊球、收拍時拍子順勢越過網：合法。
+// 2. 球還沒過網就伸過去打：失誤。
+// 3. 球還在打的時候碰到網子：失誤。
+import Figure from './Figure.astro';
+const rowH = 170;
+const rows = [
+  { t: '在自己這邊打，收拍過網', ok: true },
+  { t: '球還沒過網，伸過去打', ok: false },
+  { t: '球還在打，碰到網子', ok: false },
+];
+const g = 146; // 每格地面的相對高度
+---
+<Figure caption="側面示意圖，我方在左、對方在右。① 在自己這邊擊球，收拍時拍子順勢越過網的上空：合法。② 球還在對方那邊就伸過去打：失誤。③ 球還在打的時候，身體、球拍或衣服碰到網子：失誤。">
+  <svg class="gear-fig netf" viewBox={`0 0 480 ${rows.length * rowH + 4}`} role="img" aria-label="側面三格：在自己這邊擊球後收拍過網合法；球沒過網就伸過去打失誤；球還在打時碰到網子失誤">
+    {rows.map((r, i) => {
+      const top = 4 + i * rowH;
+      return (
+        <g transform={`translate(0,${top})`}>
+          <rect x="8" y="0" width="464" height={rowH - 10} rx="14" class="nf-card" />
+          <text class="lab dark big" x="24" y="32">{`${i + 1}. ${r.t}`}</text>
+          <rect x="24" y={g} width="432" height="8" class="nf-court" />
+          <rect x="237" y={g - 52} width="6" height="52" class="nf-net" />
+          <text class="lab" x="70" y={g - 8}>我方</text>
+          <text class="lab" x="370" y={g - 8}>對方</text>
+          {i === 0 && (
+            <g>
+              <circle cx="222" cy={g - 64} r="8" class="ball-dot" />
+              <rect x="186" y={g - 80} width="24" height="32" rx="10" class="nf-paddle" />
+              <path d={`M210 ${g - 82} Q246 ${g - 100} 266 ${g - 76}`} class="nf-swing" />
+              <rect x="262" y={g - 76} width="24" height="32" rx="10" class="nf-paddle ghost" />
+            </g>
+          )}
+          {i === 1 && (
+            <g>
+              <circle cx="276" cy={g - 70} r="8" class="ball-dot" />
+              <rect x="250" y={g - 86} width="24" height="32" rx="10" class="nf-paddle" />
+              <line x1="200" y1={g - 64} x2="250" y2={g - 70} class="nf-arm" />
+            </g>
+          )}
+          {i === 2 && (
+            <g>
+              <circle cx="300" cy={g - 80} r="8" class="ball-dot" />
+              <rect x="216" y={g - 58} width="24" height="32" rx="10" class="nf-paddle" transform={`rotate(20 228 ${g - 42})`} />
+              <path d={`M246 ${g - 62} l10 -8 M248 ${g - 48} l12 0 M246 ${g - 34} l10 8`} class="nf-hit" />
+            </g>
+          )}
+          <g transform={`translate(430,${g - 70})`} class:list={['mk', r.ok ? 'ok' : 'fault']}>
+            <circle r="14" />
+            {r.ok
+              ? <path d="M-7 0 l5 5.5 l9 -11" fill="none" />
+              : <path d="M-6 -6 l12 12 M6 -6 l-12 12" fill="none" />}
+          </g>
+        </g>
+      );
+    })}
+  </svg>
+</Figure>
+
+<style>
+  .nf-card { fill: var(--paper); stroke: var(--rule); stroke-width: 2; }
+  .nf-court { fill: var(--court); }
+  .nf-net { fill: var(--ink); }
+  .nf-paddle { fill: var(--muted); }
+  .nf-paddle.ghost { fill: none; stroke: var(--muted); stroke-width: 2.5; stroke-dasharray: 5 4; }
+  .nf-swing { fill: none; stroke: var(--muted); stroke-width: 2.5; stroke-dasharray: 5 4; }
+  .nf-arm { stroke: var(--ink); stroke-width: 7; stroke-linecap: round; }
+  .nf-hit { fill: none; stroke: var(--fault); stroke-width: 3; stroke-linecap: round; }
+</style>
