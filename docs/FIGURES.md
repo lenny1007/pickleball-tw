@@ -83,6 +83,10 @@
 | `KidsCourt` | 給孩子的縮短場地：非截擊區線和底線中間貼膠帶 | pickleball-for-kids |
 | `KidsPaddles` | 兩支兒童拍依比例的長寬重，加規則長度上限 | pickleball-for-kids |
 | `MetZones` | 強度刻度：輕度、中等、費力的 MET 範圍，加匹克球實測平均 4.1 與範圍 1.5–7.7 | pickleball-calories-benefits |
+| `TennisLayouts` | 一面網球場（連場外 18.29 × 36.58 公尺）畫一面、兩面、四面匹克球場（依比例，三格直排） | pickleball-on-tennis-court |
+| `TennisOverlay` | 網球半場上的匹克球場：非截擊區線 2.13、底線 6.71（發球線 6.40 後約 30 公分）、邊線在單打邊線內 1.07、中線沿用中央發球線 | pickleball-on-tennis-court |
+| `TennisNetHeight` | 正面：網球網（網柱 107、中間 91.4）vs 匹克球網應有高度（邊線 91.4、中間 86.4），依比例 | pickleball-on-tennis-court |
+| `MeasureCourt` | 兩把捲尺量四個角：邊線 13.41、底線 6.10、對角線 14.73；4.57／6.71／8.84 記號與 3.05 中線 | pickleball-on-tennis-court |
 | `LevelLadder` | 自評分級階梯 2.0–5.0，每級一個最好認的特徵（長度無比例意義） | pickleball-skill-levels |
 | `DuprBands` | DUPR 分數對照（3.0 以下起步到 5.5 以上頂尖），右側 2–8 全刻度小尺 | pickleball-skill-levels |
 | `ReliabilityDecay` | DUPR 可靠度沒有新紀錄時往下掉：100→60%（約 6 個月）→30%（約 3 個月）→不到 10%（約 6 個月） | pickleball-skill-levels |
