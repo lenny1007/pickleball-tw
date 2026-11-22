@@ -1,0 +1,32 @@
+---
+// 拍面正面：貼紙和膠帶只能貼在外緣（有護邊就從護邊內側）往內 1.27 公分（0.5 英寸）的一圈，和握把上方 2.54 公分（1 英寸）的一段。
+// 1 公分 = 8 單位：拍面寬 20.3 公分 = 162，拍頭高 27 公分 = 216。帶狀範圍照比例畫。
+import Figure from './Figure.astro';
+const s = 8, x0 = 159, y0 = 24, W = 20.3 * s, H = 27 * s, edge = 1.27 * s, above = 2.54 * s, r = 26;
+const gw = 26;
+---
+<Figure caption="拍面正面示意圖，帶狀範圍依比例。名字貼紙、護邊膠帶這類東西，只能貼在黃色範圍：外緣（有護邊就從護邊內側）往內 1.27 公分（0.5 英寸）的一圈，和握把上方 2.54 公分（1 英寸）的一段。拍面中間不能貼，市售球拍也不能自己加圖案。">
+  <svg class="gear-fig ptz" viewBox="0 0 480 360" role="img" aria-label="拍面上可以貼貼紙或膠帶的範圍：外緣往內 1.27 公分一圈、握把上方 2.54 公分一段，中間不能貼">
+    <rect x={x0} y={y0} width={W} height={H} rx={r} class="ptz-zone" />
+    <rect x={x0 + edge} y={y0 + edge} width={W - 2 * edge} height={H - edge - above} rx={r - edge} class="ptz-face" />
+    <rect x={x0} y={y0} width={W} height={H} rx={r} class="ptz-outline" />
+    <rect x={240 - gw / 2} y={y0 + H - 2} width={gw} height="104" rx="6" class="ptz-grip" />
+    <text class="lab dark big" x="240" y={y0 + H / 2 - 10} text-anchor="middle">中間</text>
+    <text class="lab dark big" x="240" y={y0 + H / 2 + 18} text-anchor="middle">不能貼</text>
+    <line x1={x0 - 4} y1="70" x2="112" y2="70" class="ptz-lead" />
+    <text class="lab dark" x="104" y="66" text-anchor="end">外緣一圈</text>
+    <text class="lab" x="104" y="92" text-anchor="end">1.27 公分內</text>
+    <line x1={x0 + W - 30} y1={y0 + H - above / 2} x2="368" y2="214" class="ptz-lead" />
+    <text class="lab dark" x="376" y="210">握把上方</text>
+    <text class="lab" x="376" y="236">2.54 公分內</text>
+    <text class="lab" x="262" y="320">握把</text>
+  </svg>
+</Figure>
+
+<style>
+  .ptz-zone { fill: var(--ball); }
+  .ptz-face { fill: var(--kitchen); }
+  .ptz-outline { fill: none; stroke: var(--ink); stroke-width: 3; }
+  .ptz-grip { fill: var(--ink); }
+  .ptz-lead { stroke: var(--ink); stroke-width: 2; }
+</style>
