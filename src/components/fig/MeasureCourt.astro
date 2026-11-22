@@ -1,0 +1,37 @@
+---
+// 俯視：USA Pickleball「How to Line a Pickleball Court」的量法。座標同 Court（1 呎 = 10 單位）。
+// A(0,0) B(440,0) 是一條 44 呎邊線；C(0,200)、D(440,200)。BC 對角線 48.33 呎。
+// AB、CD 上在 15、22、29 呎做記號（22 呎是網），AC、BD 與非截擊區線上在 10 呎做記號（中線）。
+import Court from './Court.astro';
+import Figure from './Figure.astro';
+const ticks = [150, 220, 290];
+---
+<Figure caption="俯視示意圖。先貼一條 13.41 公尺的邊線 AB，再用兩把捲尺找出 C：離 A 6.10 公尺、離 B 14.73 公尺（對角線），兩把尺交會的點就是直角。同樣方法找出 D。四個角定好後，在兩條邊線上量 4.57、6.71、8.84 公尺做記號，6.71 公尺是網，另外兩個是非截擊區線；底線和非截擊區線的中點 3.05 公尺連起來是中線。">
+  <Court label="用兩把捲尺量出四個角：邊線 13.41 公尺、底線 6.10 公尺、對角線 14.73 公尺；邊線上 4.57、6.71、8.84 公尺做記號，中線在 3.05 公尺" x0={-6} x1={50} y0={-9} y1={29} net={false} kitchenFill={false}>
+    <line x1="440" y1="0" x2="0" y2="200" class="mc-diag" />
+    {ticks.map((t) => <g><line x1={t} y1="-8" x2={t} y2="8" class="mc-tick" /><line x1={t} y1="192" x2={t} y2="208" class="mc-tick" /></g>)}
+    <line x1="-8" y1="100" x2="8" y2="100" class="mc-tick" />
+    <line x1="142" y1="100" x2="158" y2="100" class="mc-tick" />
+    <line x1="282" y1="100" x2="298" y2="100" class="mc-tick" />
+    <line x1="432" y1="100" x2="448" y2="100" class="mc-tick" />
+    <circle cx="0" cy="0" r="9" class="mc-pt" /><circle cx="440" cy="0" r="9" class="mc-pt" />
+    <circle cx="0" cy="200" r="9" class="mc-pt" /><circle cx="440" cy="200" r="9" class="mc-pt" />
+    <text class="lab dark big" x="-14" y="-26" text-anchor="middle">A</text>
+    <text class="lab dark big" x="454" y="-26" text-anchor="middle">B</text>
+    <text class="lab dark big" x="-14" y="248" text-anchor="middle">C</text>
+    <text class="lab dark big" x="454" y="248" text-anchor="middle">D</text>
+    <text class="lab dark" x="150" y="-26" text-anchor="middle">4.57</text>
+    <text class="lab dark" x="220" y="-26" text-anchor="middle">網 6.71</text>
+    <text class="lab dark" x="290" y="-26" text-anchor="middle">8.84</text>
+    <text class="lab big mc-on" x="300" y="78" text-anchor="middle">對角線 14.73 m</text>
+    <text class="lab dark" x="220" y="250" text-anchor="middle">邊線 13.41 m</text>
+    <text class="lab dark" x="-30" y="106" text-anchor="middle">6.10</text>
+  </Court>
+</Figure>
+
+<style>
+  .mc-diag { stroke: var(--ball); stroke-width: 4; stroke-dasharray: 10 7; }
+  .mc-tick { stroke: var(--ink); stroke-width: 3; }
+  .mc-pt { fill: var(--ball); stroke: var(--ink); stroke-width: 2.5; }
+  :global(.court-fig) .mc-on { fill: var(--on-court); }
+</style>

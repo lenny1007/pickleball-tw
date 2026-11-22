@@ -1,0 +1,44 @@
+---
+// 通用：一個城市的公共匹克球場，依行政區分組（寬 400，直式）。每列一個場地：名稱（≤ 9 字）＋右邊一顆標籤（專用／共用／室內等，≤ 3 字）。
+// 用在 where-to-play-<城市>，只放內文已寫、已查證的場地。
+import Figure from './Figure.astro';
+interface Court { name: string; tag: string; kind?: 'own' | 'share' | 'in' }
+interface Group { area: string; courts: Court[] }
+interface Props { groups: Group[]; caption: string; label: string }
+const { groups, caption, label } = Astro.props;
+const headH = 40, rowH = 46, gap = 14;
+let y = 8;
+const laid = groups.map((g) => {
+  const top = y;
+  y += headH + g.courts.length * rowH + gap;
+  return { ...g, top };
+});
+const H = y;
+---
+<Figure caption={caption}>
+  <svg class="gear-fig ctc" viewBox={`0 0 400 ${H}`} role="img" aria-label={label}>
+    {laid.map((g) => (
+      <g transform={`translate(16,${g.top})`}>
+        <text class="lab dark big" x="4" y="26">{g.area}</text>
+        {g.courts.map((c, i) => (
+          <g transform={`translate(0,${headH + i * rowH})`}>
+            <rect width="368" height="38" rx="10" class="ctc-card" />
+            <text class="lab dark" x="16" y="25">{c.name}</text>
+            <rect x="288" y="6" width="68" height="26" rx="13" class={`ctc-${c.kind ?? 'own'}`} />
+            <text class={`ctc-tag ctc-t-${c.kind ?? 'own'}`} x="322" y="24" text-anchor="middle">{c.tag}</text>
+          </g>
+        ))}
+      </g>
+    ))}
+  </svg>
+</Figure>
+
+<style>
+  .ctc-card { fill: var(--paper); stroke: var(--rule); stroke-width: 2; }
+  .ctc-own { fill: var(--court); }
+  .ctc-share { fill: var(--kitchen); }
+  .ctc-in { fill: var(--apron); }
+  .ctc-tag { font: 15px var(--display); }
+  .ctc-t-own { fill: var(--on-court); }
+  .ctc-t-share, .ctc-t-in { fill: var(--ink); }
+</style>
