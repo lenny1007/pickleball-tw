@@ -83,6 +83,8 @@
 | `KidsCourt` | 給孩子的縮短場地：非截擊區線和底線中間貼膠帶 | pickleball-for-kids |
 | `KidsPaddles` | 兩支兒童拍依比例的長寬重，加規則長度上限 | pickleball-for-kids |
 | `MetZones` | 強度刻度：輕度、中等、費力的 MET 範圍，加匹克球實測平均 4.1 與範圍 1.5–7.7 | pickleball-calories-benefits |
+| `PaddleSizeLimit` | 依比例：長＋寬剛好 60.96 公分的三種拍（標準、長、寬）與長度上限 43.18 公分虛線 | pickleball-paddle-rules |
+| `PaddleTapeZones` | 拍面正面：貼紙膠帶只能貼外緣 1.27 公分一圈、握把上方 2.54 公分一段 | pickleball-paddle-rules |
 | `TennisLayouts` | 一面網球場（連場外 18.29 × 36.58 公尺）畫一面、兩面、四面匹克球場（依比例，三格直排） | pickleball-on-tennis-court |
 | `TennisOverlay` | 網球半場上的匹克球場：非截擊區線 2.13、底線 6.71（發球線 6.40 後約 30 公分）、邊線在單打邊線內 1.07、中線沿用中央發球線 | pickleball-on-tennis-court |
 | `TennisNetHeight` | 正面：網球網（網柱 107、中間 91.4）vs 匹克球網應有高度（邊線 91.4、中間 86.4），依比例 | pickleball-on-tennis-court |
