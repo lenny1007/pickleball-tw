@@ -2,7 +2,7 @@
 
 - slug：where-to-buy-paddle
 - 分類：paddle
-- 狀態：查證中
+- 狀態：查證完成，待上線
 
 ## 讀者與需求
 
@@ -18,7 +18,7 @@
 - 2026-11-22 在站主電腦（Remote Control）讀官網，原始頁面有存在本機；雲端讀不到迪卡儂（JS）、joola.com 經銷頁、Selkirk 亞洲政策頁。
 - 迪卡儂台灣：匹克球拍分類 https://www.decathlon.tw/c/球拍運動/匹克球/匹克球拍.html ；KUIKMA Open 商品頁有「迪卡儂門市取貨」「查詢門市庫存」（瀏覽器確認）https://www.decathlon.tw/p/初階玻璃纖維匹克球拍-open-美國匹克球協會認可-藍色-kuikma-8941064.html ；配送服務頁：「運動商城的商品由合作夥伴出貨」「※ 運動商城商品僅支援宅配，不支援超商與門市取貨」https://www.decathlon.tw/s/配送服務 ；標籤原文「官網限定 | 廠商宅配」；KASACA 商品 partnerName "KASACA"。門市資訊頁列北部 10、中南部 10（另有士林門市頁不在列表），數字不寫。試拍查不到。
 - JOOLA：https://joola.com/pages/authorized-retailers 「Chinese Taipei JOOLA Chinese Taipei Website: https://www.joola.tw」；https://joola.tw/about-joola/ 「優拉於2022年成立台灣辦公室」；頁尾「銷售門市」只連 Shopee JOOLA 台灣，無實體地址。
-- HEAD：https://www.head.com/en_US/locations 亞洲只列日本、香港、澳洲、泰國、菲律賓；瑜飛運動 https://www.headsports.com.tw/about 「2010年1月，瑜飛運動成為世界知名運動品牌-HEAD台灣地區的總代理商與授權商」，代理網球、壁球、匹克球，有匹克球拍專區；https://www.headsports.com.tw/ 「INFIN 直營門市 … 台北市信義區和平東路三段359號」。代理身分只有瑜飛自述，文中寫「在自己的官網寫是」。
+- HEAD：https://www.head.com/en_US/locations 亞洲只列日本、香港、澳洲、泰國、菲律賓；瑜飛運動 https://www.headsports.com.tw/about 「2010年1月，瑜飛運動成為世界知名運動品牌-HEAD台灣地區的總代理商與授權商，引進HEAD網球、壁球及羽球相關產品」（關於頁沒寫匹克球；首頁導覽有「匹克球拍專區」）；https://www.headsports.com.tw/ 「INFIN 直營門市 … 台北市信義區和平東路三段359號」。代理身分只有瑜飛自述，文中寫「在自己的官網寫是」。
 - KASACA：kasaca.com 「我們以台灣為設計與研發核心」，無門市／經銷列表。好市多商品頁標「Costco好市多網路獨家商品」「此商品為廠商出貨之常溫商品」https://www.costco.com.tw/Sports-Lifestyle/Sports-Fitness/Team-Sports/KASACA-Pro-Max-II-Pickleball-Paddle/p/161128 ；線上獨家定義「線上獨家商品能讓您輕鬆選購實體賣場未販售的專屬規格與品項」https://www.costco.com.tw/c/OnlineExclusive
 - Selkirk 亞洲：國家選單 "Taiwan (TWD $)"；https://asia.selkirk.com/pages/contact-us "solely responsible for paying any applicable taxes, duties, import fees, and carrier fees"、"strictly non-refundable"；https://asia.selkirk.com/policies/refund-policy 30 天、國際退貨運費買方付；https://asia.selkirk.com/pages/warranty/paddle-warranty 保固需在 selkirk.com 註冊（6 個月，但零售商招募頁寫 limited lifetime，兩頁矛盾，所以文中不寫期限）；營運 SELKIRK SPORT MALAYSIA SDN. BHD.；無公開台灣零售商。
 - 其他：Franklin https://franklinsports.com/faq "we do not have the ability to ship orders outside of the United States"；Onix https://www.onixpickleball.com/pages/find-a-retailer 全在美國；Wilson https://www.wilson.com/en-us/pages/international-sites 無台灣、zh-tw 404；Paddletek 無經銷頁；Gearbox https://gearboxsports.com/pages/shipping "All international shipment must be placed by telephone." "All duties and shipping fees are paid for by receiver."
@@ -37,6 +37,7 @@
 ## 刻意不寫
 
 - 價格、租金（站主 2026-11-20 定）。
+- Wilson：國際網站清單沒有台灣，但 2026-09 報導有台北大巨蛋品牌櫃位（經營者、是否賣匹克球拍不明），所以不列入「找不到代理」。
 - 迪卡儂門市數（官網列表 20 間但另有士林門市頁，對不上）、迪卡儂匹克球拍商品數（只在 JSON）。
 - 迪卡儂網站地圖上的第三方品牌（Selkirk、Franklin 等，可能已下架）。
 - Selkirk 保固期限（保固頁 6 個月、招募頁 limited lifetime，矛盾）。
@@ -54,5 +55,9 @@
 - 往內連：paddle-recommendations、pickleball-shoes 的延伸閱讀
 
 ## 查證
+
+- 2026-11-22 獨立查證（fresh-context agent，WebFetch 讀原頁；迪卡儂、Franklin、Onix 讀不到，只對選題卡紀錄）：約 95 句，通過約 80，error 3、minor 11，全部修正。
+  - error：Wilson 有台北大巨蛋櫃位的報導 → 從「找不到代理」名單拿掉；「網購賣家都不是授權的」→「我們查不到賣家有授權」；瑜飛關於頁寫的是網球、壁球、羽球（主控重讀原頁確認）→ 改成「網站的 HEAD 品牌館有匹克球拍專區」，選題卡素材一併更正。
+  - minor：「實體店：沒有」→「官網沒列／查不到」；直營門市寫明是瑜飛的；HEAD 正品「確定」→「比較有保障」；好市多只說查到的 KASACA；KUIKMA 庫存加「例如 Open」；「最容易」改成「我們查到最方便」；KASACA「自己出貨」→「出貨廠商標為 KASACA」；迪卡儂合作廠商 FAQ 改成只講出貨與宅配；Selkirk 新台幣改「顯示價格」、退貨加「收到貨後」；租拍「不用先花錢」→「不用先買一支」；「USAPA 認證不算數」→「不能只看」。
 
 ## 追蹤
