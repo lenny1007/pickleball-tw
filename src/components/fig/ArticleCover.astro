@@ -3,7 +3,10 @@
 interface Props { slug: string; small?: boolean }
 const { slug, small = false } = Astro.props;
 const kind =
-  slug.includes('referee') ? 'ref'
+  slug.includes('tennis-court') ? 'tennis'
+  : slug.includes('skill-levels') ? 'levels'
+  : slug.includes('referee') ? 'ref'
+  : slug.includes('faults') ? 'faults'
   : slug.includes('for-kids') ? 'kids'
   : slug.includes('calories') ? 'cal'
   : slug.includes('tournaments') ? 'tour'
@@ -27,6 +30,7 @@ const kind =
   : slug.includes('scoring') ? 'scoring'
   : slug.includes('non-volley') ? 'nvz'
   : slug.includes('paddle-recommendations') ? 'picks'
+  : slug.includes('paddle-brands') ? 'brands'
   : slug.includes('paddle-grip') ? 'grip'
   : slug.includes('paddle-rules') ? 'prules'
   : slug.includes('paddle') ? 'paddle'
@@ -43,6 +47,39 @@ const kind =
 ---
 <svg class:list={['cover', { small }]} viewBox="0 0 640 280" aria-hidden="true" focusable="false">
   <rect width="640" height="280" fill="var(--apron)" />
+  {kind === 'tennis' && (
+    <g>
+      <rect x="20" y="40" width="600" height="220" fill="var(--court)" opacity=".35" />
+      <g stroke="var(--line)" stroke-width="3" fill="none" opacity=".7">
+        <rect x="20" y="40" width="600" height="220" />
+        <line x1="20" y1="72" x2="620" y2="72" /><line x1="20" y1="228" x2="620" y2="228" />
+        <line x1="158" y1="72" x2="158" y2="228" /><line x1="482" y1="72" x2="482" y2="228" />
+        <line x1="158" y1="150" x2="482" y2="150" />
+      </g>
+      <rect x="148" y="92" width="344" height="116" fill="var(--court)" />
+      <rect x="265" y="92" width="110" height="116" fill="var(--kitchen)" />
+      <g stroke="var(--ball)" stroke-width="5" fill="none" stroke-linecap="round">
+        <rect x="148" y="92" width="344" height="116" />
+        <line x1="265" y1="92" x2="265" y2="208" /><line x1="375" y1="92" x2="375" y2="208" />
+      </g>
+      <line x1="320" y1="26" x2="320" y2="274" stroke="var(--ink)" stroke-width="7" stroke-linecap="round" />
+      <circle cx="550" cy="248" r="14" class="ball-dot" />
+    </g>
+  )}
+  {kind === 'levels' && (
+    <g>
+      <rect x="0" y="222" width="640" height="58" fill="var(--court)" />
+      <line x1="0" y1="222" x2="640" y2="222" stroke="var(--line)" stroke-width="5" />
+      <g stroke="var(--ink)" stroke-width="5" stroke-linejoin="round">
+        <rect x="90" y="172" width="90" height="50" rx="6" fill="var(--card)" />
+        <rect x="200" y="142" width="90" height="80" rx="6" fill="var(--kitchen)" />
+        <rect x="310" y="106" width="90" height="116" rx="6" fill="var(--court)" fill-opacity=".55" />
+        <rect x="420" y="66" width="90" height="156" rx="6" fill="var(--court)" />
+      </g>
+      <circle cx="465" cy="40" r="20" class="ball-dot" />
+      <path d="M110 150 Q250 60 430 40" fill="none" stroke="var(--muted)" stroke-width="5" stroke-dasharray="10 8" stroke-linecap="round" />
+    </g>
+  )}
   {kind === 'cal' && (
     <g>
       <rect x="0" y="222" width="640" height="58" fill="var(--court)" />
@@ -68,6 +105,16 @@ const kind =
       <g transform="translate(170 26) rotate(-12)"><rect width="74" height="96" rx="30" fill="var(--card)" stroke="var(--ink)" stroke-width="5" /><rect x="29" y="92" width="16" height="44" rx="5" fill="var(--ink)" /></g>
       <g transform="translate(400 40) rotate(10)"><rect width="56" height="70" rx="24" fill="var(--ball)" stroke="var(--ink)" stroke-width="5" /><rect x="21" y="66" width="14" height="34" rx="5" fill="var(--ink)" /></g>
       <circle cx="320" cy="96" r="15" class="ball-dot" />
+    </g>
+  )}
+  {kind === 'faults' && (
+    <g>
+      <rect x="0" y="222" width="640" height="58" fill="var(--court)" />
+      <line x1="0" y1="222" x2="640" y2="222" stroke="var(--line)" stroke-width="5" />
+      <rect x="314" y="120" width="12" height="102" fill="var(--ink)" />
+      <g transform="translate(236 64) rotate(24)"><rect width="64" height="84" rx="26" fill="var(--card)" stroke="var(--ink)" stroke-width="5" /><rect x="25" y="80" width="14" height="40" rx="5" fill="var(--ink)" /></g>
+      <circle cx="380" cy="104" r="15" class="ball-dot" />
+      <g transform="translate(520 80)"><circle r="40" fill="var(--fault)" /><path d="M-16 -16 L16 16 M16 -16 L-16 16" stroke="var(--marker-light)" stroke-width="9" stroke-linecap="round" /></g>
     </g>
   )}
   {kind === 'ref' && (
@@ -449,6 +496,19 @@ const kind =
         <path d="M478 140 l22 24 l42 -50" />
       </g>
       <circle cx="560" cy="236" r="16" class="ball-dot" />
+  {kind === 'brands' && (
+    <g>
+      <rect x="0" y="220" width="640" height="60" fill="var(--court)" />
+      <line x1="0" y1="220" x2="640" y2="220" stroke="var(--line)" stroke-width="5" />
+      {[{ x: 150, c: 'var(--muted)', t: 1 }, { x: 320, c: 'var(--kitchen)', t: 2 }, { x: 490, c: 'var(--court)', t: 3 }].map((p) => (
+        <g>
+          <rect x={p.x - 46} y="40" width="92" height="112" rx="26" fill={p.c} stroke="var(--ink)" stroke-width="5" />
+          <rect x={p.x - 12} y="150" width="24" height="70" rx="7" class="paddle-grip" />
+          {Array.from({ length: p.t }).map((_, i) => (
+            <rect x={p.x + 52} y={196 - i * 22} width="44" height="16" rx="8" fill="var(--ball)" stroke="var(--ink)" stroke-width="3" />
+          ))}
+        </g>
+      ))}
     </g>
   )}
   {kind === 'paddle' && (

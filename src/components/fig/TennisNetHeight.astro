@@ -1,0 +1,35 @@
+---
+// 正面示意：網球網與匹克球網高度。水平 1 公尺 = 36 單位，原點在中央；網球網柱在 ±6.40 公尺（雙打邊線外 0.914）。
+// 垂直 1 公分 = 2.4 單位，依比例。地面 y = 300。匹克球邊線在 ±3.05 公尺。
+import Figure from './Figure.astro';
+const g = 300, v = 2.4, s = 36;
+const Y = (cm: number) => g - cm * v;
+const X = (m: number) => 270 + m * s;
+---
+<Figure caption="正面示意圖，依比例畫。實線是網球網：網柱處 1.07 公尺、中間 91.4 公分。虛線是匹克球網該有的高度：邊線處 91.4 公分、中間 86.4 公分。網球網整條都比匹克球網高，中間高 5 公分，越往兩邊差越多。">
+  <svg class="gear-fig tnh" viewBox="0 0 540 360" role="img" aria-label="網球網和匹克球網高度比較：網球網中間 91.4 公分、網柱 1.07 公尺；匹克球網中間 86.4 公分、邊線處 91.4 公分，網球網整條比較高">
+    <line x1="10" y1={g} x2="530" y2={g} stroke="var(--rule)" stroke-width="3" />
+    <rect x={X(-3.05)} y={g} width={X(3.05) - X(-3.05)} height="8" fill="var(--court)" />
+    <rect x={X(-6.4) - 6} y={Y(107) - 6} width="12" height={g - Y(107) + 6} fill="var(--ink)" rx="3" />
+    <rect x={X(6.4) - 6} y={Y(107) - 6} width="12" height={g - Y(107) + 6} fill="var(--ink)" rx="3" />
+    <path d={`M${X(-6.4)} ${Y(107)} Q${X(0)} ${2 * Y(91.4) - Y(107)} ${X(6.4)} ${Y(107)} L${X(6.4)} ${Y(30)} L${X(-6.4)} ${Y(30)} Z`} class="tnh-mesh" />
+    <path d={`M${X(-6.4)} ${Y(107)} Q${X(0)} ${2 * Y(91.4) - Y(107)} ${X(6.4)} ${Y(107)}`} class="tnh-tennis" />
+    <path d={`M${X(-3.05)} ${Y(91.4)} Q${X(0)} ${2 * Y(86.4) - Y(91.4)} ${X(3.05)} ${Y(91.4)}`} class="tnh-pb" />
+    <line x1={X(-3.05)} y1={Y(91.4)} x2={X(-3.05)} y2={g} class="tnh-dim" />
+    <line x1={X(3.05)} y1={Y(91.4)} x2={X(3.05)} y2={g} class="tnh-dim" />
+    <text class="lab dark big" x={X(-6.4) + 16} y={Y(107) + 62}>網柱 107</text>
+    <text class="lab dark big" x={X(0)} y={Y(91.4) - 42} text-anchor="middle">網球網 91.4</text>
+    <text class="lab dark big tnh-pbt" x={X(0)} y={Y(86.4) + 34} text-anchor="middle">匹克球 86.4</text>
+    <text class="lab dark" x={X(3.05)} y={Y(91.4) + 72} text-anchor="middle">邊線 91.4</text>
+    <text class="lab" x={X(-3.05)} y={g + 30} text-anchor="middle">匹克球邊線</text>
+    <text class="lab" x={X(3.05)} y={g + 30} text-anchor="middle">匹克球邊線</text>
+    <text class="lab" x="270" y={g + 54} text-anchor="middle">單位：公分</text>
+  </svg>
+</Figure>
+
+<style>
+  .tnh-mesh { fill: var(--muted); opacity: .16; }
+  .tnh-tennis { fill: none; stroke: var(--ink); stroke-width: 6; stroke-linejoin: round; }
+  .tnh-pb { fill: none; stroke: var(--ball); stroke-width: 5; stroke-dasharray: 10 7; stroke-linecap: round; }
+  .tnh-dim { stroke: var(--muted); stroke-width: 1.5; stroke-dasharray: 5 4; }
+</style>
