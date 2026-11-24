@@ -3,7 +3,7 @@
 import Figure from './Figure.astro';
 const x0 = 40, x1 = 500;
 ---
-<Figure caption="示意圖。上：球落在你這邊、你沒回球，要在球落地後馬上喊出界，拖到下一次發球前才喊，2026 年起不再算數。下：你已經把球打回去了，出界要在對方擊球之前喊，對方打了才喊就繼續打。">
+<Figure caption="示意圖。上：球落在你這邊、你沒回球，要在球落地後馬上喊出界，拖到下一次發球前才喊，2026 年起不再算數。下：你已經把球打回去了，出界要在對方擊球之前、這一球結束之前喊，對方打了才喊就繼續打。">
   <svg class="gear-fig oct" viewBox="0 0 540 400" role="img" aria-label="喊出界的時機：沒回球時落地後馬上喊；回了球時要在對方擊球前喊">
     <text class="lab dark big" x={x0 - 20} y="34">你沒回球</text>
     <rect x="70" y="62" width="150" height="28" rx="6" class="oct-ok" />
