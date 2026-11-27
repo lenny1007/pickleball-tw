@@ -1,0 +1,79 @@
+---
+// 俯視：臨打時球跑到別的場。兩面直放的球場並排（1 呎 = 5 單位，球場 100 × 220，網在中間）。
+// 上：隔壁的球滾進來，喊「Ball」停下，這一球重打。
+// 下：要經過正在打的場地後方，等這一球結束再一起快速通過。
+import Figure from './Figure.astro';
+import Player from './Player.astro';
+const court = (x: number) => ({ x, y: 30, w: 100, h: 220 });
+const A = court(24), B = court(168);
+const C = court(168);
+---
+<Figure caption="俯視示意圖：兩面並排的球場。上：隔壁場的球滾進你們的場，任何人都可以喊停，這一球重打，不算誰得分。反過來，你們的球滾到別的場，要先大聲喊「Ball」提醒對方，不要直接跑進去撿。下：要經過正在打的場地後方，先在旁邊等這一球打完，再大家一起快速通過。">
+  <div class="sb-pair">
+    <svg class="gear-fig" viewBox="0 0 480 290" role="img" aria-label="隔壁場的球滾進來：喊 Ball，這一球重打">
+      {[A, B].map((c) => (
+        <g>
+          <rect x={c.x} y={c.y} width={c.w} height={c.h} fill="var(--court)" />
+          <rect x={c.x} y={c.y + 75} width={c.w} height="70" fill="var(--kitchen)" />
+          <g stroke="var(--line)" stroke-width="2" fill="none">
+            <rect x={c.x} y={c.y} width={c.w} height={c.h} />
+            <line x1={c.x} y1={c.y + 75} x2={c.x + c.w} y2={c.y + 75} />
+            <line x1={c.x} y1={c.y + 145} x2={c.x + c.w} y2={c.y + 145} />
+            <line x1={c.x + 50} y1={c.y} x2={c.x + 50} y2={c.y + 75} />
+            <line x1={c.x + 50} y1={c.y + 145} x2={c.x + 50} y2={c.y + c.h} />
+          </g>
+          <line x1={c.x - 6} y1={c.y + 110} x2={c.x + c.w + 6} y2={c.y + 110} stroke="var(--ink)" stroke-width="4" stroke-linecap="round" />
+        </g>
+      ))}
+      <text class="lab muted" x="74" y="20" text-anchor="middle">隔壁場</text>
+      <text class="lab dark" x="218" y="20" text-anchor="middle">你們這場</text>
+      <Player x={52} y={225} side="them" />
+      <path d="M70 215 Q130 200 200 196" class="sb-roll" />
+      <circle cx="204" cy="196" r="8" class="ball-dot" />
+      <Player x={240} y={210} label="你" />
+      <Player x={196} y={64} side="them" />
+      <Player x={240} y={64} side="them" />
+      <g transform="translate(360,92)">
+        <rect x="-64" y="-26" width="128" height="44" rx="22" class="sb-bubble" />
+        <text class="lab dark big" text-anchor="middle" y="4">喊「Ball」</text>
+      </g>
+      <path d="M296 108 L262 196" class="arrow-line" />
+      <text class="lab dark big" x="360" y="160" text-anchor="middle">停下來</text>
+      <text class="lab dark big" x="360" y="190" text-anchor="middle">這一球重打</text>
+      <g transform="translate(360,224)" class="mk ok"><circle r="11" /><path d="M-5 0 l3.5 4 l6.5 -8" fill="none" /></g>
+    </svg>
+    <svg class="gear-fig" viewBox="0 0 480 320" role="img" aria-label="要經過正在打的場地後方：等這一球打完，大家一起快速通過">
+      <rect x={C.x} y={C.y} width={C.w} height={C.h} fill="var(--court)" />
+      <rect x={C.x} y={C.y + 75} width={C.w} height="70" fill="var(--kitchen)" />
+      <g stroke="var(--line)" stroke-width="2" fill="none">
+        <rect x={C.x} y={C.y} width={C.w} height={C.h} />
+        <line x1={C.x} y1={C.y + 75} x2={C.x + C.w} y2={C.y + 75} />
+        <line x1={C.x} y1={C.y + 145} x2={C.x + C.w} y2={C.y + 145} />
+        <line x1={C.x + 50} y1={C.y} x2={C.x + 50} y2={C.y + 75} />
+        <line x1={C.x + 50} y1={C.y + 145} x2={C.x + 50} y2={C.y + C.h} />
+      </g>
+      <line x1={C.x - 6} y1={C.y + 110} x2={C.x + C.w + 6} y2={C.y + 110} stroke="var(--ink)" stroke-width="4" stroke-linecap="round" />
+      <text class="lab dark" x="218" y="20" text-anchor="middle">正在打的場</text>
+      <Player x={196} y={64} side="them" />
+      <Player x={240} y={64} side="them" />
+      <Player x={196} y={226} side="them" />
+      <Player x={240} y={226} side="them" />
+      <Player x={340} y={292} label="你" />
+      <Player x={372} y={292} />
+      <Player x={404} y={292} />
+      <path d="M318 292 L60 292" class="sb-walk" />
+      <path d="M70 284 l-10 8 l10 8" class="arrow-line" />
+      <text class="lab dark big" x="372" y="110" text-anchor="middle">1 先在旁邊等</text>
+      <text class="lab dark big" x="372" y="140" text-anchor="middle">這一球打完</text>
+      <text class="lab dark big" x="372" y="190" text-anchor="middle">2 一起快速</text>
+      <text class="lab dark big" x="372" y="220" text-anchor="middle">從後方通過</text>
+    </svg>
+  </div>
+</Figure>
+
+<style>
+  .sb-pair { display: grid; gap: 12px; }
+  .sb-roll { fill: none; stroke: var(--ball); stroke-width: 4; stroke-dasharray: 8 7; stroke-linecap: round; }
+  .sb-walk { fill: none; stroke: var(--ink); stroke-width: 3; stroke-dasharray: 8 7; stroke-linecap: round; }
+  .sb-bubble { fill: var(--card); stroke: var(--ink); stroke-width: 2.5; }
+</style>
