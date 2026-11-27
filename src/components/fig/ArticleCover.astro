@@ -3,7 +3,8 @@
 interface Props { slug: string; small?: boolean }
 const { slug, small = false } = Astro.props;
 const kind =
-  slug.includes('tennis-court') ? 'tennis'
+  slug.includes('open-play') ? 'openplay'
+  : slug.includes('tennis-court') ? 'tennis'
   : slug.includes('skill-levels') ? 'levels'
   : slug.includes('referee') ? 'ref'
   : slug.includes('faults') ? 'faults'
@@ -49,6 +50,27 @@ const kind =
 ---
 <svg class:list={['cover', { small }]} viewBox="0 0 640 280" aria-hidden="true" focusable="false">
   <rect width="640" height="280" fill="var(--apron)" />
+  {kind === 'openplay' && (
+    <g>
+      <rect x="380" y="12" width="170" height="256" fill="var(--court)" />
+      <rect x="380" y="99" width="170" height="82" fill="var(--kitchen)" />
+      <g stroke="var(--line)" stroke-width="4" fill="none">
+        <rect x="380" y="12" width="170" height="256" />
+        <line x1="380" y1="99" x2="550" y2="99" /><line x1="380" y1="181" x2="550" y2="181" />
+        <line x1="465" y1="12" x2="465" y2="99" /><line x1="465" y1="181" x2="465" y2="268" />
+      </g>
+      <line x1="368" y1="140" x2="562" y2="140" stroke="var(--ink)" stroke-width="7" stroke-linecap="round" />
+      <rect x="40" y="196" width="250" height="16" rx="8" fill="var(--ink)" />
+      {[0, 1, 2, 3, 4].map((i) => (
+        <g transform={`translate(${250 - i * 46},92)`}>
+          <rect x="-17" y="0" width="34" height="72" rx="13" fill={i < 4 ? 'var(--ball)' : 'var(--card)'} stroke="var(--ink)" stroke-width="4" />
+          <rect x="-5" y="70" width="10" height="34" rx="4" fill="var(--ink)" />
+        </g>
+      ))}
+      <path d="M300 128 h48 m-12 -12 l12 12 l-12 12" fill="none" stroke="var(--ink)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+      <circle cx="510" cy="226" r="14" class="ball-dot" />
+    </g>
+  )}
   {kind === 'tennis' && (
     <g>
       <rect x="20" y="40" width="600" height="220" fill="var(--court)" opacity=".35" />
