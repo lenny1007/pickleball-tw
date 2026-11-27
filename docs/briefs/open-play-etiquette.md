@@ -2,7 +2,7 @@
 
 - slug：pickleball-open-play-etiquette
 - 分類：beginner
-- 狀態：查證中
+- 狀態：查證完成，待站主看預覽
 
 ## 讀者與需求
 
@@ -39,19 +39,19 @@
 | 球擦到你或球拍才出界要承認 | https://usapickleball.org/?p=53662 | 2026-11 |
 | 自己的球跑到別場大聲喊 Ball；跟對方對上眼再滾或丟回；經過別人場地後方要等死球、一群人快速通過；別場後方的球等打完再撿或請他們丟回 | https://usapickleball.org/?p=53662 | 2026-11 |
 | 挑戰場：贏的隊伍最多連打三場，有人在等就下場；排拍（paddle in line）四人上場 | 休閒推廣指南 p.10 https://usapickleball.org/docs/educators/usap-rec-programs-guide-march-2023.pdf | 2026-11 |
-| 想打高手時別一直留著（weakest player don't stay indefinitely） | 休閒推廣指南 p.20 | 2026-11 |
+| 明顯最弱時打完謝謝、別一直留在那一場（weakest player don't stay indefinitely） | 休閒推廣指南 p.20 | 2026-11 |
 | 每人放自己的球拍、前四支上場、打完重新排；朋友一起下場一起重排；不事先湊好四人，除非場地允許，改找預約場或固定團體時段；輪到不在會跳過；第一場習慣熱身幾分鐘；打完在場上對打、聊天會拖慢輪替；先客氣提醒、別在場上爭執、照公告、請管理人員 | https://www.selkirk.com/blogs/pickleball-education/pickleball-etiquette-how-the-paddle-rack-system-works-during-open-play | 2026-11 |
-| 是不是每個人都要一起打：照規矩是；不舒服可以婉拒；贏球拆隊、計時換場（贏的往上一面場）是球會做法；沒人排可以繼續打，有人排了打完下一場就換 | https://www.selkirk.com/blogs/pickleball-education/do-i-have-to-play-with-everyone-at-pickleball-open-play-and-other-open-play-etiquette-tips | 2026-11 |
-| 球滾進來要停、重打；球很遠或靜止不會絆到人不必喊 | https://www.selkirk.com/blogs/pickleball-education/pickleball-ball-on-court | 2026-11 |
-| 就算正要得分也要停；自己的球跑到別場要馬上喊、等那邊停再撿、不要踏進正在打的場 | https://www.selkirk.com/blogs/pickleball-education/how-to-properly-call-ball-on-in-pickleball | 2026-11 |
+| 是不是每個人都要一起打：照規矩是；不舒服可以婉拒；贏球拆隊、計時換場（贏的往上一面場）是球會做法；沒人排可以繼續打，有人排了就收尾下場（原文 rotate off after the next one finishes，寫保守說法） | https://www.selkirk.com/blogs/pickleball-education/do-i-have-to-play-with-everyone-at-pickleball-open-play-and-other-open-play-etiquette-tips | 2026-11 |
+| 球滾進來要停、重打 | https://www.selkirk.com/blogs/pickleball-education/pickleball-ball-on-court | 2026-11 |
+| 就算正要得分也要停；球很遠或靜止不會絆到人不必喊；自己的球跑到別場要馬上喊、等那邊停再撿、不要踏進正在打的場 | https://www.selkirk.com/blogs/pickleball-education/how-to-properly-call-ball-on-in-pickleball | 2026-11 |
 | 不要追進別人的場 | https://www.selkirk.com/blogs/pickleball-education/how-to-politely-tell-someone-not-to-run-on-your-pickleball-court | 2026-11 |
 | 開打前後碰拍是慣例；誤判讓它過去；撿到別場的球別看都不看就打回去；別給沒人要的建議；有時間限制照時間打完 | https://www.ppatour.com/ppa-blog/correct-pickleball-etiquette/ | 2026-11 |
 | 有些球場允許把球拍疊在一起表示要一起上；用別人的球打完還給球主；別給沒人要的建議 | https://www.playpickleball.com/pickleball-court-etiquette-public-open-play/ | 2026-11 |
 | 高雄前金運動中心辦過歡迎新手的臨打團，名額有限、額滿為止 | https://www.cianjin-sc.com/news-20260923.html | 2026-11 |
-| 新北板橋、鶯歌運動中心有暢打時段 | https://www.nownews.com/news/6870652 | 2026-11 |
+| 新北板橋、鶯歌等運動中心有團體課程或暢打時段 | https://www.nownews.com/news/6870652 | 2026-11 |
 | 影片：Better Pickleball「Pickleball Open Play - Everything Beginners Need to Know」01:39 分區、03:29 球拍架 | https://www.youtube.com/watch?v=BE5bChvoKxk（知識卡 bp-be5bchvokxk-0139、-0329；內文不引用教練說法，只放影片） | 2026-11 |
 | 影片：Better Pickleball「The Beginner's Guide on How to Play Pickleball」09:56 賽後碰拍 | https://www.youtube.com/watch?v=d3WTNjz9W2g（知識卡 bp-d3wtnjz9w2g-0956） | 2026-11 |
-| 有些球場按程度分場、球拍架標程度；先在場邊看幾分鐘節奏或問人 | 知識卡 bp-be5bchvokxk-0139、-0329（Better Pickleball）；寫成一般建議，不歸給教練 | 2026-11 |
+| 不確定適合哪一場，先在場邊看幾分鐘節奏或問人 | 本站整理的一般建議（影片 01:39 有示範）；「球拍架標程度」只有未對字幕的知識卡，已刪 | 2026-11 |
 
 ## 刻意不寫
 
@@ -82,5 +82,9 @@
 - 往內連：pickleball-line-calls、pickleball-faults、where-to-play-taiwan 的延伸閱讀（first-time-pickleball 站主說不要沒問就改，不加）
 
 ## 查證
+
+- 2026-11-27 獨立查證（subagent，WebFetch 對照規則書、運動家精神指南、休閒推廣指南、Selkirk 5 篇、PPA、PlayPickleball、前金、NOWnews）：檢查約 88 句，通過約 75、error 2、minor 11。
+- error（主控對照研究時讀到的原文確認後改）：(1) 入門方「別一直留、說謝謝」出自休閒推廣指南 p.20，不是運動家精神指南，改成兩份指南並列，圖說改成「明顯是場上最弱的一位時，打完謝謝大家，別一直留在那一場」；(2) NOWnews 原文是板橋、鶯歌「等」運動中心「另有團體課程或暢打時段」，照原文改。
+- minor 全修：贏球拆隊、計時換場改「有些球會用」；拿掉「唯一的例外」；FAQ 拿掉「現場常客」與「大部分人都會願意放慢」；干擾補「影響到這一球」；StrayBall 圖說改「場上任何一位球員」；刪掉只有知識卡支持的「球拍架標程度」；運動家精神指南歸屬改成「原則是」、資料來源段拿掉「報分」；有人排了改成「把這一場收尾、下場讓人」；PaddleRack 圖說「排球拍」改「排拍方式」（first-time-pickleball 共用，只改圖說）；來源表「球很遠不必喊」改記到 how-to-properly-call-ball-on 那篇。
 
 ## 追蹤

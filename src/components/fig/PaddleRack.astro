@@ -3,7 +3,7 @@ import Figure from './Figure.astro';
 // 示意圖：臨打排球拍。先到先排，一場打完，最前面四支上場。
 const slots = Array.from({ length: 7 }, (_, i) => i);
 ---
-<Figure caption="臨打常見的排球拍：想打的人把自己的球拍放進架上排隊，一場打完，排在最前面的四支球拍上場。">
+<Figure caption="臨打常見的排拍方式：想打的人把自己的球拍放進架上排隊，一場打完，排在最前面的四支球拍上場。">
   <svg class="gear-fig" viewBox="0 0 480 230" role="img" aria-label="球拍架排隊示意：最前面四支球拍下一場上場">
     <rect x="20" y="150" width="300" height="14" rx="7" class="rack" />
     {slots.map((i) => {
