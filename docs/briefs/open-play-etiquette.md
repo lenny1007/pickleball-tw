@@ -47,6 +47,7 @@
 | 不要追進別人的場 | https://www.selkirk.com/blogs/pickleball-education/how-to-politely-tell-someone-not-to-run-on-your-pickleball-court | 2026-11 |
 | 開打前後碰拍是慣例；誤判讓它過去；撿到別場的球別看都不看就打回去；別給沒人要的建議；有時間限制照時間打完 | https://www.ppatour.com/ppa-blog/correct-pickleball-etiquette/ | 2026-11 |
 | 有些球場允許把球拍疊在一起表示要一起上；用別人的球打完還給球主；別給沒人要的建議 | https://www.playpickleball.com/pickleball-court-etiquette-public-open-play/ | 2026-11 |
+| 台灣臨打目前多半由主揪安排，也有球場用排拍架或白板 | 站主說明（2026-11-27 討論串：「都有，但目前一般都是主揪自己安排」）；寫成現況描述，不加數字 | 2026-11 |
 | 高雄前金運動中心辦過歡迎新手的臨打團，名額有限、額滿為止 | https://www.cianjin-sc.com/news-20260923.html | 2026-11 |
 | 新北板橋、鶯歌等運動中心有團體課程或暢打時段 | https://www.nownews.com/news/6870652 | 2026-11 |
 | 影片：Better Pickleball「Pickleball Open Play - Everything Beginners Need to Know」01:39 分區、03:29 球拍架 | https://www.youtube.com/watch?v=BE5bChvoKxk（知識卡 bp-be5bchvokxk-0139、-0329；內文不引用教練說法，只放影片） | 2026-11 |
@@ -82,6 +83,8 @@
 - 往內連：pickleball-line-calls、pickleball-faults、where-to-play-taiwan 的延伸閱讀（first-time-pickleball 站主說不要沒問就改，不加）
 
 ## 查證
+
+- 2026-11-27 站主看預覽問「影片說的跟台灣一樣嗎」：影片與排拍、挑戰場等來源都是美國的。依站主說明補上台灣多半由主揪安排，四種輪流方式改標「國外常見」。
 
 - 2026-11-27 獨立查證（subagent，WebFetch 對照規則書、運動家精神指南、休閒推廣指南、Selkirk 5 篇、PPA、PlayPickleball、前金、NOWnews）：檢查約 88 句，通過約 75、error 2、minor 11。
 - error（主控對照研究時讀到的原文確認後改）：(1) 入門方「別一直留、說謝謝」出自休閒推廣指南 p.20，不是運動家精神指南，改成兩份指南並列，圖說改成「明顯是場上最弱的一位時，打完謝謝大家，別一直留在那一場」；(2) NOWnews 原文是板橋、鶯歌「等」運動中心「另有團體課程或暢打時段」，照原文改。
