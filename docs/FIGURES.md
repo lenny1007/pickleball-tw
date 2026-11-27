@@ -93,6 +93,7 @@
 | `DuprBands` | DUPR 分數對照（3.0 以下起步到 5.5 以上頂尖），右側 2–8 全刻度小尺 | pickleball-skill-levels |
 | `ReliabilityDecay` | DUPR 可靠度沒有新紀錄時往下掉：100→60%（約 6 個月）→30%（約 3 個月）→不到 10%（約 6 個月） | pickleball-skill-levels |
 | `NetFaults` | 側面三格：在自己這邊擊球後收拍過網合法、球沒過網就伸過去打失誤、碰網失誤 | pickleball-faults |
+| `LineOwnership` | 俯視兩格：臨打自己這半場的線（底線、邊線、中線、非截擊區線）自己喊；有司線時球員只喊自己的中線 | pickleball-line-calls |
 | `CityCourts` | 一個城市的公共球場依行政區分組，每列一個場地＋專用／共用標籤（通用，傳 groups） | where-to-play-taipei |
 | `ArticleCover` | 每篇的封面，依 slug 關鍵字選畫面 | 全部 |
 
