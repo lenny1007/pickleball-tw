@@ -95,6 +95,7 @@
 | `NetFaults` | 側面三格：在自己這邊擊球後收拍過網合法、球沒過網就伸過去打失誤、碰網失誤 | pickleball-faults |
 | `LineOwnership` | 俯視兩格：臨打自己這半場的線（底線、邊線、中線、非截擊區線）自己喊；有司線時球員只喊自己的中線 | pickleball-line-calls |
 | `CityCourts` | 一個城市的公共球場依行政區分組，每列一個場地＋專用／共用標籤（通用，傳 groups） | where-to-play-taipei |
+| `StrayBall` | 俯視兩格：隔壁場的球滾進來喊「Ball」、這一球重打；要經過正在打的場地後方，等這一球打完再一起快速通過 | pickleball-open-play-etiquette |
 | `ArticleCover` | 每篇的封面，依 slug 關鍵字選畫面 | 全部 |
 
 畫新圖用的零件：
